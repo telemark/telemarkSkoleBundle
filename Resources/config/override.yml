@@ -1,0 +1,28 @@
+system:
+  tfk_skole_group:
+    location_view:
+      full:
+        frontpage:
+          template: tfktelemarkBundle:full:frontpage.html.twig
+          match:
+           Identifier\ContentType: [frontpage]
+        folder:
+          controller: "tfktelemarkBundle:Folder:showFolderList"
+          template: "tfktelemarkBundle:full:folder.html.twig"
+          match:
+            Identifier\ContentType: [folder]
+        article:
+          template: tfktelemarkBundle:full:article.html.twig
+          match:
+           Identifier\ContentType: [article]
+      aside:
+        folder:
+          template: "tfktelemarkBundle:aside:folder.html.twig"
+          match:
+            Identifier\ContentType: [folder]
+      aside_sub:
+        folder:
+           controller: "tfktelemarkBundle:Folder:showFolderListAsideView"
+           template: "tfktelemarkBundle:aside_sub:folder.html.twig"
+           match:
+             Identifier\ContentType: [folder]
