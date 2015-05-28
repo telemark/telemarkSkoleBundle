@@ -12,6 +12,7 @@ parameters:
     ezpublish.tfkskolenome.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_nome.html.twig
     ezpublish.tfkskolevesttelemark.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_vesttelemark.html.twig
 
+
 services:
     ezpublish.view_manager:
         class: %ezpublish.view_manager.class%
