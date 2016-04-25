@@ -1,0 +1,7 @@
+<div>
+    <h2>{{ ez_render_field( content, 'title' ) }}</h2>
+
+    {% if not ez_is_field_empty( content, 'text' ) %}
+        {{ ez_render_field( content, 'text' ) }}
+    {% endif %}
+</div>

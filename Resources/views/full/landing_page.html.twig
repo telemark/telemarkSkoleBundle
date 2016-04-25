@@ -1,0 +1,11 @@
+{% extends noLayout ? viewbaseLayout : "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+
+{% block content %}
+    <div class="constrained-content clearfix">
+        {{ ez_render_field(content, 'page', {
+            'attr': {
+                'class': 'landing-page--dynamic landing-page'
+            }
+        }) }}
+    </div>
+{% endblock %}
