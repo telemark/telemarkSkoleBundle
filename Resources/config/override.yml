@@ -1,28 +1,61 @@
 system:
-  tfk_skole_group:
-    location_view:
-      full:
-        frontpage:
-          template: tfktelemarkBundle:full:frontpage.html.twig
-          match:
-           Identifier\ContentType: [frontpage]
-        folder:
-          controller: "tfktelemarkBundle:Folder:showFolderList"
-          template: "tfktelemarkBundle:full:folder.html.twig"
-          match:
-            Identifier\ContentType: [folder]
-        article:
-          template: tfktelemarkBundle:full:article.html.twig
-          match:
-           Identifier\ContentType: [article]
-      aside:
-        folder:
-          template: "tfktelemarkBundle:aside:folder.html.twig"
-          match:
-            Identifier\ContentType: [folder]
-      aside_sub:
-        folder:
-           controller: "tfktelemarkBundle:Folder:showFolderListAsideView"
-           template: "tfktelemarkBundle:aside_sub:folder.html.twig"
-           match:
-             Identifier\ContentType: [folder]
+    tfk_school_group:
+        user:
+            layout: tfktelemarkSkoleBundle::pagelayout.html.twig
+            login_template: tfktelemarkSkoleBundle:security:login.html.twig
+        content_view:
+            full:
+                landing_page:
+                    template: tfktelemarkSkoleBundle:full:landing_page.html.twig
+                    match:
+                        Identifier\ContentType: [landing_page]
+                frontpage:
+                    template: tfktelemarkSkoleBundle:full:frontpage.html.twig
+                    match:
+                        Identifier\ContentType: [frontpage]
+                news_folder:
+                    controller: "tfktelemarkSkoleBundle:Folder:newsfolderViewEnhanced"
+                    template: "tfktelemarkSkoleBundle:full:news_folder.html.twig"
+                    match:
+                        Identifier\ContentType: [folder]
+                        Id\Location: 104 
+                folder:
+                    controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
+                    template: "tfktelemarkSkoleBundle:full:folder.html.twig"
+                    match:
+                        Identifier\ContentType: [folder]
+                article:
+                    template: tfktelemarkSkoleBundle:full:article.html.twig
+                    match:
+                        Identifier\ContentType: [article]
+            line:
+                article:
+                    template: tfktelemarkSkoleBundle:line:article.html.twig
+                    match:
+                        Identifier\ContentType: [article]
+
+                infobox:
+                    template: tfktelemarkSkoleBundle:line:infobox.html.twig
+                    match:
+                        Identifier\ContentType: [infobox]
+        block_view:
+            ContentGrid:
+                template: tfktelemarkSkoleBundle:block:contentgrid.html.twig
+                match:
+                    Type: ContentGrid
+            Campaign:
+                template: tfktelemarkSkoleBundle:block:campaign:html.twig
+                match:
+                    Type: Campaign
+#            aside:
+#                folder:
+#                    template: "tfktelemarkSkoleBundle:aside:folder.html.twig"
+#                    match:
+#                      Identifier\ContentType: [folder]
+#            aside_sub:
+#                folder:
+#                    controller: "tfktelemarkSkoleBundle:Folder:showFolderListAsideView"
+#                    template: "tfktelemarkSkoleBundle:aside_sub:folder.html.twig"
+#                    match:
+#                        Identifier\ContentType: [folder]
+

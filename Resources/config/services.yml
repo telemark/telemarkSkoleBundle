@@ -1,27 +1,70 @@
 parameters:
-    ezpublish.default.content_view.viewbase_layout: EzPublishCoreBundle :: viewbase_layout.html.twig
-    ezpublish.tfkskolebamble.content_view.viewbase_layout: "tfktelemarkSkoleBundle:pagelayouts:pagelayout_bamble.html.twig"
-    ezpublish.tfkskolebo.content_view.viewbase_layout: "tfktelemarkSkoleBundle:pagelayouts:pagelayout_bo.html.twig"
-    ezpublish.tfkskolehjalmarjohansen.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_hjalmar.html.twig
-    ezpublish.tfkskolekragero.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_kragero.html.twig
-    ezpublish.tfkskolenotodden.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_notodden.html.twig
-    ezpublish.tfkskoleporsgrunn.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_porsgrunn.html.twig
-    ezpublish.tfkskolerjukan.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_rjukan.html.twig
-    ezpublish.tfkskoleskien.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_skien.html.twig
-    ezpublish.tfkskoleskogmo.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_skogmo.html.twig
-    ezpublish.tfkskolenome.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_nome.html.twig
-    ezpublish.tfkskolevesttelemark.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_vesttelemark.html.twig
+#    ezpublish.default.content_view.viewbase_layout: EzPublishCoreBundle :: viewbase_layout.html.twig
+#    ezpublish.tfk_school_group.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout.html.twig
+
+#    ezpublish.tfkskolebamble.content_view.viewbase_layout: "tfktelemarkSkoleBundle:pagelayouts:pagelayout_bamble.html.twig"
+#    ezpublish.tfkskolebo.content_view.viewbase_layout: "tfktelemarkSkoleBundle:pagelayouts:pagelayout_bo.html.twig"
+#    ezpublish.tfkskolehjalmarjohansen.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_hjalmar.html.twig
+#    ezpublish.tfkskolekragero.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_kragero.html.twig
+#    ezpublish.tfkskolenotodden.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_notodden.html.twig
+#    ezpublish.tfkskoleporsgrunn.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_porsgrunn.html.twig
+#    ezpublish.tfkskolerjukan.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_rjukan.html.twig
+#    ezpublish.tfkskoleskien.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_skien.html.twig
+#    ezpublish.tfkskoleskogmo.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_skogmo.html.twig
+#    ezpublish.tfkskolenome.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_nome.html.twig
+#    ezpublish.tfkskolevesttelemark.content_view.viewbase_layout: tfktelemarkSkoleBundle:pagelayouts:pagelayout_vesttelemark.html.twig
 
 
 services:
-    ezpublish.view_manager:
-        class: %ezpublish.view_manager.class%
-        arguments:
-            - @templating
-            - @event_dispatcher
-            - @ezpublish.api.repository
-            - @ezpublish.config.resolver
-            - "$content_view.viewbase_layout;ezpublish$"
+#    ezpublish.view_manager: 
+#        class: %ezpublish.view_manager.class%
+#        arguments: 
+#            - @templating
+#            - @event_dispatcher
+#            - @ezpublish.api.repository
+#            - @ezpublish.config.resolver
+#            - "$content_view.viewbase_layout;ezpublish$"
+#            - @?logger
+
 #    tfktelemark_skole.example:
 #        class: tfk\telemarkSkoleBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+
+    #vp_utility.config_resolver_helper:
+    #    class: tfk\telemarkSkoleBundle\Twig\Extension\ConfigResolverHelper
+    #    arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
+    
+
+    ezpublish.landing_page.block.contentgrid:
+        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentGridBlock
+        arguments:
+            - '@ezpublish.api.service.location'
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.search'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: contentgrid }
+
+    ezpublish.landing_page.block.campaign:
+        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\CampaignBlock
+        arguments:
+            - '@ezpublish.api.service.location'
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.search'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: campaign }
+
+    config_resolver_extension.twig_extension:
+        class: tfk\telemarkSkoleBundle\Twig\Extension\ConfigResolverExtension
+        public: false
+        calls:
+            - [setContainer, [@service_container] ]
+        tags:
+            - { name: twig.extension }
+
+    vp_utility.location_helper:
+        class: tfk\telemarkSkoleBundle\Helper\LocationHelper
+        arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
+
+    vp_utility.sort_location_clause_helper:
+        class: tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper
+        arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]

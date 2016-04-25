@@ -1,0 +1,78 @@
+    {% if contentArray|length > 0 %}
+        <div class="content">
+            <div class="slider-wrapper slider-wrapper--fullwidth">
+                <div class="constrained">
+                    <div class="slider slider--fullwidth">
+                        <ul class="slider__slides">
+                            {% for item in contentArray %}
+                                {% set content = item.content %}
+
+                                {#{ render( controller("tfktelemarkBundle:Item:childrenItems", {'locationId': content.contentInfo.mainLocationId,  'params' : { 'class' : ['slide'] , 'viewType': 'line' }} )) }#}
+
+                                {% if not ez_is_field_empty( content, 'image') %}
+                                    {% set imageId = ez_field_value( content, 'image' ) %}
+                                {% endif %}
+
+                                {% if not ez_is_field_empty( content, 'internal_resource' ) %}
+                                    {% set externalResourceId = ez_field_value( content, 'internal_resource' ) %}
+                                    {% set this_block_url = url( 'ez_urlalias', {'contentId': externalResourceId} ) %}
+                                {% else %}
+                                    {% set this_block_url = ez_field_value( content, 'url' ) %}
+                                {% endif %}
+
+                                {% if not ez_is_field_empty( content, 'open_in_new_window' ) %}
+                                    {% set this_block_target = '_blank' %}  
+                                {% else %}
+                                    {% set this_block_target = '_self' %}
+                                {% endif %}
+
+                                <li class="slider__slide">
+                                    <a href={{ this_block_url }} target={{ this_block_target }} class="top-image top-image--large">
+                                        <img sizes="(min-width: 64em) 757px, 100vw" src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_04' ).uri, absolute=true ) }} 360w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }} 578w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_09' ).uri, absolute=true ) }} 846w" alt="{% if image_alt is defined %}{{image_alt}}{% elseif content.fields.image['nor-NO'].alternativeText is defined %}{{ content.fields.image['nor-NO'].alternativeText }}{% endif %}">
+                                        <!--img.top-image__img(src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}")-->
+                                        <div class="top-image__text-wrapper">
+                                            <div class="top-image__text">
+                                                {% if not ez_is_field_empty( content, 'title') %}
+                                                    <h2 class="top-image__header">{{ ez_field_value( content, 'title' ) }}</h2>
+                                                {% endif %}
+                                                <div class="top-image__body">
+                                                    {% if not ez_is_field_empty( content, 'text') %}
+                                                      {{ ez_field_value( content, 'text' ) }}<br />
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+{#
+
+                                    <a href={{ this_block_url }} target={{ this_block_target }} class="top-image top-image--large">
+                                    {% if imageId is defined %}
+                                        {{  render(
+                                              controller( 
+                                                "ez_content:viewContent", 
+                                                    {
+                                                      "contentId": imageId.destinationContentId,
+                                                      "viewType": "responsive",
+                                                      "params": 
+                                                        { 
+                                                          "image_title": ez_field_value(content, 'title'),
+                                                          "image_text" : ez_field_value(content, 'text'),
+                                                          "image_type" : "slide",
+                                                          "image_alt"  : ez_field_value(content, 'alt_image_text')
+                                                        }
+                                                    }
+                                              )
+                                            ) 
+                                        }}
+                                    {% endif %}
+                                    </a>
+#}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}

@@ -1,0 +1,13 @@
+system:
+    default:
+        image_variations:
+#            article_grid_2:
+#                reference: null
+#                filters:
+#                    - {name: geometry/scalewidth, params: [300]}
+#
+#            article_grid_3:
+#                reference: null
+#                filters:
+#                    - {name: geometry/scalewidth, params: [380]}
+

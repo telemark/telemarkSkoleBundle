@@ -1,0 +1,23 @@
+layouts:
+    School:
+        identifier: school
+        name: School zone 1 Zone, 1 Column
+        description: One zone in one column
+        thumbnail: /bundles/ezstudiodemo/images/layouts/1.png
+        template: tfktelemarkSkoleBundle:layouts:school.html.twig
+        zones:
+            first:
+                name: School zone
+
+blocks:
+    contentgrid:
+        views:
+            contentgrid:
+                template: tfktelemarkSkoleBundle:blocks:contentgrid.html.twig
+                name: Content grid
+    campaign:
+        views:
+            campaign:
+                template: tfktelemarkSkoleBundle:blocks:campaign.html.twig
+                name: Campaign
+

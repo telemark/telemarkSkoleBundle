@@ -1,0 +1,9 @@
+filter_sets:
+    article_grid_2:
+        quality: 85
+        filters:
+            centercrop: [570, 280]
+    article_grid_3:
+        quality: 85
+        filters:
+            centercrop: [400, 280]
