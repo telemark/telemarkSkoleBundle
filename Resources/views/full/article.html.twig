@@ -1,0 +1,53 @@
+{% extends noLayout ? viewbaseLayout : "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+
+{% block content %}
+    <div class="content">
+        <div class="constrained-content">
+            <main id="main" role="main" tabindex="-1" class="main">
+                <article class="main__center">
+                    <header class="article__header">
+                        <h1>{{ ez_render_field( content, 'title' ) }}</h1>
+                        <div class="sidenote">
+                            {% if not ez_is_field_empty( content, 'author' ) %}
+                                Av: {{ ez_render_field(
+                                content,
+                                'author',
+                                {
+                                    'template': 'eZStudioDemoBundle:fields:ezauthor_simple.html.twig'
+                                }
+                            ) }}
+                            {% endif %} / Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
+                        </div>
+                    </header>
+                    {{ ez_render_field( content, "image" , { 
+                        'parameters': {
+                            'alias': 'ingress_smal'
+                        } } ) 
+                    }}
+                    <div class="caption">
+                        {% if not ez_is_field_empty(content, 'caption') %}
+                            <div>
+                                {{ ez_render_field( content, 'caption') }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    {% if not ez_is_field_empty( content, 'intro' ) %}
+                        <div class="byline">
+                            {{ ez_render_field( content, 'intro' ) }}
+                        </div>
+                    {% endif %}
+
+                    {% if not ez_is_field_empty( content, 'body' ) %}
+                        {{ ez_render_field( content, 'body' ) }}
+                    {% endif %}
+                </article>
+                <aside class="main__right">
+                    {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", { 
+                        'locationId': location.id }
+                    )) }}
+                </aside>
+            </main>
+        </div>
+    </div>
+{% endblock %}

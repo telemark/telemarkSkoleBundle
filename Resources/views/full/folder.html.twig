@@ -1,0 +1,65 @@
+{% extends noLayout ? viewbaseLayout : "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+
+{% block content %}
+    <div class="content">
+        <div class="constrained-content">
+            <main id="main" role="main" tabindex="-1" class="main">
+                <article class="main__center">
+                    <header class="article__header">
+                        <h1>{{ ez_render_field( content, 'name' ) }}</h1>
+                        <div class="sidenote">
+                            Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
+                        </div>
+                    </header>
+                    {{ ez_render_field( content, 'image', {
+                        'parameters': {
+                            'alias': 'ingress_smal'
+                        }
+                    })}}
+
+                    {#
+                    {% if not ez_is_field_empty( content, 'image' ) %}
+                        {% set image_alias = ez_image_alias( content.getField('image') , content.versionInfo , 'ingress_smal') %}
+                        {% if image_alias is defined %}
+                            <img 
+                                property="image" 
+                                content="{{ asset( image_alias.uri ) }}" 
+                                src="{{ asset( image_alias.uri ) }}"
+                                {% if image_alias.width is defined %} width="{{ image_alias.width }}"{% endif %}
+                                {% if image_alias.height is defined %} height="{{ image_alias.height }}"{% endif %} 
+                                alt="{{ content.getField('image').value.alternativeText }}" 
+                            />
+                            {% if not ez_is_field_empty(content, 'caption') %}
+                                <div class="caption">
+                                    {% if not ez_is_field_empty(content, 'caption') %}
+                                        <div>
+                                            {{ ez_render_field( content, 'caption') }}
+                                        </div>
+                                    {% endif %}
+
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                    #}
+
+                    {% if not ez_is_field_empty( content, 'short_description' ) %}
+                        <div class="byline">
+                            {{ ez_render_field( content, 'short_description' ) }}
+                        </div>
+                    {% endif %}
+
+                    {% if not ez_is_field_empty( content, 'description' ) %}
+                        {{ ez_render_field( content, 'description' ) }}
+                    {% endif %}
+                </article>
+                <aside class="main__right">
+                    {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", { 
+                        'locationId': location.id }
+                    )) }}
+                </aside>
+            </main>
+        </div>
+    </div>
+
+{% endblock %}
