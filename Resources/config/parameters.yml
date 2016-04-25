@@ -1,0 +1,23 @@
+parameters:
+    
+    topmenu.tfk_school_group.identifiers:
+        - folder
+
+    topmenu.tfk_school_group.identifiers:
+        - folder
+
+    subitems.tfk_school_group.identifiers:
+        - article
+
+    sidebar.tfk_school_group.identifiers.right:
+        - infobox
+
+    subitems.tfk_school_group.newsfolder.columns: 3
+    subitems.tfk_school_group.newsfolder.rows: 5
+
+
+    head.school_demo.logo: 'vesttelemark_toplogo.png'
+    head.school_demo.title: 'Vest-telemark videregående skole'
+    head.school_demo.meta_author: 'Vest-telemark videregående skole'
+    head.school_demo.meta_description: 'Vest-telemark videregående skole er en fin skole'
+    head.school_demo.meta_keywords: 'telemark videregående skole'

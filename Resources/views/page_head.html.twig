@@ -1,0 +1,52 @@
+{#
+    Defining page title based on current content name, if available
+    See full/blog_post.html.twig for an example of customization
+#}
+{% set main_title = getConfigResolverParameter( 'title', 'head' ) %}
+{% set meta_author = getConfigResolverParameter( 'meta_author', 'head' ) %}
+{% set meta_description = getConfigResolverParameter( 'meta_description', 'head' ) %}
+{% set meta_keywords = getConfigResolverParameter( 'meta_keywords', 'head' ) %}
+{#
+    Need something to ensure that home get the title Hjem
+#}
+{% if content is defined and title is not defined %}
+    {% set title = ez_content_name( content ) ~ ' - ' ~ main_title %}
+{% endif %}
+
+{% if content.fields.author is defined %}
+    {% set author = ez_field_value(content,'author') %}
+{% else %}
+    {% set author = meta_author %}
+{% endif %}
+
+{% if content.fields.author is defined %}
+    {% set author = ez_field_value(content,'author') %}
+{% else %}
+    {% set author = meta_author %}
+{% endif %}
+
+{% if content.fields.author is defined %}
+    {% set author = ez_field_value(content,'author') %}
+{% else %}
+    {% set author = meta_author %}
+{% endif %}
+
+<title>{{ title|default( main_title ) }}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="author" content="{{ author }}"/>
+<meta name="copyright" content="{{ main_title }}"/>
+<meta name="description" content="{% if content.fields.meta_description is defined %}{{ ez_field_value(content,'meta_description') }}{% else %}{{ meta_description }}{% endif %}"/>
+<meta name="keywords" content="{% if content.fields.meta_keywords is defined %}{{ ez_field_value(content,'meta_keywords') }}{% else %}{{ meta_keywords }}{% endif %}"/>
+<meta name="MSSmartTagsPreventParsing" content="TRUE"/>
+<meta name="generator" content="eZ Platform"/>
+
+<link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ main_title }}"/>
+<link rel="Index" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
+<link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
+<link rel="Shortcut icon" href="{{ asset( "bundles/tfktelemark/images/icons/favicon.ico" ) }}" type="image/x-icon"/>
+<link rel="icon" type="image/x-icon" href="{{ asset( "bundles/tfktelemark/images/icons/favicon.ico" ) }}" />
+
+{# adding canonical url for all location not set as main #}
+{% if content is defined and content.contentInfo.mainLocationId != location.id %}
+    <link rel="canonical" href="{{ path( 'ez_urlalias', {'locationId': content.contentInfo.mainLocationId} ) }}" />
+{% endif %}
