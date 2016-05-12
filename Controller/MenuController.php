@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
-use tfk\telemarkBundle\Helper\SortLocationHelper;
+use tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper;
 
 class MenuController extends Controller
 {
@@ -60,7 +60,7 @@ class MenuController extends Controller
 
         $query->filter  = new Criterion\LogicalOr( $arrCriteria );
 
-        $sorting = new SortLocationHelper();
+        $sorting = new SortLocationClauseHelper();
         $sortingClause = $sorting->getSortClauseFromLocation( $rootLocation );
 
         $query->sortClauses = array($sortingClause);
@@ -100,7 +100,7 @@ class MenuController extends Controller
 
             $query->filter  = new Criterion\LogicalOr( $arrCriteria );
 
-            $sorting = new SortLocationHelper();
+            $sorting = new SortLocationClauseHelper();
             $sortingClause = $sorting->getSortClauseFromLocation( $rootLocation );
 
             $query->sortClauses = array($sortingClause);
