@@ -3,7 +3,7 @@
     width: 50%;
 }
 
-.content-list-float2:nth-child(2n+1) div {
+.content-list-float2layouts div {
     padding-right: 5px;
 }
 
