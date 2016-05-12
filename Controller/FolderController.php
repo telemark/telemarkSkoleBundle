@@ -21,11 +21,25 @@ class FolderController extends Controller
 {
     public function folderViewEnhancedAction( $locationId, $viewType, $layout = false, array $params = array() )
     {
+        $configResolver = $this->getConfigResolver();
+        $locationService = $this->getRepository()->getLocationService();
+
+        $identifiers = array('article');
+        $limit = 10;
+        $offset = 0;
+
+        $location = $locationService->loadLocation( $locationId );
+        $result = $this->get( 'vp_utility.location_helper' )->getLocationItems( $location, $identifiers, true, $limit, $offset );
+
+        $params += array( 
+            'subitems'  => $result['items'],
+            'totalCount' => $result['totalCount']
+        );
+
         $response = $this->get( 'ez_content' )->viewLocation( $locationId, $viewType, $layout, $params );
         $response->headers->set( 'X-Location-Id',  $locationId );
         $response->setSharedMaxAge( 15 );
 
-        echo '<!--'.time().'-->';
         return $response;
     }
 
@@ -35,9 +49,6 @@ class FolderController extends Controller
         
         $configResolver = $this->getConfigResolver();
         $locationService = $this->getRepository()->getLocationService();
-
-
-        echo '<!--'.time().'-->';
 
         // load subitems with pagination
 
@@ -53,6 +64,16 @@ class FolderController extends Controller
 
         $location = $locationService->loadLocation( $locationId );
         $result = $this->get( 'vp_utility.location_helper' )->getLocationItems( $location, $identifiers, true, $limit, $offset );
+/*
+        echo '<pre>';
+        var_dump($result);
+        echo '</pre>';
+*/
+
+
+        // get keywords
+        // most used or related???
+        // get archives overview
 
         $params += array( 
             'items'  => $result['items'],
@@ -65,6 +86,7 @@ class FolderController extends Controller
 
         return $response;
     }
+
 
 }
 
