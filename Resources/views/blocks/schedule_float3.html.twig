@@ -1,0 +1,24 @@
+{% spaceless %}
+    <div class="schedule-layout schedule-layout--hero">
+        <div class="schedule-layout--hero__slot schedule-layout__slot" data-studio-slot>
+            {% if items[0] is defined %}
+                {{ render(controller('ez_content:viewLocation', {
+                    'locationId': items[0],
+                    'viewType': 'cover'
+                })) }}
+            {% endif %}
+            {% if items[1] is defined %}
+                {{ render(controller('ez_content:viewLocation', {
+                    'locationId': items[0],
+                    'viewType': 'cover'
+                })) }}
+            {% endif %}
+            {% if items[3] is defined %}
+                {{ render(controller('ez_content:viewLocation', {
+                    'locationId': items[0],
+                    'viewType': 'cover'
+                })) }}
+            {% endif %}
+        </div>
+    </div>
+{% endspaceless %}
