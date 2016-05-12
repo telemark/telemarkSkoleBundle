@@ -5,7 +5,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="{{ siteLang }}"><!--<![endif]-->
 <head>
     {# TODO: this probably won't be needed anymore as we will relay on the HTTP cache #}
-    {% include 'tfktelemarkBundle::page_head_displaystyles.html.twig' %}
+    {% include 'tfktelemarkSkoleBundle::page_head_displaystyles.html.twig' %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     {% block page_head %}
@@ -69,7 +69,6 @@
 {% block footerScript %}
     {% include 'tfktelemarkSkoleBundle::page_footer_script.html.twig' %}
 {% endblock %}
-
 <!-- Footer script area: END -->
 </body>
 </html>

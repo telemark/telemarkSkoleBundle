@@ -1,12 +1,16 @@
 {# Override this template and place javascript based statistics here (like Google Analytics) #}
 
 {#% javascripts filter='yui_js' output='js/*' #}
+{#
+    '@tfktelemarkSkoleBundle/Resources/public/js/tabs.js'
+
+#}
 {% javascripts 
-    '@tfktelemarkBundle/Resources/public/js/vendor/jquery-1.10.2.min.js'
-    '@tfktelemarkBundle/Resources/public/js/main.js'
-    '@tfktelemarkBundle/Resources/public/js/slider.js'
-    '@tfktelemarkBundle/Resources/public/js/tabs.js'
-    '@tfktelemarkBundle/Resources/public/js/popup.js'
+    '@tfktelemarkSkoleBundle/Resources/public/js/vendor/jquery-1.10.2.min.js'
+    '@tfktelemarkSkoleBundle/Resources/public/js/main.js'
+    '@tfktelemarkSkoleBundle/Resources/public/js/slider.js'
+    '@tfktelemarkSkoleBundle/Resources/public/js/tabs.js'
+    '@tfktelemarkSkoleBundle/Resources/public/js/popup.js'
 %}
     <script type="text/javascript" src="{{ asset_url }}" async="async" defer="defer"></script>
 {% endjavascripts %}
