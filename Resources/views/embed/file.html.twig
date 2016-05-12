@@ -1,0 +1,34 @@
+{% set field = content.getField('file') %}
+{% set languageCode = field.languageCode %}
+{% set mimeType = field.value.mimeType %}
+{% set fileName = field.value.fileName %}
+{% set fileNameArray = field.value.fileName|split('.') %}
+{% set fileType = fileNameArray|last|lower %}
+{% set fileSize = field.value.fileSize %}
+{% set url = '/content/download/' ~ content.contentInfo.id ~ '/file/' ~ content.getField('file').value.fileName|url_encode %}
+{#% set url = '/content/download/' ~ content.contentInfo.id ~ '/' ~ content.getField('file').id ~ '/version/' ~ content.contentInfo.currentVersionNo ~ '/' ~ content.getField('file').value.fileName|url_encode %#}
+
+<div class="content-view-embed">
+    <a href="{{url}}">
+        <div class="class-file class-file-{{ fileType }}">
+            <div class="">
+                {{ content.versionInfo.contentInfo.name }}<span> ({{ fileType|upper }} | 
+                    {% if fileSize > 1000000 %}
+                        {% set fileSizeCalculated = fileSize/1000000 %}
+                        {{ fileSizeCalculated|number_format(2, ',', '.') }} MB
+                    {% elseif fileSize > 1000 %}
+                        {% set fileSizeCalculated = fileSize/1000 %}
+                        {{ fileSizeCalculated|number_format(1, ',', '.') }} KB
+                    {% endif %}
+                )
+                </span>
+            </div>
+        </div>
+    </a>
+</div>
+{#
+<div class="content-view-embed">
+    <a href="{{ path( "ez_urlalias", {"locationId": content.contentInfo.mainLocationId } ) }}">{{ ez_content_name(content) }}</a>
+    {{ dump(objectParameters) }}
+</div>
+#}
