@@ -1,23 +1,30 @@
 .content-list-float2 {
-  float: left;
-  width: 50%; }
+    float: left;
+    width: 50%;
+}
 
 .content-list-float2layouts div {
-  padding-right: 5px; }
+    padding-right: 5px;
+}
 
 .content-list-float2:nth-child(2n+2) div {
-  padding-left: 5px; }
+    padding-left: 5px;
+}
 
 .content-list-float3 {
-  float: left;
-  width: 33.33%; }
+    float: left;
+    width: 33.33%;
+}
 
 .content-list-float3:nth-child(3n+1) div {
-  padding-right: 5px; }
+    padding-right: 5px;
+}
 
 .content-list-float3:nth-child(3n+2) div {
-  padding-left: 5px;
-  padding-right: 5px; }
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
 .content-list-float3:nth-child(3n+3) div {
-  padding-left: 5px; }
+    padding-left: 5px;
+}

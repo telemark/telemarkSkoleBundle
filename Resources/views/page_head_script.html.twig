@@ -1,3 +1,6 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
 {# Override this template and place javascript based statistics here (like Google Analytics) #}
     <script>
       // Picture element HTML5 shiv
@@ -5,14 +8,12 @@
     </script>
 {#% javascripts  filter='yui_js' output='js/*' #}
 {% javascripts
-
+    '@tfktelemarkSkoleBundle/Resources/public/js/vendor/jquery-1.10.2.min.js'
     '@tfktelemarkSkoleBundle/Resources/public/js/picturefill.js'
     '@tfktelemarkSkoleBundle/Resources/public/js/vendor/modernizr-custom-0.4.1.js'
-
-
 %}
 {#
 
 #}
-    <script type="text/javascript" src="{{ asset_url }}" async="async" defer="defer"></script>
+    <script type="text/javascript" src="{{ asset_url }}" defer="defer"></script>
 {% endjavascripts %}
