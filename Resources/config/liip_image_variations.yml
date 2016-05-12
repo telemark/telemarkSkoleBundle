@@ -1,4 +1,8 @@
 filter_sets:
+    article_full:
+        quality: 85
+        filters:
+            centercrop: [846, 380]
     article_grid_2:
         quality: 85
         filters:
@@ -7,3 +11,7 @@ filter_sets:
         quality: 85
         filters:
             centercrop: [400, 280]
+    campaign_1:
+        quality: 85
+        filters:
+            centercrop: [846, 378]

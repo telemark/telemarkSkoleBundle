@@ -9,16 +9,12 @@ system:
                     template: tfktelemarkSkoleBundle:full:landing_page.html.twig
                     match:
                         Identifier\ContentType: [landing_page]
-                frontpage:
-                    template: tfktelemarkSkoleBundle:full:frontpage.html.twig
-                    match:
-                        Identifier\ContentType: [frontpage]
                 news_folder:
                     controller: "tfktelemarkSkoleBundle:Folder:newsfolderViewEnhanced"
                     template: "tfktelemarkSkoleBundle:full:news_folder.html.twig"
                     match:
                         Identifier\ContentType: [folder]
-                        Id\Location: 104 
+                        Id\Location: 63 
                 folder:
                     controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
                     template: "tfktelemarkSkoleBundle:full:folder.html.twig"
@@ -38,15 +34,58 @@ system:
                     template: tfktelemarkSkoleBundle:line:infobox.html.twig
                     match:
                         Identifier\ContentType: [infobox]
-        block_view:
-            ContentGrid:
-                template: tfktelemarkSkoleBundle:block:contentgrid.html.twig
-                match:
-                    Type: ContentGrid
-            Campaign:
-                template: tfktelemarkSkoleBundle:block:campaign:html.twig
-                match:
-                    Type: Campaign
+
+                shortcut:
+                    template: tfktelemarkSkoleBundle:line:shortcut.html.twig
+                    match:
+                        Identifier\ContentType: [shortcut]
+            embed:
+                image:
+                    template: tfktelemarkSkoleBundle:embed:image.html.twig
+                    match:
+                        Identifier\ContentType: [image]
+
+                file:
+                    template: tfktelemarkSkoleBundle:embed:file.html.twig
+                    match:
+                        Identifier\ContentType: [file]
+
+#        block_view:
+#            ContentBox:
+#                template: tfktelemarkSkoleBundle:block:contentbox.html.twig
+#                match:
+#                    Type: ContentBox
+#            ContentGrid:
+#                template: tfktelemarkSkoleBundle:block:contentgrid.html.twig
+#                match:
+#                    Type: ContentGrid
+#            Campaign:
+#                template: tfktelemarkSkoleBundle:block:campaign:html.twig
+#                match:
+#                    Type: Campaign
+        
+
+
+        location_view:
+            float3:
+                article:
+                    template: "tfktelemarkSkoleBundle:float3:article.html.twig"
+                    match:
+                        Identifier\ContentType: [article]
+            block_box:
+                article:
+                    template: tfktelemarkSkoleBundle:block_box:article.html.twig
+                    match:
+                        Identifier\ContentType: [article]
+                folder:
+                    template: tfktelemarkSkoleBundle:block_box:folder.html.twig
+                    match:
+                        Identifier\ContentType: [folder]
+                shortcut:
+                    template: tfktelemarkSkoleBundle:block_box:shortcut.html.twig
+                    match:
+                        Identifier\ContentType: [shortcut]
+
 #            aside:
 #                folder:
 #                    template: "tfktelemarkSkoleBundle:aside:folder.html.twig"

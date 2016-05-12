@@ -9,6 +9,8 @@ parameters:
     subitems.tfk_school_group.identifiers:
         - article
 
+    subitems.tfk_school_group.limit: 10
+
     sidebar.tfk_school_group.identifiers.right:
         - infobox
 
