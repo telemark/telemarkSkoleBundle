@@ -1,0 +1,21 @@
+<div class="row block-contentlist">
+    <div class="grid grid--12">
+            {% for locationId in contentArray %}
+                {{ render(controller('ez_content:viewLocation', {
+                    'locationId': locationId,
+                    'viewType': 'block_box'
+                })) }}
+            {% endfor %}
+            <div class="item item--vertical grid__item--4-12">
+                {% if listArray is defined %}
+                    <ul>
+                        {% for content in listArray %}
+                            <li>
+                                {{ ez_render_field( content, 'url') }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+    </div>
+</div>

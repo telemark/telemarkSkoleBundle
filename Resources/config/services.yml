@@ -35,12 +35,34 @@ services:
     #    arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
     
 
+    ezpublish.landing_page.block.contentbox:
+        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBoxBlock
+        arguments:
+            - '@ezpublish.api.service.location'
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.search'
+            - '@ezpublish.config.resolver'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: contentbox }
+
+    ezpublish.landing_page.block.contentbox3x1:
+        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBox3x1Block
+        arguments:
+            - '@ezpublish.api.service.location'
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.search'
+            - '@ezpublish.config.resolver'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: contentbox3x1 }
+
+
     ezpublish.landing_page.block.contentgrid:
         class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentGridBlock
         arguments:
             - '@ezpublish.api.service.location'
             - '@ezpublish.api.service.content'
             - '@ezpublish.api.service.search'
+            - '@ezpublish.config.resolver'
         tags:
             - { name: landing_page_field_type.block_type, alias: contentgrid }
 
@@ -50,6 +72,7 @@ services:
             - '@ezpublish.api.service.location'
             - '@ezpublish.api.service.content'
             - '@ezpublish.api.service.search'
+            - '@ezpublish.config.resolver'
         tags:
             - { name: landing_page_field_type.block_type, alias: campaign }
 

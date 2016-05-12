@@ -10,6 +10,7 @@ use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use eZ\Publish\API\Repository\LocationService;
 use eZ\Publish\API\Repository\ContentService;
 use eZ\Publish\API\Repository\SearchService;
+use eZ\Publish\Core\MVC\ConfigResolverInterface;
 use EzSystems\LandingPageFieldTypeBundle\Exception\InvalidBlockAttributeException;
 use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Definition\BlockDefinition;
 use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Definition\BlockAttributeDefinition;
@@ -53,16 +54,21 @@ class ContentGridBlock extends AbstractBlockType implements BlockType
     /** @var SearchService */
     private $searchService;
 
+    /** @var ConfigResolverInterface */
+    private $configResolver;
+
     /**
-     * @param LocationService $locationService
-     * @param ContentService  $contentService
-     * @param SearchService   $searchService
+     * @param LocationService           $locationService
+     * @param ContentService            $contentService
+     * @param SearchService             $searchService
+     * @param ConfigResolverInterface   $configResolver
      */
-    public function __construct(LocationService $locationService, ContentService $contentService, SearchService $searchService)
+    public function __construct(LocationService $locationService, ContentService $contentService, SearchService $searchService, ConfigResolverInterface $configResolver)
     {
         $this->locationService = $locationService;
-        $this->contentService = $contentService;
-        $this->searchService = $searchService;
+        $this->contentService  = $contentService;
+        $this->searchService   = $searchService;
+        $this->configResolver  = $configResolver;
     }
 
     /**
@@ -70,6 +76,8 @@ class ContentGridBlock extends AbstractBlockType implements BlockType
      */
     public function getTemplateParameters(BlockValue $blockValue)
     {
+        $languages = array( 'languages' => $this->configResolver->getParameter( 'languages' ) );
+
         $attributes = $blockValue->getAttributes();
         $contentInfo = $this->contentService->loadContentInfo($attributes['contentId']);
 
@@ -86,10 +94,10 @@ class ContentGridBlock extends AbstractBlockType implements BlockType
             $query->limit = (int) $attributes['limit'];
         }
 
-        $searchHits = $this->searchService->findContent($query)->searchHits;
+        $result = $this->searchService->findContent($query, $languages);
 
-        $contentArray = [];
-        foreach ($searchHits as $key => $searchHit) {
+        $contentArray = array();
+        foreach ($result->searchHits as $key => $searchHit) {
             $content = $searchHit->valueObject;
             $locationId = $this->contentService->loadContentInfo($content->id)->mainLocationId;
             $location = $this->locationService->loadLocation($locationId);

@@ -11,6 +11,7 @@ use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use eZ\Publish\API\Repository\LocationService;
 use eZ\Publish\API\Repository\ContentService;
 use eZ\Publish\API\Repository\SearchService;
+use eZ\Publish\Core\MVC\ConfigResolverInterface;
 use EzSystems\LandingPageFieldTypeBundle\Exception\InvalidBlockAttributeException;
 use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Definition\BlockDefinition;
 use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Definition\BlockAttributeDefinition;
@@ -56,16 +57,21 @@ class CampaignBlock extends AbstractBlockType implements BlockType
     /** @var SearchService */
     private $searchService;
 
+    /** @var ConfigResolverInterface */
+    private $configResolver;
+
     /**
-     * @param LocationService $locationService
-     * @param ContentService  $contentService
-     * @param SearchService   $searchService
+     * @param LocationService           $locationService
+     * @param ContentService            $contentService
+     * @param SearchService             $searchService
+     * @param ConfigResolverInterface   $configResolver
      */
-    public function __construct(LocationService $locationService, ContentService $contentService, SearchService $searchService)
+    public function __construct(LocationService $locationService, ContentService $contentService, SearchService $searchService, ConfigResolverInterface $configResolver)
     {
         $this->locationService = $locationService;
-        $this->contentService = $contentService;
-        $this->searchService = $searchService;
+        $this->contentService  = $contentService;
+        $this->searchService   = $searchService;
+        $this->configResolver  = $configResolver;
     }
 
     /**
@@ -73,16 +79,18 @@ class CampaignBlock extends AbstractBlockType implements BlockType
      */
     public function getTemplateParameters(BlockValue $blockValue)
     {
+        $languages = array( 'languages' => $this->configResolver->getParameter( 'languages' ) );
+
         $attributes = $blockValue->getAttributes();
         $contentInfo = $this->contentService->loadContentInfo($attributes['contentId']);
         $location = $this->locationService->loadLocation( $contentInfo->mainLocationId );
         $identifiers = array('slide');
 
-        $query = new LocationQuery();
         //$query = new Query();
+        $query = new LocationQuery();
         $query->query = new Criterion\LogicalAnd(
             [
-                new Criterion\ParentLocationId($contentInfo->mainLocationId),
+                new Criterion\ParentLocationId( $contentInfo->mainLocationId ),
                 new Criterion\ContentTypeIdentifier( $identifiers ),
                 new Criterion\Visibility(Criterion\Visibility::VISIBLE),
             ]
@@ -93,22 +101,19 @@ class CampaignBlock extends AbstractBlockType implements BlockType
         //$sortingClause = $sorting->getSortClauseFromLocation( $location );
         //$query->sortClauses = array($sortingClause);
         
-        $result = $this->searchService->findLocations( $query );
-        //$result = $this->searchService->findContent( $query );
+        $result = $this->searchService->findContent( $query, $languages );
         $searchHits = $result->searchHits;
-        //echo '<pre>';
-        //var_dump($searchHits[0]);
-        //echo '<pre>';
 
         $contentArray = array();
         foreach ($searchHits as $searchHit)
         {
-            //$content = $searchHit->valueObject;
-            $content = $this->contentService->loadContent( $searchHit->valueObject->contentInfo->id );
+            $content = $searchHit->valueObject;
+            //$content = $this->contentService->loadContent( $searchHit->valueObject->contentInfo->id );
             $location = $this->locationService->loadLocation( $searchHit->valueObject->id );
             $targetField = $content->getField( 'internal_resource' );
+            $titleField = $content->getField( 'title' );
 
-            if ( $targetField->value->destinationContentId )
+            if ( $targetField->value->destinationContentId > 0 )
             {
                 $targetContentId = $targetField->value->destinationContentId;
                 $targetContent = $this->contentService->loadContent($targetContentId);

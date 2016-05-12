@@ -1,15 +1,31 @@
 layouts:
-    School:
+    school:
         identifier: school
-        name: School zone 1 Zone, 1 Column
-        description: One zone in one column
+        name: School zone 3 Zone, 1 Column
+        description: Three zone in one column
         thumbnail: /bundles/ezstudiodemo/images/layouts/1.png
         template: tfktelemarkSkoleBundle:layouts:school.html.twig
         zones:
             first:
-                name: School zone
+                name: School zone 1
+            second:
+                name: School zone 2 
+            third:
+                name: School zone 3
 
 blocks:
+    contentbox:
+        views:
+            contentbox:
+                template: tfktelemarkSkoleBundle:blocks:contentbox.html.twig
+                name: Content box
+
+    contentbox3x1:
+        views:
+            contentbox3x1:
+                template: tfktelemarkSkoleBundle:blocks:contentbox3x1.html.twig
+                name: Content box 3x1
+
     contentgrid:
         views:
             contentgrid:
@@ -20,4 +36,10 @@ blocks:
             campaign:
                 template: tfktelemarkSkoleBundle:blocks:campaign.html.twig
                 name: Campaign
+
+    schedule:
+        views:
+            schedule_float3:
+                template: tfktelemarkSkoleBundle:blocks:schedule_float3.html.twig
+                name: Schedule float 3
 

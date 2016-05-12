@@ -1,12 +1,12 @@
 <div class="row block-contentlist">
-    {% if name is defined %}
+    {% if name is defined  %}
         <h3>{{ name }}</h3>
     {% endif %}
     {% if contentArray|length > 0 %}
         {% if viewType == 'float2' %}
-            <div class="content-grid block-contentlist-items clearfix">
+            <div class="grid grid--12">
                 {% for content in contentArray %}
-                    <div class="block-contentlist-child content-list-float2">
+                    <div class="item item--vertical grid__item--6-12">
                         <div>
                             {% if not ez_is_field_empty( content.content, 'image' )%}
                                 {{ ez_render_field(
@@ -18,7 +18,7 @@
                                     }
                                 ) }}
                             {% endif %}
-                            <h4><a href="{{ path(content.location) }}">{{ ez_content_name(content.content) }}</a></h4>
+                            <h4><a href="{{ path(content.location) }}">{{ ez_render_field( content.content, 'title') }}</a></h4>
                             {#
                                 {% if not ez_is_field_empty( content.content, ('intro') %}
                                     <div>{{ ez_render_field(content.content, 'intro') }}</div>
@@ -31,9 +31,9 @@
         {% endif %}
 
         {% if viewType == 'float3' %}
-            <div class="block-contentlist-items clearfix">
+            <div class="grid grid--12">
                 {% for content in contentArray %}
-                    <div class="block-contentlist-child content-list-float3">
+                    <div class="item item--vertical grid__item--4-12">
                         <div>
                             {{ ez_render_field(
                                 content.content, 'image', {
@@ -43,7 +43,7 @@
                                     }
                                 }
                             ) }}
-                            <h4><a href="{{ path(content.location) }}">{{ ez_content_name(content.content) }}</a></h4>
+                            <h4><a href="{{ path(content.location) }}">{{ ez_render_field( content.content, 'title') }}</a></h4>
                             {#
                                 {% if not ez_is_field_empty( content.content, ('intro') %}
                                     <div>{{ ez_render_field(content.content, 'intro') }}</div>

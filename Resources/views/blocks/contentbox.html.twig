@@ -1,0 +1,10 @@
+<div class="grid grid--12">
+
+    {% for locationId in contentArray %}
+        {{ render(controller('ez_content:viewLocation', {
+            'locationId': locationId,
+            'viewType': 'block_box'
+        })) }}
+    {% endfor %}
+
+</div>
