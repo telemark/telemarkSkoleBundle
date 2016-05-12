@@ -1,8 +1,31 @@
 {% extends noLayout ? viewbaseLayout : "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
 
 {% block content %}
-    <div class="constrained-content">
-        <div class="content grid">
+        <div class="constrained-content">
+            <main id="main" role="main" tabindex="-1" class="main">
+                <article class="main__center-left">
+                    <header class="article__header">
+                        <h1>{{ ez_render_field( content, 'title' ) }}</h1>
+                    </header>
+                    <div class="content grid">
+                    {% for item in items %}
+                        {{ render(controller('ez_content:viewLocation', {
+                                'locationId': item.id,
+                                'viewType': 'line',
+                                'columns': columns
+                            }))
+                        }}
+                    {% endfor %}
+                    </div>
+                </article>
+                <aside class="main__right">
+                    {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", { 
+                        'locationId': location.id }
+                    )) }}
+                </aside>
+            </main>
+
+            {#        <div class="content grid">
             {% for item in items %}
                 {{ render(controller('ez_content:viewLocation', {
                         'locationId': item.id,
@@ -12,7 +35,7 @@
                 }}
             {% endfor %}
 
-            {#
+
             <main id="main" role="main" tabindex="-1" class="main">
                 <article class="main__center">
                     <header class="article__header">
@@ -25,8 +48,9 @@
                     )) }}
                 </aside>
             </main>
+        </div>
             #}
 
+
         </div>
-    </div>
 {% endblock %}

@@ -4,10 +4,11 @@
     <div class="content">
         <div class="constrained-content">
             <main id="main" role="main" tabindex="-1" class="main">
-                <article class="main__center">
+                <article class="main__center-left">
                     <header class="article__header">
                         <h1>{{ ez_render_field( content, 'title' ) }}</h1>
                         <div class="sidenote">
+                            {#
                             {% if not ez_is_field_empty( content, 'author' ) %}
                                 Av: {{ ez_render_field(
                                 content,
@@ -16,18 +17,26 @@
                                     'template': 'eZStudioDemoBundle:fields:ezauthor_simple.html.twig'
                                 }
                             ) }}
-                            {% endif %} / Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
+                            {% endif %} / 
+                            #}
+                            Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
                         </div>
                     </header>
+
                     {{ ez_render_field( content, "image" , { 
                         'parameters': {
-                            'alias': 'ingress_smal'
+                            'alias': 'article_full'
                         } } ) 
                     }}
                     <div class="caption">
                         {% if not ez_is_field_empty(content, 'caption') %}
                             <div>
                                 {{ ez_render_field( content, 'caption') }}
+                            </div>
+                        {% endif %}
+                        {% if not ez_is_field_empty(content, 'copyright') %}
+                            <div>
+                                Copyright: {{ ez_render_field( content, 'copyright') }}
                             </div>
                         {% endif %}
                     </div>
@@ -37,7 +46,7 @@
                             {{ ez_render_field( content, 'intro' ) }}
                         </div>
                     {% endif %}
-
+                    
                     {% if not ez_is_field_empty( content, 'body' ) %}
                         {{ ez_render_field( content, 'body' ) }}
                     {% endif %}
