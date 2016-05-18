@@ -1,3 +1,5 @@
-<div class="item item--vertical grid__item--4-12">
-    <h2><a href="{{ path(location) }}">{{ ez_render_field( content, 'title') }}</a></h2>
-</div>
+<a class="folder item--4-12" href="{{ path(location) }}">
+    <div>
+        <h2>{{ ez_render_field( content, 'title') }}</h2>
+    </div>
+</a>

@@ -1,0 +1,309 @@
+// Fikser slider z-index:
+.slider__active-slide {
+  z-index: 100;
+}
+.slider__slide {
+  /* z-index: -999; */
+  position: relative;
+}
+.slider-wrapper--fullwidth {
+  overflow: hidden;
+}
+
+
+
+
+
+.slider__slides,.slider__control-nav,.slider__direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slider-wrapper {
+    padding-bottom: .5em;
+}
+
+.slider-wrapper--inline {
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+@media (min-width: 64em) {
+    .slider-wrapper--inline {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.slider-wrapper--fullwidth {
+}
+
+@media (min-width: 64em) {
+    .slider-wrapper--fullwidth {
+        padding-top: 2.5em;
+    }
+}
+
+.slider {
+    position: relative;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+@media (min-width: 64em) {
+    .slider {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.slider .top-image {
+    margin-right: 0;
+    margin-left: 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.slider--inline {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.slider__viewport {
+    max-height: 2000px;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.slider__slide {
+    display: none;
+    -webkit-backface-visibility: hidden;
+    *zoom: 1;
+}
+
+.slider__slide a {
+    position: relative;
+    display: block;
+}
+
+.slider__slide img {
+    display: block;
+    width: 100%;
+}
+
+* html .slider__slide {
+    height: 1%;
+}
+
+.no-js .slider__slide:first-child {
+    display: block;
+}
+
+@media (min-width: 64em) {
+    .slider--fullwidth .slider__slide .top-image {
+        display: block;
+        margin-left: -14px;
+        width: 100%;
+    }
+}
+
+.slider--fullwidth .slider__slide,.slider--fullwidth .slider__slide .top-image__text-wrapper {
+    background-color: #007c97;
+    color: #fff;
+}
+
+@media (min-width: 64em) {
+    .slider--fullwidth .slider__slide .top-image__text-wrapper {
+        float: right;
+        margin-right: 1.38889%;
+        width: 30.55556%;
+    }
+}
+
+@media (min-width: 64em) {
+    .slider--fullwidth .slider__slide .top-image__text {
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 64em) {
+    .slider--fullwidth .slider__slide img {
+        float: left;
+        margin-left: 1.38889%;
+        padding-right: .69444%;
+        width: 63.88889%;
+        background-color: #ededed;
+    }
+}
+
+@media (min-width: 64em) {
+    .slider--inline .slider__slide .top-image__text-wrapper {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.slider__control-nav {
+    margin-right: 5em;
+    margin-left: 5em;
+    text-align: center;
+    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    margin-top: .5em;
+}
+
+.slider__control-nav li {
+    display: inline-block;
+}
+
+.slider__control-nav li a {
+    display: block;
+    margin: 0 5px;
+    width: .5em;
+    height: .5em;
+    background-color: #b8d2da;
+    cursor: pointer;
+    text-indent: -999em;
+    overflow: hidden;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+}
+
+@media (min-width: 64em) {
+    .slider__control-nav li a {
+        background-color: #717171;
+    }
+}
+
+.slider--inline .slider__control-nav li a {
+    background-color: #717171;
+}
+
+.slider__control-nav li .slider__active {
+    text-decoration: none;
+}
+
+.slider__control-nav li .slider__active,.slider__control-nav li .slider__active:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media (min-width: 64em) {
+    .slider__control-nav li .slider__active,.slider__control-nav li .slider__active:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+.slider--inline .slider__control-nav li .slider__active,.slider--inline .slider__control-nav li .slider__active:hover {
+    background: #000;
+    color: #fff;
+}
+
+.slider__direction-nav {
+    margin: 0;
+    text-align: right;
+    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+}
+
+@media (min-width: 64em) {
+    .slider__direction-nav {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.slider__direction-nav li {
+    text-align: left;
+    display: inline-block;
+}
+
+.slider__nav-prev,.slider__nav-next {
+    position: absolute;
+    bottom: -13px;
+    width: 50px;
+    height: 50px;
+}
+
+@media (min-width: 64em) {
+    .slider--fullwidth .slider__nav-prev,.slider--fullwidth .slider__nav-next {
+        top: 50%;
+        bottom: auto;
+        margin-top: -37px;
+    }
+}
+
+.slider__nav-prev {
+    left: 0;
+}
+
+.slider--fullwidth .slider__nav-prev {
+    left: 10px;
+}
+
+@media (min-width: 64em) {
+    .slider--fullwidth .slider__nav-prev {
+        left: 10px;
+    }
+}
+
+@media (min-width: 75em) {
+    .slider--fullwidth .slider__nav-prev {
+        left: 10px;
+    }
+}
+
+.slider__nav-next {
+    right: 0;
+}
+
+.slider--fullwidth .slider__nav-next {
+    right: 10px;
+}
+
+@media (min-width: 64em) {
+    .slider--fullwidth .slider__nav-next {
+        right: 10px;
+    }
+}
+
+@media (min-width: 75em) {
+    .slider--fullwidth .slider__nav-next {
+        right: 10px;
+    }
+}
+
+.slider__prev,.slider__next {
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    background-position: 50%;
+    text-indent: -999em;
+    -moz-transition: box-shadow .3s;
+    -o-transition: box-shadow .3s;
+    -webkit-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.4);
+    box-shadow: 0 0 1px rgba(0,0,0,0.4);
+}
+
+.slider__prev:hover,.slider__prev:focus,.slider__next:hover,.slider__next:focus {
+    -moz-box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+
+@media screen and (max-width: 63.95em) {
+    .top-image__text-wrapper {
+        padding: .5em 1em;
+    }
+}
