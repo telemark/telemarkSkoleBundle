@@ -97,7 +97,13 @@ class LocationHelper
         }
 
         if ( count( $items ) )
-            return array( 'success' => true, 'items' => $items, 'totalCount' => $result->totalCount );
+            return array( 
+                'success' => true, 
+                'items' => $items, 
+                'totalCount' => $result->totalCount,
+                'limit' => $limit,
+                'offset' => $offset
+            );
         else
             return array( 'success' => true, 'items' => array(), 'totalCount' => 0 );
 

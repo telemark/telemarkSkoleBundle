@@ -1,0 +1,22 @@
+{# pagination #}
+{% if location is defined and paginationBaseUri is not defined %}
+    {% set paginationBaseUri = path(location) ~ '?' %}
+{% else %}
+    {% set paginationBaseUri = paginationBaseUri ~ '&' %}
+{% endif %}
+{% if maxPage > 1 and paginationBaseUri is defined %}
+
+    <div class="pagination">
+        {% if prevPage != false %}
+            <div class="pagination-left">
+                <a href="{{ paginationBaseUri }}page={{ prevPage }}">Forrige</a>
+            </div>
+        {% endif %}
+        Side {{ page }} av {{ maxPage }}
+        {% if nextPage != false %}
+            <div class="pagination-right">
+                <a href="{{ paginationBaseUri }}page={{ nextPage }}">Neste</a>
+            </div>
+        {% endif %}
+    </div>
+{% endif %}
