@@ -35,10 +35,10 @@ system:
                     match:
                         Identifier\ContentType: [infobox]
 
-                shortcut:
-                    template: tfktelemarkSkoleBundle:line:shortcut.html.twig
+                link:
+                    template: tfktelemarkSkoleBundle:line:link.html.twig
                     match:
-                        Identifier\ContentType: [shortcut]
+                        Identifier\ContentType: [link]
             embed:
                 image:
                     template: tfktelemarkSkoleBundle:embed:image.html.twig
@@ -49,6 +49,28 @@ system:
                     template: tfktelemarkSkoleBundle:embed:file.html.twig
                     match:
                         Identifier\ContentType: [file]
+            menu_line:
+                link:
+                    template: tfktelemarkSkoleBundle:menu_line:link.html.twig
+                    match:
+                        Identifier\ContentType: [link]
+            
+            shortcut_line:
+                link:
+                    template: tfktelemarkSkoleBundle:shortcut_line:link.html.twig
+                    match:
+                        Identifier\ContentType: [link]
+
+            search_line:
+                folder:
+                    template: "tfktelemarkSkoleBundle:search_line:folder.html.twig"
+                    match:
+                        Identifier\ContentType: [folder]
+                article:
+                    template: tfktelemarkSkoleBundle:search_line:article.html.twig
+                    match:
+                        Identifier\ContentType: [article]
+
 
 #        block_view:
 #            ContentBox:
@@ -81,10 +103,10 @@ system:
                     template: tfktelemarkSkoleBundle:block_box:folder.html.twig
                     match:
                         Identifier\ContentType: [folder]
-                shortcut:
-                    template: tfktelemarkSkoleBundle:block_box:shortcut.html.twig
+                link:
+                    template: tfktelemarkSkoleBundle:block_box:link.html.twig
                     match:
-                        Identifier\ContentType: [shortcut]
+                        Identifier\ContentType: [link]
 
 #            aside:
 #                folder:

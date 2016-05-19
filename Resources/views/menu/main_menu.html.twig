@@ -13,9 +13,18 @@
                         </div>
                        <ul class="menu__submenu menu__level">
                             {% for subItem in item.subLevelItems %}
-                                <li class="menu__submenu-item">
-                                    <a href="{{ path(subItem) }}" class="menu__item-link">{{subItem.contentInfo.name}}</a>
-                                </li>
+                                {% if contentTypesIdentifiers[subItem.contentInfo.contentTypeId] == 'link'  %}
+                                    <li class="menu__submenu-item">
+                                        {{ render(controller('ez_content:viewLocation', {
+                                            'locationId': subItem.id,
+                                            'viewType': 'menu_line'
+                                        })) }}
+                                    </li>
+                                {% else %}
+                                    <li class="menu__submenu-item">
+                                        <a href="{{ path(subItem) }}" class="menu__item-link">{{subItem.contentInfo.name}}</a>
+                                    </li>
+                                {% endif %}
                             {% endfor %}
                         </ul>
                     </li>

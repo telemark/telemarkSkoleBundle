@@ -25,6 +25,7 @@ class MenuController extends Controller
         $rootLocation = $this->getRootLocation();
         $configResolver = $this->getConfigResolver();
         $repository = $this->getRepository();
+        $locationService = $repository->getLocationService();
         $searchService = $repository->getSearchService();
 
         $identifiers = $configResolver->getParameter( 'identifiers', 'topmenu' );
@@ -69,6 +70,7 @@ class MenuController extends Controller
         foreach ( $result->searchHits as $hit )
         {
             $items[] = $hit->valueObject;
+
         }
 
         $menuItems = array();
@@ -76,9 +78,12 @@ class MenuController extends Controller
         // second level of main menu
         foreach( $items as $item )
         {
+            $location = $locationService->loadLocation($item->id); 
             $query = new LocationQuery();
             unset( $arrCriteria );
             unset( $arr1Criteria );
+            unset( $arr2Criteria );
+
             if ( in_array( 'folder', $identifiers ) )
             {
                 $arr1Criteria[] = new Criterion\ParentLocationId( $item->id );
@@ -101,7 +106,7 @@ class MenuController extends Controller
             $query->filter  = new Criterion\LogicalOr( $arrCriteria );
 
             $sorting = new SortLocationClauseHelper();
-            $sortingClause = $sorting->getSortClauseFromLocation( $rootLocation );
+            $sortingClause = $sorting->getSortClauseFromLocation( $location );
 
             $query->sortClauses = array($sortingClause);
             $subResult = $searchService->findLocations( $query );
@@ -120,6 +125,7 @@ class MenuController extends Controller
             );
         }
 
+
         $response = new Response();
         $response->headers->set( 'X-Location-Id', $rootLocation->id );
         $response->setSharedMaxAge( 3600 );
@@ -129,8 +135,29 @@ class MenuController extends Controller
             'tfktelemarkSkoleBundle:menu:main_menu.html.twig',
             array(
                 'menuItems' => $menuItems,
+                'contentTypesIdentifiers' => $this->getMenuIdentifierIds( $identifiers )
             ),
             $response
         );
     }
+
+    public function getMenuIdentifierIds( $identifiers )
+    {
+        $contentTypeService = $this->getRepository()->getContentTypeService();
+        $contentTypesIdentifierIds = array();
+        foreach ( $identifiers as $identifier )
+        {
+            try
+            {
+                $contentType = $contentTypeService->loadContentTypeByIdentifier( $identifier );
+                $contentTypesIdentifierIds[$contentType->id] = $identifier;
+            }
+            catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
+            {
+                //return;
+            }    
+        }
+        return $contentTypesIdentifierIds;
+    }
+
 }
