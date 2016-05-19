@@ -1,0 +1,3 @@
+{% set url = content.getField( 'url' ) %}
+{% set open_in_new_window = content.getField( 'open_in_new_window' ) %}
+<a href="{{ url.value.link }}" {% if open_in_new_window.value == true %}target="_blank"{% endif %}>{{ url.value.text }}</a>
