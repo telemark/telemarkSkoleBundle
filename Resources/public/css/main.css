@@ -827,6 +827,10 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
     line-height: 1.33333em;
 }
 
+.main__right p {
+    font-family: "Open Sans";
+}
+
 .main__right h2,.main__right .form__group__title {
     font-size: 2em;
     line-height: 1.33333em;
