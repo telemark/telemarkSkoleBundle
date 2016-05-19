@@ -10,6 +10,7 @@ use eZ\Publish\API\Repository\Values\Content\Query\Criterion\ParentLocationId;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use eZ\Publish\API\Repository\Values\Content\Query\SortClause;
 use eZ\Publish\Core\Pagination\Pagerfanta\ContentSearchAdapter;
+use Pagerfanta\Pagerfanta;
 use eZ\Publish\API\Repository\Values\Content\Location;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,9 +25,15 @@ class FolderController extends Controller
         $configResolver = $this->getConfigResolver();
         $locationService = $this->getRepository()->getLocationService();
 
-        $identifiers = array('article');
-        $limit = 10;
+
+        $request = Request::createFromGlobals();
+        $scriptUri = $request->server->get('SCRIPT_URI');
+        $searchString = $request->query->get('SearchText'); 
         $offset = 0;
+        if ( $configResolver->hasParameter( 'identifiers', 'subitems') )
+            $identifiers = $configResolver->getParameter( 'identifiers', 'subitems' );
+        if ( $configResolver->hasParameter( 'limit', 'subitems') )
+            $limit = $configResolver->getParameter( 'limit', 'subitems' );
 
         $location = $locationService->loadLocation( $locationId );
         $result = $this->get( 'vp_utility.location_helper' )->getLocationItems( $location, $identifiers, true, $limit, $offset );
@@ -49,27 +56,84 @@ class FolderController extends Controller
         
         $configResolver = $this->getConfigResolver();
         $locationService = $this->getRepository()->getLocationService();
+        $request = Request::createFromGlobals();
+        
+        $page = intval( $request->query->get('page') );
+        if ( $page < 1 )
+            $page = 1;
+
 
         // load subitems with pagination
 
+        if ( $configResolver->hasParameter( 'newsfolder.identifiers', 'subitems') )
+            $identifiers = $configResolver->getParameter( 'newsfolder.identifiers', 'subitems' );
         if ( $configResolver->hasParameter( 'newsfolder.rows', 'subitems') )
             $rows = $configResolver->getParameter( 'newsfolder.rows', 'subitems' );
         if ( $configResolver->hasParameter( 'newsfolder.columns', 'subitems') )
             $columns = $configResolver->getParameter( 'newsfolder.columns', 'subitems' );
 
         $limit = $rows * $columns;
-        $offset = 0;
-
-        $identifiers = array('article');
+        $limit = 3;
+        if ( isset( $page ) )
+            $offset = ( $page - 1 ) * $limit;
+        else
+            $offset = 0;
 
         $location = $locationService->loadLocation( $locationId );
         $result = $this->get( 'vp_utility.location_helper' )->getLocationItems( $location, $identifiers, true, $limit, $offset );
+
+        if ( $result['totalCount'] > 0 )
+        {
+            if ( intval( $result['totalCount'] / $limit ) < $result['totalCount'] / $limit )
+                $maxPage = intval( $result['totalCount'] / $limit ) + 1;
+            else
+                $maxPage = intval( $result['totalCount'] / $limit );
+            $prevPage = false;
+            $nextPage = false;
+
+            $page = $offset / $limit + 1;
+            if ( $page > $maxPage )
+                $prevPage = $maxPage;
+            elseif ( $offset > 0 )
+            {
+                $prevPage = $page - 1;
+            }
+            if ( $page * $limit < $result['totalCount'] )
+            {
+                $nextPage = $page + 1;
+            }
+        }
+        else
+        {
+            $maxPage = 2;
+            $prevPage = 1;
+            $nextPage = false;
+        }
+
 /*
+        $query = new LocationQuery();
+        $query->filter = new Criterion\LogicalAnd([
+            new Criterion\ParentLocationId( $locationId ),
+            new Criterion\ContentTypeIdentifier( $identifiers ),
+            new Criterion\Visibility( Criterion\Visibility::VISIBLE )
+        ]);
+        $query->sortClauses = array(
+            new SortClause\DatePublished(),
+        );
+
+        // Initialize pagination.
+        $pager = new Pagerfanta(
+            new ContentSearchAdapter($query, $this->getRepository()->getSearchService())
+        );
+
+        $pager->setMaxPerPage($limit);
+        $pager->setCurrentPage($request->get('page', 1));
+
+
         echo '<pre>';
-        var_dump($result);
+        //var_dump($pager);
         echo '</pre>';
 */
-
 
         // get keywords
         // most used or related???
@@ -77,7 +141,16 @@ class FolderController extends Controller
 
         $params += array( 
             'items'  => $result['items'],
-            'columns' => $columns
+            'columns' => $columns,
+            //'pagerFolder' => $pager,
+            'result' => $result,
+            'limit' => $limit,
+            'offset' => $offset,
+            'page' => $page,
+            'maxPage' => $maxPage,
+            'prevPage' => $prevPage,
+            'nextPage' => $nextPage,
+            'request' => $request
         );
 
         $response = $this->get( 'ez_content' )->viewLocation( $locationId, $viewType, $layout, $params );

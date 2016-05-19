@@ -17,6 +17,9 @@
                         }}
                     {% endfor %}
                     </div>
+
+                    {% include 'tfktelemarkSkoleBundle:parts:pagination.html.twig' %}
+
                 </article>
                 <aside class="main__right">
                     {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", { 
@@ -50,7 +53,5 @@
             </main>
         </div>
             #}
-
-
         </div>
 {% endblock %}
