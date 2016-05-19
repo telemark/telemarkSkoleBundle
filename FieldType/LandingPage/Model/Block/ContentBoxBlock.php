@@ -94,43 +94,61 @@ class ContentBoxBlock extends AbstractBlockType implements BlockType
         if ( isset( $attributes['content1_Id'] ) )
         {
             $order = ( isset( $attributes['content1_Order'] ) ? $attributes['content1_Order'] : 0  );
-            $contentInfo = $this->contentService->loadContentInfo($attributes['content1_Id']);
-
-            if ( $ordering )
-                $dataArray[] = array( 
-                    'locationId' => $contentInfo->mainLocationId,
-                    'order'    => $order
-                );
-            else
-                $contentArray[] = $contentInfo->mainLocationId;
+            try
+            {
+                $contentInfo = $this->contentService->loadContentInfo($attributes['content1_Id']);
+                if ( $ordering )
+                    $dataArray[] = array( 
+                        'locationId' => $contentInfo->mainLocationId,
+                        'order'    => $order
+                    );
+                else
+                    $contentArray[] = $contentInfo->mainLocationId;
+            }
+            catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
+            {
+                //return;
+            } 
         }
             
         if ( isset( $attributes['content2_Id'] ) )
         {
             $order = ( isset( $attributes['content2_Order'] ) ? $attributes['content2_Order'] : 0  );
-            $contentInfo = $this->contentService->loadContentInfo($attributes['content2_Id']);
-
-            if ( $ordering )
-                $dataArray[] = array( 
-                    'locationId' => $contentInfo->mainLocationId,
-                    'order'    => $order
-                );
-            else
-                $contentArray[] = $contentInfo->mainLocationId;
+            try
+            {
+                $contentInfo = $this->contentService->loadContentInfo($attributes['content2_Id']);
+                if ( $ordering )
+                    $dataArray[] = array( 
+                        'locationId' => $contentInfo->mainLocationId,
+                        'order'    => $order
+                    );
+                else
+                    $contentArray[] = $contentInfo->mainLocationId;
+            }
+            catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
+            {
+                //return;
+            } 
         }
 
         if ( isset( $attributes['content3_Id'] ) )
         {
             $order = ( isset( $attributes['content1_Order'] ) ? $attributes['content3_Order'] : 0  );
-            $contentInfo = $this->contentService->loadContentInfo($attributes['content3_Id']);
-
-            if ( $ordering )
-                $dataArray[] = array( 
-                    'locationId' => $contentInfo->mainLocationId,
-                    'order'    => $order
-                );
-            else
-                $contentArray[] = $contentInfo->mainLocationId;
+            try
+            {
+                $contentInfo = $this->contentService->loadContentInfo($attributes['content3_Id']);
+                if ( $ordering )
+                    $dataArray[] = array( 
+                        'locationId' => $contentInfo->mainLocationId,
+                        'order'    => $order
+                    );
+                else
+                    $contentArray[] = $contentInfo->mainLocationId;
+            }
+            catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
+            {
+                //return;
+            } 
         }
 
         if ( $ordering )

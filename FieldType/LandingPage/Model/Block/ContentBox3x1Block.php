@@ -80,6 +80,7 @@ class ContentBox3x1Block extends AbstractBlockType implements BlockType
 
         $attributes = $blockValue->getAttributes();
 
+    
         if (  isset( $attributes['content1_Order'] ) || isset( $attributes['content2_Order'] ) || isset( $attributes['content3_Order'] ) || isset( $attributes['content4_Order'] ) )
             $ordering = true;
         else
@@ -92,86 +93,105 @@ class ContentBox3x1Block extends AbstractBlockType implements BlockType
         if ( isset( $attributes['content1_Id'] ) )
         {
             $order = ( isset( $attributes['content1_Order'] ) ? $attributes['content1_Order'] : 0  );
-            $contentInfo = $this->contentService->loadContentInfo($attributes['content1_Id']);
-
-            if ( $ordering )
-                $dataArray[] = array( 
-                    'locationId' => $contentInfo->mainLocationId,
-                    'order'    => $order
-                );
-            else
-                $contentArray[] = $contentInfo->mainLocationId;
+            try
+            {
+                $contentInfo = $this->contentService->loadContentInfo($attributes['content1_Id']);
+                if ( $ordering )
+                    $dataArray[] = array( 
+                        'locationId' => $contentInfo->mainLocationId,
+                        'order'    => $order
+                    );
+                else
+                    $contentArray[] = $contentInfo->mainLocationId;
+            }
+            catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
+            {
+                //return;
+            } 
         }
             
         if ( isset( $attributes['content2_Id'] ) )
         {
             $order = ( isset( $attributes['content2_Order'] ) ? $attributes['content2_Order'] : 0  );
-            $contentInfo = $this->contentService->loadContentInfo($attributes['content2_Id']);
-
-            if ( $ordering )
-                $dataArray[] = array( 
-                    'locationId' => $contentInfo->mainLocationId,
-                    'order'    => $order
-                );
-            else
-                $contentArray[] = $contentInfo->mainLocationId;
+            try
+            {
+                $contentInfo = $this->contentService->loadContentInfo($attributes['content2_Id']);
+                if ( $ordering )
+                    $dataArray[] = array( 
+                        'locationId' => $contentInfo->mainLocationId,
+                        'order'    => $order
+                    );
+                else
+                    $contentArray[] = $contentInfo->mainLocationId;
+            }
+            catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
+            {
+                //return;
+            } 
         }
 
         if ( isset( $attributes['content3_Id'] ) )
         {
             $order = ( isset( $attributes['content3_Order'] ) ? $attributes['content3_Order'] : 0  );
-            $contentInfo = $this->contentService->loadContentInfo($attributes['content3_Id']);
-
-            if ( $ordering )
-                $dataArray[] = array( 
-                    'locationId' => $contentInfo->mainLocationId,
-                    'order'    => $order
-                );
-            else
-                $contentArray[] = $contentInfo->mainLocationId;
+            try
+            {
+                $contentInfo = $this->contentService->loadContentInfo($attributes['content3_Id']);
+                if ( $ordering )
+                    $dataArray[] = array( 
+                        'locationId' => $contentInfo->mainLocationId,
+                        'order'    => $order
+                    );
+                else
+                    $contentArray[] = $contentInfo->mainLocationId;
+            }
+            catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
+            {
+                //return;
+            } 
         }
 
         if ( isset( $attributes['content4_Id'] ) )
         {
             $order = ( isset( $attributes['content4_Order'] ) ? $attributes['content4_Order'] : 0  );
-            $contentInfo = $this->contentService->loadContentInfo($attributes['content4_Id']);
-
-            if ( $ordering )
-                $dataArray[] = array( 
-                    'locationId' => $contentInfo->mainLocationId,
-                    'order'    => $order
-                );
-            else
-                $contentArray[] = $contentInfo->mainLocationId;
-        }
-
-        if ( $ordering )
-        {
-
-            foreach ($dataArray as $item )
+            try
             {
-                $contentArray[] = $item['locationId']; 
+                $contentInfo = $this->contentService->loadContentInfo($attributes['content4_Id']);
+                if ( $ordering )
+                    $dataArray[] = array( 
+                        'locationId' => $contentInfo->mainLocationId,
+                        'order'    => $order
+                    );
+                else
+                    $contentArray[] = $contentInfo->mainLocationId;
             }
-
+            catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
+            {
+                //return;
+            } 
         }
 
         // get list
         if ( isset( $attributes['content5_Id'] ) )
         {
-            $contentInfo = $this->contentService->loadContentInfo($attributes['content5_Id']);
+            try
+            {
+                $contentInfo = $this->contentService->loadContentInfo($attributes['content5_Id']);
+                $query = new Query();
+                $query->query = new Criterion\LogicalAnd(
+                    [
+                        new Criterion\ParentLocationId($contentInfo->mainLocationId),
+                        new Criterion\Visibility(Criterion\Visibility::VISIBLE),
+                    ]
+                );
 
-            $query = new Query();
-            $query->query = new Criterion\LogicalAnd(
-                [
-                    new Criterion\ParentLocationId($contentInfo->mainLocationId),
-                    new Criterion\Visibility(Criterion\Visibility::VISIBLE),
-                ]
-            );
-
-            $result = $this->searchService->findContent($query, $languages);
-            foreach ($result->searchHits as $searchHit)
-                $listArray[] = $searchHit->valueObject;
-
+                $result = $this->searchService->findContent($query, $languages);
+                foreach ($result->searchHits as $searchHit)
+                    $listArray[] = $searchHit->valueObject;
+            }
+            catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
+            {
+                //return;
+            } 
         }
 
         return [
