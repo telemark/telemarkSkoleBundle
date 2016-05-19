@@ -13,7 +13,6 @@
 
 
 
-
 .slider__slides,.slider__control-nav,.slider__direction-nav {
     margin: 0;
     padding: 0;
@@ -306,4 +305,14 @@
     .top-image__text-wrapper {
         padding: .5em 1em;
     }
+
+    .slider__slide a {
+      float: left;
+      width: 100%;
+    }
+
+    .slider__direction-nav {
+        display: none;
+    }
+
 }
