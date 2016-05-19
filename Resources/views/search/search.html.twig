@@ -25,7 +25,10 @@
                                 <li class="search-result__item">
                                     {{ render(controller('ez_content:viewLocation', {
                                             'locationId': item.valueObject.contentInfo.mainLocationId,
-                                            'viewType': 'search_line'
+                                            'viewType': 'search_line',
+                                            'params': {
+                                                'searchHit': item
+                                            }
                                         }))
                                     }}
                                 </li>
@@ -36,7 +39,6 @@
                     {% include 'tfktelemarkSkoleBundle:parts:pagination.html.twig' %}
                 </div>
             </main>
-            {{ dump() }}
         </div>
     </div>
 

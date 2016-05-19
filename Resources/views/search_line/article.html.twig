@@ -6,9 +6,9 @@
             }
         }  ) }}
     {% else %}
-        {#
-            add dummy image if no image is available in content
-        #}
+        <figure class="ezimage-field">
+            <img src="{{ asset('bundles/tfktelemarkskole/images/contenttype/bildetmangler.jpg') }}" alt="Bilde ikke tilgjengelig" />
+        </figure>        
     {% endif %}
 </a>
 <div class="search-result__content">
@@ -18,7 +18,7 @@
         </a>
     </h2>
     <div class="sidenote">
-        Publisert 01.01.1970
+        Publisert {{ location.contentInfo.publishedDate|date("d.m.Y") }} {# Relevans: {{ searchHit.score }} #}
     </div>
     <div class="search-result__item__intro">
         <div class="ezxmltext-field"><p>{{ ez_render_field( content, 'intro' ) }}</p></div>

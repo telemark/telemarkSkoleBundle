@@ -31,12 +31,12 @@ class SearchController extends Controller
         $queryString = $request->server->get('QUERY_STRING');      
         $queryUri = $scriptUri.'?'.$queryString;
         $searchUri = $scriptUri.'?searchText='.$searchText;
+        $searchText = $request->query->get('searchText');
 
         if ( intval( $request->query->get('page') ) > 1 )
             $page = intval( $request->query->get('page') );
         else
             $page = 1;
-        $searchText = $request->query->get('searchText');
 
         if ( isset($searchText) )
         {
@@ -46,7 +46,6 @@ class SearchController extends Controller
             $languages = array( 'languages' => $configResolver->getParameter( 'languages' ) );
             $identifiers = $configResolver->getParameter( 'identifiers', 'search' );
             $limit = $configResolver->getParameter( 'limit', 'search' );
-            $limit = 2;
 
             $offset = $this->get( 'vp_utility.pagination_helper' )->getOffsetFromPage( $page, $limit );
 
