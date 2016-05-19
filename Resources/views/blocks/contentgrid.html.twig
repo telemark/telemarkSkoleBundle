@@ -33,37 +33,6 @@
                 {% endfor %}
             </div>
         {% endif %}
-<!-- 
-        {% if viewType == 'float2' %}
-            <div class="grid grid--12">
-                {% for content in contentArray %}
-                    <div class="item item--vertical grid__item--6-12 landing-article">
-                        <div>
-                            {% if not ez_is_field_empty( content.content, 'image' )%}
-                                {{ ez_render_field(
-                                    content.content, 'image', {
-                                        'parameters': {
-                                            'alias': 'article_grid_2',
-                                            'class': 'img-responsive'
-                                        }
-                                    }
-                                ) }}
-                            {% endif %}
-                            <div class="intro-text">
-                                <h4><a href="{{ path(content.location) }}">{{ ez_render_field( content.content, 'title') }}</a></h4>
-                                <p>But then the winter came, and the grasshopper died, and the octopus ate all his acorns. Also he got a race car.</p>
-                                <a href="#" class="read-more">Les mer</a>
-                            </div>
-                            {#
-                                {% if not ez_is_field_empty( content.content, ('intro') %}
-                                    <div>{{ ez_render_field(content.content, 'intro') }}</div>
-                                {% endif %}
-                            #}
-                        </div>
-                     </div>
-                {% endfor %}
-            </div>
-        {% endif %} -->
 
        {% if viewType == 'float3' %}
             <div class="grid grid--12">
