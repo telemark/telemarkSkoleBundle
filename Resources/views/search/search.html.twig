@@ -1,0 +1,43 @@
+{% extends noLayout ? viewbaseLayout : "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+
+{% block content %}
+    <div class="content">
+        <div class="constrained-content">
+            <main id="main" role="main" tabindex="-1" class="main">
+                <div class="main__center-right">
+                    <h2>Søk etter "{{ searchText }}" ga {{ result.totalCount }} treff</h2>
+                    {% if result.totalCount == 0 %}
+                        <form role="search" action="/search" method="get" class="well form-search">
+                        <!-- form errors 
+                        <input id="basicsearch_term" name="basicsearch[term]" required="required" type="search">
+                        <input id="basicsearch_ezxform_token" name="basicsearch[ezxform_token]" value="1Mg8of7LxVdOhn-d21_JtH23d3x0IdGW_J3u6vrNZGk" type="hidden">
+                        <label for="basicsearch_term" class="visuallyhidden">Søk</label>
+                        <label for="page-header__search__field" class="visuallyhidden">Søk</label>
+                        <input id="basicsearch_term" name="basicsearch[term]" required="required" type="search">-->
+                        <input id="searchText" name="searchText" required="required" type="search">
+                        <input id="page-header__search__field" class="btn btn-primary clear search__btn icon--search " value="Søk" type="submit">
+                      </form>
+                    {% endif %}
+                    
+                    {% if result.searchHits|length > 0 %}
+                        <ul class="search-result">
+                            {% for item in result.searchHits %}
+                                <li class="search-result__item">
+                                    {{ render(controller('ez_content:viewLocation', {
+                                            'locationId': item.valueObject.contentInfo.mainLocationId,
+                                            'viewType': 'search_line'
+                                        }))
+                                    }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% include 'tfktelemarkSkoleBundle:parts:pagination.html.twig' %}
+                </div>
+            </main>
+            {{ dump() }}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+<a href="{{ path(location) }}" title="{{ ez_content_name( content ) }}" tabindex="-1" class="search-result__item__img">  
+    {% if not ez_is_field_empty( content, 'image' ) %}
+        {{ ez_render_field( content, 'image', { 
+            'parameters': {
+                'alias': 'article_grid_3'
+            }
+        }  ) }}
+    {% else %}
+        {#
+            add dummy image if no image is available in content
+        #}
+    {% endif %}
+</a>
+<div class="search-result__content">
+    <h2 class="search-result__item__header">
+        <a href="{{ path(location) }}" title="{{ ez_content_name( content ) }}">
+            <span class="ezstring-field">{{ ez_content_name( content ) }}</span>
+        </a>
+    </h2>
+    <div class="sidenote">
+        Publisert 01.01.1970
+    </div>
+    <div class="search-result__item__intro">
+        <div class="ezxmltext-field"><p>{{ ez_render_field( content, 'intro' ) }}</p></div>
+    </div>
+</div>
