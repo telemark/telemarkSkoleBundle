@@ -22,6 +22,32 @@ body {
     font-family: $open-sans;
 }
 
+.pagination {
+    margin: 1em 0;
+}
+
+.pagination-right {
+  display: inline;
+  margin-left: -5.125em;
+
+  a {
+      float: right;
+  }
+
+}
+
+.pagination-left {
+  display: inline;
+  margin-right: -5.125em;
+
+  a {
+    float: left;
+  }
+
+}
+
+
+
 
 
 // Grids forside
