@@ -32,6 +32,18 @@
                 <div class="page-header__search">
                 {% block searchbox %}
                   {#{ render( controller("tfktelemarkBundle:Search:searchBox" )) }#}
+                  <div class="page-header__search">
+                    <form role="search" action="/search" method="get" class="well form-search">
+                        <!-- form errors 
+                        <input id="basicsearch_term" name="basicsearch[term]" required="required" type="search">
+                        <input id="basicsearch_ezxform_token" name="basicsearch[ezxform_token]" value="1Mg8of7LxVdOhn-d21_JtH23d3x0IdGW_J3u6vrNZGk" type="hidden">
+                        <label for="basicsearch_term" class="visuallyhidden">Søk</label>
+                        <label for="page-header__search__field" class="visuallyhidden">Søk</label>
+                        <input id="basicsearch_term" name="basicsearch[term]" required="required" type="search">-->
+                        <input id="searchText" name="searchText" required="required" type="search">
+                        <input id="page-header__search__field" class="btn btn-primary clear search__btn icon--search " value="Søk" type="submit">
+                      </form>
+                    </div>
                 {% endblock %}
                 </div>
                 <div class="font-adjust__message js-font-adjust-message">For å endre tekststørrelsen, hold inne <kbd>Ctrl</kbd> (Windows/Linux) eller <kbd>Cmd</kbd> (Mac) og trykk på <kbd>+</kbd> for å forstørre eller <kbd>-</kbd> for å forminske.</div>
@@ -39,57 +51,4 @@
             </div>
           </div>
           {{ render( controller( "tfktelemarkSkoleBundle:Menu:mainMenu")) }}
-          {#
-            <nav id="menu" role="navigation" class="menu">
-              <div class="constrained">
-                <ul class="menu__content menu__level">
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="{{ path( ezpublish.rootLocation ) }}" class="menu__item-link menu__item-link">Forside</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Om-skolen" class="menu__item-link">Om skolen</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Utdanningstilbud" class="menu__item-link">Utdanningstilbud</a>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content menu__item--submenu"><a href="/Vaare-tjenester" class="menu__item-link menu__item-link--submenu">Våre tjenester</a><span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span><span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
-                      </div>
-                         {{ render( controller("tfktelemarkBundle:Item:mainMenu", {'locationId': '111' } )) }}
-                    </div>
-                  </li>
-
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Praktisk-info" class="menu__item-link">Praktisk info</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Elevtjenester" class="menu__item-link">Elevtjenester</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Aktuelt" class="menu__item-link">Aktuelt</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          #}
           </header>
