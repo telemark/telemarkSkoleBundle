@@ -1,5 +1,5 @@
 parameters:
-    
+
     topmenu.tfk_school_group.identifiers:
         - folder
         - link
@@ -27,3 +27,10 @@ parameters:
     head.school_demo.meta_author: 'Vest-telemark videregående skole'
     head.school_demo.meta_description: 'Vest-telemark videregående skole er en fin skole'
     head.school_demo.meta_keywords: 'telemark videregående skole'
+
+    head.vest_vdg.logo: 'vesttelemark_toplogo.png'
+    head.vest_vdg.title: 'Vest-telemark videregående skole'
+    head.vest_vdg.meta_author: 'Vest-telemark videregående skole'
+    head.vest_vdg.meta_description: 'Vest-telemark videregående skole er en fin skole'
+    head.vest_vdg.meta_keywords: 'telemark videregående skole'
+
