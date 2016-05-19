@@ -2,21 +2,25 @@ parameters:
     
     topmenu.tfk_school_group.identifiers:
         - folder
-
-    topmenu.tfk_school_group.identifiers:
-        - folder
+        - link
 
     subitems.tfk_school_group.identifiers:
         - article
 
     subitems.tfk_school_group.limit: 10
 
+    subitems.tfk_school_group.newsfolder.columns: 3
+    subitems.tfk_school_group.newsfolder.rows: 5
+    subitems.tfk_school_group.newsfolder.identifiers:
+        - article
+
     sidebar.tfk_school_group.identifiers.right:
         - infobox
 
-    subitems.tfk_school_group.newsfolder.columns: 3
-    subitems.tfk_school_group.newsfolder.rows: 5
-
+    search.tfk_school_group.limit: 10
+    search.tfk_school_group.identifiers:
+        - article
+        - folder
 
     head.school_demo.logo: 'vesttelemark_toplogo.png'
     head.school_demo.title: 'Vest-telemark videregående skole'

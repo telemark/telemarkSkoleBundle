@@ -1,3 +1,6 @@
 tfktelemark_skole_homepage:
     path:     /hello/{name}
     defaults: { _controller: tfktelemarkSkoleBundle:Default:index }
+tfktelemark_skole_search:
+    path:   /search
+    defaults: { _controller: tfktelemarkSkoleBundle:Search:search }

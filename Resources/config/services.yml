@@ -84,10 +84,22 @@ services:
         tags:
             - { name: twig.extension }
 
+    content_type_extension.twig_extension:
+        class: tfk\telemarkSkoleBundle\Twig\Extension\ContentTypeExtension
+        public: false
+        calls:
+            - [setContainer, [@service_container] ]
+        tags:
+            - { name: twig.extension }
+
     vp_utility.location_helper:
         class: tfk\telemarkSkoleBundle\Helper\LocationHelper
         arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
 
     vp_utility.sort_location_clause_helper:
         class: tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper
+        arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
+
+    vp_utility.pagination_helper:
+        class: tfk\telemarkSkoleBundle\Helper\PaginationHelper
         arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
