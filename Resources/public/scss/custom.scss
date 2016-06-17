@@ -187,10 +187,10 @@ body {
     color: $tfk-black;
     text-decoration: none;
     margin-bottom: 1em;
-    @include span(4 of 12);
-    &:nth-child(3n) {
-        @include span(4 of 12 last);
-    }
+    @include span(12 of 12);
+    // &:nth-child(3n) {
+    //     @include span(4 of 12 last);
+    // }
 
     h2 {
         margin-top: 0;
@@ -200,16 +200,22 @@ body {
             color: $tfk-black;
         }
     }
-}
 
-@media screen and (min-width:320px) and (max-width: 1024px) {
-    .grid__item--4-12  {
-        @include span(12 of 12);
-        &:nth-child(3n){
-            @include span(12 of 12);
-        }
+    .ezimage-field {
+        float: left;
+        width: 40%;
+        padding-right: 2em;
     }
 }
+
+// @media screen and (min-width:320px) and (max-width: 1024px) {
+//     .grid__item--4-12  {
+//         @include span(12 of 12);
+//         &:nth-child(3n){
+//             @include span(12 of 12);
+//         }
+//     }
+// }
 
 
 
