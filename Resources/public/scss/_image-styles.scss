@@ -1,0 +1,14 @@
+.align-left {
+    float: left;
+    padding: 1em 1em 1em 0em;
+}
+
+.align-center > figure > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.align-right {
+    float: right;
+    padding: 1em 0em 1em 1em;
+}
