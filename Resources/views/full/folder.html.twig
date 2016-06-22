@@ -36,6 +36,30 @@
                         </div>
                     {% endif %}
 
+                    {{ ez_render_field( content, "left_text_image" , { 
+                        'parameters': {
+                            'alias': 'article_full'
+                        } } ) 
+                    }}
+
+                    {% if not ez_is_field_empty( content, 'left_text' ) %}
+                        <div class="byline">
+                            {{ ez_render_field( content, 'left_text' ) }}
+                        </div>
+                    {% endif %}
+
+                    {{ ez_render_field( content, "right_text_image" , { 
+                        'parameters': {
+                            'alias': 'article_full'
+                        } } ) 
+                    }}
+
+                    {% if not ez_is_field_empty( content, 'right_text' ) %}
+                        <div class="byline">
+                            {{ ez_render_field( content, 'right_text' ) }}
+                        </div>
+                    {% endif %}
+
                     {% if not ez_is_field_empty( content, 'description' ) %}
                         {{ ez_render_field( content, 'description' ) }}
                     {% endif %}
@@ -53,6 +77,25 @@
 
                 </article>
                 <aside class="main__right">
+
+                    {% if not ez_is_field_empty( content, 'right_header_1' ) %}
+                            <h2>{{ ez_render_field( content, 'right_header_1' ) }}</h2>
+                    {% endif %}
+                    {% if not ez_is_field_empty( content, 'right_text_1' ) %}
+                            {{ ez_render_field( content, 'right_text_1' ) }}
+                    {% endif %}
+                    {% if not ez_is_field_empty( content, 'right_header_2' ) %}
+                            <h2>{{ ez_render_field( content, 'right_header_2' ) }}</h2>
+                    {% endif %}
+                    {% if not ez_is_field_empty( content, 'right_text_2' ) %}
+                            {{ ez_render_field( content, 'right_text_2' ) }}
+                    {% endif %}
+                    {% if not ez_is_field_empty( content, 'right_header_3' ) %}
+                            <h2>{{ ez_render_field( content, 'right_header_1' ) }}</h2>
+                    {% endif %}
+                    {% if not ez_is_field_empty( content, 'right_text_3' ) %}
+                            {{ ez_render_field( content, 'right_text_1' ) }}
+                    {% endif %}
                     {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", { 
                         'locationId': location.id }
                     )) }}
