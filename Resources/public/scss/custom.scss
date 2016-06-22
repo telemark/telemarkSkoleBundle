@@ -55,11 +55,20 @@ body {
 
 
 // Grids forside
+.item {
+    &:last-child {
+        clear: both;
+    }
+}
 
 
 @media screen and (max-width: 63.95em) {
     .item {
         padding: .5em 0;
+
+        &:last-child {
+            clear: both;
+        }
     }
 
     .grid img {
