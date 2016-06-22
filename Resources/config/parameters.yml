@@ -22,8 +22,8 @@ parameters:
         - article
         - folder
 
-    head.school_demo.logo: 'vesttelemark_toplogo.png'
-    head.school_demo.title: 'Vest-telemark videregående skole'
-    head.school_demo.meta_author: 'Vest-telemark videregående skole'
-    head.school_demo.meta_description: 'Vest-telemark videregående skole er en fin skole'
-    head.school_demo.meta_keywords: 'telemark videregående skole'
+    head.vest_vgs.logo: 'vesttelemark_toplogo.png'
+    head.vest_vgs.title: 'Vest-telemark videregående skole'
+    head.vest_vgs.meta_author: 'Vest-telemark videregående skole'
+    head.vest_vgs.meta_description: 'Vest-telemark videregående skole er en fin skole'
+    head.vest_vgs.meta_keywords: 'telemark videregående skole'
