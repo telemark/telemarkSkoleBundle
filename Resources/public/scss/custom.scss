@@ -8,6 +8,8 @@
 @import "_nav";
 @import "_image-styles";
 
+@import "_aside";
+
 
 
 
@@ -411,19 +413,11 @@ body {
     margin-right: 1.38889%;
 }
 
-/*.main__center {
-    display: inline-block;
-    float: none;
-    margin-left: 1.38889%;
-}
 
-.main__left {
-    margin-left: 0;
-}
-.main__right {
-    float: right;
-}
-*/
+
+
+
+
 input #basicsearch_term {
     font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
 }

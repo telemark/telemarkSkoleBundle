@@ -1,0 +1,11 @@
+aside {
+    &.main__right {
+      margin-top: 4em;
+      font-size: initial;
+    
+      > ul, p, span {
+        font-size: 1rem;
+      }
+
+    }
+}
