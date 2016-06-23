@@ -1,0 +1,9 @@
+
+
+main#main {
+    @include breakpoint(small) {
+        padding: 0 .5em;
+        padding-top: 1em;
+    }
+  
+}

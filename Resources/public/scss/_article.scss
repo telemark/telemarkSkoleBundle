@@ -1,0 +1,22 @@
+.ingress {
+    margin: .4em 0;
+    font-size: 1.125em;
+    line-height: 1.2em;
+}
+
+.main__center-left {
+  margin-top: 3em;
+
+  &.no-top-spacing {
+    margin-top: 0;
+  }
+}
+
+.caption {
+  font-size: .75em;
+}
+
+.article__header {
+  margin-bottom: 1.5em;
+  margin-top: 1.25em;
+}

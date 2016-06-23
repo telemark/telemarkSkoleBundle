@@ -8,7 +8,53 @@
     margin: 0 auto;
 }
 
+.sidebar-right {
+    .align-center > figure > img {
+        display: block;
+        margin: 0 auto;
+        width: 8em;
+        height: 8em;
+        border-radius: 4em;
+        margin-top: 1em;
+    }
+}
+
 .align-right {
     float: right;
     padding: 1em 0em 1em 1em;
+}
+
+
+
+
+// Hardkoda bilder
+
+.left-large-image,
+.right-large-image {
+  width: 55%;
+  padding: 1em;
+  padding-bottom: .25em;
+  @include breakpoint(small) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.left-large-image {
+  float: left;
+  padding-left: 0;
+}
+
+.right-large-image {
+    float: right;
+    padding-right: 0;
+}
+
+
+.right-large-image,
+.left-large-image  {
+    @include breakpoint(small) {
+      padding: 1em 0;
+    }
 }

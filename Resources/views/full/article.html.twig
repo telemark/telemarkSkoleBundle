@@ -4,7 +4,7 @@
     <div class="content">
         <div class="constrained-content">
             <main id="main" role="main" tabindex="-1" class="main">
-                <article class="main__center-left">
+                <article class="main__center-left no-top-spacing">
                     <header class="article__header">
                         <h1>{{ ez_render_field( content, 'title' ) }}</h1>
                         <div class="sidenote">
@@ -42,7 +42,7 @@
                     </div>
 
                     {% if not ez_is_field_empty( content, 'intro' ) %}
-                        <div class="byline">
+                        <div class="ingress">
                             {{ ez_render_field( content, 'intro' ) }}
                         </div>
                     {% endif %}
