@@ -11,7 +11,15 @@ filter_sets:
         quality: 85
         filters:
             centercrop: [400, 280]
+    article_grid_4:
+        quality: 85
+        filters:
+            downscale: { max: [846, 380] }
     campaign_1:
         quality: 85
         filters:
             centercrop: [846, 378]
+    right_thumb:
+        quality: 85
+        filters:
+            downscale: { max: [220, 300] }

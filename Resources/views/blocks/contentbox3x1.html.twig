@@ -13,7 +13,14 @@
                     <ul>
                         {% for content in listArray %}
                             <li>
-                                {{ ez_render_field( content, 'url') }}
+                                {% if getContentTypeIdentifier( content.contentInfo.contentTypeId ) == 'link'  %}
+                                    {{ render(controller('ez_content:viewLocation', {
+                                        'locationId': content.contentInfo.mainLocationId,
+                                        'viewType': 'shortcut_line'
+                                    })) }}                                
+                                {% else %}
+                                    <a href="{{ url( 'ez_urlalias', {'contentId': content.contentInfo.id } ) }}">{{ ez_content_name( content ) }}</a>
+                                {% endif %}
                             </li>
                         {% endfor %}
                     </ul>
