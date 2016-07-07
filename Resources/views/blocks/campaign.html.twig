@@ -1,4 +1,3 @@
-{#{ dump(contentArray) }#}
 {% if contentArray|length > 0 %}
     <div class="content">
         <div class="slider-wrapper slider-wrapper--fullwidth">
@@ -13,11 +12,12 @@
                                 {% set imageId = ez_field_value( content, 'image' ) %}
                             {% endif %}
 
-                            {% if not ez_is_field_empty( content, 'internal_resource' ) %}
-                                {% set externalResourceId = ez_field_value( content, 'internal_resource' ) %}
-                                {% set this_block_url = url( 'ez_urlalias', {'contentId': externalResourceId} ) %}
-                            {% else %}
+                            {% if item.internal_resource_location is defined %}
+                                {% set this_block_url = url( 'ez_urlalias', {'locationId': item.internal_resource_location.id} ) %}
+                            {% elseif not ez_is_field_empty( content, 'url' ) %}
                                 {% set this_block_url = ez_field_value( content, 'url' ) %}
+                            {% else %}
+                                {% set this_block_url = null %}
                             {% endif %}
 
                             {% if not ez_is_field_empty( content, 'open_in_new_window' ) %}
@@ -25,28 +25,36 @@
                             {% else %}
                                 {% set this_block_target = '_self' %}
                             {% endif %}
-                            <li class="slider__slide">
-                                <a href={{ this_block_url }} target={{ this_block_target }} class="top-image top-image--large">
-                                    {{ ez_render_field( content, "image" , { 
-                                        'parameters': {
-                                            'alias': 'campaign_1'
-                                        } } ) 
-                                    }}
-                                    <div class="top-image__text-wrapper">
-                                        <div class="top-image__text">
-                                            {% if not ez_is_field_empty( content, 'title') %}
-                                                <h2 class="top-image__header">{{ ez_field_value( content, 'title' ) }}</h2>
-                                            {% endif %}
-                                            <div class="top-image__body">
-                                                {% if not ez_is_field_empty( content, 'text') %}
-                                                  {{ ez_field_value( content, 'text' ) }}<br />
+
+                            {% if this_block_url|length %}
+                                <li class="slider__slide">
+                                    <a href={{ this_block_url }} target={{ this_block_target }} class="top-image top-image--large">
+                                        {{ ez_render_field( content, "image" , { 
+                                            'parameters': {
+                                                'alias': 'campaign_1'
+                                            } } ) 
+                                        }}
+                                        <div class="top-image__text-wrapper">
+                                            <div class="top-image__text">
+                                                {% if not ez_is_field_empty( content, 'title') %}
+                                                    <h2 class="top-image__header">{{ ez_field_value( content, 'title' ) }}</h2>
                                                 {% endif %}
+                                                <div class="top-image__body">
+                                                    {% if not ez_is_field_empty( content, 'text') %}
+                                                      {{ ez_field_value( content, 'text' ) }}<br />
+                                                    {% endif %}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-
-
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+        </div>
+    </div>
+{% endif %}
 
 {#
                                 <a href={{ this_block_url }} target={{ this_block_target }} class="top-image top-image--large">
@@ -90,10 +98,3 @@
                                 {% endif %}
                                 </a>
 #}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-        </div>
-    </div>
-{% endif %}
