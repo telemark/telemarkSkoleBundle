@@ -1079,6 +1079,11 @@ aside.sidebar-right__others h2 {
   font-size: 1.25em;
 }
 
+/* line 55, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
+aside .ezrichtext-field {
+  padding: 1em 1em 1.5em;
+}
+
 /* line 1, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .ingress {
   margin: .4em 0;
