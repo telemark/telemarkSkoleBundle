@@ -78,7 +78,7 @@ class MenuController extends Controller
         // second level of main menu
         foreach( $items as $item )
         {
-            $location = $locationService->loadLocation($item->id); 
+            $location = $locationService->loadLocation($item->id);
             $query = new LocationQuery();
             unset( $arrCriteria );
             unset( $arr1Criteria );
@@ -87,7 +87,7 @@ class MenuController extends Controller
             if ( in_array( 'folder', $identifiers ) )
             {
                 $arr1Criteria[] = new Criterion\ParentLocationId( $item->id );
-                $arr1Criteria[] = new Criterion\ContentTypeIdentifier( array( 'folder' ) );
+                $arr1Criteria[] = new Criterion\ContentTypeIdentifier( array( 'folder' ,'fag' ) );
                 $arr1Criteria[] = new Criterion\Visibility( Criterion\Visibility::VISIBLE );
                 $arr1Criteria[] = new Criterion\Field( "hide_from_menu", Criterion\Operator::EQ, false );
 
@@ -117,7 +117,7 @@ class MenuController extends Controller
             {
                 $subItems[] = $hit->valueObject;
             }
-            
+
             $menuItems[] = array(
                 'location' => $item,
                 'subLevelItemCount' => count($subItems),
@@ -155,7 +155,7 @@ class MenuController extends Controller
             catch ( \eZ\Publish\API\Repository\Exceptions\NotFoundException $e )
             {
                 //return;
-            }    
+            }
         }
         return $contentTypesIdentifierIds;
     }

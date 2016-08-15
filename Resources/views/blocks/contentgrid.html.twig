@@ -20,14 +20,8 @@
                             {% endif %}
                             <div class="intro-text">
                                 <h4><a href="{{ path(content.location) }}">{{ ez_render_field( content.content, 'title') }}</a></h4>
-                                <p>It's just like the story of the grasshopper and the octopus. All year long...</p>
-                                <a href="#" class="read-more">Les mer</a>
+                                   {{ ez_render_field(content.content, "intro") }}
                             </div>
-                            {#
-                                {% if not ez_is_field_empty( content.content, ('intro') %}
-                                    <div>{{ ez_render_field(content.content, 'intro') }}</div>
-                                {% endif %}
-                            #}
                         </div>
                      </div>
                 {% endfor %}

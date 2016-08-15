@@ -1,5 +1,5 @@
 parameters:
-    
+
     topmenu.tfk_school_group.identifiers:
         - folder
         - link
@@ -9,10 +9,11 @@ parameters:
 
     subitems.tfk_school_group.limit: 10
 
-    subitems.tfk_school_group.newsfolder.columns: 3
+    subitems.tfk_school_group.newsfolder.columns: 10
     subitems.tfk_school_group.newsfolder.rows: 5
     subitems.tfk_school_group.newsfolder.identifiers:
         - article
+        - fag
 
     sidebar.tfk_school_group.identifiers.right:
         - infobox
@@ -21,6 +22,7 @@ parameters:
     search.tfk_school_group.identifiers:
         - article
         - folder
+        - fag
 
     head.vest_vgs.logo: 'vesttelemark_toplogo.png'
     head.vest_vgs.title: 'Vest-telemark videregående skole'
