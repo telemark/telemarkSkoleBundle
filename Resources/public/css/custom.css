@@ -1147,6 +1147,104 @@ aside .ezrichtext-field {
   float: left;
 }
 
+/*!
+Pure v0.6.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+/* line 7, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table {
+  /* Remove spacing between table cells (from Normalize.css) */
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+/* line 15, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+
+/* line 22, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table td,
+.table th {
+  border-left: 1px solid #cbcbcb;
+  /*  inner column border */
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+  /*to make ths where the title is really long work*/
+  padding: 0.5em 1em;
+  /* cell padding */
+}
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
+/* line 34, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table td:first-child,
+.table th:first-child {
+  border-left-width: 0;
+}
+
+/* line 39, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+/* line 51, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table td {
+  background-color: transparent;
+}
+
+/* line 54, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table-odd td {
+  background-color: #f2f2f2;
+}
+
+/* nth-child selector for modern browsers */
+/* line 59, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table-striped tr:nth-child(2n-1) td {
+  background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+/* line 64, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table-bordered td {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+/* line 67, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table-bordered tbody > tr:last-child > td {
+  border-bottom-width: 0;
+}
+
+/* HORIZONTAL BORDERED TABLES */
+/* line 74, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table-horizontal td,
+.table-horizontal th {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+/* line 79, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+.table-horizontal tbody > tr:last-child > td {
+  border-bottom-width: 0;
+}
+
 /* line 32, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 body {
   font-family: "Open Sans", sans-serif;
