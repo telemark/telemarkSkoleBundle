@@ -14,7 +14,13 @@ system:
                     template: "tfktelemarkSkoleBundle:full:news_folder.html.twig"
                     match:
                         Identifier\ContentType: [folder]
-                        Id\Location: 63 
+                        Id\Location: 63
+                course_folder:
+                    controller: "tfktelemarkSkoleBundle:Folder:newsfolderViewEnhanced"
+                    template: "tfktelemarkSkoleBundle:full:course_folder.html.twig"
+                    match:
+                        Identifier\ContentType: [folder]
+                        Id\Location: 67
                 folder:
                     controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
                     template: "tfktelemarkSkoleBundle:full:folder.html.twig"
@@ -24,6 +30,14 @@ system:
                     template: tfktelemarkSkoleBundle:full:article.html.twig
                     match:
                         Identifier\ContentType: [article]
+                fag:
+                    template: tfktelemarkSkoleBundle:full:fag.html.twig
+                    match:
+                        Identifier\ContentType: [fag]
+                infobox:
+                    template: tfktelemarkSkoleBundle:line:infobox.html.twig
+                    match:
+                        Identifier\ContentType: [infobox]
             line:
                 article:
                     template: tfktelemarkSkoleBundle:line:article.html.twig
@@ -34,7 +48,14 @@ system:
                     template: tfktelemarkSkoleBundle:line:infobox.html.twig
                     match:
                         Identifier\ContentType: [infobox]
-
+                folder:
+                    template: tfktelemarkSkoleBundle:line:folder.html.twig
+                    match:
+                        Identifier\ContentType: [folder]
+                fag:
+                    template: tfktelemarkSkoleBundle:line:fag.html.twig
+                    match:
+                        Identifier\ContentType: [fag]
                 link:
                     template: tfktelemarkSkoleBundle:line:link.html.twig
                     match:
@@ -54,7 +75,6 @@ system:
                     template: tfktelemarkSkoleBundle:menu_line:link.html.twig
                     match:
                         Identifier\ContentType: [link]
-            
             shortcut_line:
                 link:
                     template: tfktelemarkSkoleBundle:shortcut_line:link.html.twig
@@ -85,8 +105,6 @@ system:
 #                template: tfktelemarkSkoleBundle:block:campaign:html.twig
 #                match:
 #                    Type: Campaign
-        
-
 
         location_view:
             float3:

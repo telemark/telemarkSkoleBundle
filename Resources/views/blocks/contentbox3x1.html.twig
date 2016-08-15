@@ -17,7 +17,7 @@
                                     {{ render(controller('ez_content:viewLocation', {
                                         'locationId': content.contentInfo.mainLocationId,
                                         'viewType': 'shortcut_line'
-                                    })) }}                                
+                                    })) }}
                                 {% else %}
                                     <a href="{{ url( 'ez_urlalias', {'contentId': content.contentInfo.id } ) }}">{{ ez_content_name( content ) }}</a>
                                 {% endif %}

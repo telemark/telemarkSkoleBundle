@@ -17,16 +17,16 @@
                                     'template': 'eZStudioDemoBundle:fields:ezauthor_simple.html.twig'
                                 }
                             ) }}
-                            {% endif %} / 
+                            {% endif %} /
                             #}
                             Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
                         </div>
                     </header>
 
-                    {{ ez_render_field( content, "image" , { 
+                    {{ ez_render_field( content, "image" , {
                         'parameters': {
                             'alias': 'article_full'
-                        } } ) 
+                        } } )
                     }}
                     <div class="caption">
                         {% if not ez_is_field_empty(content, 'caption') %}
@@ -46,16 +46,26 @@
                             {{ ez_render_field( content, 'intro' ) }}
                         </div>
                     {% endif %}
-                    
+
                     {% if not ez_is_field_empty( content, 'body' ) %}
                         {{ ez_render_field( content, 'body' ) }}
                     {% endif %}
                 </article>
-                <aside class="main__right">
-                    {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", { 
+
+                {% if not ez_is_field_empty( content, 'right_header_1' ) %}
+                    <h2>{{ ez_render_field( content, 'right_header_1' ) }}</h2>
+                    <div class="sidebar-right__content">
+                        {% if not ez_is_field_empty( content, 'right_text_1' ) %}
+                                {{ ez_render_field( content, 'right_text_1' ) }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+
+                    {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", {
                         'locationId': location.id }
                     )) }}
-                </aside>
+
             </main>
         </div>
     </div>
