@@ -6,11 +6,12 @@
             <main id="main" role="main" tabindex="-1" class="main">
                 <article class="main__center-left">
 
-                    {{ ez_render_field( content, "image" , {
+                    {{ ez_render_field(content, 'image', {
                         'parameters': {
-                            'alias': 'article_grid_4'
-                        } } )
-                    }}
+                            'alias': 'article_large',
+                            'class': 'img-responsive'
+                        }
+                    }) }}
 
                     <header class="article__header">
                         <h1>{{ ez_render_field( content, 'title' ) }}</h1>
@@ -57,7 +58,16 @@
                     {% if not ez_is_field_empty( content, 'content' ) %}
                         {{ ez_render_field( content, 'content' ) }}
                     {% endif %}
-
+                    {% if totalCount > 0 %}
+                        <div class="grid grid--12">
+                            {% for item in subitems %}
+                                {{ render(controller('ez_content:viewLocation', {
+                                    'locationId': item.id,
+                                    'viewType': 'line'
+                                })) }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
                 </article>
 
                 {% if not ez_is_field_empty( content, 'box_1_header' ) %}

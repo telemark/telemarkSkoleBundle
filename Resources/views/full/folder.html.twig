@@ -6,11 +6,12 @@
             <main id="main" role="main" tabindex="-1" class="main">
                 <article class="main__center-left">
 
-                    {{ ez_render_field( content, "image" , {
+                      {{ ez_render_field(content, 'image', {
                         'parameters': {
-                            'alias': 'article_topic'
-                        } } )
-                    }}
+                            'alias': 'article_large',
+                            'class': 'img-responsive'
+                        }
+                    }) }}
                     <div class="caption">
                         {% if not ez_is_field_empty(content, 'caption') %}
                             <div>

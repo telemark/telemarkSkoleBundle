@@ -17,7 +17,9 @@
                         }}
                     {% endfor %}
                     </div>
+
                     {% include 'tfktelemarkSkoleBundle:parts:pagination.html.twig' %}
+
                 </article>
                 <aside class="main__right">
                     {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", {
@@ -25,5 +27,31 @@
                     )) }}
                 </aside>
             </main>
+
+            {#        <div class="content grid">
+            {% for item in items %}
+                {{ render(controller('ez_content:viewLocation', {
+                        'locationId': item.mainLocationId,
+                        'viewType': 'line',
+                        'columns': columns
+                    }))
+                }}
+            {% endfor %}
+
+
+            <main id="main" role="main" tabindex="-1" class="main">
+                <article class="main__center">
+                    <header class="article__header">
+                        <h1>{{ ez_render_field( content, 'name' ) }}</h1>
+                    </header>
+                </article>
+                <aside class="main__right">
+                    {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", {
+                        'locationId': location.id }
+                    )) }}
+                </aside>
+            </main>
+        </div>
+            #}
         </div>
 {% endblock %}

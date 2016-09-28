@@ -31,6 +31,7 @@ system:
                     match:
                         Identifier\ContentType: [article]
                 fag:
+                    controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
                     template: tfktelemarkSkoleBundle:full:fag.html.twig
                     match:
                         Identifier\ContentType: [fag]

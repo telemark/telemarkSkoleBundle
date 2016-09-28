@@ -6,6 +6,7 @@ parameters:
 
     subitems.tfk_school_group.identifiers:
         - article
+        - fag
 
     subitems.tfk_school_group.limit: 10
 
