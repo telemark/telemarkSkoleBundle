@@ -6,7 +6,7 @@ parameters:
 
     subitems.tfk_school_group.identifiers:
         - article
-        - fag
+        - presentasjon
 
     subitems.tfk_school_group.limit: 10
 
@@ -14,7 +14,7 @@ parameters:
     subitems.tfk_school_group.newsfolder.rows: 5
     subitems.tfk_school_group.newsfolder.identifiers:
         - article
-        - fag
+        - presentasjon
 
     sidebar.tfk_school_group.identifiers.right:
         - infobox
@@ -23,10 +23,16 @@ parameters:
     search.tfk_school_group.identifiers:
         - article
         - folder
-        - fag
+        - presentasjon
 
     head.vest_vgs.logo: 'vesttelemark_toplogo.png'
     head.vest_vgs.title: 'Vest-telemark videregående skole'
     head.vest_vgs.meta_author: 'Vest-telemark videregående skole'
     head.vest_vgs.meta_description: 'Vest-telemark videregående skole er en fin skole'
     head.vest_vgs.meta_keywords: 'telemark videregående skole'
+
+    head.admin.logo: 'vesttelemark_toplogo.png'
+    head.admin.title: 'Vest-telemark videregående skole'
+    head.admin.meta_author: 'Vest-telemark videregående skole'
+    head.admin.meta_description: 'Vest-telemark videregående skole er en fin skole'
+    head.admin.meta_keywords: 'telemark videregående skole'

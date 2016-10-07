@@ -30,11 +30,11 @@ system:
                     template: tfktelemarkSkoleBundle:full:article.html.twig
                     match:
                         Identifier\ContentType: [article]
-                fag:
+                presentasjon:
                     controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
-                    template: tfktelemarkSkoleBundle:full:fag.html.twig
+                    template: tfktelemarkSkoleBundle:full:presentasjon.html.twig
                     match:
-                        Identifier\ContentType: [fag]
+                        Identifier\ContentType: [presentasjon]
                 infobox:
                     template: tfktelemarkSkoleBundle:line:infobox.html.twig
                     match:
@@ -53,10 +53,10 @@ system:
                     template: tfktelemarkSkoleBundle:line:folder.html.twig
                     match:
                         Identifier\ContentType: [folder]
-                fag:
-                    template: tfktelemarkSkoleBundle:line:fag.html.twig
+                presentasjon:
+                    template: tfktelemarkSkoleBundle:line:presentasjon.html.twig
                     match:
-                        Identifier\ContentType: [fag]
+                        Identifier\ContentType: [presentasjon]
                 link:
                     template: tfktelemarkSkoleBundle:line:link.html.twig
                     match:
@@ -126,6 +126,10 @@ system:
                     template: tfktelemarkSkoleBundle:block_box:link.html.twig
                     match:
                         Identifier\ContentType: [link]
+                presentasjon:
+                    template: tfktelemarkSkoleBundle:block_box:presentasjon.html.twig
+                    match:
+                        Identifier\ContentType: [presentasjon]
 
 #            aside:
 #                folder:
