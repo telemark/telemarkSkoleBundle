@@ -39,6 +39,10 @@ system:
                     template: tfktelemarkSkoleBundle:line:infobox.html.twig
                     match:
                         Identifier\ContentType: [infobox]
+                embed:
+                    template: tfktelemarkSkoleBundle:full:embed.html.twig
+                    match:
+                        Identifier\ContentType: [embed]
             line:
                 article:
                     template: tfktelemarkSkoleBundle:line:article.html.twig
@@ -61,6 +65,10 @@ system:
                     template: tfktelemarkSkoleBundle:line:link.html.twig
                     match:
                         Identifier\ContentType: [link]
+                embed:
+                    template: tfktelemarkSkoleBundle:line:embed.html.twig
+                    match:
+                        Identifier\ContentType: [embed]
             embed:
                 image:
                     template: tfktelemarkSkoleBundle:embed:image.html.twig
