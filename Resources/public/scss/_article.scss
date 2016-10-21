@@ -1,5 +1,52 @@
+.presentation--left {
+  width: 72%;
+  float: left;
+  @include breakpoint(small) {
+    width: 100%;
+  }
+}
+
+.presentation--sidebar-right {
+  float: right;
+  width: 24%;
+  @include breakpoint(small) {
+    width: 100%;
+  }
+}
+
+.article-left {
+  > figure {
+      float: right;
+      padding: 0em 0em .75em 1.25em;
+  }
+}
+
+.article-right {
+  > figure {
+      float: left;
+      padding: 0em 1.25em .75em 0em;
+  }
+}
+
+.article-right,
+.article-left {
+   figure {
+    @media screen and (min-width: 0px) and (max-width: 550px) {
+      width: 50%;
+    }
+  }
+}
+
+.more-information-header {
+  border-bottom: 1px solid $tfk-black;
+}
+
+.clearfix {
+  clear: both;
+}
+
 .ingress {
-    margin: .4em 0;
+    margin: 0 0 .5em 0;
     font-size: 1.125em;
     line-height: 1.2em;
 }
@@ -17,6 +64,8 @@
 }
 
 .article__header {
-  margin-bottom: 1.5em;
-  margin-top: 1.25em;
+  margin-bottom: .75em;
+  margin-top: 2.75em;
 }
+
+

@@ -31,9 +31,11 @@
 
 .left-large-image,
 .right-large-image {
-  width: 55%;
-  padding: 1em;
-  padding-bottom: .25em;
+  width: auto;
+  padding: .5em 0em 1.5em 0em;
+  &:first-of-type {
+    margin-top: 1em;
+  }
   @include breakpoint(small) {
     width: 100%;
     padding-left: 0;
@@ -44,11 +46,17 @@
 .left-large-image {
   float: left;
   padding-left: 0;
+  > * img {
+    float: left;
+  }
 }
 
 .right-large-image {
     float: right;
     padding-right: 0;
+    > * img {
+      float: right;
+    }
 }
 
 
