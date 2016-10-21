@@ -7,9 +7,9 @@
             }
         }  ) }}
     {% else %}
-        {#
-            add dummy image if no image is available in content
-        #}
+          <figure class="ezimage-field">
+            <img src="{{ asset('bundles/tfktelemarkskole/images/contenttype/bildetmangler.jpg') }}" alt="Mappe" />
+        </figure>
     {% endif %}
     <div class="item__content">
         <h2 class="item__header">
