@@ -26,4 +26,5 @@ filter_sets:
     right_thumb:
         quality: 85
         filters:
-            downscale: { max: [220, 300] }
+            downscale: { max: [300, 300] }
+            centercrop: [300,300]
