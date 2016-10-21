@@ -3,63 +3,65 @@
 {% block content %}
     <div class="content">
         <div class="constrained-content">
-            <main id="main" role="main" tabindex="-1" class="main">
-                <article class="main__center-left">
-                    <header class="article__header">
-                        <h1>{{ ez_render_field( content, 'title' ) }}</h1>
-                        <div class="sidenote">
-                            Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
-                        </div>
-                    </header>
-                    <div class="right-large-image">
-                    {{ ez_render_field(content, 'image', {
-                        'parameters': {
-                            'alias': 'article_large',
-                            'class': 'img-responsive'
-                        }
-                    }) }}
+            <main id="main" class="presentation" role="main" tabindex="-1" class="main">
+
+                <header class="article__header">
+                    <h1>{{ ez_render_field( content, 'title' ) }}</h1>
+                    <div class="sidenote">
+                        Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
                     </div>
-                    {% if not ez_is_field_empty( content, 'intro' ) %}
-                        <div class="ingress">
+                </header>
+{% if not ez_is_field_empty( content, 'box_1_header' ) %}
+                <article class="presentation--left">
+{% else %}
+                <article class="presentation">
+{% endif %}
+
+                    <div class="ingress">
+                        {{ ez_render_field(content, 'image', {
+                            'parameters': {
+                                'alias': 'article_large',
+                                'class': 'img-responsive'
+                            }
+                        }) }}
+                        {% if not ez_is_field_empty( content, 'intro' ) %}
                             {{ ez_render_field( content, 'intro' ) }}
+                        {% endif %}
+                    </div>
+                    <div class="clearfix"></div>
+                    {% if not ez_is_field_empty( content, 'left_text' ) %}
+                        <div class="article-left">
+                            {{ ez_render_field( content, "right_text_image" , {
+                                'parameters': {
+                                    'alias': 'article_grid_4',
+                                    'class': 'right-aligned'
+                                } } )
+                            }}
+                            {{ ez_render_field( content, 'left_text' ) }}
+                            <div class="clearfix"></div>
                         </div>
                     {% endif %}
-
-                    {% if not ez_is_field_empty( content, 'left_text' ) %}
-                            <div class="right-large-image">
-                                {{ ez_render_field( content, "right_text_image" , {
-                                    'parameters': {
-                                        'alias': 'article_grid_4'
-                                    } } )
-                                }}
-                            </div>
-                            <div class="right-content-text">
-                                {{ ez_render_field( content, 'left_text' ) }}
-                            </div>
-                    {% endif %}
-
-
+                    <div class="clearfix"></div>
                     {% if not ez_is_field_empty( content, 'right_text' ) %}
-                    
-                            <div class="left-large-image">
-                                {{ ez_render_field( content, "left_text_image" , {
-                                    'parameters': {
-                                        'alias': 'article_full'
-                                    } } )
-                                }}
-                            </div>
-                             <div class="left-content-text">
+                        <div class="article-right">
+                            {{ ez_render_field( content, "left_text_image" , {
+                                'parameters': {
+                                    'alias': 'article_grid_4',
+                                    'class': 'left-aligned'
+                                } } )
+                            }}
                             {{ ez_render_field( content, 'right_text' ) }}
-                            </div>
+                            <div class="clearfix"></div>
+                        </div>
                     {% endif %}
-
+                    <div class="clearfix"></div>
 
                     {% if not ez_is_field_empty( content, 'content' ) %}
                         {{ ez_render_field( content, 'content' ) }}
                     {% endif %}
-                                    
+
                 {% if not ez_is_field_empty( content, 'header_subs' ) %}
-                    <h2>{{ ez_render_field( content, 'header_subs' ) }}</h2>
+                    <h2 class="more-information-header">{{ ez_render_field( content, 'header_subs' ) }}</h2>
                 {% endif %}
                     {% if totalCount > 0 %}
                         <div class="grid grid--12">
@@ -71,58 +73,61 @@
                             {% endfor %}
                         </div>
                     {% endif %}
+
                 </article>
+{% if not ez_is_field_empty( content, 'box_1_header' ) %}
+                <div class="presentation--sidebar-right">
+                        <aside class="sidebar-right">
+                            <h2>{{ ez_render_field( content, 'box_1_header' ) }}</h2>
 
-                {% if not ez_is_field_empty( content, 'box_1_header' ) %}
-                    <aside class="sidebar-right">
-                        <h2>{{ ez_render_field( content, 'box_1_header' ) }}</h2>
+                        <div class="sidebar-right__content">
+                        <div class="align-center ez-embed-type-image">
+                        {{ ez_render_field( content, "right_image" , {
+                                        'parameters': {
+                                            'alias': 'right_thumb'
+                                        } } )
+                                    }}
+                                    </div>
+                            {% if not ez_is_field_empty( content, 'box_1_content' ) %}
+                                    {{ ez_render_field( content, 'box_1_content' ) }}
+                            {% endif %}
+                        </div>
 
-                    <div class="sidebar-right__content">
-                    <div class="align-center ez-embed-type-image">
-                    {{ ez_render_field( content, "right_image" , {
-                                    'parameters': {
-                                        'alias': 'right_thumb'
-                                    } } )
-                                }}
-                                </div>
-                        {% if not ez_is_field_empty( content, 'box_1_content' ) %}
-                                {{ ez_render_field( content, 'box_1_content' ) }}
+                        </aside>
+                    {% endif %}
+
+
+                    {% if not ez_is_field_empty( content, 'box_2_header' ) %}
+                        <aside class="sidebar-right">
+                            <h2>{{ ez_render_field( content, 'box_2_header' ) }}</h2>
+                        {% if not ez_is_field_empty( content, 'box_2_content' ) %}
+                                {{ ez_render_field( content, 'box_2_content' ) }}
                         {% endif %}
-                    </div>
 
-                    </aside>
-                {% endif %}
-
-
-                {% if not ez_is_field_empty( content, 'box_2_header' ) %}
-                    <aside class="sidebar-right">
-                        <h2>{{ ez_render_field( content, 'box_2_header' ) }}</h2>
-                    {% if not ez_is_field_empty( content, 'box_2_content' ) %}
-                            {{ ez_render_field( content, 'box_2_content' ) }}
+                        </aside>
                     {% endif %}
 
-                    </aside>
-                {% endif %}
 
 
+                    {% if not ez_is_field_empty( content, 'box_3_header' ) %}
+                       <aside class="sidebar-right">
+                               <h2>{{ ez_render_field( content, 'box_3_header' ) }}</h2>
+                        {% if not ez_is_field_empty( content, 'box_3_content' ) %}
+                                {{ ez_render_field( content, 'box_3_content' ) }}
+                        {% endif %}
 
-                {% if not ez_is_field_empty( content, 'box_3_header' ) %}
-                   <aside class="sidebar-right">
-                           <h2>{{ ez_render_field( content, 'box_3_header' ) }}</h2>
-                    {% if not ez_is_field_empty( content, 'box_3_content' ) %}
-                            {{ ez_render_field( content, 'box_3_content' ) }}
+                        </aside>
                     {% endif %}
 
+                    <aside class="sidebar-right__others">
+
+                        {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", {
+                            'locationId': location.id }
+                        )) }}
+{% if not ez_is_field_empty( content, 'box_1_header' ) %}
                     </aside>
-                {% endif %}
-
-                <aside class="sidebar-right__others">
-
-                    {{ render( controller( "tfktelemarkSkoleBundle:Sidebar:sidebarItems", {
-                        'locationId': location.id }
-                    )) }}
-
-                </aside>
+{% endif %}
+                </div>
 
             </main>
         </div>

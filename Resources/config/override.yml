@@ -35,10 +35,19 @@ system:
                     template: tfktelemarkSkoleBundle:full:presentasjon.html.twig
                     match:
                         Identifier\ContentType: [presentasjon]
+                presentasjon_shared:
+                    controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
+                    template: tfktelemarkSkoleBundle:full:presentasjon.html.twig
+                    match:
+                        Identifier\ContentType: [presentasjon_shared]
                 infobox:
                     template: tfktelemarkSkoleBundle:line:infobox.html.twig
                     match:
                         Identifier\ContentType: [infobox]
+                embed_code:
+                    template: tfktelemarkSkoleBundle:full:embed.html.twig
+                    match:
+                        Identifier\ContentType: [embed_code]
             line:
                 article:
                     template: tfktelemarkSkoleBundle:line:article.html.twig
@@ -57,10 +66,18 @@ system:
                     template: tfktelemarkSkoleBundle:line:presentasjon.html.twig
                     match:
                         Identifier\ContentType: [presentasjon]
+                presentasjon_shared:
+                    template: tfktelemarkSkoleBundle:line:presentasjon.html.twig
+                    match:
+                        Identifier\ContentType: [presentasjon_shared]
                 link:
                     template: tfktelemarkSkoleBundle:line:link.html.twig
                     match:
                         Identifier\ContentType: [link]
+                embed_code:
+                    template: tfktelemarkSkoleBundle:line:embed.html.twig
+                    match:
+                        Identifier\ContentType: [embed_code]
             embed:
                 image:
                     template: tfktelemarkSkoleBundle:embed:image.html.twig
@@ -130,6 +147,10 @@ system:
                     template: tfktelemarkSkoleBundle:block_box:presentasjon.html.twig
                     match:
                         Identifier\ContentType: [presentasjon]
+                presentasjon_shared:
+                    template: tfktelemarkSkoleBundle:block_box:presentasjon.html.twig
+                    match:
+                        Identifier\ContentType: [presentasjon_shared]
 
 #            aside:
 #                folder:

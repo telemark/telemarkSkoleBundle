@@ -87,7 +87,7 @@ class MenuController extends Controller
             if ( in_array( 'folder', $identifiers ) )
             {
                 $arr1Criteria[] = new Criterion\ParentLocationId( $item->id );
-                $arr1Criteria[] = new Criterion\ContentTypeIdentifier( array( 'folder' ,'presentasjon' ) );
+                $arr1Criteria[] = new Criterion\ContentTypeIdentifier( array( 'folder' ,'presentasjon','presentasjon_shared','embed_code' ) );
                 $arr1Criteria[] = new Criterion\Visibility( Criterion\Visibility::VISIBLE );
                 $arr1Criteria[] = new Criterion\Field( "hide_from_menu", Criterion\Operator::EQ, false );
 

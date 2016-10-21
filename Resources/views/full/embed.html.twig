@@ -1,0 +1,14 @@
+{% extends noLayout ? viewbaseLayout : "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+{% block content %}
+<div class="content">
+        <div class="constrained-content">
+<header class="article__header">
+    <h1>{{ ez_render_field( content, 'title' ) }}</h1>
+</header>
+    {% if not ez_is_field_empty( content, 'code' ) %}
+    {% set embed = content.getFieldValue( 'code' ) %}
+    {{ embed|raw }}
+    {% endif %}
+      </div>
+</div>
+{% endblock %}

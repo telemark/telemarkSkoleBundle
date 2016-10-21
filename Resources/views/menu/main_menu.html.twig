@@ -12,8 +12,9 @@
                             </div>
                         </div>
                        <ul class="menu__submenu menu__level">
+
                             {% for subItem in item.subLevelItems %}
-                                {% if contentTypesIdentifiers[subItem.contentInfo.contentTypeId] == 'link'  %}
+                                {% if subItem.contentInfo.contentTypeId == '48' %}
                                     <li class="menu__submenu-item">
                                         {{ render(controller('ez_content:viewLocation', {
                                             'locationId': subItem.id,

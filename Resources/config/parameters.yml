@@ -7,6 +7,8 @@ parameters:
     subitems.tfk_school_group.identifiers:
         - article
         - presentasjon
+        - presentasjon_shared
+        - embed_code
 
     subitems.tfk_school_group.limit: 10
 
@@ -15,6 +17,7 @@ parameters:
     subitems.tfk_school_group.newsfolder.identifiers:
         - article
         - presentasjon
+        - presentasjon_shared
 
     sidebar.tfk_school_group.identifiers.right:
         - infobox
@@ -24,6 +27,8 @@ parameters:
         - article
         - folder
         - presentasjon
+        - presentasjon_shared
+        - embed_code
 
     head.vest_vgs.logo: 'vesttelemark_toplogo.png'
     head.vest_vgs.title: 'Vest-telemark videregående skole'
