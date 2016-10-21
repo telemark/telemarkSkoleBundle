@@ -44,7 +44,7 @@
                     {% if not ez_is_field_empty( content, 'description' ) %}
                         {{ ez_render_field( content, 'description' ) }}
                     {% endif %}
-                    {% if not content.getFieldValue('hide_subpages') %}
+                    {% if ez_is_field_empty( content, 'hide_subpages' ) %}
                     {% if totalCount > 0 %}
                         <div class="grid grid--12">
                             {% for item in subitems %}
