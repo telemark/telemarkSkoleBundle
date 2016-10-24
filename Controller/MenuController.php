@@ -28,32 +28,27 @@ class MenuController extends Controller
         $locationService = $repository->getLocationService();
         $searchService = $repository->getSearchService();
 
-        $identifiers = $configResolver->getParameter( 'identifiers', 'topmenu' );
+        $identifiers        = $configResolver->getParameter( 'identifiers', 'topmenu' );
+        $hideIdentifiers    = $configResolver->getParameter( 'identifiers_hide_from_menu', 'topmenu' );
+     
         $items = array();
 
         $query = new LocationQuery();
 
-        $otherIdentifiers = array();
-        foreach ( $identifiers as $identifier )
-        {
-            if ( $identifier != 'folder' )
-                $otherIdentifiers[] = $identifier;
-        }
-
-        if ( in_array( 'folder', $identifiers ) )
+        if ( $hideIdentifiers )
         {
             $arr1Criteria[] = new Criterion\ParentLocationId( $rootLocation->id );
-            $arr1Criteria[] = new Criterion\ContentTypeIdentifier( array( 'folder' ) );
+            $arr1Criteria[] = new Criterion\ContentTypeIdentifier( $hideIdentifiers );
             $arr1Criteria[] = new Criterion\Visibility( Criterion\Visibility::VISIBLE );
             $arr1Criteria[] = new Criterion\Field( "hide_from_menu", Criterion\Operator::EQ, false );
 
             $arrCriteria[]  = new Criterion\LogicalAnd($arr1Criteria);
         }
 
-        if ( $otherIdentifiers )
+        if ( $identifiers )
         {
             $arr2Criteria[] = new Criterion\ParentLocationId( $rootLocation->id );
-            $arr2Criteria[] = new Criterion\ContentTypeIdentifier( $otherIdentifiers );
+            $arr2Criteria[] = new Criterion\ContentTypeIdentifier( $identifiers );
             $arr2Criteria[] = new Criterion\Visibility( Criterion\Visibility::VISIBLE );
 
             $arrCriteria[]  = new Criterion\LogicalAnd($arr2Criteria);
@@ -84,20 +79,20 @@ class MenuController extends Controller
             unset( $arr1Criteria );
             unset( $arr2Criteria );
 
-            if ( in_array( 'folder', $identifiers ) )
+            if ( $hideIdentifiers )
             {
                 $arr1Criteria[] = new Criterion\ParentLocationId( $item->id );
-                $arr1Criteria[] = new Criterion\ContentTypeIdentifier( array( 'folder' ,'presentasjon','presentasjon_shared','embed_code' ) );
+                $arr1Criteria[] = new Criterion\ContentTypeIdentifier( $hideIdentifiers );
                 $arr1Criteria[] = new Criterion\Visibility( Criterion\Visibility::VISIBLE );
                 $arr1Criteria[] = new Criterion\Field( "hide_from_menu", Criterion\Operator::EQ, false );
 
                 $arrCriteria[]  = new Criterion\LogicalAnd($arr1Criteria);
             }
 
-            if ( $otherIdentifiers )
+            if ( $identifiers )
             {
                 $arr2Criteria[] = new Criterion\ParentLocationId( $item->id );
-                $arr2Criteria[] = new Criterion\ContentTypeIdentifier( $otherIdentifiers );
+                $arr2Criteria[] = new Criterion\ContentTypeIdentifier( $identifiers );
                 $arr2Criteria[] = new Criterion\Visibility( Criterion\Visibility::VISIBLE );
 
                 $arrCriteria[]  = new Criterion\LogicalAnd($arr2Criteria);
@@ -126,11 +121,13 @@ class MenuController extends Controller
         }
 
 
+
         $response = new Response();
         $response->headers->set( 'X-Location-Id', $rootLocation->id );
         $response->setSharedMaxAge( 3600 );
         $response->setVary( 'X-User-Hash' );
 
+        $identifiers = array_merge( $identifiers, $hideIdentifiers );
         return $this->render(
             'tfktelemarkSkoleBundle:menu:main_menu.html.twig',
             array(

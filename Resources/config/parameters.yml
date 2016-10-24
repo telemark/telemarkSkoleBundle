@@ -1,14 +1,16 @@
 parameters:
 
     topmenu.tfk_school_group.identifiers:
-        - folder
         - link
 
-    subitems.tfk_school_group.identifiers:
-        - article
+    topmenu.tfk_school_group.identifiers_hide_from_menu:
+        - folder
         - presentasjon
         - presentasjon_shared
         - embed_code
+
+    subitems.tfk_school_group.identifiers:
+        - article
 
     subitems.tfk_school_group.limit: 10
 
