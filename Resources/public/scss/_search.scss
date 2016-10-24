@@ -1,0 +1,44 @@
+@media screen and (max-width:1023px) and (min-width: 320px) {
+    .page-header__search.toggled {
+        width: 100%;
+        position: absolute;
+        bottom: -1em;
+
+        #searchText {
+            padding: 0em 1em;
+        }
+    }
+}
+
+
+@media screen and (max-width:1023px) and (min-width: 881px) {
+    #searchText {
+        height: 3.25em;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:880px) and (min-width: 320px) {
+    #searchText {
+        height: 2.25em;
+        width: calc(100% - 1em);
+        margin-left: 1em;
+    }
+}
+
+
+main {
+    #searchText {
+        height: 3.25em;
+        width: 100%;
+        padding: 0em 1em;
+    }
+
+    form.well.form-search {
+      position: relative;
+      padding: 1em 0px;
+    }
+}
+
+
+

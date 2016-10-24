@@ -840,3 +840,14 @@ function setUpMainMenu() {
 }
 
 setUpMainMenu();
+
+
+
+
+$(document).ready(function(){
+    
+  $("#search-trigger").on('click',function(){
+    $("div.page-header__search").toggle().addClass("toggled");
+  });
+  
+});
