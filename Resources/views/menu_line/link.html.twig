@@ -4,4 +4,4 @@
 {% if open_in_new_window.value == true %}
     {% set target = 'target="_blank"' %}
 {% endif %}
-<a href="{{ url.value.link }}" {{ target }} class="menu__item-link">{{ url.value.text }}</a>
+<a href="{{ url.value.link }}" {{ target }} class="menu__item-link">{{ content.contentInfo.name }}</a>
