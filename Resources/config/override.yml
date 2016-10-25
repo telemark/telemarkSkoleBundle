@@ -9,12 +9,6 @@ system:
                     template: tfktelemarkSkoleBundle:full:landing_page.html.twig
                     match:
                         Identifier\ContentType: [landing_page]
-                news_folder:
-                    controller: "tfktelemarkSkoleBundle:Folder:newsfolderViewEnhanced"
-                    template: "tfktelemarkSkoleBundle:full:news_folder.html.twig"
-                    match:
-                        Identifier\ContentType: [folder]
-                        Id\Location: 63
                 folder:
                     controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
                     template: "tfktelemarkSkoleBundle:full:folder.html.twig"
