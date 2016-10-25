@@ -9,7 +9,11 @@ parameters:
         - presentasjon
         - presentasjon_shared
         - embed_code
-
+    topmenu.tfk_school_group.identifiers_hide_from_menu:
+          - folder
+          - presentasjon
+          - presentasjon_shared
+          - embed_code
     subitems.tfk_school_group.limit: 10
 
     subitems.tfk_school_group.newsfolder.columns: 10
