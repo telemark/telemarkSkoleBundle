@@ -15,12 +15,6 @@ system:
                     match:
                         Identifier\ContentType: [folder]
                         Id\Location: 63
-                course_folder:
-                    controller: "tfktelemarkSkoleBundle:Folder:newsfolderViewEnhanced"
-                    template: "tfktelemarkSkoleBundle:full:course_folder.html.twig"
-                    match:
-                        Identifier\ContentType: [folder]
-                        Id\Location: 67
                 folder:
                     controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
                     template: "tfktelemarkSkoleBundle:full:folder.html.twig"
