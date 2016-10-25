@@ -63,7 +63,8 @@
                             {% for item in subitems %}
                                 {{ render(controller('ez_content:viewLocation', {
                                     'locationId': item.id,
-                                    'viewType': 'line'
+                                    'viewType': 'line',
+                                    'limit': '10'
                                 })) }}
                             {% endfor %}
                         </div>
