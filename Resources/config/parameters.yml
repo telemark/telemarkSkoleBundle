@@ -2,7 +2,6 @@ parameters:
 
     topmenu.tfk_school_group.identifiers:
         - link
-        - folder
     topmenu.tfk_school_group.identifiers_hide_from_menu:
         - folder
         - presentasjon
