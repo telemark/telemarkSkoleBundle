@@ -76,6 +76,10 @@ system:
                     template: tfktelemarkSkoleBundle:embed:file.html.twig
                     match:
                         Identifier\ContentType: [file]
+                embed_code:
+                    template: tfktelemarkSkoleBundle:embed:embed.html.twig
+                    match:
+                        Identifier\ContentType: [embed_code]
             menu_line:
                 link:
                     template: tfktelemarkSkoleBundle:menu_line:link.html.twig

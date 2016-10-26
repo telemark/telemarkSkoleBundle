@@ -1,0 +1,4 @@
+    {% if not ez_is_field_empty( content, 'code' ) %}
+    {% set embed = content.getFieldValue( 'code' ) %}
+    {{ embed|raw }}
+    {% endif %}
