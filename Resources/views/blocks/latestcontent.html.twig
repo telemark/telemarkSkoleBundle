@@ -1,0 +1,12 @@
+<div class="row block-contentlist">
+    {% if name is defined  %}
+        <h3>{{ name }}</h3>
+    {% endif %}
+    {% if contentArray|length > 0 %}
+        <ul>
+            {% for item in contentArray %}
+                <li><a href="{{ path( item.location ) }}">{{ ez_render_field( item.content, 'title') }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>

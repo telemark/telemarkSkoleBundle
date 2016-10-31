@@ -42,4 +42,8 @@ blocks:
             schedule_float3:
                 template: tfktelemarkSkoleBundle:blocks:schedule_float3.html.twig
                 name: Schedule float 3
-
+    latestcontent:
+        views:
+            latestcontent:
+                template: tfktelemarkSkoleBundle:blocks:latestcontent.html.twig
+                name: Latest content

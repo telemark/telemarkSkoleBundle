@@ -66,6 +66,16 @@ services:
         tags:
             - { name: landing_page_field_type.block_type, alias: contentgrid }
 
+    ezpublish.landing_page.block.latestcontent:
+        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\LatestContentBlock
+        arguments:
+            - '@ezpublish.api.service.location'
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.search'
+            - '@ezpublish.config.resolver'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: latestcontent }
+
     ezpublish.landing_page.block.campaign:
         class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\CampaignBlock
         arguments:
