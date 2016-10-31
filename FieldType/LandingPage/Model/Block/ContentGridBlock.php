@@ -18,6 +18,7 @@ use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Model\AbstractBlo
 use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Model\BlockType;
 use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Model\BlockValue;
 //use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Model\Block;
+use tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper;
 
 /**
  * ContentListBlock block
@@ -80,6 +81,7 @@ class ContentGridBlock extends AbstractBlockType implements BlockType
 
         $attributes = $blockValue->getAttributes();
         $contentInfo = $this->contentService->loadContentInfo($attributes['contentId']);
+        $parentLocation = $this->locationService->loadLocation( $contentInfo->mainLocationId );
 
         $query = new Query();
         $query->query = new Criterion\LogicalAnd(
@@ -93,6 +95,11 @@ class ContentGridBlock extends AbstractBlockType implements BlockType
         if (isset($attributes['limit']) && ($attributes['limit'] > 1)) {
             $query->limit = (int) $attributes['limit'];
         }
+
+        // sortOrder must be set
+        $sorting = new SortLocationClauseHelper();
+        $sortingClause = $sorting->getSortClauseFromLocation( $parentLocation );
+        $query->sortClauses = array($sortingClause);
 
         $result = $this->searchService->findContent($query, $languages);
 
