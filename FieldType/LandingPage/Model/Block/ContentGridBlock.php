@@ -6,7 +6,9 @@
 namespace tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block;
 
 use eZ\Publish\API\Repository\Values\Content\Query;
+use eZ\Publish\API\Repository\Values\Content\LocationQuery;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
+use eZ\Publish\API\Repository\Values\Content\Query\SortClause;
 use eZ\Publish\API\Repository\LocationService;
 use eZ\Publish\API\Repository\ContentService;
 use eZ\Publish\API\Repository\SearchService;
@@ -17,7 +19,6 @@ use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Definition\BlockA
 use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Model\AbstractBlockType;
 use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Model\BlockType;
 use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Model\BlockValue;
-//use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Model\Block;
 use tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper;
 
 /**
@@ -83,7 +84,7 @@ class ContentGridBlock extends AbstractBlockType implements BlockType
         $contentInfo = $this->contentService->loadContentInfo($attributes['contentId']);
         $parentLocation = $this->locationService->loadLocation( $contentInfo->mainLocationId );
 
-        $query = new Query();
+        $query = new LocationQuery();
         $query->query = new Criterion\LogicalAnd(
             [
                 new Criterion\ParentLocationId($contentInfo->mainLocationId),
@@ -99,19 +100,20 @@ class ContentGridBlock extends AbstractBlockType implements BlockType
         // sortOrder must be set
         $sorting = new SortLocationClauseHelper();
         $sortingClause = $sorting->getSortClauseFromLocation( $parentLocation );
-        $query->sortClauses = array($sortingClause);
+            
+        $query->sortClauses = array(
+            $sortingClause,
+            new SortClause\DatePublished( Query::SORT_DESC )
+        );
 
-        $result = $this->searchService->findContent($query, $languages);
+        $result = $this->searchService->findLocations($query, $languages);
 
         $contentArray = array();
         foreach ($result->searchHits as $key => $searchHit) {
-            $content = $searchHit->valueObject;
-            $locationId = $this->contentService->loadContentInfo($content->id)->mainLocationId;
-            $location = $this->locationService->loadLocation($locationId);
-            $contentArray[$key]['content'] = $content;
+            $location = $searchHit->valueObject;
+            $contentArray[$key]['content'] = $this->contentService->loadContent( $location->contentInfo->id );
             $contentArray[$key]['location'] = $location;
         }
-
         return [
             'name'          => $blockValue->getName(),
             'contentArray'  => $contentArray,
