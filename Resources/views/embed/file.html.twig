@@ -2,14 +2,16 @@
 {% set languageCode = field.languageCode %}
 {% set mimeType = field.value.mimeType %}
 {% set fileName = field.value.fileName %}
+{% set urlFileName = fileName|url_encode %}
 {% set fileNameArray = field.value.fileName|split('.') %}
 {% set fileType = fileNameArray|last|lower %}
 {% set fileSize = field.value.fileSize %}
-{% set url = '/content/download/' ~ content.contentInfo.id ~ '/file/' ~ content.getField('file').value.fileName|url_encode %}
+{% set url = '/content/download/' ~ content.contentInfo.id ~ '/file/' ~ urlFileName %}
+{#% set url = '/content/download/' ~ content.contentInfo.id ~ '/' ~ content.getField('file').id %#}
 {#% set url = '/content/download/' ~ content.contentInfo.id ~ '/' ~ content.getField('file').id ~ '/version/' ~ content.contentInfo.currentVersionNo ~ '/' ~ content.getField('file').value.fileName|url_encode %#}
 
 <div class="content-view-embed">
-    <a href="{{url}}">
+    <a href="{{ url }}">
         <div class="class-file class-file-{{ fileType }}">
             <div class="">
                 {{ content.versionInfo.contentInfo.name }}<span> ({{ fileType|upper }} | 
