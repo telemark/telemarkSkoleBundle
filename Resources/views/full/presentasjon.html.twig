@@ -16,14 +16,16 @@
 {% else %}
                 <article class="presentation">
 {% endif %}
-
-                    <div class="ingress">
+<div class="ingress">
+ {% if ez_is_field_empty(content, 'hide_poster') %}
+                    
                         {{ ez_render_field(content, 'image', {
                             'parameters': {
                                 'alias': 'article_large',
                                 'class': 'img-responsive'
                             }
                         }) }}
+ {% endif %}   
                         {% if not ez_is_field_empty( content, 'intro' ) %}
                             {{ ez_render_field( content, 'intro' ) }}
                         {% endif %}

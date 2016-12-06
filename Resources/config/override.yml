@@ -36,12 +36,23 @@ system:
                     template: tfktelemarkSkoleBundle:full:embed.html.twig
                     match:
                         Identifier\ContentType: [embed_code]
+                spacer:
+                    template: tfktelemarkSkoleBundle:full:spacer.html.twig
+                    match:
+                        Identifier\ContentType: [spacer]
+                link:
+                    template: tfktelemarkSkoleBundle:full:link.html.twig
+                    match:
+                        Identifier\ContentType: [link]
             line:
                 article:
                     template: tfktelemarkSkoleBundle:line:article.html.twig
                     match:
                         Identifier\ContentType: [article]
-
+                spacer:
+                    template: tfktelemarkSkoleBundle:line:spacer.html.twig
+                    match:
+                        Identifier\ContentType: [spacer]
                 infobox:
                     template: tfktelemarkSkoleBundle:line:infobox.html.twig
                     match:
@@ -85,6 +96,10 @@ system:
                     template: tfktelemarkSkoleBundle:menu_line:link.html.twig
                     match:
                         Identifier\ContentType: [link]
+                spacer:
+                    template: tfktelemarkSkoleBundle:menu_line:spacer.html.twig
+                    match:
+                        Identifier\ContentType: [spacer]
             shortcut_line:
                 link:
                     template: tfktelemarkSkoleBundle:shortcut_line:link.html.twig

@@ -1,0 +1,12 @@
+{% extends noLayout ? viewbaseLayout : "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+{% block content %}
+   <div class="content">
+        <div class="constrained-content">
+            <main id="main" role="main" tabindex="-1" class="main">
+{% set url = content.getField( 'url' ) %}
+{% set open_in_new_window = content.getField( 'open_in_new_window' ) %}
+<a href="{{ url.value.link }}" {% if open_in_new_window.value == true %}target="_blank"{% endif %}>{{ url.value.text }}</a>
+           </main>
+        </div>
+    </div>
+{% endblock %}

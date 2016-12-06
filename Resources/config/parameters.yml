@@ -2,6 +2,7 @@ parameters:
 
     topmenu.tfk_school_group.identifiers:
         - link
+        - spacer
     topmenu.tfk_school_group.identifiers_hide_from_menu:
         - folder
         - presentasjon
@@ -13,6 +14,7 @@ parameters:
         - presentasjon
         - presentasjon_shared
         - embed_code
+        - spacer
     subitems.tfk_school_group.limit: 10
 
     subitems.tfk_school_group.newsfolder.columns: 10
@@ -21,6 +23,7 @@ parameters:
         - article
         - presentasjon
         - presentasjon_shared
+        - spacer
 
     sidebar.tfk_school_group.identifiers.right:
         - infobox
@@ -39,6 +42,15 @@ parameters:
     head.vest_vgs.meta_description: 'Vest-telemark videregående skole er en fin skole'
     head.vest_vgs.meta_keywords: 'telemark videregående skole'
 
+    footer.vest_vgs.email: 'vest-telemark.vgs@t-fk.no'
+    footer.vest_vgs.phone: 'Sentralbord Dalen: 35 91 97 00'
+    footer.vest_vgs.phone2: 'Sentralbord Seljord: 35 91 90 70'
+    footer.vest_vgs.post: 'Postboks 2844, 3702 Skien'
+    footer.vest_vgs.adress: 'Storvegen 195 3880 Dalen'
+    footer.vest_vgs.adress2: 'Brøløsvegen 2 3840 Seljord'
+    footer.vest_vgs.contact: 'Webmaster'
+    footer.vest_vgs.link: 'http://apps.t-fk.no/ansatte/#/ansatt/2703'
+
     head.admin.logo: 'admin_toplogo.png'
     head.admin.title: 'Vest-telemark videregående skole'
     head.admin.meta_author: 'Vest-telemark videregående skole'
@@ -51,11 +63,25 @@ parameters:
     head.bamble.meta_description: 'Bamble videregående skole videregående skole er en fin skole'
     head.bamble.meta_keywords: 'bamble videregående skole'
 
+    footer.bamble.email: 'bamble.vgs@t-fk.no'
+    footer.bamble.phone: '35 91 94 00'
+    footer.bamble.post: 'Postboks 23, 3995 Stathelle'
+    footer.bamble.adress: 'Tønderveien 6, Stathelle'
+    footer.bamble.contact: 'Webmaster'
+    footer.bamble.link: 'telemark videregående skole'
+
     head.boe.logo: 'boe_toplogo.png'
     head.boe.title: 'Bøe videregående skole'
     head.boe.meta_author: 'Bamble videregående skole'
     head.boe.meta_description: 'Bamble videregående skole videregående skole er en fin skole'
     head.boe.meta_keywords: 'bamble videregående skole'
+
+    footer.boe.email: 'bo.vgs@t-fk.no'
+    footer.boe.phone: '35 91 90 00'
+    footer.boe.post: 'Postboks 54, 3833 Bø i Telemark'
+    footer.boe.adress: 'Gymnasbakken 23, Bø i Telemark'
+    footer.boe.contact: 'Webmaster'
+    footer.boe.link: 'telemark videregående skole'
 
     head.hjalmarj.logo: 'hjalmarj_toplogo.png'
     head.hjalmarj.title: 'Hjalmar Johansen videregående skole'
@@ -63,11 +89,25 @@ parameters:
     head.hjalmarj.meta_description: 'Hjalmar Johansen videregående skole er en fin skole'
     head.hjalmarj.meta_keywords: 'hjalmar johansen videregående skole'
 
+    footer.hjalmarj.email: 'hjalmarjohansen.vgs@t-fk.no'
+    footer.hjalmarj.phone: '35 91 83 00'
+    footer.hjalmarj.post: ' Moflatvegen 38, 3733 Skien'
+    footer.hjalmarj.adress: 'Moflatvegen 38, Skien'
+    footer.hjalmarj.contact: 'Webmaster'
+    footer.hjalmarj.link: 'telemark videregående skole'
+
     head.kragero.logo: 'kragero_toplogo.png'
     head.kragero.title: 'Kragerø videregående skole'
     head.kragero.meta_author: 'Kragerø videregående skole'
     head.kragero.meta_description: 'Kragerø videregående skole er en fin skole'
     head.kragero.meta_keywords: 'kragerø videregående skole'
+
+    footer.kragero.email: 'kragero.vgs@t-fk.no'
+    footer.kragero.phone: '35 91 95 00'
+    footer.kragero.post: 'Frydenborgveien 9–11, 3772 Kragerø'
+    footer.kragero.adress: 'Frydenborgveien 9–11, Kragerø'
+    footer.kragero.contact: 'Webmaster'
+    footer.kragero.link: 'telemark videregående skole'
 
     head.nome.logo: 'nome_toplogo.png'
     head.nome.title: 'Nome videregående skole'
@@ -75,11 +115,25 @@ parameters:
     head.nome.meta_description: 'Nome videregående skole er en fin skole'
     head.nome.meta_keywords: 'nome videregående skole'
 
+    footer.nome.email: 'nome.vgs@t-fk.no'
+    footer.nome.phone: '35 91 87 00'
+    footer.nome.post: ' Søvevegen 12, 3830 Ulefoss'
+    footer.nome.adress: 'Søvevegen 12, Ulefoss'
+    footer.nome.contact: 'Webmaster'
+    footer.nome.link: 'telemark videregående skole'
+
     head.notodden.logo: 'notodden_toplogo.png'
     head.notodden.title: 'Notodden videregående skole'
     head.notodden.meta_author: 'Notodden videregående skole'
     head.notodden.meta_description: 'Notodden videregående skole er en fin skole'
     head.notodden.meta_keywords: 'notodden videregående skole'
+
+    footer.notodden.email: 'notodden.vgs@t-fk.no'
+    footer.notodden.phone: '35 91 85 00'
+    footer.notodden.post: 'Postboks 184, 3672 Notodden'
+    footer.notodden.adress: 'Heddalsvegen 4, Notodden'
+    footer.notodden.contact: 'Webmaster'
+    footer.notodden.link: 'telemark videregående skole'
 
     head.porsgrunn.logo: 'porsgrunn_toplogo.png'
     head.porsgrunn.title: 'Porsgrunn videregående skole'
@@ -87,11 +141,25 @@ parameters:
     head.porsgrunn.meta_description: 'Porsgrunn videregående skole er en fin skole'
     head.porsgrunn.meta_keywords: 'porsgrunn videregående skole'
 
+    footer.porsgrunn.email: 'porsgrunn.vgs@t-fk.no'
+    footer.porsgrunn.phone: '35 91 75 00'
+    footer.porsgrunn.post: 'Kjølnes Ring 58, 3918 Porsgrunn'
+    footer.porsgrunn.adress: 'Kjølnes Ring 58, Porsgrunn'
+    footer.porsgrunn.contact: 'Webmaster'
+    footer.porsgrunn.link: 'telemark videregående skole'
+
     head.rjukan.logo: 'rjukan_toplogo.png'
     head.rjukan.title: 'Rjukan videregående skole'
     head.rjukan.meta_author: 'Rjukan videregående skole'
     head.rjukan.meta_description: 'Rjukan videregående skole er en fin skole'
     head.rjukan.meta_keywords: 'rjukan videregående skole'
+
+    footer.rjukan.email: 'rjukan.vgs@t-fk.no'
+    footer.rjukan.phone: '35 91 99 00'
+    footer.rjukan.post: 'Såheimsveien 22, 3660 Rjukan'
+    footer.rjukan.adress: 'Såheimsveien 22, Rjukan'
+    footer.rjukan.contact: 'Webmaster'
+    footer.rjukan.link: 'telemark videregående skole'
 
     head.skien.logo: 'skien_toplogo.png'
     head.skien.title: 'Skien videregående skole'
@@ -99,14 +167,35 @@ parameters:
     head.skien.meta_description: 'Skien videregående skole er en fin skole'
     head.skien.meta_keywords: 'skien videregående skole'
 
+    footer.skien.email: 'skien.vgs@t-fk.no'
+    footer.skien.phone: '35 91 80 00 Prestejordet / 35 91 80 50 Brekkeby'
+    footer.skien.post: 'Einar Østvedts gate 12, Skien'
+    footer.skien.adress: 'Einar Østvedts gate 12, 3724 Skien'
+    footer.skien.contact: 'Webmaster'
+    footer.skien.link: 'telemark videregående skole'
+
     head.skogmo.logo: 'skogmo_toplogo.png'
     head.skogmo.title: 'Skogmo videregående skole'
     head.skogmo.meta_author: 'Skogmo videregående skole'
     head.skogmo.meta_description: 'Skogmo videregående skole er en fin skole'
     head.skogmo.meta_keywords: 'skogmo videregående skole'
 
+    footer.skogmo.email: 'skogmo.vgs@t-fk.no'
+    footer.skogmo.phone: '35 91 92 00'
+    footer.skogmo.post: 'Kjørbekkdalen 11, 3735 Skien'
+    footer.skogmo.adress: 'Kjørbekkdalen 11, Skien'
+    footer.skogmo.contact: 'Webmaster'
+    footer.skogmo.link: 'telemark videregående skole'
+
     head.fagskolen.logo: 'fagskolen_toplogo.png'
     head.fagskolen.title: 'Fagskolen telemark'
     head.fagskolen.meta_author: 'Fagskolen telemark'
     head.fagskolen.meta_description: 'Fagskolen telemark er en fin skole'
     head.fagskolen.meta_keywords: 'fagskolen videregående skole'
+
+    footer.fagskolen.email: 'vesttelemark_toplogo.png'
+    footer.fagskolen.phone: 'Vest-telemark videregående skole'
+    footer.fagskolen.post: 'Vest-telemark videregående skole'
+    footer.fagskolen.adress: 'Vest-telemark videregående skole er en fin skole'
+    footer.fagskolen.contact: 'telemark videregående skole'
+    footer.fagskolen.link: 'telemark videregående skole'

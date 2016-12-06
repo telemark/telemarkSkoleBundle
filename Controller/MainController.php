@@ -44,7 +44,46 @@ class DefaultController extends Controller
         );
 
     }
+    public function footerAction()
+    {
+        $rootLocation = $this->getRootLocation();
+        $configResolver = $this->getConfigResolver();
 
+        if ( $configResolver->hasParameter( 'email', 'footer' ) )
+            $email = $configResolver->getParameter( 'email', 'footer' );
+        if ( $configResolver->hasParameter( 'phone', 'footer' ) )
+            $email = $configResolver->getParameter( 'phone2', 'footer' );
+        if ( $configResolver->hasParameter( 'phone2', 'footer' ) )
+            $email = $configResolver->getParameter( 'phone', 'footer' );
+        if ( $configResolver->hasParameter( 'post', 'footer' ) )
+            $email = $configResolver->getParameter( 'post', 'footer' );
+        if ( $configResolver->hasParameter( 'adress2', 'footer' ) )
+            $email = $configResolver->getParameter( 'adress2', 'footer' );
+        if ( $configResolver->hasParameter( 'adress', 'footer' ) )
+            $email = $configResolver->getParameter( 'adress', 'footer' );
+        if ( $configResolver->hasParameter( 'contact', 'footer' ) )
+            $email = $configResolver->getParameter( 'contact', 'footer' );
+        if ( $configResolver->hasParameter( 'link', 'footer' ) )
+            $email = $configResolver->getParameter( 'link', 'footer' );
+        $response = new Response;
+        $response->setSharedMaxAge( 3600 );
+
+        return $this->render(
+            'tfktelemarkSkoleBundle::page_footer.html.twig',
+            array(
+                'email' => $email
+                'phone' => $phone
+                'phone' => $phone
+                'post' => $post
+                'adress2' => $adress2
+                'adress' => $adress
+                'contact' => $contact
+                'link' => $link
+            ),
+            $response
+        );
+
+    }
     public function mainMenuAction()
     {
         $rootLocation = $this->getRootLocation();

@@ -11,6 +11,7 @@
                             Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
                         </div>
                     </header>
+ {% if ez_is_field_empty(content, 'hide_poster') %}
                            {% if not ez_is_field_empty(content, 'image') %}
                      <div class="right-large-image">
                          {{ ez_render_field(content, 'image', {
@@ -33,6 +34,7 @@
                     </div>
                     </div>
                     {% endif %}
+ {% endif %}
                       {% if not ez_is_field_empty( content, 'intro' ) %}
                         <div class="ingress">
                             {{ ez_render_field( content, 'intro' ) }}

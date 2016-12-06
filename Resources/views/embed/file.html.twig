@@ -14,15 +14,7 @@
     <a href="{{ url }}">
         <div class="class-file class-file-{{ fileType }}">
             <div class="">
-                {{ content.versionInfo.contentInfo.name }}<span> ({{ fileType|upper }} | 
-                    {% if fileSize > 1000000 %}
-                        {% set fileSizeCalculated = fileSize/1000000 %}
-                        {{ fileSizeCalculated|number_format(2, ',', '.') }} MB
-                    {% elseif fileSize > 1000 %}
-                        {% set fileSizeCalculated = fileSize/1000 %}
-                        {{ fileSizeCalculated|number_format(1, ',', '.') }} KB
-                    {% endif %}
-                )
+                {{ content.versionInfo.contentInfo.name }}<span> ({{ fileType|upper }})
                 </span>
             </div>
         </div>

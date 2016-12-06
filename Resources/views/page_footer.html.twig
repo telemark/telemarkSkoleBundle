@@ -1,14 +1,41 @@
-
-
-        <div class="content highlight--dark">
-          <div class="constrained-content clearfix" style="margin-top: 0.5em; margin-bottom: 0.5em;">
-            <div class="page-footer-nav" style="margin: 0px;">
-              <ul class="page-footer-nav__list nav nav--small nav--short">
-                <li class="nav__item"><a href="https://docs.google.com/spreadsheet/viewform?formkey=dDFHcVlIQW43eHhjWUdXSlh2WVVlUEE6MQ" class="nav__item__link">Tilbakemeldinger</a></li>
-                <li class="nav__item"><a href="/Om-www.telemark.no" class="nav__item__link">Om nettstedet</a></li>
-                <li class="nav__item"><a href="mailto:eva-susanne.drugg@t-fk.no" class="nav__item__link">Kontakt webmaster</a></li>
-                <li class="nav__item"><a href="/login" class="nav__item__link">Logg inn</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+{% set email = getConfigResolverParameter( 'email', 'footer' ) %}
+{% set phone = getConfigResolverParameter( 'phone', 'footer' ) %}
+{% set phone2 = getConfigResolverParameter( 'phone2', 'footer' ) %}
+{% set post = getConfigResolverParameter( 'post', 'footer' ) %}
+{% set adress2 = getConfigResolverParameter( 'adress2', 'footer' ) %}
+{% set adress = getConfigResolverParameter( 'adress', 'footer' ) %}
+{% set contact = getConfigResolverParameter( 'contact', 'footer' ) %}
+{% set link = getConfigResolverParameter( 'link', 'footer' ) %}
+{% set title = getConfigResolverParameter( 'title', 'head' ) %}
+<div class="content highlight--dark">
+  <div class="constrained-content clearfix" style="margin-top: 0.5em; margin-bottom: 0.5em;">
+<div class="page-footer__box">
+                  <div class="page-footer__content">
+                    <h2 class="visuallyhidden">Kontaktinformasjon</h2>
+                    <h3>Kontakt {{ title }}:</h3>
+                    <ul>
+                      <li>{{ phone }}</li>
+                       {% if phone2 %}
+                      <li>{{ phone2 }}</li>
+                       {% endif %}
+                      <li>E-post: <a href="{{ email }}">{{ email }}</a></li>
+                    </ul>
+                    <h3>Besøksadresse:</h3>
+                    <p>{{ adress }}</p>
+                    {% if adress2 %}
+                    <p>{{ adress2 }}</p>
+                    {% endif %}
+                    <h3>Postadresse:</h3>
+                    <p>{{ post }}</p>
+                  </div>
+                  <div class="page-footer__content page-footer__content--last">
+                    <h3>Kontakter:</h3>
+                    <ul class="side-menu">
+                      <li class="side-menu__item"><a href="http://apps.t-fk.no/ansatte" target="_blank">Finn ansatte og avdelinger</a></li>
+                   
+                    <li class="side-menu__item"><a href="{{ link }}" class="nav__item__link">Kontakt webmaster</a></li>
+                     </ul>
+                  </div>
+                </div>
+  </div>
+</div>

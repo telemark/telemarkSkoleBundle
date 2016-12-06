@@ -14,7 +14,14 @@
                        <ul class="menu__submenu menu__level">
 
                             {% for subItem in item.subLevelItems %}
-                                {% if subItem.contentInfo.contentTypeId == '48' %}
+                                {% if subItem.contentInfo.contentTypeId == '64' %}
+                                    <li class="menu__submenu-item">
+                                        {{ render(controller('ez_content:viewLocation', {
+                                            'locationId': subItem.id,
+                                            'viewType': 'menu_line'
+                                        })) }}
+                                    </li>
+                                {% elseif subItem.contentInfo.contentTypeId == '48' %}
                                     <li class="menu__submenu-item">
                                         {{ render(controller('ez_content:viewLocation', {
                                             'locationId': subItem.id,
