@@ -18,6 +18,10 @@ system:
                     template: tfktelemarkSkoleBundle:full:article.html.twig
                     match:
                         Identifier\ContentType: [article]
+                article_shared:
+                    template: tfktelemarkSkoleBundle:full:article.html.twig
+                    match:
+                        Identifier\ContentType: [article_shared]
                 presentasjon:
                     controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
                     template: tfktelemarkSkoleBundle:full:presentasjon.html.twig
@@ -49,6 +53,10 @@ system:
                     template: tfktelemarkSkoleBundle:line:article.html.twig
                     match:
                         Identifier\ContentType: [article]
+                article_shared:
+                    template: tfktelemarkSkoleBundle:line:article.html.twig
+                    match:
+                        Identifier\ContentType: [article_shared]
                 spacer:
                     template: tfktelemarkSkoleBundle:line:spacer.html.twig
                     match:
@@ -115,6 +123,10 @@ system:
                     template: tfktelemarkSkoleBundle:search_line:article.html.twig
                     match:
                         Identifier\ContentType: [article]
+                article_shared:
+                    template: tfktelemarkSkoleBundle:search_line:article.html.twig
+                    match:
+                        Identifier\ContentType: [article_shared]
 
 
 #        block_view:
