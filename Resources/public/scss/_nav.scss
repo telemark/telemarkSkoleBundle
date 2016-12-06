@@ -1,6 +1,19 @@
 // Meny fra farte 
 
 
+.menu__submenu-item span.menu__item-spacer {
+  font-weight: 100;
+  padding: .5rem 1rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: black;
+  font-size: .75rem;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+
 .menu {
     background: $tfk-yellow;
 }
@@ -186,6 +199,16 @@
         font-size: 1.25em;
         line-height: 1.2em;
     }
+
+    .menu__submenu-item span.menu__item-spacer {
+        padding: .8em 20px;
+        box-shadow: inset 0 -1px rgba(0,0,0,0.1);
+        font-size: 14px;
+        line-height: 1.2em;
+        display: block;
+        letter-spacing: 2px;
+    }
+
 
     .menu__item-link:hover,.menu__item-link:focus,.menu__item-link:active,.menu__item-link--active {
         background: #ffdd4c;

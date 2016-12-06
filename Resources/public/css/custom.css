@@ -1,15 +1,13 @@
 /* line 7, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 *, * > * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 @font-face {
   font-family: 'icomoon';
   src: url("../bundles/tfktelemarkskole/images/icon-font/icomoon.eot");
   src: url("../bundles/tfktelemarkskole/images/icon-font/icomoon.eot") format("embedded-opentype"), url("../bundles/tfktelemarkskole/images/icon-font/icomoon.ttf") format("truetype"), url("../bundles/tfktelemarkskole/images/icon-font/icomoon.woff") format("woff"), url("../bundles/tfktelemarkskole/images/icon-font/icomoon.svg") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 /* line 12, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
 [class^="icon-"], [class*=" icon-"] {
@@ -23,28 +21,23 @@
   line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
 /* line 27, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
 .icon-google-plus:before {
-  content: "\e910";
-}
+  content: "\e910"; }
 
 /* line 30, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
 .icon-facebook2:before {
-  content: "\e911";
-}
+  content: "\e911"; }
 
 /* line 33, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
 .icon-twitter:before {
-  content: "\e912";
-}
+  content: "\e912"; }
 
 /* line 36, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
 .icon-rss:before {
-  content: "\e913";
-}
+  content: "\e913"; }
 
 /* line 41, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
 .social-icons {
@@ -53,196 +46,154 @@
   margin: 0;
   padding: 0;
   top: 1.5em;
-  right: 0;
-}
-
-/* line 49, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
-.social-icons a {
-  text-decoration: none;
-  color: #000;
-}
-
-/* line 53, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
-.social-icons a:hover {
-  color: #000;
-}
+  right: 0; }
+  /* line 49, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
+  .social-icons a {
+    text-decoration: none;
+    color: #000; }
+    /* line 53, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
+    .social-icons a:hover {
+      color: #000; }
 
 /* line 59, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
 .social-icons__list-item {
   display: inline-block;
-  padding-left: 1em;
-}
+  padding-left: 1em; }
 
 @media screen and (min-width: 880px) and (max-width: 1023px) {
   /* line 65, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
   .social-icons {
     top: 3.75em;
-    right: 10em;
-  }
-}
+    right: 10em; } }
 
 @media screen and (min-width: 650px) and (max-width: 880px) {
   /* line 73, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
   .social-icons {
     top: 3em;
-    right: 10em;
-  }
-}
+    right: 10em; } }
 
 @media screen and (min-width: 320px) and (max-width: 650px) {
   /* line 81, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_social-icons.scss */
   .social-icons {
     top: 5.5em;
-    right: .25em;
-  }
-}
+    right: .25em; } }
 
 /* line 2, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__active-slide {
-  z-index: 100;
-}
+  z-index: 100; }
 
 /* line 5, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__slide {
   /* z-index: -999; */
-  position: relative;
-}
+  position: relative; }
 
 /* line 9, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider-wrapper--fullwidth {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 /* line 16, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__slides, .slider__control-nav, .slider__direction-nav {
   margin: 0;
   padding: 0;
-  list-style: none;
-}
+  list-style: none; }
 
 /* line 22, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider-wrapper {
-  padding-bottom: .5em;
-}
+  padding-bottom: .5em; }
 
 /* line 26, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider-wrapper--inline {
   margin-right: -20px;
-  margin-left: -20px;
-}
+  margin-left: -20px; }
 
 @media (min-width: 64em) {
   /* line 32, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider-wrapper--inline {
     margin-right: 0;
-    margin-left: 0;
-  }
-}
+    margin-left: 0; } }
 
 @media (min-width: 64em) {
   /* line 42, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider-wrapper--fullwidth {
-    padding-top: 2.5em;
-  }
-}
+    padding-top: 2.5em; } }
 
 /* line 47, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider {
   position: relative;
   margin-right: -20px;
-  margin-left: -20px;
-}
+  margin-left: -20px; }
 
 @media (min-width: 64em) {
   /* line 54, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider {
     margin-left: 0;
-    margin-right: 0;
-  }
-}
+    margin-right: 0; } }
 
 /* line 60, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider .top-image {
   margin-right: 0;
   margin-left: 0;
   color: #000;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 /* line 67, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider--inline {
   margin-right: 0;
-  margin-left: 0;
-}
+  margin-left: 0; }
 
 /* line 72, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__viewport {
   max-height: 2000px;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
   -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
+  transition: all 1s ease; }
 
 /* line 80, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__slide {
   display: none;
   -webkit-backface-visibility: hidden;
-  *zoom: 1;
-}
+  *zoom: 1; }
 
 /* line 86, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__slide a {
   position: relative;
-  display: block;
-}
+  display: block; }
 
 /* line 91, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__slide img {
   display: block;
-  width: 100%;
-}
+  width: 100%; }
 
 /* line 96, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 * html .slider__slide {
-  height: 1%;
-}
+  height: 1%; }
 
 /* line 100, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .no-js .slider__slide:first-child {
-  display: block;
-}
+  display: block; }
 
 @media (min-width: 64em) {
   /* line 105, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider--fullwidth .slider__slide .top-image {
     display: block;
     margin-left: -14px;
-    width: 100%;
-  }
-}
+    width: 100%; } }
 
 /* line 112, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider--fullwidth .slider__slide, .slider--fullwidth .slider__slide .top-image__text-wrapper {
   background-color: #007c97;
-  color: #fff;
-}
+  color: #fff; }
 
 @media (min-width: 64em) {
   /* line 118, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider--fullwidth .slider__slide .top-image__text-wrapper {
     float: right;
     margin-right: 1.38889%;
-    width: 30.55556%;
-  }
-}
+    width: 30.55556%; } }
 
 @media (min-width: 64em) {
   /* line 126, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider--fullwidth .slider__slide .top-image__text {
-    padding-left: 0;
-  }
-}
+    padding-left: 0; } }
 
 @media (min-width: 64em) {
   /* line 132, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
@@ -251,17 +202,13 @@
     margin-left: 1.38889%;
     padding-right: .69444%;
     width: 63.88889%;
-    background-color: #ededed;
-  }
-}
+    background-color: #ededed; } }
 
 @media (min-width: 64em) {
   /* line 142, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider--inline .slider__slide .top-image__text-wrapper {
     padding-right: 20px;
-    padding-left: 20px;
-  }
-}
+    padding-left: 20px; } }
 
 /* line 148, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__control-nav {
@@ -269,13 +216,11 @@
   margin-left: 5em;
   text-align: center;
   font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
-  margin-top: .5em;
-}
+  margin-top: .5em; }
 
 /* line 156, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__control-nav li {
-  display: inline-block;
-}
+  display: inline-block; }
 
 /* line 160, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__control-nav li a {
@@ -287,133 +232,103 @@
   cursor: pointer;
   text-indent: -999em;
   overflow: hidden;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
-}
+  border-radius: 100px; }
 
 @media (min-width: 64em) {
   /* line 175, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider__control-nav li a {
-    background-color: #717171;
-  }
-}
+    background-color: #717171; } }
 
 /* line 180, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider--inline .slider__control-nav li a {
-  background-color: #717171;
-}
+  background-color: #717171; }
 
 /* line 184, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__control-nav li .slider__active {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 /* line 188, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__control-nav li .slider__active, .slider__control-nav li .slider__active:hover {
   background: #fff;
-  color: #000;
-}
+  color: #000; }
 
 @media (min-width: 64em) {
   /* line 194, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider__control-nav li .slider__active, .slider__control-nav li .slider__active:hover {
     background: #000;
-    color: #fff;
-  }
-}
+    color: #fff; } }
 
 /* line 200, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider--inline .slider__control-nav li .slider__active, .slider--inline .slider__control-nav li .slider__active:hover {
   background: #000;
-  color: #fff;
-}
+  color: #fff; }
 
 /* line 205, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__direction-nav {
   margin: 0;
   text-align: right;
-  font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
-}
+  font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; }
 
 @media (min-width: 64em) {
   /* line 212, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider__direction-nav {
     margin-right: 0;
-    margin-left: 0;
-  }
-}
+    margin-left: 0; } }
 
 /* line 218, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__direction-nav li {
   text-align: left;
-  display: inline-block;
-}
+  display: inline-block; }
 
 /* line 223, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__nav-prev, .slider__nav-next {
   position: absolute;
   bottom: -13px;
   width: 50px;
-  height: 50px;
-}
+  height: 50px; }
 
 @media (min-width: 64em) {
   /* line 231, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider--fullwidth .slider__nav-prev, .slider--fullwidth .slider__nav-next {
     top: 50%;
     bottom: auto;
-    margin-top: -37px;
-  }
-}
+    margin-top: -37px; } }
 
 /* line 238, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__nav-prev {
-  left: 0;
-}
+  left: 0; }
 
 /* line 242, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider--fullwidth .slider__nav-prev {
-  left: 10px;
-}
+  left: 10px; }
 
 @media (min-width: 64em) {
   /* line 247, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider--fullwidth .slider__nav-prev {
-    left: 10px;
-  }
-}
+    left: 10px; } }
 
 @media (min-width: 75em) {
   /* line 253, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider--fullwidth .slider__nav-prev {
-    left: 10px;
-  }
-}
+    left: 10px; } }
 
 /* line 258, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__nav-next {
-  right: 0;
-}
+  right: 0; }
 
 /* line 262, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider--fullwidth .slider__nav-next {
-  right: 10px;
-}
+  right: 10px; }
 
 @media (min-width: 64em) {
   /* line 267, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider--fullwidth .slider__nav-next {
-    right: 10px;
-  }
-}
+    right: 10px; } }
 
 @media (min-width: 75em) {
   /* line 273, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider--fullwidth .slider__nav-next {
-    right: 10px;
-  }
-}
+    right: 10px; } }
 
 /* line 278, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__prev, .slider__next {
@@ -426,69 +341,64 @@
   background-color: #fff;
   background-position: 50%;
   text-indent: -999em;
-  -moz-transition: box-shadow .3s;
-  -o-transition: box-shadow .3s;
   -webkit-transition: box-shadow .3s;
   transition: box-shadow .3s;
-  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-}
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4); }
 
 /* line 297, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
 .slider__prev:hover, .slider__prev:focus, .slider__next:hover, .slider__next:focus {
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-}
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); }
 
 @media screen and (max-width: 63.95em) {
   /* line 305, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .top-image__text-wrapper {
-    padding: .5em 1em;
-  }
+    padding: .5em 1em; }
   /* line 309, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider__slide a {
     float: left;
-    width: 100%;
-  }
+    width: 100%; }
   /* line 314, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_slider.scss */
   .slider__direction-nav {
-    display: none;
-  }
-}
+    display: none; } }
 
 /* line 4, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+.menu__submenu-item span.menu__item-spacer {
+  font-weight: 100;
+  padding: .5rem 1rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: black;
+  font-size: .75rem;
+  border-top: 1px solid;
+  border-bottom: 1px solid; }
+
+/* line 17, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .menu {
-  background: #ffd520;
-}
+  background: #ffd520; }
 
-/* line 8, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 21, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .menu a {
-  zoom: 1;
-}
+  zoom: 1; }
 
-/* line 12, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 25, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .menu-search-trigger, .menu-trigger, .menu__back-level {
-  display: none;
-}
+  display: none; }
 
-/* line 16, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 29, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .menu__content {
   margin: 0;
   padding-left: 0;
-  list-style: none;
-}
+  list-style: none; }
 
-/* line 22, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 35, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .menu__submenu {
   margin: 0;
   padding-left: 1em;
-  list-style: none;
-}
+  list-style: none; }
 
 @media (max-width: 63.9375em) {
-  /* line 29, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+  /* line 42, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu {
     position: absolute;
     top: 0;
@@ -499,22 +409,17 @@
     max-width: 80%;
     height: 100%;
     -webkit-transform: translate3d(100%, 0, 0);
-    -moz-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-  /* line 43, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    transform: translate3d(100%, 0, 0); }
+  /* line 56, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu, .menu a, .page-header .menu a {
-    color: #000;
-  }
-  /* line 47, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    color: #000; }
+  /* line 60, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .no-csstransforms3d .menu, .no-js .menu {
-    display: none;
-  }
-  /* line 51, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    display: none; }
+  /* line 64, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-container, .menu-scroller {
-    height: 100%;
-  }
-  /* line 55, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    height: 100%; }
+  /* line 68, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-trigger, .menu-search-trigger {
     display: block;
     position: absolute;
@@ -527,43 +432,33 @@
     background-color: #ffd520;
     background-position: 50% 50%;
     text-indent: -999em;
-    -moz-transition: background-color .2s;
-    -o-transition: background-color .2s;
     -webkit-transition: background-color .2s;
-    transition: background-color .2s;
-  }
-  /* line 73, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    transition: background-color .2s; }
+  /* line 86, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-trigger:hover, .menu-trigger:focus, .menu-trigger:active, .menu-search-trigger:hover, .menu-search-trigger:focus, .menu-search-trigger:active {
-    background-color: #ffdd4c;
-  }
-  /* line 77, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    background-color: #ffdd4c; }
+  /* line 90, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-search-trigger {
-    right: 4.5em;
-  }
-  /* line 81, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    right: 4.5em; }
+  /* line 94, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-scroller {
-    overflow-y: scroll;
-  }
-  /* line 85, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    overflow-y: scroll; }
+  /* line 98, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-scroller, .menu-scroller-inner {
-    position: relative;
-  }
-  /* line 89, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    position: relative; }
+  /* line 102, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-container {
     position: relative;
-    overflow-x: hidden;
-  }
-  /* line 94, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    overflow-x: hidden; }
+  /* line 107, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-pusher {
     position: relative;
     left: 0;
-    height: 100%;
-  }
-  /* line 100, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    height: 100%; }
+  /* line 113, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-pusher:after {
-    z-index: -1;
-  }
-  /* line 104, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    z-index: -1; }
+  /* line 117, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__level {
     position: absolute;
     top: 0;
@@ -572,92 +467,76 @@
     height: 100%;
     background: #ffd520;
     z-index: 1100;
-    -moz-transform: translate3d(100%, 0, 0);
     -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-  /* line 117, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    transform: translate3d(100%, 0, 0); }
+  /* line 130, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .constrained > .menu__level, .constrained-content > .menu__level {
     box-shadow: none;
-    -moz-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  /* line 124, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    transform: translate3d(0, 0, 0); }
+  /* line 137, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__level:after {
-    z-index: -1;
-  }
-  /* line 128, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    z-index: -1; }
+  /* line 141, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__level--open {
     box-shadow: none;
-    -moz-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  /* line 135, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
-  .menu__level--open .menu__level--open {
-    -moz-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
-    -moz-transform: translate3d(40px, 0, 0);
-    -webkit-transform: translate3d(40px, 0, 0);
-    transform: translate3d(40px, 0, 0);
-  }
-  /* line 144, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
-  .menu__level--overlay {
-    overflow-x: visible;
-  }
+    transform: translate3d(0, 0, 0); }
   /* line 148, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+  .menu__level--open .menu__level--open {
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate3d(40px, 0, 0);
+    transform: translate3d(40px, 0, 0); }
+  /* line 157, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+  .menu__level--overlay {
+    overflow-x: visible; }
+  /* line 161, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__level--overlay:before {
     width: 100%;
     height: 100%;
     background: transparent;
-    opacity: 1;
-  }
-  /* line 155, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    opacity: 1; }
+  /* line 168, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__level--overlay > li {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  /* line 161, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    box-shadow: none; }
+  /* line 174, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__level--overlay > li > .menu__item-content-wrapper > .menu__item-content {
     visibility: hidden;
-    opacity: 0;
-  }
-  /* line 166, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    opacity: 0; }
+  /* line 179, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__level--noscroll {
-    overflow-x: visible;
-  }
-  /* line 170, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    overflow-x: visible; }
+  /* line 183, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__level--scroll {
-    overflow-x: hidden;
-  }
-  /* line 174, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    overflow-x: hidden; }
+  /* line 187, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-content {
     position: relative;
     overflow: hidden;
     -webkit-transition: opacity .5s;
-    -moz-transition: opacity .5s;
-    transition: opacity .5s;
-  }
-  /* line 182, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    transition: opacity .5s; }
+  /* line 195, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-link {
     display: block;
     padding: .8em 20px;
     box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1);
     font-size: 1.25em;
+    line-height: 1.2em; }
+  /* line 203, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+  .menu__submenu-item span.menu__item-spacer {
+    padding: .8em 20px;
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
     line-height: 1.2em;
-  }
-  /* line 190, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    display: block;
+    letter-spacing: 2px; }
+  /* line 213, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-link:hover, .menu__item-link:focus, .menu__item-link:active, .menu__item-link--active {
-    background: #ffdd4c;
-  }
-  /* line 194, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    background: #ffdd4c; }
+  /* line 217, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-content:hover .menu__item-link {
-    background: #ffdd4c;
-  }
-  /* line 198, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    background: #ffdd4c; }
+  /* line 221, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item__dropdown {
     position: absolute;
     right: 0;
@@ -666,11 +545,8 @@
     height: 100%;
     background-position: 50% 50%;
     cursor: e-resize;
-    -moz-box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1);
-  }
-  /* line 211, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1); }
+  /* line 234, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__back-level {
     display: block;
     padding: .66667em 20px;
@@ -678,23 +554,18 @@
     box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1);
     cursor: w-resize;
     font-size: .75em;
-    line-height: 1.33333em;
-  }
-  /* line 221, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    line-height: 1.33333em; }
+  /* line 244, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__back-level:hover, .menu__back-level:focus, .menu__back-level:active {
-    background-color: #ffdd4c;
-  }
-  /* line 225, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    background-color: #ffdd4c; }
+  /* line 248, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__submenu {
-    padding-left: 0;
-  }
-  /* line 229, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    padding-left: 0; }
+  /* line 252, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-pusher, .menu__level {
     -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    transition: all .5s;
-  }
-  /* line 235, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    transition: all .5s; }
+  /* line 258, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-pusher:after, .menu__level:after, .menu__level:before {
     position: absolute;
     top: 0;
@@ -703,33 +574,26 @@
     height: 0;
     content: '';
     opacity: 0;
-    z-index: 1000;
-  }
-  /* line 246, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    z-index: 1000; }
+  /* line 269, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-pusher:after, .menu__level:after {
     background: rgba(0, 0, 0, 0.3);
     -webkit-transition: opacity .3s,width .1s .3s,height .1s .3s;
-    -moz-transition: opacity .3s,width .1s .3s,height .1s .3s;
-    transition: opacity .3s,width .1s .3s,height .1s .3s;
-  }
-  /* line 253, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    transition: opacity .3s,width .1s .3s,height .1s .3s; }
+  /* line 276, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu-pushed:after, .menu__level--overlay:after {
     width: 100%;
     height: 100%;
     opacity: 1;
     -webkit-transition: opacity .3s;
-    -moz-transition: opacity .3s;
-    transition: opacity .3s;
-  }
-}
+    transition: opacity .3s; } }
 
 @media (min-width: 64em) {
-  /* line 264, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+  /* line 287, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu {
     background: #ffd520;
-    margin-top: .5em;
-  }
-  /* line 269, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    margin-top: .5em; }
+  /* line 292, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__content {
     display: table;
     margin: 0 -.84211em;
@@ -738,50 +602,40 @@
     width: calc(100%+2em);
     list-style: none;
     font-size: 1.1875em;
-    line-height: 1.26316em;
-  }
-  /* line 280, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    line-height: 1.26316em; }
+  /* line 303, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item {
     position: relative;
     display: inline-block;
     display: table-cell;
-    vertical-align: middle;
-  }
-  /* line 287, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    vertical-align: middle; }
+  /* line 310, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item__dropdown {
     position: absolute;
     top: .84211em;
     left: .84211em;
     width: 15px;
-    height: 9px;
-  }
-  /* line 295, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    height: 9px; }
+  /* line 318, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-content-wrapper {
-    position: relative;
-  }
-  /* line 299, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    position: relative; }
+  /* line 322, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-link {
     display: block;
     padding: .42105em .84211em;
     color: #000;
-    -moz-transition: background .2s;
-    -o-transition: background .2s;
     -webkit-transition: background .2s;
-    transition: background .2s;
-  }
-  /* line 309, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    transition: background .2s; }
+  /* line 332, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-link:hover, .menu__item-link:focus, .menu__item-link:active {
-    background: #ffdd4c;
-  }
-  /* line 313, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    background: #ffdd4c; }
+  /* line 336, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-link--submenu {
-    padding-left: 2.10526em;
-  }
-  /* line 317, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    padding-left: 2.10526em; }
+  /* line 340, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-link--active, .page-header .menu__item-link--active, .menu__item-link--active:hover, .menu__item-link--active:focus, .menu__item-link--active:active {
-    color: black;
-  }
-  /* line 321, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    color: black; }
+  /* line 344, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__submenu {
     position: absolute;
     display: none;
@@ -791,170 +645,138 @@
     background-color: #ffd520;
     list-style: none;
     text-align: left;
-    _width: 100%;
-  }
-  /* line 333, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    _width: 100%; }
+  /* line 356, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__back-level {
-    display: none;
-  }
-  /* line 337, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    display: none; }
+  /* line 360, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item:hover .menu__submenu, .menu__item:focus .menu__submenu {
-    display: block;
-  }
-}
+    display: block; } }
 
-/* line 342, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 365, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .nav {
   margin: 0;
   padding: 0;
-  list-style: none;
-}
+  list-style: none; }
 
-/* line 348, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 371, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .nav a, .nav a:visited {
   text-decoration: none;
-  color: #000;
-}
+  color: #000; }
 
-/* line 353, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 376, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .highlight--dark .nav a, .highlight--dark .nav a:visited {
-  color: #fff;
-}
+  color: #fff; }
 
-/* line 357, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 380, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .nav abbr {
-  border-bottom: 0;
-}
+  border-bottom: 0; }
 
-/* line 361, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 384, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .nav__item {
   float: left;
-  border-right: 1px solid #ededed;
-}
+  border-right: 1px solid #ededed; }
 
-/* line 366, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 389, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .nav__item:last-child {
-  border-right: 0;
-}
+  border-right: 0; }
 
-/* line 370, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 393, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .nav__item__link {
   display: block;
-  padding: .5em 10px;
-}
+  padding: .5em 10px; }
 
-/* line 375, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 398, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .nav--short .nav__item__link {
   padding-top: 0;
-  padding-bottom: 0;
-}
+  padding-bottom: 0; }
 
-/* line 383, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 406, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .menu__item-link {
   color: black;
   -webkit-transition: background .2s;
   transition: background .2s;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-/* line 390, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 413, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .menu__item-link:hover, .menu__item-link:focus, .menu__item-link:active .page-header {
   -webkit-transition: all 100ms ease;
   transition: all 100ms ease;
   text-decoration: none;
-  background: #ffdd4c;
-}
+  background: #ffdd4c; }
 
-/* line 397, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 420, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .menu__submenu {
-  background-color: #ffd520;
-}
+  background-color: #ffd520; }
 
-/* line 401, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 424, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .page__header__search {
-  top: 2.5em;
-}
+  top: 2.5em; }
 
-/* line 407, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 430, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .menu__item-link:hover, .menu__item-link:focus, .menu__item-link:active {
   background-color: initial;
-  color: black;
-}
+  color: black; }
 
-/* line 412, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 435, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 .icon--menu-arrow-down.menu__item__dropdown.hide--to-l {
   background-image: none;
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 8px solid #000;
-}
+  border-top: 8px solid #000; }
 
-/* line 420, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 443, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 li.menu__item:hover .icon--menu-arrow-down.menu__item__dropdown.hide--to-l {
-  border-top: 8px solid black;
-}
+  border-top: 8px solid black; }
 
-/* line 424, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+/* line 447, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
 li.menu__submenu-item:hover a {
-  background-color: #ffdd4c;
-}
+  background-color: #ffdd4c; }
 
 @media (max-width: 63.9375em) {
-  /* line 431, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+  /* line 454, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .icon--menu-arrow-down.menu__item__dropdown.hide--to-l {
     margin-right: 1.25em;
-    margin-top: 1.5em;
-  }
-  /* line 436, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    margin-top: 1.5em; }
+  /* line 459, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   li.menu__item,
   li.menu__submenu-item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  }
-  /* line 441, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+  /* line 464, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item__dropdown {
-    box-shadow: inset 1px 0 rgba(255, 255, 255, 0.1);
-  }
-  /* line 445, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    box-shadow: inset 1px 0 rgba(255, 255, 255, 0.1); }
+  /* line 468, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__item-link {
-    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1);
-  }
-  /* line 449, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1); }
+  /* line 472, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__submenu {
-    width: 400px;
-  }
-  /* line 453, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    width: 400px; }
+  /* line 476, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .ui-autocomplete {
     width: 100% !important;
-    left: 0 !important;
-  }
-  /* line 458, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    left: 0 !important; }
+  /* line 481, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .constrained-content {
     margin-bottom: 1em;
-    margin-top: 1em;
-  }
-  /* line 463, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    margin-top: 1em; }
+  /* line 486, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .constrained-content .item .item {
-    padding: 0;
-  }
-  /* line 467, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
+    padding: 0; }
+  /* line 490, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_nav.scss */
   .menu__level--scroll {
-    overflow-x: visible;
-  }
-}
+    overflow-x: visible; } }
 
 /* line 1, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
 .align-left {
   float: left;
-  padding: 1em 1em 1em 0em;
-}
+  padding: 1em 1em 1em 0em; }
 
 /* line 6, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
 .align-center > figure > img {
   display: block;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 /* line 12, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
 .sidebar-right .align-center > figure > img {
@@ -963,67 +785,51 @@ li.menu__submenu-item:hover a {
   width: 8em;
   height: 8em;
   border-radius: 4em;
-  margin-top: 1em;
-}
+  margin-top: 1em; }
 
 /* line 22, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
 .align-right {
   float: right;
-  padding: 1em 0em 1em 1em;
-}
+  padding: 1em 0em 1em 1em; }
 
 /* line 32, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
 .left-large-image,
 .right-large-image {
   width: auto;
-  padding: .5em 0em 1.5em 0em;
-}
-
-/* line 36, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
-.left-large-image:first-of-type,
-.right-large-image:first-of-type {
-  margin-top: 1em;
-}
-
-@media (max-width: 800px) {
-  /* line 32, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
-  .left-large-image,
-  .right-large-image {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+  padding: .5em 0em 1.5em 0em; }
+  /* line 36, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
+  .left-large-image:first-of-type,
+  .right-large-image:first-of-type {
+    margin-top: 1em; }
+  @media (max-width: 800px) {
+    /* line 32, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
+    .left-large-image,
+    .right-large-image {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0; } }
 
 /* line 46, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
 .left-large-image {
   float: left;
-  padding-left: 0;
-}
-
-/* line 49, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
-.left-large-image > * img {
-  float: left;
-}
+  padding-left: 0; }
+  /* line 49, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
+  .left-large-image > * img {
+    float: left; }
 
 /* line 54, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
 .right-large-image {
   float: right;
-  padding-right: 0;
-}
-
-/* line 57, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
-.right-large-image > * img {
-  float: right;
-}
+  padding-right: 0; }
+  /* line 57, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
+  .right-large-image > * img {
+    float: right; }
 
 @media (max-width: 800px) {
   /* line 63, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_image-styles.scss */
   .right-large-image,
   .left-large-image {
-    padding: 1em 0;
-  }
-}
+    padding: 1em 0; } }
 
 /* line 2, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
 aside.sidebar-right {
@@ -1031,27 +837,21 @@ aside.sidebar-right {
   width: 100%;
   margin-bottom: 2em;
   background: rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(0, 0, 0, 0.25);
-}
-
-@media (max-width: 800px) {
-  /* line 2, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
-  aside.sidebar-right {
-    width: calc(100% - 2em);
-    margin-left: 1em;
-    float: left;
-    overflow: auto;
-  }
-}
-
-/* line 14, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
-aside.sidebar-right h2 {
-  margin-top: 0;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.15);
-  padding: 0.5em 0em .375em 0em;
-  font-size: 1.25em;
-}
+  border: 2px solid rgba(0, 0, 0, 0.25); }
+  @media (max-width: 800px) {
+    /* line 2, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
+    aside.sidebar-right {
+      width: calc(100% - 2em);
+      margin-left: 1em;
+      float: left;
+      overflow: auto; } }
+  /* line 14, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
+  aside.sidebar-right h2 {
+    margin-top: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 0.5em 0em .375em 0em;
+    font-size: 1.25em; }
 
 /* line 23, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
 aside.sidebar-right__others {
@@ -1059,154 +859,116 @@ aside.sidebar-right__others {
   width: 100%;
   background: transparent;
   border: 2px solid transparent;
-  margin-top: 1em;
-}
-
-@media (max-width: 800px) {
-  /* line 23, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
-  aside.sidebar-right__others {
-    width: 100%;
-    padding: 1em;
-  }
-}
-
-/* line 33, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
-aside.sidebar-right__others img {
-  width: 100%;
-}
-
-/* line 36, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
-aside.sidebar-right__others h2 {
-  margin-top: 0;
-  text-align: left;
-  background-color: transparent;
-  padding: 0.5em 0em .375em 0em;
-  font-size: 1.25em;
-}
+  margin-top: 1em; }
+  @media (max-width: 800px) {
+    /* line 23, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
+    aside.sidebar-right__others {
+      width: 100%;
+      padding: 1em; } }
+  /* line 33, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
+  aside.sidebar-right__others img {
+    width: 100%; }
+  /* line 36, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
+  aside.sidebar-right__others h2 {
+    margin-top: 0;
+    text-align: left;
+    background-color: transparent;
+    padding: 0.5em 0em .375em 0em;
+    font-size: 1.25em; }
 
 /* line 45, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_aside.scss */
 aside .ezrichtext-field {
-  padding: 1em 1em 1.5em;
-}
+  padding: 1em 1em 1.5em; }
 
 /* line 1, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .presentation--left {
   width: 72%;
-  float: left;
-}
-
-@media (max-width: 800px) {
-  /* line 1, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
-  .presentation--left {
-    width: 100%;
-  }
-}
+  float: left; }
+  @media (max-width: 800px) {
+    /* line 1, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
+    .presentation--left {
+      width: 100%; } }
 
 /* line 9, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .presentation--sidebar-right {
   float: right;
-  width: 24%;
-}
-
-@media (max-width: 800px) {
-  /* line 9, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
-  .presentation--sidebar-right {
-    width: 100%;
-  }
-}
+  width: 24%; }
+  @media (max-width: 800px) {
+    /* line 9, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
+    .presentation--sidebar-right {
+      width: 100%; } }
 
 /* line 18, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .article-left > figure {
   float: right;
-  padding: 0em 0em .75em 1.25em;
-}
+  padding: 0em 0em .75em 1.25em; }
 
 /* line 25, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .article-right > figure {
   float: left;
-  padding: 0em 1.25em .75em 0em;
-}
+  padding: 0em 1.25em .75em 0em; }
 
 @media screen and (min-width: 0px) and (max-width: 550px) {
   /* line 33, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
   .article-right figure,
   .article-left figure {
-    width: 50%;
-  }
-}
+    width: 50%; } }
 
 /* line 40, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .more-information-header {
-  border-bottom: 1px solid black;
-}
+  border-bottom: 1px solid black; }
 
 /* line 44, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .clearfix {
-  clear: both;
-}
+  clear: both; }
 
 /* line 48, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .ingress {
   margin: 0 0 .5em 0;
   font-size: 1.125em;
-  line-height: 1.2em;
-}
+  line-height: 1.2em; }
 
 /* line 54, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .main__center-left {
-  margin-top: 3em;
-}
-
-/* line 57, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
-.main__center-left.no-top-spacing {
-  margin-top: 0;
-}
+  margin-top: 3em; }
+  /* line 57, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
+  .main__center-left.no-top-spacing {
+    margin-top: 0; }
 
 /* line 62, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .caption {
-  font-size: .75em;
-}
+  font-size: .75em; }
 
 /* line 66, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_article.scss */
 .article__header {
   margin-bottom: .75em;
-  margin-top: 2.75em;
-}
+  margin-top: 2.75em; }
 
 @media (max-width: 800px) {
   /* line 3, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_main.scss */
   main#main {
     padding: 0 .5em;
-    padding-top: 1em;
-  }
-}
+    padding-top: 1em; } }
 
 /* line 2, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_pagina.scss */
 .pagination {
-  margin: 1em 0;
-}
+  margin: 1em 0; }
 
 /* line 6, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_pagina.scss */
 .pagination-right {
   display: inline;
-  margin-left: -5.125em;
-}
-
-/* line 10, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_pagina.scss */
-.pagination-right a {
-  float: right;
-}
+  margin-left: -5.125em; }
+  /* line 10, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_pagina.scss */
+  .pagination-right a {
+    float: right; }
 
 /* line 16, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_pagina.scss */
 .pagination-left {
   display: inline;
-  margin-right: -5.125em;
-}
-
-/* line 20, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_pagina.scss */
-.pagination-left a {
-  float: left;
-}
+  margin-right: -5.125em; }
+  /* line 20, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_pagina.scss */
+  .pagination-left a {
+    float: left; }
 
 /*!
 Pure v0.6.0
@@ -1221,21 +983,17 @@ table {
   border-spacing: 0;
   empty-cells: show;
   border: 1px solid #cbcbcb;
-  margin: 1em 0;
-}
-
-/* line 15, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
-table p {
-  margin: 0;
-}
+  margin: 1em 0; }
+  /* line 15, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
+  table p {
+    margin: 0; }
 
 /* line 20, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
 table caption {
   color: #000;
   font: italic 85%/1 arial, sans-serif;
   padding: 1em 0;
-  text-align: center;
-}
+  text-align: center; }
 
 /* line 27, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
 table td,
@@ -1248,29 +1006,25 @@ table th {
   overflow: visible;
   /*to make ths where the title is really long work*/
   padding: 0.5em 1em;
-  /* cell padding */
-}
+  /* cell padding */ }
 
 /* line 37, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
 table td {
-  border-bottom: 1px solid #cbcbcb;
-}
+  border-bottom: 1px solid #cbcbcb; }
 
 /* Consider removing this next declaration block, as it causes problems when
 there's a rowspan on the first cell. Case added to the tests. issue#432 */
 /* line 43, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
 table td:first-child,
 table th:first-child {
-  border-left-width: 0;
-}
+  border-left-width: 0; }
 
 /* line 48, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_table-styling.scss */
 table thead {
   background-color: #e0e0e0;
   color: #000;
   text-align: left;
-  vertical-align: bottom;
-}
+  vertical-align: bottom; }
 
 /*
 striping:
@@ -1282,91 +1036,103 @@ striping:
   .page-header__search.toggled {
     width: 100%;
     position: absolute;
-    bottom: -1em;
-  }
-  /* line 7, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_search.scss */
-  .page-header__search.toggled #searchText {
-    padding: 0em 1em;
-  }
-}
+    bottom: -1em; }
+    /* line 7, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_search.scss */
+    .page-header__search.toggled #searchText {
+      padding: 0em 1em; } }
 
 @media screen and (max-width: 1023px) and (min-width: 881px) {
   /* line 15, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_search.scss */
   #searchText {
     height: 3.25em;
-    width: 100%;
-  }
-}
+    width: 100%; } }
 
 @media screen and (max-width: 880px) and (min-width: 320px) {
   /* line 22, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_search.scss */
   #searchText {
     height: 2.25em;
     width: calc(100% - 1em);
-    margin-left: 1em;
-  }
-}
+    margin-left: 1em; } }
 
 /* line 31, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_search.scss */
 main #searchText {
   height: 3.25em;
   width: 100%;
-  padding: 0em 1em;
-}
+  padding: 0em 1em; }
 
 /* line 37, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_search.scss */
 main form.well.form-search {
   position: relative;
-  padding: 1em 0px;
-}
+  padding: 1em 0px; }
 
-/* line 31, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 5, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_skole.scss */
+.content-list-float2 {
+  float: left;
+  width: 50%; }
+
+/* line 10, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_skole.scss */
+.content-list-float2layouts div {
+  padding-right: 5px; }
+
+/* line 14, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_skole.scss */
+.content-list-float2:nth-child(2n+2) div {
+  padding-left: 5px; }
+
+/* line 18, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_skole.scss */
+.content-list-float3 {
+  float: left;
+  width: 33.33%; }
+
+/* line 23, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_skole.scss */
+.content-list-float3:nth-child(3n+1) div {
+  padding-right: 5px; }
+
+/* line 27, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_skole.scss */
+.content-list-float3:nth-child(3n+2) div {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+/* line 32, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/_skole.scss */
+.content-list-float3:nth-child(3n+3) div {
+  padding-left: 5px; }
+
+/* line 32, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 body {
-  font-family: "Open Sans", sans-serif;
-}
+  font-family: "Open Sans", sans-serif; }
 
-/* line 35, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 36, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 h1 {
   margin-top: .75em;
-  margin-bottom: .5em;
-}
+  margin-bottom: .5em; }
 
-/* line 40, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 41, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .constrained,
 .constrained-content {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1060px;
-}
+  max-width: 1060px; }
 
 @media (max-width: 800px) {
-  /* line 49, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  /* line 50, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .landing-page--dynamic {
-    margin-top: 1.5em;
-  }
-}
+    margin-top: 1.5em; } }
 
-/* line 59, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 60, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .item:last-child {
-  clear: both;
-}
+  clear: both; }
 
 @media screen and (max-width: 63.95em) {
-  /* line 66, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  /* line 67, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .item {
-    padding: .5em 0;
-  }
-  /* line 69, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-  .item:last-child {
-    clear: both;
-  }
-  /* line 74, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    padding: .5em 0; }
+    /* line 70, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .item:last-child {
+      clear: both; }
+  /* line 75, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .grid img {
-    width: 100%;
-  }
-}
+    width: 100%; } }
 
-/* line 79, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 80, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .item--4-12 {
   color: black;
   text-decoration: none;
@@ -1376,164 +1142,127 @@ h1 {
   text-align: center;
   width: 32.2033898305%;
   float: left;
-  margin-right: 1.6949152542%;
-}
-
-/* line 88, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--4-12:last-child {
-  width: 32.2033898305%;
-  float: right;
-  margin-right: 0;
-}
-
-/* line 92, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--4-12 h2 {
-  margin-top: 0;
-}
-
-/* line 95, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--4-12 h2 a {
-  text-decoration: none;
-  color: black;
-}
+  margin-right: 1.6949152542%; }
+  /* line 89, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .item--4-12:last-child {
+    width: 32.2033898305%;
+    float: right;
+    margin-right: 0; }
+  /* line 93, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .item--4-12 h2 {
+    margin-top: 0; }
+    /* line 96, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .item--4-12 h2 a {
+      text-decoration: none;
+      color: black; }
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
-  /* line 103, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  /* line 104, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .item--4-12 {
     width: 100%;
     float: left;
     margin-left: 0;
-    margin-right: 0;
-  }
-  /* line 105, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-  .item--4-12:last-child {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+    margin-right: 0; }
+    /* line 106, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .item--4-12:last-child {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
 
-/* line 113, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 114, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .item--3-3 {
   color: black;
   text-decoration: none;
   margin-bottom: 1em;
   width: 32.2033898305%;
   float: left;
-  margin-right: 1.6949152542%;
-}
-
-/* line 119, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--3-3:nth-child(2) {
-  width: 32.2033898305%;
-  float: right;
-  margin-right: 0;
-}
-
-/* line 123, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--3-3 h2 {
-  margin-top: 0;
-}
-
-/* line 126, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--3-3 h2 a {
-  text-decoration: none;
-  color: black;
-}
+  margin-right: 1.6949152542%; }
+  /* line 120, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .item--3-3:nth-child(2) {
+    width: 32.2033898305%;
+    float: right;
+    margin-right: 0; }
+  /* line 124, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .item--3-3 h2 {
+    margin-top: 0; }
+    /* line 127, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .item--3-3 h2 a {
+      text-decoration: none;
+      color: black; }
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
-  /* line 134, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  /* line 135, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .item--3-3 {
     width: 100%;
     float: left;
     margin-left: 0;
-    margin-right: 0;
-  }
-  /* line 136, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-  .item--3-3:last-child {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  /* line 139, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-  .item--3-3:nth-child(2) {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+    margin-right: 0; }
+    /* line 137, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .item--3-3:last-child {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+    /* line 140, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .item--3-3:nth-child(2) {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
 
-/* line 147, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 148, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .intro-text {
   width: 100%;
   bottom: .875em;
   margin-top: 0.75em;
-  margin-bottom: 1.5em;
-}
-
-/* line 153, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.intro-text h4 {
-  margin-top: .25em;
-  margin-bottom: .25em;
-  line-height: 1em;
-}
-
-/* line 159, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.intro-text h4, .intro-text h4 a {
-  text-decoration: none;
-  color: black;
-}
-
-/* line 165, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.intro-text h4 a:hover {
-  border-bottom: 2px solid black;
-}
-
-/* line 170, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.intro-text p, .intro-text a {
-  font-size: 14px;
-}
+  margin-bottom: 1.5em; }
+  /* line 154, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .intro-text h4 {
+    margin-top: .25em;
+    margin-bottom: .25em;
+    line-height: 1em; }
+  /* line 160, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .intro-text h4, .intro-text h4 a {
+    text-decoration: none;
+    color: black; }
+  /* line 166, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .intro-text h4 a:hover {
+    border-bottom: 2px solid black; }
+  /* line 171, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .intro-text p, .intro-text a {
+    font-size: 14px; }
 
 @media screen and (min-width: 64em) {
-  /* line 178, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  /* line 179, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .grid__item--6-12 {
     width: 49.1525423729%;
     float: left;
-    position: relative;
-  }
-  /* line 66, /Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/language/susy/_gallery.scss */
-  .grid__item--6-12:nth-child(2n + 1) {
-    margin-left: 0;
-    margin-right: -100%;
-    clear: both;
-    margin-left: 0;
-  }
-  /* line 66, /Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/language/susy/_gallery.scss */
-  .grid__item--6-12:nth-child(2n + 2) {
-    margin-left: 50.8474576271%;
-    margin-right: -100%;
-    clear: none;
-  }
-}
+    position: relative; }
+    /* line 66, /Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/language/susy/_gallery.scss */
+    .grid__item--6-12:nth-child(2n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    /* line 66, /Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/language/susy/_gallery.scss */
+    .grid__item--6-12:nth-child(2n + 2) {
+      margin-left: 50.8474576271%;
+      margin-right: -100%;
+      clear: none; } }
 
 @media screen and (max-width: 63.95em) {
-  /* line 184, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  /* line 185, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .grid__item--6-12 {
     width: 100%;
     float: left;
     margin-left: 0;
-    margin-right: 0;
-  }
-  /* line 188, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    margin-right: 0; }
+  /* line 189, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .intro-text {
-    padding: 0em 1em;
-  }
-}
+    padding: 0em 1em; } }
 
-/* line 195, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 196, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .grid__item--4-12 {
   color: black;
   text-decoration: none;
@@ -1541,28 +1270,21 @@ h1 {
   width: 100%;
   float: left;
   margin-left: 0;
-  margin-right: 0;
-}
+  margin-right: 0; }
+  /* line 205, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .grid__item--4-12 h2 {
+    margin-top: 0; }
+    /* line 208, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .grid__item--4-12 h2 a {
+      text-decoration: none;
+      color: black; }
+  /* line 214, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .grid__item--4-12 .ezimage-field {
+    float: left;
+    width: 40%;
+    padding-right: 2em; }
 
-/* line 204, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.grid__item--4-12 h2 {
-  margin-top: 0;
-}
-
-/* line 207, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.grid__item--4-12 h2 a {
-  text-decoration: none;
-  color: black;
-}
-
-/* line 213, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.grid__item--4-12 .ezimage-field {
-  float: left;
-  width: 20%;
-  padding-right: 2em;
-}
-
-/* line 232, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 233, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .item--aside {
   background: #ffd520;
   width: 32.2033898305%;
@@ -1572,46 +1294,34 @@ h1 {
   right: 0;
   min-height: 12.875em;
   top: 0;
-  font-family: 'Telefon';
-}
-
-/* line 241, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--aside ul {
-  list-style: none;
-}
-
-/* line 246, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--aside ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.25em;
-}
-
-/* line 251, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--aside ul li a:hover {
-  text-decoration: underline;
-}
-
-/* line 258, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--aside h2 {
-  padding-left: 40px;
-  margin-top: 20px;
-}
-
-/* line 263, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-.item--aside hr {
-  margin: .25em 0;
-  border: 1px solid black;
-  max-width: 96%;
-  margin: 0 auto;
-}
+  font-family: 'Telefon'; }
+  /* line 242, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .item--aside ul {
+    list-style: none; }
+    /* line 247, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .item--aside ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.25em; }
+      /* line 252, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+      .item--aside ul li a:hover {
+        text-decoration: underline; }
+  /* line 259, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .item--aside h2 {
+    padding-left: 40px;
+    margin-top: 20px; }
+  /* line 264, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  .item--aside hr {
+    margin: .25em 0;
+    border: 1px solid black;
+    max-width: 96%;
+    margin: 0 auto; }
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
-  /* line 275, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  /* line 276, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .block_contentbox3x1 {
-    padding: 0;
-  }
-  /* line 280, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    padding: 0; }
+  /* line 281, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .item--aside {
     position: relative;
     width: 100%;
@@ -1620,99 +1330,82 @@ h1 {
     margin-right: 0;
     min-height: initial;
     height: auto;
-    margin-bottom: 1em;
-  }
-  /* line 287, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-  .item--aside h2, .item--aside ul {
-    text-align: center;
-    padding: 0;
-  }
-}
+    margin-bottom: 1em; }
+    /* line 288, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .item--aside h2, .item--aside ul {
+      text-align: center;
+      padding: 0; } }
 
-/* line 296, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 297, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .grid.grid--12 {
-  position: relative;
-}
+  position: relative; }
 
-/* line 303, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 304, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .articles-3-1 .item--4-12 {
-  background-color: #00b1c7;
-}
+  background-color: #00b1c7; }
 
 @media screen and (min-width: 320px) and (max-width: 880px) {
-  /* line 314, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+  /* line 315, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .constrained, .constrained-content {
-    padding: 0;
-  }
-  /* line 320, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    padding: 0; }
+  /* line 321, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
   .page-header__logo {
-    margin: 1em 6.475em 1em 1em;
-  }
-}
+    margin: 1em 6.475em 1em 1em; } }
 
-/* line 327, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 328, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 body {
   ms-word-wrap: normal;
-  word-wrap: normal;
-}
+  word-wrap: normal; }
 
-/* line 332, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 333, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination {
   position: relative;
-  text-align: center;
-}
+  text-align: center; }
 
-/* line 337, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 338, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination ul {
   list-style: none;
   padding-left: 85px;
-  padding-right: 85px;
-}
+  padding-right: 85px; }
 
-/* line 343, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 344, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination li {
   display: inline-block;
-  margin: 5px;
-}
+  margin: 5px; }
 
-/* line 348, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 349, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination .prev {
   position: absolute;
-  left: 0;
-}
+  left: 0; }
 
-/* line 353, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 354, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination .prev a:before {
   color: #383838;
   font-size: 27px;
   margin-left: -13px;
-  position: absolute;
-}
+  position: absolute; }
 
-/* line 360, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 361, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination .next {
   position: absolute;
-  right: 0;
-}
+  right: 0; }
 
-/* line 365, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 366, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination .next a:after {
   color: #383838;
   font-size: 27px;
   margin-left: 4px;
-  position: absolute;
-}
+  position: absolute; }
 
-/* line 372, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 373, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination .next span, .pagination .prev span {
   background-color: #e8f3f0;
   border: 0 none;
   color: #6c6c6c;
   display: inline-block;
-  padding: 0.5em 1em;
-}
+  padding: 0.5em 1em; }
 
-/* line 380, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 381, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination a {
   background-color: #e8f3f0;
   border: 0 none;
@@ -1720,92 +1413,75 @@ body {
   cursor: pointer;
   display: inline-block;
   padding: 0.5em 1em;
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
-/* line 390, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 391, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination li.active span {
   background-color: #ffd520;
   color: #000;
   border: 0 none;
   display: inline-block;
-  padding: 0.5em 1em;
-}
+  padding: 0.5em 1em; }
 
-/* line 398, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 399, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .pagination__next a, .pagination__prev a {
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 402, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 403, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .main .pagination {
   float: left;
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 407, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 408, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .main__center-left {
   width: 72.22222%;
   float: left;
   margin-left: 1.38889%;
-  margin-right: 1.38889%;
-}
+  margin-right: 1.38889%; }
+  @media (max-width: 800px) {
+    /* line 408, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+    .main__center-left {
+      width: 100%;
+      margin: 0;
+      padding-left: .25em;
+      padding-right: .25em; } }
 
-@media (max-width: 800px) {
-  /* line 407, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
-  .main__center-left {
-    width: 100%;
-    margin: 0;
-    padding-left: .25em;
-    padding-right: .25em;
-  }
-}
-
-/* line 425, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 426, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 input #basicsearch_term {
-  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
-}
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; }
 
-/* line 429, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 430, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .slider__slide a {
-  float: left;
-}
+  float: left; }
 
-/* line 433, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 434, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .block_contentbox {
-  padding: 1em 0em;
-}
+  padding: 1em 0em; }
 
-/* line 437, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 438, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .block_contentbox3x1 {
-  padding: 0em 0em;
-}
+  padding: 0em 0em; }
 
-/* line 442, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 443, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .block_contentbox .item, .block_contentbox3x1 .item {
   background-color: #007c97;
   color: #fff;
   text-align: center;
   height: 100px;
-  margin-bottom: 1em;
-}
+  margin-bottom: 1em; }
 
-/* line 449, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 450, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .block_contentbox .item a {
-  color: #fff;
-}
+  color: #fff; }
 
-/* line 453, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 454, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .block_contentbox3x1 .item {
   background-color: #007c97;
   color: #fff;
   text-align: center;
-  height: 100px;
-}
+  height: 100px; }
 
-/* line 459, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
+/* line 460, /Users/sten/Synk/Telemark Skolebundle/Resources/public/scss/custom.scss */
 .block_contentbox3x1 .item a {
-  color: #fff;
-}
-
+  color: #fff; }
 /*# sourceMappingURL=custom.css.map */
