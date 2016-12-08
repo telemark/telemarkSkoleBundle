@@ -17,9 +17,9 @@ parameters:
         - embed_code
         - spacer
 
-    subitems.tfk_school_group.limit: 10
+    subitems.tfk_school_group.limit: 40
 
-    subitems.tfk_school_group.newsfolder.columns: 10
+    subitems.tfk_school_group.newsfolder.columns: 40
     subitems.tfk_school_group.newsfolder.rows: 5
     subitems.tfk_school_group.newsfolder.identifiers:
         - article
@@ -31,7 +31,7 @@ parameters:
     sidebar.tfk_school_group.identifiers.right:
         - infobox
 
-    search.tfk_school_group.limit: 10
+    search.tfk_school_group.limit: 40
     search.tfk_school_group.identifiers:
         - article
         - article_shared
