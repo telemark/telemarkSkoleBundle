@@ -26,6 +26,12 @@ blocks:
                 template: tfktelemarkSkoleBundle:blocks:contentbox3x1.html.twig
                 name: Content box 3x1
 
+    contentbox2x2andlatest:
+        views:
+            contentbox2x2andlatest:
+                template: tfktelemarkSkoleBundle:blocks:contentbox2x2andlatest.html.twig
+                name: Content box 2x2 and latest
+
     contentgrid:
         views:
             contentgrid:

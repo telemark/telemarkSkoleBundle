@@ -1,0 +1,30 @@
+<div class="row block-contentlist">
+    <div class="grid grid--12">
+            {% for locationId in contentArray %}
+                {{ render(controller('ez_content:viewLocation', {
+                    'locationId': locationId,
+                    'viewType': 'block_box'
+                })) }}
+            {% endfor %}
+            <div class="item--aside">
+                <h2>Sist oppdatert</h2>
+                <hr>
+                {% if listArray is defined %}
+                    <ul>
+                        {% for content in listArray %}
+                            <li>
+                                {% if getContentTypeIdentifier( content.contentInfo.contentTypeId ) == 'link'  %}
+                                    {{ render(controller('ez_content:viewLocation', {
+                                        'locationId': content.contentInfo.mainLocationId,
+                                        'viewType': 'shortcut_line'
+                                    })) }}
+                                {% else %}
+                                    <a href="{{ url( 'ez_urlalias', {'contentId': content.contentInfo.id } ) }}">{{ ez_content_name( content ) }}</a>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+    </div>
+</div>

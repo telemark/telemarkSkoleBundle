@@ -55,6 +55,15 @@ services:
         tags:
             - { name: landing_page_field_type.block_type, alias: contentbox3x1 }
 
+    ezpublish.landing_page.block.contentbox2x2andlatest:
+        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBox2x2AndLatestBlock
+        arguments:
+            - '@ezpublish.api.service.location'
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.search'
+            - '@ezpublish.config.resolver'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: contentbox2x2andlatest }
 
     ezpublish.landing_page.block.contentgrid:
         class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentGridBlock
