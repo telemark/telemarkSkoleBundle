@@ -20,13 +20,7 @@
                             {% endif %}
 
                             <div class="intro-text">
-                                <span class="sidenote">
-                                {% if content.content.contentInfo.publishedDate|date("d.m.Y") !=  content.content.contentInfo.modificationDate|date("d.m.Y") %}
-                                Publisert: {{ content.content.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ content.content.contentInfo.modificationDate|date("d.m.Y") }}
-                                {% else %}
-                                Publisert: {{ content.content.contentInfo.publishedDate|date("d.m.Y") }}
-                                {% endif %}
-                            </span>
+
                                 <h4><a href="{{ path(content.location) }}">{{ ez_render_field( content.content, 'title') }}</a></h4>
                                    {{ ez_render_field(content.content, "intro") }}
                             </div>
