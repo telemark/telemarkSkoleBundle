@@ -22,7 +22,13 @@
                                         'viewType': 'shortcut_line'
                                     })) }}
                                 {% else %}
-                                    <a href="{{ url( 'ez_urlalias', {'contentId': content.contentInfo.id } ) }}">{{ ez_content_name( content ) }}</a>
+                                {% set intro = ez_content_name( content ) %}
+                                    <a href="{{ url( 'ez_urlalias', {'contentId': content.contentInfo.id } ) }}">
+                                    {% if intro[31:] != '' %}
+                                        {{ intro[:30] ~ '...' }}
+                                    {% else %}
+                                        {{ intro[:30]}}
+                                    {% endif %}</a>
                                 {% endif %}
                             </li>
                         {% endfor %}

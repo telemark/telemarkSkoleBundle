@@ -6,3 +6,8 @@
         }
     }
 ) }}
+ {% if not ez_is_field_empty(content, 'caption') %}
+<div>
+     {{ ez_render_field( content, 'caption') }}
+</div>
+{% endif %}
