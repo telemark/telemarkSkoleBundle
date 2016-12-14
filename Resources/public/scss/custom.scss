@@ -2,6 +2,9 @@
   @if $point == small {
     @media (max-width: 800px) { @content; }
   }
+  @if $point == medium {
+    @media (max-width: 1024px) { @content; }
+  }
 }
 
 *, * > * {
@@ -63,6 +66,28 @@ h1 {
 }
 
 
+
+
+
+.block_contentbox {
+    padding: 1em 0em;
+}
+
+// Må ryddes opp i
+.landing-page--dynamic {
+    .block_contentbox {
+        padding: 1em 0em;
+        @include breakpoint(medium) {
+           padding: 0;
+        }   
+    }
+}
+
+
+
+
+
+
 @media screen and (max-width: 63.95em) {
     .item {
         padding: .5em 0;
@@ -77,6 +102,9 @@ h1 {
     }
 }
 
+
+
+// Forsideknappene
 .item--4-12 {
     color: $tfk-black;
     text-decoration: none;
@@ -99,6 +127,98 @@ h1 {
         }
     }
 }
+
+
+// Forsideknappene --- med «siste hendelser»-blokk
+.block_contentbox2x2andlatest {
+    padding: 0em 0em 2em;
+    .item--4-12 {
+        @extend .item--4-12;
+        @include span(4 of 12);
+        &:last-child {
+            @include span(4 of 12);
+        }
+    }
+    .block--box--wrapper {
+        @include span(8 of 12 nest);
+            @include breakpoint(medium) {
+                @include span(12 of 12);
+            }
+        .item--4-12 {
+            @include gallery(4 of 8);
+            &:nth-child(2n1) {
+                @include gallery(4 of 8 last);
+            }
+        }
+    }
+}
+
+
+// Snarveier
+.item--aside {
+    background: $tfk-yellow;
+    @include span(4 of 12 last);
+    position: relative;
+    font-family: 'Telefon';
+    float: right;
+
+    ul {
+
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+                color: $tfk-black;
+                font-size: 1.25em;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    h2 {
+        padding-left: 40px;
+        margin-top: 20px;
+    }
+
+    hr {
+        margin: .25em 0;
+        border: 1px solid black;
+        max-width: 96%;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media screen and (min-width:320px) and (max-width: 1024px) {
+
+    .block_contentbox3x1 {
+        padding: 0;
+    }
+
+
+    .item--aside {
+        position: relative;
+        @include span(12 of 12);
+        min-height: initial;
+        height: auto;
+        margin-bottom: 1em;
+
+        h2, ul {
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+}
+
+
+
+
 
 @media screen and (min-width:320px) and (max-width: 1024px) {
     .item--4-12 {
@@ -229,69 +349,7 @@ h1 {
 
 
 
-// Snarveier
-.item--aside {
-    background: $tfk-yellow;
-    @include span(4 of 12 last);
-    position: absolute;
-    right: 0;
-    min-height: 12.875em;
-    top: 0;
-    font-family: 'Telefon';
 
-    ul {
-
-        list-style: none;
-
-        li {
-            a {
-                text-decoration: none;
-                color: $tfk-black;
-                font-size: 1.25em;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-
-    h2 {
-        padding-left: 40px;
-        margin-top: 20px;
-    }
-
-    hr {
-        margin: .25em 0;
-        border: 1px solid black;
-        max-width: 96%;
-        margin: 0 auto;
-    }
-}
-
-
-
-@media screen and (min-width:320px) and (max-width: 1024px) {
-
-    .block_contentbox3x1 {
-        padding: 0;
-    }
-
-
-    .item--aside {
-        position: relative;
-        @include span(12 of 12);
-        min-height: initial;
-        height: auto;
-        margin-bottom: 1em;
-
-        h2, ul {
-            text-align: center;
-            padding: 0;
-        }
-    }
-
-}
 
 
 .grid.grid--12 {
@@ -431,9 +489,7 @@ input #basicsearch_term {
     float: left;
 }
 
-.block_contentbox {
-    padding: 1em 0em;
-}
+
 
 .block_contentbox3x1  {
     padding: 0em 0em;

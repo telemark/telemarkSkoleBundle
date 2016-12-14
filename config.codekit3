@@ -7,7 +7,7 @@
 		"uuidString": "4A39C4B9-2512-4195-9E98-65B130567164"
 		}
 	],
-"creatorBuild": "25444",
+"creatorBuild": "25479",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -67,6 +67,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/CampaignBlock.php",
+		"oF": 0
+		},
+	"\/FieldType\/LandingPage\/Model\/Block\/ContentBox2x2AndLatestBlock.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/ContentBox2x2AndLatestBlock.php",
 		"oF": 0
 		},
 	"\/FieldType\/LandingPage\/Model\/Block\/ContentBox3x1Block.php": {
@@ -140,6 +146,12 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/Resources\/config\/default_settings.yml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/config\/default_settings.yml",
+		"oF": 0
 		},
 	"\/Resources\/config\/image_variations.yml": {
 		"ft": 8192,
@@ -697,13 +709,13 @@
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 1,
+		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/css\/custom.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"\/Resources\/translations\/messages.fr.xlf": {
@@ -752,6 +764,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/blocks\/contentbox.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/blocks\/contentbox2x2andlatest.html.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/blocks\/contentbox2x2andlatest.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/blocks\/contentbox3x1.html.twig": {
@@ -844,6 +862,12 @@
 		"oAP": "\/Resources\/views\/full\/landing_page.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/full\/link.html.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/full\/link.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/full\/news_folder.html.twig": {
 		"ft": 8192,
 		"oA": 2,
@@ -854,6 +878,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/presentasjon.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/full\/spacer.html.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/full\/spacer.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/layouts\/school.html.twig": {
@@ -904,6 +934,12 @@
 		"oAP": "\/Resources\/views\/line\/presentasjon.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/line\/spacer.html.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/line\/spacer.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/menu\/main_menu.html.twig": {
 		"ft": 8192,
 		"oA": 2,
@@ -914,6 +950,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/menu_line\/link.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/menu_line\/spacer.html.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/menu_line\/spacer.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/page_footer.html.twig": {
@@ -1569,6 +1611,10 @@
 			"active": 0,
 			"optionString": "{'properties': 'always'}"
 			},
+		"capitalized-comments": {
+			"active": 0,
+			"optionString": "'always', {'ignoreInlineComments': false, 'ignoreConsecutiveComments': false}"
+			},
 		"class-methods-use-this": {
 			"active": 0,
 			"optionString": "{'exceptMethods': []}"
@@ -1732,6 +1778,10 @@
 		"max-statements": {
 			"active": 0,
 			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
+			},
+		"max-statements-per-line": {
+			"active": 0,
+			"optionString": "{'max': 1}"
 			},
 		"multiline-ternary": {
 			"active": 0,
@@ -2097,6 +2147,10 @@
 			"active": 0,
 			"optionString": "'except-parens'"
 			},
+		"no-return-await": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-script-url": {
 			"active": 0,
 			"optionString": ""
@@ -2328,6 +2382,10 @@
 		"radix": {
 			"active": 0,
 			"optionString": "'always'"
+			},
+		"require-await": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-jsdoc": {
 			"active": 0,
@@ -3161,6 +3219,10 @@
 			},
 		"space-colon": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"support-ie8": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"toplevel": {

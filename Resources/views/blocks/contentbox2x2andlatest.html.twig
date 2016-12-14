@@ -1,11 +1,14 @@
 <div class="row block-contentlist">
     <div class="grid grid--12">
-            {% for locationId in contentArray %}
-                {{ render(controller('ez_content:viewLocation', {
-                    'locationId': locationId,
-                    'viewType': 'block_box'
-                })) }}
-            {% endfor %}
+
+            <div class="block--box--wrapper">
+                {% for locationId in contentArray %}
+                    {{ render(controller('ez_content:viewLocation', {
+                        'locationId': locationId,
+                        'viewType': 'block_box'
+                    })) }}
+                {% endfor %}
+            </div>
             <div class="item--aside">
                 <h2>Sist oppdatert</h2>
                 <hr>
