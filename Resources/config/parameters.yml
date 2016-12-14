@@ -2,6 +2,7 @@ parameters:
 
     topmenu.tfk_school_group.identifiers:
         - spacer
+
     topmenu.tfk_school_group.identifiers_hide_from_menu:
         - folder
         - presentasjon
