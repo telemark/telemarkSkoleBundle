@@ -2,6 +2,7 @@ parameters:
 
     topmenu.tfk_school_group.identifiers:
         - spacer
+
     topmenu.tfk_school_group.identifiers_hide_from_menu:
         - folder
         - presentasjon
@@ -56,16 +57,16 @@ parameters:
     footer.vest_vgs.link: 'http://apps.t-fk.no/ansatte/#/ansatt/2703'
 
     head.admin.logo: 'admin_toplogo.png'
-    head.admin.title: 'Vest-telemark videregående skole'
-    head.admin.meta_author: 'Vest-telemark videregående skole'
-    head.admin.meta_description: 'Vest-telemark videregående skole er en fin skole'
-    head.admin.meta_keywords: 'telemark videregående skole'
+    head.admin.title: 'Admin videregående skole'
+    head.admin.meta_author: 'Admin videregående skole'
+    head.admin.meta_description: 'Modig, imøtekommende og troverdig'
+    head.admin.meta_keywords: 'admin telemark videregående skole'
 
     head.bamble.logo: 'bamble_toplogo.png'
     head.bamble.title: 'Bamble videregående skole'
     head.bamble.meta_author: 'Bamble videregående skole'
     head.bamble.meta_description: 'Bamble videregående skole videregående skole er en fin skole'
-    head.bamble.meta_keywords: 'bamble videregående skole'
+    head.bamble.meta_keywords: 'http://apps.t-fk.no/ansatte/#/ansatt/353'
 
     footer.bamble.email: 'bamble.vgs@t-fk.no'
     footer.bamble.phone: '35 91 94 00'
@@ -85,7 +86,7 @@ parameters:
     footer.boe.post: 'Postboks 54, 3833 Bø i Telemark'
     footer.boe.adress: 'Gymnasbakken 23, Bø i Telemark'
     footer.boe.contact: 'Webmaster'
-    footer.boe.link: 'telemark videregående skole'
+    footer.boe.link: 'http://apps.t-fk.no/ansatte/#/ansatt/20169'
 
     head.hjalmarj.logo: 'hjalmarj_toplogo.png'
     head.hjalmarj.title: 'Hjalmar Johansen videregående skole'
@@ -98,7 +99,7 @@ parameters:
     footer.hjalmarj.post: ' Moflatvegen 38, 3733 Skien'
     footer.hjalmarj.adress: 'Moflatvegen 38, Skien'
     footer.hjalmarj.contact: 'Webmaster'
-    footer.hjalmarj.link: 'telemark videregående skole'
+    footer.hjalmarj.link: 'http://apps.t-fk.no/ansatte/#/ansatt/2141'
 
     head.kragero.logo: 'kragero_toplogo.png'
     head.kragero.title: 'Kragerø videregående skole'
@@ -137,20 +138,21 @@ parameters:
     footer.notodden.post: 'Postboks 184, 3672 Notodden'
     footer.notodden.adress: 'Heddalsvegen 4, Notodden'
     footer.notodden.contact: 'Webmaster'
-    footer.notodden.link: 'telemark videregående skole'
+    footer.notodden.link: 'http://apps.t-fk.no/ansatte/#/ansatt/17171'
 
     head.porsgrunn.logo: 'porsgrunn_toplogo.png'
     head.porsgrunn.title: 'Porsgrunn videregående skole'
     head.porsgrunn.meta_author: 'Porsgrunn videregående skole'
-    head.porsgrunn.meta_description: 'Porsgrunn videregående skole er en fin skole'
+    head.porsgrunn.meta_description: 'Sammen om mestring, mangfold og miljø!'
     head.porsgrunn.meta_keywords: 'porsgrunn videregående skole'
 
     footer.porsgrunn.email: 'porsgrunn.vgs@t-fk.no'
     footer.porsgrunn.phone: '35 91 75 00'
-    footer.porsgrunn.post: 'Kjølnes Ring 58, 3918 Porsgrunn'
+    footer.porsgrunn.post: 'Postboks 2844, 3702 Skien'
     footer.porsgrunn.adress: 'Kjølnes Ring 58, Porsgrunn'
+    footer.porsgrunn.adress2: 'Kjølnes Ring 20, 3918 Porsgrunn'
     footer.porsgrunn.contact: 'Webmaster'
-    footer.porsgrunn.link: 'telemark videregående skole'
+    footer.porsgrunn.link: 'http://apps.t-fk.no/ansatte/#/ansatt/13462'
 
     head.rjukan.logo: 'rjukan_toplogo.png'
     head.rjukan.title: 'Rjukan videregående skole'
@@ -163,7 +165,7 @@ parameters:
     footer.rjukan.post: 'Såheimsveien 22, 3660 Rjukan'
     footer.rjukan.adress: 'Såheimsveien 22, Rjukan'
     footer.rjukan.contact: 'Webmaster'
-    footer.rjukan.link: 'telemark videregående skole'
+    footer.rjukan.link: 'http://apps.t-fk.no/ansatte/#/ansatt/1186'
 
     head.skien.logo: 'skien_toplogo.png'
     head.skien.title: 'Skien videregående skole'
@@ -176,13 +178,13 @@ parameters:
     footer.skien.post: 'Einar Østvedts gate 12, Skien'
     footer.skien.adress: 'Einar Østvedts gate 12, 3724 Skien'
     footer.skien.contact: 'Webmaster'
-    footer.skien.link: 'telemark videregående skole'
+    footer.skien.link: 'http://apps.t-fk.no/ansatte/#/ansatt/11165'
 
     head.skogmo.logo: 'skogmo_toplogo.png'
     head.skogmo.title: 'Skogmo videregående skole'
     head.skogmo.meta_author: 'Skogmo videregående skole'
     head.skogmo.meta_description: 'Skogmo videregående skole er en fin skole'
-    head.skogmo.meta_keywords: 'skogmo videregående skole'
+    head.skogmo.meta_keywords: 'http://apps.t-fk.no/ansatte/#/ansatt/8491'
 
     footer.skogmo.email: 'skogmo.vgs@t-fk.no'
     footer.skogmo.phone: '35 91 92 00'

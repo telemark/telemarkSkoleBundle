@@ -194,12 +194,6 @@
 		"oAP": "\/Resources\/config\/override.yml",
 		"oF": 0
 		},
-	"\/Resources\/config\/parameters.yml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/Resources\/config\/parameters.yml",
-		"oF": 0
-		},
 	"\/Resources\/config\/routing.yml": {
 		"ft": 8192,
 		"oA": 2,
@@ -783,22 +777,10 @@
 		"oAP": "\/Resources\/views\/blocks\/contentbox.html.twig",
 		"oF": 0
 		},
-	"\/Resources\/views\/blocks\/contentbox2x2andlatest.html.twig": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/Resources\/views\/blocks\/contentbox2x2andlatest.html.twig",
-		"oF": 0
-		},
 	"\/Resources\/views\/blocks\/contentbox3x1.html.twig": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/blocks\/contentbox3x1.html.twig",
-		"oF": 0
-		},
-	"\/Resources\/views\/blocks\/contentgrid.html.twig": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/Resources\/views\/blocks\/contentgrid.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/blocks\/latestcontent.html.twig": {
@@ -829,12 +811,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/embed\/file.html.twig",
-		"oF": 0
-		},
-	"\/Resources\/views\/embed\/image.html.twig": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/Resources\/views\/embed\/image.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/article.html.twig": {
