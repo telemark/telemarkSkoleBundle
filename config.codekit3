@@ -99,6 +99,15 @@
 		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/LatestContentBlock.php",
 		"oF": 0
 		},
+	"\/gulpfile.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/gulpfile-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/Helper\/LocationHelper.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -123,11 +132,19 @@
 		"oAP": "\/LICENSE",
 		"oF": 0
 		},
-	"\/npm-debug.log": {
-		"ft": 8192,
+	"\/node_modules": {
+		"ft": 65536,
 		"oA": 2,
-		"oAP": "\/npm-debug.log",
+		"oAP": "\/build\/node_modules",
 		"oF": 0
+		},
+	"\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"\/README.md": {
 		"cS": 0,
