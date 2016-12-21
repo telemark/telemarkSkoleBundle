@@ -17,6 +17,7 @@ parameters:
         - presentasjon_shared
         - embed_code
         - spacer
+        - link
 
     subitems.tfk_school_group.limit: 40
 
@@ -73,7 +74,7 @@ parameters:
     footer.bamble.post: 'Postboks 23, 3995 Stathelle'
     footer.bamble.adress: 'Tønderveien 6, Stathelle'
     footer.bamble.contact: 'Webmaster'
-    footer.bamble.link: 'telemark videregående skole'
+    footer.bamble.link: 'http://apps.t-fk.no/ansatte/#/ansatt/353'
 
     head.boe.logo: 'boe_toplogo.png'
     head.boe.title: 'Bøe videregående skole'
@@ -112,7 +113,7 @@ parameters:
     footer.kragero.post: 'Frydenborgveien 9–11, 3772 Kragerø'
     footer.kragero.adress: 'Frydenborgveien 9–11, Kragerø'
     footer.kragero.contact: 'Webmaster'
-    footer.kragero.link: 'telemark videregående skole'
+    footer.kragero.link: 'http://apps.t-fk.no/ansatte/#/ansatt/13407'
 
     head.nome.logo: 'nome_toplogo.png'
     head.nome.title: 'Nome videregående skole'
@@ -125,7 +126,7 @@ parameters:
     footer.nome.post: ' Søvevegen 12, 3830 Ulefoss'
     footer.nome.adress: 'Søvevegen 12, Ulefoss'
     footer.nome.contact: 'Webmaster'
-    footer.nome.link: 'telemark videregående skole'
+    footer.nome.link: 'http://apps.t-fk.no/ansatte/#/ansatt/17714'
 
     head.notodden.logo: 'notodden_toplogo.png'
     head.notodden.title: 'Notodden videregående skole'
@@ -149,7 +150,7 @@ parameters:
     footer.porsgrunn.email: 'porsgrunn.vgs@t-fk.no'
     footer.porsgrunn.phone: '35 91 75 00'
     footer.porsgrunn.post: 'Postboks 2844, 3702 Skien'
-    footer.porsgrunn.adress: 'Kjølnes Ring 58, Porsgrunn'
+    footer.porsgrunn.adress: 'Kjølnes Ring 58, 3918 Porsgrunn'
     footer.porsgrunn.adress2: 'Kjølnes Ring 20, 3918 Porsgrunn'
     footer.porsgrunn.contact: 'Webmaster'
     footer.porsgrunn.link: 'http://apps.t-fk.no/ansatte/#/ansatt/13462'
@@ -184,14 +185,14 @@ parameters:
     head.skogmo.title: 'Skogmo videregående skole'
     head.skogmo.meta_author: 'Skogmo videregående skole'
     head.skogmo.meta_description: 'Skogmo videregående skole er en fin skole'
-    head.skogmo.meta_keywords: 'http://apps.t-fk.no/ansatte/#/ansatt/8491'
+    head.skogmo.meta_keywords: 'skogmo'
 
     footer.skogmo.email: 'skogmo.vgs@t-fk.no'
     footer.skogmo.phone: '35 91 92 00'
     footer.skogmo.post: 'Kjørbekkdalen 11, 3735 Skien'
     footer.skogmo.adress: 'Kjørbekkdalen 11, Skien'
     footer.skogmo.contact: 'Webmaster'
-    footer.skogmo.link: 'telemark videregående skole'
+    footer.skogmo.link: 'http://apps.t-fk.no/ansatte/#/ansatt/8491'
 
     head.fagskolen.logo: 'fagskolen_toplogo.png'
     head.fagskolen.title: 'Fagskolen telemark'
@@ -203,5 +204,5 @@ parameters:
     footer.fagskolen.phone: 'Vest-telemark videregående skole'
     footer.fagskolen.post: 'Vest-telemark videregående skole'
     footer.fagskolen.adress: 'Vest-telemark videregående skole er en fin skole'
-    footer.fagskolen.contact: 'telemark videregående skole'
-    footer.fagskolen.link: 'telemark videregående skole'
+    footer.fagskolen.contact: 'Webmaster'
+    footer.fagskolen.link: 'http://apps.t-fk.no/ansatte/#/ansatt/2120'

@@ -30,32 +30,32 @@
                     </ul>
                 </nav>
 
-                <ul class="social-icons">
-                  
+                <ul class="social-icons js-sl">
+
                   <li class="social-icons__list-item">
-                    <a href="#">
-                      <i class="icon-google-plus"></i>
+                     <a class="social-links__link js-sl-googlepluss">
+                      <i class="icon-google-plus js-sl-googlepluss"></i>
                     </a>
                   </li>
 
                   <li class="social-icons__list-item">
-                    <a href="#">
+                     <a class="social-links__link js-sl-facebook">
                       <i class="icon-facebook2"></i>
                     </a>
                   </li>
 
                   <li class="social-icons__list-item">
-                    <a href="#">
+                     <a class="social-links__link js-sl-twitter">
                       <i class="icon-twitter"></i>
                     </a>
                   </li>
-
+{#
                   <li class="social-icons__list-item">
                     <a href="#">
                       <i class="icon-rss"></i>
                     </a>
                   </li>
-
+#}
 
                 </ul>
                 <div class="clearfix"></div>
@@ -65,7 +65,7 @@
                   {#{ render( controller("tfktelemarkBundle:Search:searchBox" )) }#}
                   <div class="page-header__search">
                     <form role="search" action="/search" method="get" class="well form-search">
-                        <!-- form errors 
+                        <!-- form errors
                         <input id="basicsearch_term" name="basicsearch[term]" required="required" type="search">
                         <input id="basicsearch_ezxform_token" name="basicsearch[ezxform_token]" value="1Mg8of7LxVdOhn-d21_JtH23d3x0IdGW_J3u6vrNZGk" type="hidden">
                         <label for="basicsearch_term" class="visuallyhidden">Søk</label>

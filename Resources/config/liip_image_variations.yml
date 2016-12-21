@@ -19,6 +19,10 @@ filter_sets:
         quality: 85
         filters:
             downscale: { max: [846, 380] }
+    article_grid_5:
+        quality: 85
+        filters:
+            centercrop: [400,266]
     article_grid_6:
         quality: 85
         filters:
