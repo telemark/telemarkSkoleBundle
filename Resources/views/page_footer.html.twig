@@ -5,8 +5,18 @@
 {% set adress2 = getConfigResolverParameter( 'adress2', 'footer' ) %}
 {% set adress = getConfigResolverParameter( 'adress', 'footer' ) %}
 {% set contact = getConfigResolverParameter( 'contact', 'footer' ) %}
+{% set fblink = getConfigResolverParameter( 'fblink', 'footer' ) %}
+{% set fblink2 = getConfigResolverParameter( 'fblink2', 'footer' ) %}
+{% set fb = getConfigResolverParameter( 'fb', 'footer' ) %}
+{% set fb2 = getConfigResolverParameter( 'fb2', 'footer' ) %}
+{% set twitter = getConfigResolverParameter( 'twitter', 'footer' ) %}
+{% set youtube = getConfigResolverParameter( 'youtube', 'footer' ) %}
+{% set instagram = getConfigResolverParameter( 'instagram', 'footer' ) %}
+{% set flickr = getConfigResolverParameter( 'flickr', 'footer' ) %}
+{% set linkedin = getConfigResolverParameter( 'linkedin', 'footer' ) %}
 {% set link = getConfigResolverParameter( 'link', 'footer' ) %}
 {% set title = getConfigResolverParameter( 'title', 'head' ) %}
+
 <div class="content highlight--dark">
   <div class="constrained-content clearfix" style="margin-top: 0.5em; margin-bottom: 0.5em;">
 <div class="page-footer__box">
@@ -32,8 +42,43 @@
                     <h3>Kontakter:</h3>
                     <ul class="side-menu">
                       <li class="side-menu__item"><a href="http://apps.t-fk.no/ansatte" target="_blank">Finn ansatte og avdelinger</a></li>
-                   
                     <li class="side-menu__item"><a href="{{ link }}" class="nav__item__link">Kontakt webmaster</a></li>
+
+                    {% if fblink %}
+                    <li class="side-menu__item">
+                        <a class="social-links__link" href="{{ fblink }}" target="_blank"><i class="icon-facebook2"></i> {{ fb }}
+                    </a></li>
+                    {% endif %}
+                    {% if fblink2 %}
+                    <li class="side-menu__item">
+                        <a href="{{ fblink2 }}" target="_blank"><i class="icon-facebook2"></i> {{ fb2 }}
+                    </a></li>
+                    {% endif %}
+                    {% if twitter %}
+                    <li class="side-menu__item">
+                        <a href="{{ twitter }}" target="_blank"><i class="icon-twitter"></i> Twitter
+                    </a></li>
+                    {% endif %}
+                    {% if youtube %}
+                    <li class="side-menu__item">
+                        <a href="{{ youtube }}" target="_blank">YouTube
+                    </a></li>
+                    {% endif %}
+                    {% if instagram %}
+                    <li class="side-menu__item">
+                        <a href="{{ instagram }}" target="_blank">Instagram
+                    </a></li>
+                    {% endif %}
+                    {% if linkedin %}
+                    <li class="side-menu__item">
+                        <a href="{{ linkedin }}" target="_blank">Linkedin
+                    </a></li>
+                    {% endif %}
+                    {% if flickr %}
+                    <li class="side-menu__item">
+                        <a href="{{ flickr }}" target="_blank">Flickr
+                    </a></li>
+                    {% endif %}
                      </ul>
                   </div>
                 </div>

@@ -25,7 +25,7 @@ class FolderController extends Controller
         $configResolver = $this->getConfigResolver();
         $locationService = $this->getRepository()->getLocationService();
         $request = Request::createFromGlobals();
-        
+
         $page = intval( $request->query->get('page') );
         if ( $page < 1 )
             $page = 1;
@@ -42,7 +42,7 @@ class FolderController extends Controller
         $result = $this->get( 'vp_utility.location_helper' )->getLocationItems( $location, $identifiers, true, $limit, $offset );
 
         $pagination = $this->get( 'vp_utility.pagination_helper' )->paginate( $result['totalCount'], $limit, $offset, $page );
-        $params += array( 
+        $params += array(
             'subitems'  => $result['items'],
             'totalCount' => $result['totalCount'],
             'limit' => $limit,
@@ -63,11 +63,11 @@ class FolderController extends Controller
     public function newsfolderViewEnhancedAction( $locationId, $viewType, $layout = false, array $params = array() )
     {
         // get request data for pagination, month, year
-        
+
         $configResolver = $this->getConfigResolver();
         $locationService = $this->getRepository()->getLocationService();
         $request = Request::createFromGlobals();
-        
+
         $page = intval( $request->query->get('page') );
         if ( $page < 1 )
             $page = 1;
@@ -81,14 +81,14 @@ class FolderController extends Controller
             $columns = $configResolver->getParameter( 'newsfolder.columns', 'subitems' );
 
         $limit = $rows * $columns;
-        $limit = 3;
+        $limit = 10;
         $offset = $this->get( 'vp_utility.pagination_helper' )->getOffsetFromPage( $page, $limit );
 
         $location = $locationService->loadLocation( $locationId );
         $result = $this->get( 'vp_utility.location_helper' )->getLocationItems( $location, $identifiers, true, $limit, $offset );
 
         $pagination = $this->get( 'vp_utility.pagination_helper' )->paginate( $result['totalCount'], $limit, $offset, $page );
-        $params += array( 
+        $params += array(
             'items'  => $result['items'],
             'totalCount' => $result['totalCount'],
             'columns' => $columns,

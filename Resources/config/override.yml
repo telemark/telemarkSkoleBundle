@@ -10,7 +10,7 @@ system:
                     match:
                         Identifier\ContentType: [landing_page]
                 folder:
-                    controller: "tfktelemarkSkoleBundle:Folder:folderViewEnhanced"
+                    controller: "tfktelemarkSkoleBundle:Folder:newsfolderViewEnhanced"
                     template: "tfktelemarkSkoleBundle:full:folder.html.twig"
                     match:
                         Identifier\ContentType: [folder]
