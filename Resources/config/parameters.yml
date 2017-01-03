@@ -208,10 +208,10 @@ parameters:
 
     footer.skien.email: 'skien.vgs@t-fk.no'
     footer.skien.phone: 'Avd. Prestejordet: 35 91 80 00'
-    footer.skien.phone2: 'Avd. Brekkeby: 35 91 80 00'
+    footer.skien.phone2: 'Avd. Brekkeby: 35 91 80 50'
     footer.skien.post: 'Postboks 2844, 3702 Skien'
     footer.skien.adress: 'Avd. Prestejordet: Einar Østvedts gate 12, 3724 Skien'
-    footer.skien.adress2: 'Avd. Brekkeby: Rektor Ørns gate 2, 3717 Skie'
+    footer.skien.adress2: 'Avd. Brekkeby: Rektor Ørns gate 2, 3717 Skien'
 
     footer.skien.contact: 'Webmaster'
     footer.skien.link: 'http://apps.t-fk.no/ansatte/#/ansatt/11165'
