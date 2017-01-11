@@ -87,10 +87,10 @@ parameters:
     footer.bamble.youtube: 'https://www.youtube.com/channel/UC49syS4LRCmbIA5K6bLFk7g'
 
     head.boe.logo: 'boe_toplogo.png'
-    head.boe.title: 'Bø vidaregåande skole'
-    head.boe.meta_author: 'Bø Vidaregåande skole'
-    head.boe.meta_description: 'Bø Vidaregåande skole er en fin skole'
-    head.boe.meta_keywords: 'Bø Vidaregåande skole'
+    head.boe.title: 'Bø vidaregåande skule'
+    head.boe.meta_author: 'Bø Vidaregåande skule'
+    head.boe.meta_description: 'Bø Vidaregåande er ein fin skule'
+    head.boe.meta_keywords: 'Bø Vidaregåande skule'
 
     footer.boe.email: 'bo.vgs@t-fk.no'
     footer.boe.phone: '35 91 90 00'
