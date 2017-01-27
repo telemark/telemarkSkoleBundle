@@ -43,10 +43,10 @@ parameters:
         - embed_code
 
     head.vest_vgs.logo: 'vesttelemark_toplogo.png'
-    head.vest_vgs.title: 'Vest-telemark videregående skole'
-    head.vest_vgs.meta_author: 'Vest-telemark videregående skole'
-    head.vest_vgs.meta_description: 'Vest-telemark videregående skole er en fin skole'
-    head.vest_vgs.meta_keywords: 'telemark videregående skole'
+    head.vest_vgs.title: 'Vest-Telemark vidaregåande skule'
+    head.vest_vgs.meta_author: 'Vest-Telemark vidaregåande skule'
+    head.vest_vgs.meta_description: 'Vest-Telemark vidaregåande skule er en fin skole'
+    head.vest_vgs.meta_keywords: 'vest telemark videregående skole'
 
     footer.vest_vgs.email: 'vest-telemark.vgs@t-fk.no'
     footer.vest_vgs.phone: 'Sentralbord Dalen: 35 91 97 00'
@@ -175,8 +175,8 @@ parameters:
     footer.porsgrunn.email: 'porsgrunn.vgs@t-fk.no'
     footer.porsgrunn.phone: '35 91 75 00'
     footer.porsgrunn.post: 'Postboks 2844, 3702 Skien'
-    footer.porsgrunn.adress: 'Kjølnes Ring 58, 3918 Porsgrunn'
-    footer.porsgrunn.adress2: 'Kjølnes Ring 20, 3918 Porsgrunn'
+    footer.porsgrunn.adress: 'Avd. Nord: Kjølnes Ring 58, 3918 Porsgrunn'
+    footer.porsgrunn.adress2: 'Avd. Sør: Kjølnes Ring 20, 3918 Porsgrunn'
     footer.porsgrunn.contact: 'Webmaster'
     footer.porsgrunn.link: 'http://apps.t-fk.no/ansatte/#/ansatt/13462'
     footer.porsgrunn.fblink: 'https://www.facebook.com/PorsgrunnVGS/'
