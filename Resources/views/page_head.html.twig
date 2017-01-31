@@ -31,11 +31,18 @@
     {% set author = meta_author %}
 {% endif %}
 
+{% if content.fields.intro is defined %}
+{% set intro = ez_render_field(content, 'intro')|striptags|convert_encoding('UTF-8', 'HTML-ENTITIES') %}
+{% endif %}
 <title>{{ title|default( main_title ) }}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="author" content="{{ author }}"/>
 <meta name="copyright" content="{{ main_title }}"/>
-<meta name="description" content="{% if content.fields.meta_description is defined %}{{ ez_field_value(content,'meta_description') }}{% else %}{{ meta_description }}{% endif %}"/>
+<meta property="og:title" content="{{ main_title }}" />
+<meta name="description" content="{% if content.fields.intro is defined %}{{ intro }}{% else %}{{ meta_description }}{% endif %}"/>
+<meta property="og:description" content="{% if content.fields.intro is defined %}{{ intro }}{% else %}{{ meta_description }}{% endif %}" />
+
+
 <meta name="keywords" content="{% if content.fields.meta_keywords is defined %}{{ ez_field_value(content,'meta_keywords') }}{% else %}{{ meta_keywords }}{% endif %}"/>
 <meta name="MSSmartTagsPreventParsing" content="TRUE"/>
 <meta name="generator" content="eZ Platform"/>
@@ -51,6 +58,12 @@
 <link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ main_title }}"/>
 <link rel="Index" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
 <link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
+<meta property="og:url" content="{{ url( 'ez_urlalias', {'locationId': content.contentInfo.mainLocationId} ) }}" />
+
+{% if content.fields.image is defined %}
+<meta property="og:image" content="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'small' ).uri ) }}" />
+{% endif %}
+
 <link rel="Shortcut icon" href="{{ asset( "bundles/tfktelemark/images/icons/favicon.ico" ) }}" type="image/x-icon"/>
 <link rel="icon" type="image/x-icon" href="{{ asset( "bundles/tfktelemark/images/icons/favicon.ico" ) }}" />
 
