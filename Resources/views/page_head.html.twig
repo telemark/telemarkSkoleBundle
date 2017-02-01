@@ -61,7 +61,9 @@
 <meta property="og:url" content="{{ url( 'ez_urlalias', {'locationId': content.contentInfo.mainLocationId} ) }}" />
 
 {% if content.fields.image is defined %}
-<meta property="og:image" content="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'small' ).uri|url_encode ) }}" />
+{% if not ez_is_field_empty( content, 'image') %}
+<meta property="og:image" content="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'medium' ).uri ) }}" />
+{% endif %}
 {% endif %}
 
 <link rel="Shortcut icon" href="{{ asset( "bundles/tfktelemark/images/icons/favicon.ico" ) }}" type="image/x-icon"/>
