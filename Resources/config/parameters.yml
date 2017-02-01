@@ -184,6 +184,7 @@ parameters:
     footer.porsgrunn.twitter: 'https://twitter.com/PorsgrunnVGS'
     footer.porsgrunn.instagram: 'https://www.instagram.com/porsgrunnvgs/'
     footer.porsgrunn.flickr: 'https://www.flickr.com/photos/porvgs/albums'
+    footer.porsgrunn.analytics: 'UA-5569947-12'
 
     head.rjukan.logo: 'rjukan_toplogo.png'
     head.rjukan.title: 'Rjukan videregående skole'
