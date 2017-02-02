@@ -66,6 +66,7 @@ parameters:
     head.admin.meta_author: 'Admin videregående skole'
     head.admin.meta_description: 'Modig, imøtekommende og troverdig'
     head.admin.meta_keywords: 'admin telemark videregående skole'
+    footer.admin.analytics: 'UA-91276641-1'
 
     head.bamble.logo: 'bamble_toplogo.png'
     head.bamble.title: 'Bamble videregående skole'
@@ -220,6 +221,7 @@ parameters:
     footer.skien.fblink: 'https://www.facebook.com/skienvgs/'
     footer.skien.fb: 'Facebook'
     footer.skien.youtube: 'https://www.youtube.com/channel/UCSaA2KXfm__BkVYb49P2ACg'
+    footer.skien.analytics: 'UA-56306666-1'
 
     head.skogmo.logo: 'skogmo_toplogo.png'
     head.skogmo.title: 'Skogmo videregående skole'
