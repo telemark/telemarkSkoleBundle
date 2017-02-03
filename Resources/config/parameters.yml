@@ -119,6 +119,7 @@ parameters:
     footer.hjalmarj.fb: 'Facebook'
     footer.hjalmarj.instagram: 'https://instagram.com/explore/tags/hjalmarjohansenvgs/'
     footer.hjalmarj.twitter: 'https://twitter.com/hjalmarjovgs'
+    footer.hjalmarj.analytics: 'UA-6487573-1'
 
     head.kragero.logo: 'kragero_toplogo.png'
     head.kragero.title: 'Kragerø videregående skole'
