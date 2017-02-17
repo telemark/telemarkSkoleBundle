@@ -1,0 +1,24 @@
+<div class="item item--vertical grid__item--{{ columns|default(4) }}-12">
+          <figure class="ezimage-field">
+            <img src="{{ asset('bundles/tfktelemarkskole/images/contenttype/vedlegg.jpg') }}" alt="Mappe" />
+        </figure>
+
+    <div class="item__content">
+        <h2 class="item__header">
+            <a href="{{ path(location) }}" class="item__imglink imglink">
+                {{ ez_render_field( content, 'title' ) }}
+            </a>
+        </h2>
+
+        <span class="sidenote">
+            {% if location.contentInfo.publishedDate|date("d.m.Y") !=  location.contentInfo.modificationDate|date("d.m.Y") %}
+                Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
+            {% else %}
+                Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }}
+            {% endif %}
+        </span>
+        <div class="item__intro">
+
+        </div>
+    </div>
+</div>

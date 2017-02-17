@@ -58,7 +58,10 @@
 <link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ main_title }}"/>
 <link rel="Index" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
 <link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
+
+{% if content is defined and content.contentInfo.mainLocationId != location.id %}
 <meta property="og:url" content="{{ url( 'ez_urlalias', {'locationId': content.contentInfo.mainLocationId} ) }}" />
+{% endif %}
 
 {% if content.fields.image is defined %}
 {% if not ez_is_field_empty( content, 'image') %}

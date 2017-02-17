@@ -127,8 +127,18 @@ system:
                     template: tfktelemarkSkoleBundle:search_line:article.html.twig
                     match:
                         Identifier\ContentType: [article_shared]
-
-
+                presentasjon_shared:
+                    template: tfktelemarkSkoleBundle:search_line:presentasjon.html.twig
+                    match:
+                        Identifier\ContentType: [presentasjon_shared]
+                presentasjon:
+                    template: tfktelemarkSkoleBundle:search_line:presentasjon.html.twig
+                    match:
+                        Identifier\ContentType: [presentasjon]
+                embed:
+                    template: tfktelemarkSkoleBundle:search_line:embed.html.twig
+                    match:
+                        Identifier\ContentType: [embed_code]
 #        block_view:
 #            ContentBox:
 #                template: tfktelemarkSkoleBundle:block:contentbox.html.twig
