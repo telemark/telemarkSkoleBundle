@@ -98,14 +98,16 @@ class ContentGridBlock extends AbstractBlockType implements BlockType
         }
 
         // sortOrder must be set
-        $sorting = new SortLocationClauseHelper();
-        $sortingClause = $sorting->getSortClauseFromLocation( $parentLocation );
+        #$sorting = new SortLocationClauseHelper();     
+        #$sortingClause = $sorting->getSortClauseFromLocation( $parentLocation );
             
+        #$query->sortClauses = array(
+        #    $sortingClause,
+        #    new SortClause\DatePublished( Query::SORT_DESC )
+        #);
         $query->sortClauses = array(
-            $sortingClause,
-            new SortClause\DatePublished( Query::SORT_DESC )
+            new SortClause\DatePublished(Query::SORT_DESC ),
         );
-
         $result = $this->searchService->findLocations($query, $languages);
 
         $contentArray = array();

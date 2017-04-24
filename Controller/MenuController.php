@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
-use tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper;
+#use tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper;
 
 class MenuController extends Controller
 {
@@ -56,10 +56,10 @@ class MenuController extends Controller
 
         $query->filter  = new Criterion\LogicalOr( $arrCriteria );
 
-        $sorting = new SortLocationClauseHelper();
-        $sortingClause = $sorting->getSortClauseFromLocation( $rootLocation );
+        #$sorting = new SortLocationClauseHelper();
+        #$sortingClause = $sorting->getSortClauseFromLocation( $rootLocation );
 
-        $query->sortClauses = array($sortingClause);
+        $query->sortClauses = $rootLocation->getSortClauses();
         $result = $searchService->findLocations( $query );
 
         foreach ( $result->searchHits as $hit )
@@ -100,10 +100,10 @@ class MenuController extends Controller
 
             $query->filter  = new Criterion\LogicalOr( $arrCriteria );
 
-            $sorting = new SortLocationClauseHelper();
-            $sortingClause = $sorting->getSortClauseFromLocation( $location );
+            #$sorting = new SortLocationClauseHelper();
+            #$sortingClause = $sorting->getSortClauseFromLocation( $location );
 
-            $query->sortClauses = array($sortingClause);
+            $query->sortClauses = $rootLocation->getSortClauses();
             $subResult = $searchService->findLocations( $query );
 
             $subItems = array();

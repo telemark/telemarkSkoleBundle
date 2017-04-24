@@ -12,7 +12,7 @@ use eZ\Publish\Core\MVC\ConfigResolverInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface as Container;
 
 use eZ\Publish\Core\Repository\LocationService;
-use tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper;
+#use tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper;
 
 class LocationHelper
 {
@@ -83,9 +83,9 @@ class LocationHelper
         }
         else
         {
-            $sorting = new SortLocationClauseHelper();
-            $sortingClause = $sorting->getSortClauseFromLocation( $location );
-            $query->sortClauses = array($sortingClause);
+            #$sorting = new SortLocationClauseHelper();
+            #$sortingClause = $sorting->getSortClauseFromLocation( $location );
+            $query->sortClauses = $location->getSortClauses();
         }
 
         $result = $searchService->findLocations( $query );
