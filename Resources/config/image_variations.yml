@@ -5,13 +5,29 @@ system:
                 reference: null
                 filters:
                     - { name: geometry/scalewidth, params: [846] }
-#            article_grid_2:
-#                reference: null
-#                filters:
-#                    - {name: geometry/scalewidth, params: [300]}
-#
-#            article_grid_3:
-#                reference: null
-#                filters:
-#                    - {name: geometry/scalewidth, params: [380]}
-
+            latest_article:
+                reference: null
+                filters:
+                    - {name: geometry/crop, params: [600, 600, 0, 0]}
+                    - {name: geometry/scalewidth, params: [70]}
+            article_list:
+                reference: null
+                filters:
+                    - { name: geometry/scaledownonly, params: [420, 370] }
+            article:
+                reference: null
+                filters:
+                    - { name: geometry/scaledownonly, params: [420, 370] }
+            article_large:
+                reference: null
+                filters:
+                    - { name: geometry/scalewidth, params: [1200] }
+                    - { name: geometry/crop, params: [1200, 500, 0, 0] }
+            article_full_width:
+                reference: null
+                filters:
+                    - { name: geometry/scaledownonly, params: [970, 600] }
+            gallery:
+                reference: null
+                filters:
+                    - { name: geometry/scaleexact, params: [960, 647] }
