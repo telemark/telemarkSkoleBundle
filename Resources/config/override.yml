@@ -48,6 +48,24 @@ system:
                     template: tfktelemarkSkoleBundle:full:link.html.twig
                     match:
                         Identifier\ContentType: [link]
+            frontpage:
+                article:
+                    template: tfktelemarkSkoleBundle:frontpage:article.html.twig
+                    match:
+                        Identifier\ContentType: [article]
+                article_shared:
+                    template: tfktelemarkSkoleBundle:frontpage:article.html.twig
+                    match:
+                        Identifier\ContentType: [article_shared]
+            slide:
+                article:
+                    template: tfktelemarkSkoleBundle:slide:article.html.twig
+                    match:
+                        Identifier\ContentType: [article]
+                article_shared:
+                    template: tfktelemarkSkoleBundle:slide:article.html.twig
+                    match:
+                        Identifier\ContentType: [article_shared]
             line:
                 article:
                     template: tfktelemarkSkoleBundle:line:article.html.twig
@@ -139,6 +157,7 @@ system:
                     template: tfktelemarkSkoleBundle:search_line:embed.html.twig
                     match:
                         Identifier\ContentType: [embed_code]
+
 #        block_view:
 #            ContentBox:
 #                template: tfktelemarkSkoleBundle:block:contentbox.html.twig

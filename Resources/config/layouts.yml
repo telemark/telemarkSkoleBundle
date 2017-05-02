@@ -19,7 +19,14 @@ blocks:
             contentbox:
                 template: tfktelemarkSkoleBundle:blocks:contentbox.html.twig
                 name: Content box
-
+            contentbox_news:
+                template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
+                name: Content box news
+    contentboxstatic:
+        views:
+            contentboxstatic:
+                template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
+                name: Content box static               
     contentbox3x1:
         views:
             contentbox3x1:

@@ -44,6 +44,15 @@ services:
             - '@ezpublish.config.resolver'
         tags:
             - { name: landing_page_field_type.block_type, alias: contentbox }
+    ezpublish.landing_page.block.contentboxstatic:
+        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBoxBlockStatic
+        arguments:
+            - '@ezpublish.api.service.location'
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.search'
+            - '@ezpublish.config.resolver'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: contentboxstatic }
 
     ezpublish.landing_page.block.contentbox3x1:
         class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBox3x1Block

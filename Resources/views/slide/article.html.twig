@@ -1,0 +1,26 @@
+<li class="slider__slide">
+<a href="{{ path(location) }}" class="top-image top-image--large">
+    {% if not ez_is_field_empty( content, 'image' ) %}
+        {{ ez_render_field( content, 'image', {
+            'parameters': {
+                'alias': 'campaign_1'
+            }
+        }  ) }}
+    {% else %}
+          <figure class="ezimage-field">
+            <img src="{{ asset('bundles/tfktelemarkskole/images/contenttype/bildetmangler.jpg') }}" alt="Mappe" />
+        </figure>
+    {% endif %}
+    <div class="top-image__text-wrapper">
+        <div class="top-image__text">
+            <h2 class="top-image__header">
+                {{ ez_render_field( content, 'title' ) }}
+            </h2>
+             <div class="top-image__body">
+                {{ ez_render_field( content, 'intro' ) }}
+            <br />
+            </div>
+        </div>
+    </div>
+</a>
+</li>

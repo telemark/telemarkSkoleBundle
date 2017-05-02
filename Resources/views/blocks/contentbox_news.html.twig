@@ -1,0 +1,36 @@
+
+{% if viewType == 'standard' %}
+<div class="row block-contentlist">
+ <div class="grid grid--12">
+    {% for locationId in contentArray %}
+        {% if locationId %}
+            {{ render(controller('ez_content:viewLocation', {
+                'locationId': locationId,
+                'viewType': 'frontpage'
+            })) }}
+        {% endif %}
+    {% endfor %}
+       </div>
+ </div>
+{% endif %}
+
+{% if viewType == 'kampanje' %}
+<div class="content">
+        <div class="slider-wrapper slider-wrapper--fullwidth">
+        		<div class="constrained">
+                	<div class="slider slider--fullwidth">
+                    <ul class="slider__slides">
+    				{% for locationId in contentArray %}
+        				{% if locationId %}
+            				{{ render(controller('ez_content:viewLocation', {
+                				'locationId': locationId,
+                				'viewType': 'slide'
+            				})) }}
+        				{% endif %}
+    				{% endfor %}
+                    </ul>
+                </div>
+               </div>
+        </div>
+ </div>
+{% endif %}
