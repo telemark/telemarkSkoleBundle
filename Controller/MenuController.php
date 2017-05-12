@@ -103,7 +103,7 @@ class MenuController extends Controller
             #$sorting = new SortLocationClauseHelper();
             #$sortingClause = $sorting->getSortClauseFromLocation( $location );
 
-            $query->sortClauses = $rootLocation->getSortClauses();
+            $query->sortClauses = $location->getSortClauses();
             $subResult = $searchService->findLocations( $query );
 
             $subItems = array();
