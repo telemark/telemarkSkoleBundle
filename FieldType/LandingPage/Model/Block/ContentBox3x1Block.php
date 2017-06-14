@@ -194,6 +194,22 @@ class ContentBox3x1Block extends AbstractBlockType implements BlockType
             } 
         }
 
+        // do sorting of items based on order numbers
+        if ( $ordering )
+        {
+            foreach ( $dataArray as $key => $row )
+            {
+                $locationArray[$key] = $row[ 'locationId' ];
+                $orderArray[$key]    = $row[ 'order' ];
+            }
+
+            array_multisort( $orderArray, SORT_ASC, $dataArray );
+
+            foreach ( $dataArray as $data )
+                $contentArray[] = $data[ 'locationId' ];
+        }
+
+
         return [
             'contentArray' => $contentArray,
             'listArray'    => $listArray

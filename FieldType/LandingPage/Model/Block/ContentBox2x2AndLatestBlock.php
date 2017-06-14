@@ -211,6 +211,8 @@ class ContentBox2x2AndLatestBlock extends AbstractBlockType implements BlockType
                 $orderArray[$key]    = $row[ 'order' ];
             }
 
+            array_multisort( $orderArray, SORT_ASC, $dataArray );
+
             foreach ( $dataArray as $data )
                 $contentArray[] = $data[ 'locationId' ];
         }
