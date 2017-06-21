@@ -61,6 +61,25 @@ parameters:
     footer.vest_vgs.fb2: 'Seljord på facebook'
     footer.vest_vgs.fblink2: 'https://www.facebook.com/seljordvgs?fref=ts'
 
+    head.telemark.logo: 'telemark.svg'
+    head.telemark.title: 'Telemark Fylkeskommune'
+    head.telemark.meta_author: 'Telemark Fylkeskommune'
+    head.telemark.meta_description: 'Modig, imøtekommende og troverdig'
+    head.telemark.meta_keywords: 'admin telemark videregående skole'
+    #footer.telemark.analytics: 'UA-91276641-1'
+
+    footer.telemark.email: ' post@t-fk.no'
+    footer.telemark.phone: '35 91 70 00'
+    footer.telemark.phone2: '35 91 70 01'
+    footer.telemark.post: 'Postboks 2844, 3702 Skien'
+    footer.telemark.adress: 'Fylkesbakken 10, 3715 Skien'
+    footer.telemark.contact: 'Webmaster'
+    footer.telemark.link: 'http://apps.t-fk.no/ansatte/'
+    footer.telemark.fblink: 'https://www.facebook.com/telemarkfylke'
+    footer.telemark.fb: 'Facebook'
+    footer.telemark.analytics: 'UA-5569947-5'
+
+
     head.admin.logo: 'admin_toplogo.png'
     head.admin.title: 'Admin videregående skole'
     head.admin.meta_author: 'Admin videregående skole'
@@ -261,3 +280,4 @@ parameters:
     footer.fagskolen.youtube: 'https://www.youtube.com/channel/UC9eKxv7J1hc2iKCMGSg6kQg'
     footer.fagskolen.flickr: 'https://www.flickr.com/photos/107959030@N03/albums/with/72157654237948960'
     footer.fagskolen.linkedin: 'https://www.linkedin.com/company/fagskolen-telemark'
+    footer.fagskolen.analytics: 'UA-37031548-7'
