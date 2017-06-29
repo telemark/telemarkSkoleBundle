@@ -281,3 +281,11 @@ parameters:
     footer.fagskolen.flickr: 'https://www.flickr.com/photos/107959030@N03/albums/with/72157654237948960'
     footer.fagskolen.linkedin: 'https://www.linkedin.com/company/fagskolen-telemark'
     footer.fagskolen.analytics: 'UA-37031548-7'
+
+    head.nettskolen.logo: 'nettskolen_toplogo.png'
+    head.nettskolen.title: 'Nettskolen Telemark'
+    head.nettskolen.meta_author: 'Nettskolen Telemark'
+    head.nettskolen.meta_keywords: 'nettskolen, telemark'
+    footer.nettskolen.phone: 'Sentralbord: 35 91 85 00'
+    footer.nettskolen.post: 'Postboks 182, 3674 NOTODDEN'
+    footer.nettskolen.adress: 'Heddalsveien 4 3674 NOTODDEN'
