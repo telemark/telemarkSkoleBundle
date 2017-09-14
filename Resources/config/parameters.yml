@@ -45,7 +45,7 @@ parameters:
     head.vest_vgs.logo: 'vesttelemark_toplogo.png'
     head.vest_vgs.title: 'Vest-Telemark vidaregåande skule'
     head.vest_vgs.meta_author: 'Vest-Telemark vidaregåande skule'
-    head.vest_vgs.meta_description: 'Vest-Telemark vidaregåande skule er en fin skole'
+    head.vest_vgs.meta_description: 'Vest-Telemark vidaregåande skule'
     head.vest_vgs.meta_keywords: 'vest telemark videregående skole'
 
     footer.vest_vgs.email: 'vest-telemark.vgs@t-fk.no'
