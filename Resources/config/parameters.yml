@@ -46,7 +46,7 @@ parameters:
     head.vest_vgs.title: 'Vest-Telemark vidaregåande skule'
     head.vest_vgs.meta_author: 'Vest-Telemark vidaregåande skule'
     head.vest_vgs.meta_description: 'Vest-Telemark vidaregåande skule'
-    head.vest_vgs.meta_keywords: 'vest telemark videregående skole'
+    head.vest_vgs.meta_keywords: 'vest telemark videregående skule'
 
     footer.vest_vgs.email: 'vest-telemark.vgs@t-fk.no'
     footer.vest_vgs.phone: 'Sentralbord Dalen: 35 91 97 00'
