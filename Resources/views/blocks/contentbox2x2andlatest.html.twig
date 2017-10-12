@@ -13,6 +13,7 @@
                 <hr>
                 {% if listArray is defined %}
                     <ul>
+                        {#
                         {% for content in listArray %}
                             <li>
                                 {% if getContentTypeIdentifier( content.contentInfo.contentTypeId ) == 'link'  %}
@@ -23,6 +24,26 @@
                                 {% else %}
                                 {% set intro = ez_content_name( content ) %}
                                     <a href="{{ url( 'ez_urlalias', {'contentId': content.contentInfo.id } ) }}">
+                                    {% if intro[31:] != '' %}
+                                        {{ intro[:30] ~ '...' }}
+                                    {% else %}
+                                        {{ intro[:30]}}
+                                    {% endif %}</a>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                        #}
+
+                        {% for item in listArray %}
+                            <li>
+                                {% if getContentTypeIdentifier( item.content.contentInfo.contentTypeId ) == 'link'  %}
+                                    {{ render(controller('ez_content:viewLocation', {
+                                        'locationId': item.location.id,
+                                        'viewType': 'shortcut_line'
+                                    })) }}
+                                {% else %}
+                                {% set intro = ez_content_name( item.content ) %}
+                                    <a href="{{ path( item.location ) }}">
                                     {% if intro[31:] != '' %}
                                         {{ intro[:30] ~ '...' }}
                                     {% else %}
