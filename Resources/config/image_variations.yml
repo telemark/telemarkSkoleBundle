@@ -23,6 +23,10 @@ system:
                 filters:
                     - { name: geometry/scalewidth, params: [1200] }
                     - { name: geometry/crop, params: [1200, 500, 0, 0] }
+            article_topic_large:
+                reference: null
+                filters:
+                    - { name: geometry/scalewidth, params: [1200] }
             article_full_width:
                 reference: null
                 filters:
@@ -31,3 +35,5 @@ system:
                 reference: null
                 filters:
                     - { name: geometry/scaleexact, params: [960, 647] }
+            original:
+                reference: null

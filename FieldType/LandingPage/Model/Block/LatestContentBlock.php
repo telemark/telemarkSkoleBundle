@@ -1,6 +1,7 @@
 <?php
 namespace tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block;
 
+use eZ\Publish\API\Repository\Values\Content\LocationQuery;
 use eZ\Publish\API\Repository\Values\Content\Query;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use eZ\Publish\API\Repository\Values\Content\Query\SortClause;
@@ -78,7 +79,7 @@ class LatestContentBlock extends AbstractBlockType implements BlockType
         $contentInfo = $this->contentService->loadContentInfo($attributes['contentId']);
         $location = $this->locationService->loadLocation( $contentInfo->mainLocationId );
 
-        $query = new Query();
+        $query = new LocationQuery();
         $query->query = new Criterion\LogicalAnd(
             [
                 new Criterion\Subtree( $location->pathString ),
@@ -93,15 +94,14 @@ class LatestContentBlock extends AbstractBlockType implements BlockType
 
         $query->sortClauses = array( new SortClause\DateModified( Query::SORT_DESC ) );
 
-        $result = $this->searchService->findContent($query, $languages);
+        $result = $this->searchService->findLocations($query, $languages);
 
         $contentArray = array();
         foreach ($result->searchHits as $key => $searchHit)
         {
-            $content = $searchHit->valueObject;
-            $locationId = $this->contentService->loadContentInfo($content->id)->mainLocationId;
-            $location = $this->locationService->loadLocation($locationId);
-            $contentArray[$key]['content'] = $content;
+            $location = $searchHit->valueObject;
+            $content = $this->contentService->loadContent( $location->contentInfo->id );
+            $contentArray[$key]['content']  = $content;
             $contentArray[$key]['location'] = $location;
         }
 

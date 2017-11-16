@@ -10,13 +10,27 @@
                             <span class="content-meta-author">
                                     {{ ez_render_field(content, 'author', {attr: {class: 'authors'}}) }}
                             </span>
+
+                        <h1>{{ ez_render_field( content, 'title' ) }}</h1>
+                        <div class="sidenote">
+                        {% if not ez_is_field_empty( content, 'author' ) %}
+                        Av: {{ ez_render_field(
+                        content,
+                        'author',
+                        {
+                            'template': 'tfktelemarkSkoleBundle:fields:ezauthor_simple.html.twig'
+                        }
+                        ) }}
+                        {% endif %} / Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
+                        </div>
+
                     </header>
                     {% if ez_is_field_empty(content, 'hide_poster') %}
                            {% if not ez_is_field_empty(content, 'image') %}
                      <div class="right-large-image">
                          {{ ez_render_field(content, 'image', {
                         'parameters': {
-                            'alias': 'article_large',
+                            'alias': 'article_topic_large',
                             'class': 'img-responsive'
                         }
                     }) }}
@@ -28,7 +42,7 @@
                         {% endif %}
                         {% if not ez_is_field_empty(content, 'copyright') %}
                             <div>
-                                Copyright: {{ ez_render_field( content, 'copyright') }}
+
                             </div>
                         {% endif %}
                     </div>
