@@ -8,6 +8,7 @@
                 {% for content in contentArray %}
                     <div class="item item--vertical grid__item--6-12 landing-article">
                         <div>
+                         <a href="{{ path(content.location) }}" alt="{{ content.content.contentInfo.name }}">
                             {% if not ez_is_field_empty( content.content, 'image' )%}
                                 {{ ez_render_field(
                                     content.content, 'image', {
@@ -17,11 +18,11 @@
                                         }
                                     }
                                 ) }}
+                            </a>
                             {% endif %}
 
                             <div class="intro-text">
-
-                                <h1><a href="{{ path(content.location) }}">{{ ez_render_field( content.content, 'title') }}</a></h1>
+                                <h1><a href="{{ path(content.location) }}" alt="{{ content.content.contentInfo.name }}">{{ ez_render_field( content.content, 'title') }}</a></h1>
                                    {{ ez_render_field(content.content, "intro") }}
                             </div>
                         </div>
@@ -35,6 +36,7 @@
                 {% for content in contentArray %}
                     <div class="item item--vertical item--3-3">
                         <div>
+                        <a href="{{ path(content.location) }}" alt="{{ content.content.contentInfo.name }}">
                             {{ ez_render_field(
                                 content.content, 'image', {
                                     'parameters': {
@@ -43,8 +45,9 @@
                                     }
                                 }
                             ) }}
+                        </a>
                             <div class="intro-text">
-                                <h4><a href="{{ path(content.location) }}">{{ ez_render_field( content.content, 'title') }}</a></h4>
+                                <h4><a href="{{ path(content.location) }} alt="{{ content.content.contentInfo.name }}">{{ ez_render_field( content.content, 'title') }}</a></h4>
                             </div>
                             {#
                                 {% if not ez_is_field_empty( content.content, ('intro') %}

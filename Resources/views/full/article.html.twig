@@ -6,12 +6,12 @@
             <main id="main" role="main" tabindex="-1" class="main">
                 <article class="no-top-spacing">
                     <header class="article__header">
-                        <h1>{{ ez_render_field( content, 'title' ) }}</h1>
-                        <div class="sidenote">
-                            Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
-                        </div>
+                        <h1>{{ ez_render_field( content, 'title' ) }}</h1>       
+                            <span class="content-meta-author">
+                                    {{ ez_render_field(content, 'author', {attr: {class: 'authors'}}) }}
+                            </span>
                     </header>
- {% if ez_is_field_empty(content, 'hide_poster') %}
+                    {% if ez_is_field_empty(content, 'hide_poster') %}
                            {% if not ez_is_field_empty(content, 'image') %}
                      <div class="right-large-image">
                          {{ ez_render_field(content, 'image', {
@@ -43,6 +43,10 @@
                     {% if not ez_is_field_empty( content, 'body' ) %}
                         {{ ez_render_field( content, 'body' ) }}
                     {% endif %}
+
+                 <div class="sidenote">
+                            Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
+                 </div>
                 </article>
             </main>
         </div>

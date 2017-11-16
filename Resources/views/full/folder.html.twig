@@ -45,29 +45,16 @@
                         {{ ez_render_field( content, 'description' ) }}
                     {% endif %}
                     {% if ez_is_field_empty( content, 'hide_subpages' ) %}
-
-                    {#% if totalCount > 0 %}
-                        <div class="grid grid--12">
-                            {% for item in subitems %}
-                                {{ render(controller('ez_content:viewLocation', {
-                                    'locationId': item.id,
-                                    'viewType': 'line',
-                                    'limit': '40'
-                                })) }}
-                            {% endfor %}
-                        </div>
-                    {% endif %#}
-
-
                     {% for item in items %}
                         {{ render(controller('ez_content:viewLocation', {
                         'locationId': item.id,
                         'viewType': 'line',
+                        'limit': '5',
                         'columns': columns
                                 }))
                             }}
                     {% endfor %}
-                    {% include 'tfktelemarkSkoleBundle:parts:pagination.html.twig' %}
+                        {% include 'tfktelemarkSkoleBundle:parts:pagination.html.twig' %}
                     {% endif %}
 
                 </article>

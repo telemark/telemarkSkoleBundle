@@ -14,6 +14,7 @@ use EzSystems\LandingPageFieldTypeBundle\FieldType\LandingPage\Model\BlockValue;
 use eZ\Publish\API\Repository\LocationService;
 use eZ\Publish\API\Repository\ContentService;
 use eZ\Publish\API\Repository\SearchService;
+use eZ\Publish\API\Repository\Values\Content\LocationQuery;
 use eZ\Publish\API\Repository\Values\Content\Query;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use eZ\Publish\API\Repository\Values\Content\Query\SortClause;
@@ -180,7 +181,7 @@ class ContentBox2x2AndLatestBlock extends AbstractBlockType implements BlockType
                 $rootLocationId = $this->configResolver->getParameter( 'content.tree_root.location_id' );
                 $rootLocation   = $this->locationService->loadLocation( $rootLocationId );
 
-                $query = new Query();
+                $query = new LocationQuery();
                 $query->limit = 5;
                 $query->query = new Criterion\LogicalAnd(
                     [
@@ -192,9 +193,12 @@ class ContentBox2x2AndLatestBlock extends AbstractBlockType implements BlockType
 
                 $query->sortClauses = array( new SortClause\DateModified( Query::SORT_DESC ) );
 
-                $result = $this->searchService->findContent( $query, $languages );
+                $result = $this->searchService->findLocations( $query, $languages );
                 foreach ($result->searchHits as $searchHit)
-                    $listArray[] = $searchHit->valueObject;
+                    $listArray[] = array(
+                        'location' => $searchHit->valueObject,
+                        'content'  => $this->contentService->loadContent( $searchHit->valueObject->contentInfo->id )
+                    );
             }
             catch (Exception $e)
             {

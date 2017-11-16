@@ -7,9 +7,7 @@
 
                 <header class="article__header">
                     <h1>{{ ez_render_field( content, 'title' ) }}</h1>
-                    <div class="sidenote">
-                        Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
-                    </div>
+
                 </header>
 {% if not ez_is_field_empty( content, 'box_1_header' ) %}
                 <article class="presentation--left">
@@ -77,6 +75,10 @@
                         </div>
                     {% endif %}
                     {% endif %}
+
+                <div class="sidenote">
+                        Publisert: {{ location.contentInfo.publishedDate|date("d.m.Y") }} / Oppdatert: {{ location.contentInfo.modificationDate|date("d.m.Y") }}
+                    </div>
                 </article>
 {% if not ez_is_field_empty( content, 'box_1_header' ) %}
                 <div class="presentation--sidebar-right">

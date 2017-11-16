@@ -1,12 +1,14 @@
 <div class="item item--vertical grid__item--{{ columns|default(4) }}-12">
 
     {% if not ez_is_field_empty( content, 'image' ) %}
+    <a href="{{ path(location) }}" class="item__imglink imglink" alt="{{ content.contentInfo.name }}">
         {{ ez_render_field( content, 'image', {
             'parameters': {
                 'alias': 'article_grid_5',
                 'class': 'img-responsive'
             }
         }  ) }}
+          </a>
     {% else %}
           <figure class="ezimage-field">
             <img src="{{ asset('bundles/tfktelemarkskole/images/contenttype/bildetmangler.jpg') }}" alt="Mappe" />
@@ -14,7 +16,7 @@
     {% endif %}
     <div class="item__content">
         <h2 class="item__header">
-            <a href="{{ path(location) }}" class="item__imglink imglink">
+            <a href="{{ path(location) }}" class="item__imglink imglink" alt="{{ content.contentInfo.name }}">
                 {{ ez_render_field( content, 'title' ) }}
             </a>
         </h2>
