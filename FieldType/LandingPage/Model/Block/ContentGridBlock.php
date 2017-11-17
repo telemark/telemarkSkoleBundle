@@ -174,8 +174,10 @@ class ContentGridBlock extends AbstractBlockType implements BlockType
                     false,
                     [],
                     [
-                        'article' => 'Article',
-                        'presentasjon' => 'Presentasjon'
+                        'article' => 'Artikkel',
+                        'presentasjon' => 'Presentasjon',
+                        'article_shared' => 'Artikkel felles',
+                        'presentasjon_shared' => 'Presentasjon felles',
 
                     ]
                 ),
