@@ -20,7 +20,7 @@
                         </div>
 
                     </header>
-                    {% if ez_is_field_empty(content, 'hide_poster') %}
+ {% if ez_is_field_empty(content, 'hide_poster') %}
                            {% if not ez_is_field_empty(content, 'image') %}
                      <div class="right-large-image">
                          {{ ez_render_field(content, 'image', {
@@ -37,7 +37,7 @@
                         {% endif %}
                         {% if not ez_is_field_empty(content, 'copyright') %}
                             <div>
-
+                                {{ ez_render_field( content, 'copyright') }}
                             </div>
                         {% endif %}
                     </div>
