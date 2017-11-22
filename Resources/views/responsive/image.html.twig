@@ -48,7 +48,7 @@
     Visningstype for bannerbilder
 #}
 
-{% if image_type is sameas('banner') %}
+{% if image_type is same as('banner') %}
 
     <div class="top-image top-image--large">
         <picture>
@@ -81,7 +81,7 @@
     Visningstype for slideshow
 #}
 
-{% if image_type is sameas('slide') %}
+{% if image_type is same as('slide') %}
     <img sizes="(min-width: 64em) 757px, 100vw" src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_04' ).uri, absolute=true ) }} 360w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }} 578w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_09' ).uri, absolute=true ) }} 846w" alt="{% if image_alt is defined %}{{image_alt}}{% elseif content.fields.image['nor-NO'].alternativeText is defined %}{{ content.fields.image['nor-NO'].alternativeText }}{% endif %}">
     <!--img.top-image__img(src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}")-->
     <div class="top-image__text-wrapper">
@@ -98,7 +98,7 @@
     </div>
 {% endif %}
 
-{% if image_type is sameas('slider') %}
+{% if image_type is same as('slider') %}
     <img sizes="(min-width: 64em) 757px, 100vw" src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_04' ).uri, absolute=true ) }} 360w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }} 578w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_09' ).uri, absolute=true ) }} 846w" alt="{% if content.fields.image['nor-NO'].alternativeText is defined %}{{ content.fields.image['nor-NO'].alternativeText }}{% endif %}">
     <!--img.top-image__img(src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}")-->
     <div class="top-image__text-wrapper">
@@ -119,7 +119,7 @@
     Visningstype for galleri-slide
 #}
 
-{% if image_type is sameas('gallery_slide') %}
+{% if image_type is same as('gallery_slide') %}
     {% set data_credit = '' %}
 
     {% if use_data_credit is same as(1) %}
