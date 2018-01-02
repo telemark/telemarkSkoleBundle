@@ -32,7 +32,7 @@
 {% endif %}
 
 {% if content.fields.intro is defined %}
-{% set intro = ez_render_field(content, 'intro')|striptags|convert_encoding('UTF-8', 'HTML-ENTITIES') %}
+{% set intro = ez_render_field(content, 'intro')|striptags %}
 {% endif %}
 <title>{{ title|default( main_title ) }}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>

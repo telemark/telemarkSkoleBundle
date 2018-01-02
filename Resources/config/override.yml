@@ -48,6 +48,10 @@ system:
                     template: tfktelemarkSkoleBundle:full:link.html.twig
                     match:
                         Identifier\ContentType: [link]
+                person:
+                    template: tfktelemarkSkoleBundle:full:person.html.twig
+                    match:
+                        Identifier\ContentType: [link]
             frontpage:
                 article:
                     template: tfktelemarkSkoleBundle:frontpage:article.html.twig
@@ -99,6 +103,10 @@ system:
                     template: tfktelemarkSkoleBundle:line:link.html.twig
                     match:
                         Identifier\ContentType: [link]
+                person:
+                    template: tfktelemarkSkoleBundle:line:person.html.twig
+                    match:
+                        Identifier\ContentType: [person]
                 embed_code:
                     template: tfktelemarkSkoleBundle:line:embed.html.twig
                     match:

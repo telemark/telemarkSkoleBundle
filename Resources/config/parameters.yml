@@ -29,7 +29,9 @@ parameters:
         - presentasjon
         - presentasjon_shared
         - spacer
-
+        - person
+        - link
+      
     sidebar.tfk_school_group.identifiers.right:
         - infobox
 
@@ -121,6 +123,7 @@ parameters:
     footer.boe.link: 'http://apps.t-fk.no/ansatte/#/ansatt/20169'
     footer.boe.fblink: 'https://www.facebook.com/BØ-Vidaregåande-Skule-530119240390044/'
     footer.boe.fb: 'Facebook'
+    footer.bamble.analytics: 'UA-107696217-1'
 
     head.hjalmarj.logo: 'hjalmarj_toplogo.png'
     head.hjalmarj.title: 'Hjalmar Johansen videregående skole'
