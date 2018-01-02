@@ -1,8 +1,11 @@
 {% extends noLayout ? viewbaseLayout : "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
-{% block content %}
-<div class="item item--vertical grid__item--{{ columns|default(4) }}-12">
 
-    {% if not ez_is_field_empty( content, 'image' ) %}
+{% block content %}
+    <div class="content">
+        <div class="constrained-content">
+            <main id="main" role="main" tabindex="-1" class="main">
+                <article class="no-top-spacing">
+{% if not ez_is_field_empty( content, 'image' ) %}
         <a href="{{ path(location) }}" class="item__imglink imglink" alt="{{ content.contentInfo.name }}">
         {{ ez_render_field( content, 'image', {
             'parameters': {
@@ -26,5 +29,8 @@
             {{ ez_render_field( content, 'desc' ) }}
         </div>
     </div>
-</div>
+                </article>
+            </main>
+        </div>
+    </div>
 {% endblock %}

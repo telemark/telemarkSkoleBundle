@@ -51,7 +51,7 @@ system:
                 person:
                     template: tfktelemarkSkoleBundle:full:person.html.twig
                     match:
-                        Identifier\ContentType: [link]
+                        Identifier\ContentType: [person]
             frontpage:
                 article:
                     template: tfktelemarkSkoleBundle:frontpage:article.html.twig
