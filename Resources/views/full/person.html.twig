@@ -1,3 +1,5 @@
+{% extends noLayout ? viewbaseLayout : "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+
 <div class="item item--vertical grid__item--{{ columns|default(4) }}-12">
 
     {% if not ez_is_field_empty( content, 'image' ) %}
