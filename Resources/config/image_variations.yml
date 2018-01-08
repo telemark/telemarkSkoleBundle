@@ -35,5 +35,9 @@ system:
                 reference: null
                 filters:
                     - { name: geometry/scaleexact, params: [960, 647] }
+            person:
+                reference: null
+                filters:
+                    - { name: geometry/scaledownonly, params: [300, 355] }
             original:
                 reference: null

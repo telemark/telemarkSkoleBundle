@@ -1,10 +1,10 @@
-<div class="item item--vertical grid__item--{{ columns|default(4) }}-12">
+<div class="item item--vertical grid__item--4-12">
 
     {% if not ez_is_field_empty( content, 'image' ) %}
         <a href="{{ path(location) }}" class="item__imglink imglink" alt="{{ content.contentInfo.name }}">
         {{ ez_render_field( content, 'image', {
             'parameters': {
-                'alias': 'article_grid_5',
+                'alias': 'person',
                 'class': 'img-responsive'
             }
         }  ) }}
@@ -14,7 +14,6 @@
             <img src="{{ asset('bundles/tfktelemarkskole/images/contenttype/bildetmangler.jpg') }}" alt="Mappe" />
         </figure>
     {% endif %}
-    <div class="item__content">
         <h2 class="item__header">
             {{ ez_render_field( content, 'name' ) }} {{ ez_render_field( content, 'lastname' ) }}
         </h2>
@@ -30,6 +29,5 @@
             {% if not ez_is_field_empty( content, 'desc' ) %}
                     {{ ez_render_field( content, 'desc' ) }}
             {% endif %}
-        </div>
     </div>
 </div>
