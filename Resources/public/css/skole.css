@@ -21,3 +21,8 @@
 
 .content-list-float3:nth-child(3n+3) div {
   padding-left: 5px; }
+
+.person figure.ezimage-field {
+    float: left;
+    width: 20%;
+}
