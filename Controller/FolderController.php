@@ -81,7 +81,7 @@ class FolderController extends Controller
             $columns = $configResolver->getParameter( 'newsfolder.columns', 'subitems' );
 
         $limit = $rows * $columns;
-        $limit = 10;
+        $limit = 25;
         $offset = $this->get( 'vp_utility.pagination_helper' )->getOffsetFromPage( $page, $limit );
 
         $location = $locationService->loadLocation( $locationId );
