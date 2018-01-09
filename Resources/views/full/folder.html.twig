@@ -44,7 +44,10 @@
                     {% if not ez_is_field_empty( content, 'description' ) %}
                         {{ ez_render_field( content, 'description' ) }}
                     {% endif %}
+
                     {% if ez_is_field_empty( content, 'hide_subpages' ) %}
+                    
+                    {% if ez_is_field_empty( content, 'hide_pagination' ) %}
                     {% for item in items %}
                         {{ render(controller('ez_content:viewLocation', {
                         'locationId': item.id,
@@ -55,6 +58,19 @@
                             }}
                     {% endfor %}
                         {% include 'tfktelemarkSkoleBundle:parts:pagination.html.twig' %}
+                    
+                    {% else %}
+
+                    {% for item in items %}
+                        {{ render(controller('ez_content:viewLocation', {
+                        'locationId': item.id,
+                        'viewType': 'line',
+                        'limit': '50',
+                        'columns': columns
+                                }))
+                            }}
+                    {% endfor %}
+                    {% endif %}
                     {% endif %}
 
                 </article>
