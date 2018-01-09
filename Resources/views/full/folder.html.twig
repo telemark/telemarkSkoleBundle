@@ -46,7 +46,7 @@
                     {% endif %}
 
                     {% if ez_is_field_empty( content, 'hide_subpages' ) %}
-                    
+
                     {% if ez_is_field_empty( content, 'hide_pagination' ) %}
                     {% for item in items %}
                         {{ render(controller('ez_content:viewLocation', {
@@ -70,6 +70,7 @@
                                 }))
                             }}
                     {% endfor %}
+                    
                     {% endif %}
                     {% endif %}
 
