@@ -1,7 +1,7 @@
 parameters:
 
     topmenu.tfk_school_group.identifiers:
-        - spacer
+
 
     topmenu.tfk_school_group.identifiers_hide_from_menu:
         - folder
@@ -9,7 +9,8 @@ parameters:
         - presentasjon_shared
         - embed_code
         - link
-
+        - spacer
+        
     subitems.tfk_school_group.identifiers:
         - article
         - article_shared
