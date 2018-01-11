@@ -41,7 +41,7 @@
                         }
                 }) }}
                 {% endif %}
- {% endif %}
+    {% endif %}
                      <div class="caption">
                         {% if not ez_is_field_empty(content, 'caption') %}
                             <div>
@@ -54,11 +54,11 @@
                             </div>
                         {% endif %}  
                   </div>
-         {% if ez_is_field_empty(content, 'hide_poster') %}
+         {% if not ez_is_field_empty(content, 'hide_poster') %}
                 </div>
          {% endif %}
  {% endif %}
-                      {% if not ez_is_field_empty( content, 'intro' ) %}
+                    {% if not ez_is_field_empty( content, 'intro' ) %}
                         <div class="ingress">
                             {{ ez_render_field( content, 'intro' ) }}
                         </div>
