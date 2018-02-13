@@ -1,0 +1,42 @@
+{% extends "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+{% block content %}
+  {% if event is defined %}
+    <main id="main" role="main" tabindex="-1">
+      <article class="article" itemscope="" itemtype="https://schema.org/NewsArticle">
+        <header class="page-header">
+          <div class="constrained">
+            <h1 class="page-header__title" itemprop="name">{{ event.Subject }}</h1>
+          </div>
+        </header>
+
+        <div class="byline">
+          <div class="constrained">
+            <span class="ezagenda_date">
+              {%  if event.IsAllDayEvent %}
+                {{ event.Start|date('d') }}. {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMMM' ) }}
+                {% if event.Duration != 'P1D' %}
+                  → {{ event.End|date('d') - 1 }}. {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMMM' ) }}
+                {% endif %}
+                {{ event.Location }}
+              {% else %}
+                {{ event.Start|date('d') }}. {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMMM' ) }} {{ event.Start|date('H:i') }} → {% if event.Start|date('d') != event.End|date('d') %}{{ event.End|date('d') }}. {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMMM' ) }}{% endif %} {{ event.End|date('H:i') }} {{ event.Location }}
+              {% endif %}
+            </span>
+          </div>
+        </div>
+        <div class="constrained">
+          <div class="content__main">
+            <div id="event_full" class="attribute-short">
+              {{ event.Body._|raw }}
+            </div>
+
+            <script>
+              $('#event_full style').remove();
+            </script>
+          </div>
+        </div>
+      </article>
+    </main>
+  {% endif %}
+  {{ dump() }}
+{% endblock %}

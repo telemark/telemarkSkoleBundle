@@ -1,0 +1,244 @@
+{% extends "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+
+{% block content %}
+  <script>
+      function categoryClicked(element) {
+
+          var allEvents = $(".event");
+
+          $(element).toggleClass('selectedCategory');
+          $(element).find('input[type=checkbox]').prop('checked', $(element).hasClass('selectedCategory'));
+
+          var selectedCategories = $('.selectedCategory');
+          if (selectedCategories !== null && selectedCategories.length > 0)
+          {
+              allEvents.hide();
+              selectedCategories.each(function (index, elem) {
+                 var category = $(elem).attr('id');
+                 $("." + category).show();
+              });
+          }
+          else
+          {
+              allEvents.show();
+          }
+      }
+
+      function blinkDates(date) {
+          $(document).scrollTop( $('.' + date));
+          var selectedCategories = $('.selectedCategory');
+          var allEventsForDate = $('.' + date);
+
+          if (selectedCategories !== null && selectedCategories.length > 0)
+          {
+              var categoryArray = [];
+              selectedCategories.each(function (index, elem) {
+                  categoryArray.push('.' + date + '.' + $(elem).attr('id'));
+              });
+
+              $(categoryArray.join(", ")).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+          } else {
+              $('.' + date).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+          }
+      }
+  </script>
+  <div class="content">
+    <div class="constrained-content">
+
+      <main id="main" role="main" tabindex="-1" class="main">
+        <header class="page-header">
+          <div class="constrained">
+            <h1 class="page-header__title" itemprop="name">Kalender</h1>
+          </div>
+        </header>
+        <div class="constrained">
+
+          <div class="calendarRight">
+            <h2>Velg dato</h2>
+            <table class="calendar-table" cellspacing="0" cellpadding="0" border="0" summary="Event Calendar">
+              <thead>
+              <tr class="calendar-table_heading">
+                <th class="calendar-table_heading_prev"><a href="/kalender/{% if month == 1 %}{{ year-1 }}/{{ 12 }}{% else %}{{ year }}/{{ month - 1 }}{% endif %}" title=" Forrige måned " rel="prev">&#8249;&#8249;</a></th>
+                <th class="calendar-table_heading_date" colspan="5">{{ monthName|capitalize }} {{ year }}</th>
+                <th class="calendar-table_heading_next"><a href="/kalender/{% if month == 12 %}{{ year+1 }}/{{ 1 }}{% else %}{{ year }}/{{ month + 1 }}{% endif %}" title=" Neste måned " rel="next">&#8250;&#8250;</a></th>
+              </tr>
+              <tr class="calendar-table_heading-days">
+                <th class="calendar-table_heading-days__day">Man</th>
+                <th class="calendar-table_heading-days__day">Tir</th>
+                <th class="calendar-table_heading-days__day">Ons</th>
+                <th class="calendar-table_heading-days__day">Tor</th>
+                <th class="calendar-table_heading-days__day">Fre</th>
+                <th class="calendar-table_heading-days__day">Lør</th>
+                <th class="calendar-table_heading-days__day">Søn</th>
+              </tr>
+              </thead>
+              <tbody class="calendar-table__days">
+              <tr class="days first_row">
+                {% for dayWithEvent in daysWithEvents %}
+                  {% if loop.index0 is divisible by(7) %}
+                    </tr><tr>
+                  {% endif %}
+                {% set class = "calendar-table__days" %}
+                
+                {% if year~"%02d"|format(month)~"%02d"|format(dayWithEvent.day) <  'now'|date('Ymd') %}
+                  {% set class = class ~ " calendar-table__days--expired" %}
+                {% endif %}
+                {% if year~"%02d"|format(month)~"%02d"|format(dayWithEvent.day) ==  'now'|date('Ymd') %}
+                  {% set class = class ~ " calendar-table__days--current" %}
+                {% endif %}
+                {% if dayWithEvent.events|length > 0 %} 
+                  {% set class = class ~ " calendar-table__days--hasevent" %}
+                {% endif %}
+                <td class="{{ class }}">
+                  <span onclick="blinkDates('day {{ "%02d"|format(dayWithEvent.day) }}')">{{ dayWithEvent.day }}</span>
+                </td>
+                {% endfor %}
+              </tr>
+              </tbody>
+            </table>
+            <h2>Aktuelle</h2>
+            <div id="upcomingUevents">
+              {% for event in upcomingEvents %}
+                {% set categoryConcat = '' %}
+                {% set categoryConcatComma = '' %}
+
+                {% if event.Categories %}
+                  {% for category in event.Categories.String %}
+                    {% if category|split('ORG_KODE=')|length > 1 %}
+                      {%  set categoryConcat = categoryConcat ~ category|split('ORG_KODE=')[1]  %}
+                    {% else %}
+                      {%  set categoryConcat = categoryConcat ~ category|replace({' ':'_'})  %}
+                    {% endif %}
+
+                    {% if not loop.last %}
+                      {%  set categoryConcat = categoryConcat ~ ' '  %}
+                    {% endif %}
+                  {% endfor %}
+
+                  {% for category in event.Categories.String %}
+                    {% if category|split('ORG_KODE=')|length > 1 %}
+                      {%  set categoryConcatComma = categoryConcatComma ~ category|split('ORG_KODE=')[1]  %}
+                    {% else %}
+                        {%  set categoryConcatComma = categoryConcatComma ~ category  %}
+                    {% endif %}
+                    {% if not loop.last %}
+                      {%  set categoryConcatComma = categoryConcatComma ~ ', '  %}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+
+                <div class="event day{{ event.Start|date('d') }}{% if event.Categories %} {{ categoryConcat }}{% endif %}">
+                  <div class="calendarIcon">
+                    {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
+                    <div class="calendarDate">{{ event.Start|date('d') }}</div>
+                  </div>
+                  {% if event.End|date('d') - event.Start|date('d') > 1 %}
+                    <div class="calendarIconArrow">
+                      →
+                    </div>
+                    <div class="calendarIcon">
+                      {{ event.End|date('M') }}
+                      <div class="calendarDate">{% if event.IsAllDayEvent %}{{ event.End|date('d') - 1 }}{% else %}{{ event.End|date('d') }}{% endif %}</div>
+                    </div>
+                  {% endif %}
+                  <div class="calendarText">
+                    <a href="/kalender/hendelse/{{ event.ItemId.Id|replace({'/':'!SLASH!'}) }}">{{ event.Subject }}</a>
+                    {% if event.Categories.String is defined %}
+                      <i class="categories_for_event">{{ categoryConcatComma }}</i>
+                    {% endif %}
+                    <br/>
+                    {% if not(event.IsAllDayEvent) %}
+                      {{ event.Start|date('H:i') }}
+                    {% endif %}
+                    {{ event.Location }}&nbsp;
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="calendarLeft">
+            <h2>Filter</h2>
+            <div id="typeCategories">
+              <b>Type:</b><br/>
+            {% for category in categoriesType|sort %}
+              <div class="category" id="{{ category|replace({' ':'_'}) }}" onclick="categoryClicked(this);"><input type="checkbox"> {{ category }}</div>
+            {% endfor %}
+            </div>
+          </div>
+
+          <div class="calendarCenter">
+            <h2>Kalender</h2>
+            <div id="events">
+              {% for dayWithEvent in daysWithEvents %}
+                {% if dayWithEvent.events|length > 0%}
+                  {% for event in dayWithEvent.events %}
+
+                    {% set categoryConcat = '' %}
+                    {% set categoryConcatComma = '' %}
+
+                    {% if event.Categories %}
+                      {% for category in event.Categories.String %}
+                        {% if category|split('ORG_KODE=')|length > 1 %}
+                          {%  set categoryConcat = categoryConcat ~ category|split('ORG_KODE=')[1]  %}
+                        {% else %}
+                          {%  set categoryConcat = categoryConcat ~ category|replace({' ':'_'})  %}
+                        {% endif %}
+
+                        {% if not loop.last %}
+                          {%  set categoryConcat = categoryConcat ~ ' '  %}
+                        {% endif %}
+                      {% endfor %}
+
+
+                      {% for category in event.Categories.String %}
+                        {% if category|split('ORG_KODE=')|length > 1 %}
+                          {%  set categoryConcatComma = categoryConcatComma ~ category|split('ORG_KODE=')[1]  %}
+                        {% else %}
+                            {%  set categoryConcatComma = categoryConcatComma ~ category  %}
+                        {% endif %}
+                        {% if not loop.last %}
+                          {%  set categoryConcatComma = categoryConcatComma ~ ', '  %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+
+                    <div class="event day{{ event.Start|date('d') }}{% if event.Categories %} {{ categoryConcat }}{% endif %}">
+                      <div class="calendarIcon">
+                        {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
+                        <div class="calendarDate">{{ event.Start|date('d') }}</div>
+                      </div>
+                      {% if event.End|date('d') - event.Start|date('d') > 1 %}
+                        <div class="calendarIconArrow">
+                          →
+                        </div>
+                        <div class="calendarIcon">
+                          {{ event.End|date('M') }}
+                          <div class="calendarDate">{% if event.IsAllDayEvent %}{{ event.End|date('d') - 1 }}{% else %}{{ event.End|date('d') }}{% endif %}</div>
+                        </div>
+                      {% endif %}
+                      <div class="calendarText">
+                        <a href="/kalender/hendelse/{{ event.ItemId.Id|replace({'/':'!SLASH!'}) }}">{{ event.Subject }}</a>
+                        {% if event.Categories.String is defined %}
+                          <i class="categories_for_event">{{ categoryConcatComma }}</i>
+                        {% endif %}
+                        <br/>
+                        {% if not(event.IsAllDayEvent) %}
+                          {{ event.Start|date('H:i') }}
+                        {% endif %}
+                        {{ event.Location }}&nbsp;
+                      </div>
+                    </div>
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="clear: both;"></div>
+      </main>
+    </div>
+  </div>
+  {{ dump() }}
+{% endblock %}
+

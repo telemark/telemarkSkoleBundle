@@ -1,5 +1,17 @@
 parameters:
 
+    ews.global.host: 'outlook.office365.com'
+    ews.global.username: 'Trio@skoletfk.onmicrosoft.com'
+    ews.global.password: 'Telemark20!'
+
+    ews.global.timezone: 'Central Europe Standard Time'
+
+    ews.tfk_school_group.common_calendar_name: 'Felles skolekalender'
+    ews.tfk_school_group.calendar_id: 0
+
+    ews.vest_vgs.calendar_name: 'Vest-Telemark'
+    ews.vest_vgs.calendar_id: 0
+
     topmenu.tfk_school_group.identifiers:
 
 

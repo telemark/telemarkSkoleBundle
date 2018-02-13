@@ -4,3 +4,15 @@ tfktelemark_skole_homepage:
 tfktelemark_skole_search:
     path:   /search
     defaults: { _controller: tfktelemarkSkoleBundle:Search:search }
+tfktelemark_skole_calendar_view_event:
+    path: /kalender/hendelse/{uid}
+    defaults: { _controller: tfktelemarkSkoleBundle:Calendar:viewEvent }
+tfktelemark_skole_calendar_view_all:
+    path: /kalender/
+    defaults: { _controller: tfktelemarkSkoleBundle:Calendar:viewAll }
+tfktelemark_skole_calendar_view_all2:
+    path: /kalender/{year}
+    defaults: { _controller: tfktelemarkSkoleBundle:Calendar:viewAll }
+tfktelemark_skole_calendar_view_all3:
+    path: /kalender/{year}/{month}
+    defaults: { _controller: tfktelemarkSkoleBundle:Calendar:viewAll }
