@@ -60,3 +60,8 @@ blocks:
             latestcontent:
                 template: tfktelemarkSkoleBundle:blocks:latestcontent.html.twig
                 name: Latest content
+    calendar:
+        views:
+            calendar:
+                template: tfktelemarkSkoleBundle:blocks:calendar.html.twig
+                name: Calendar

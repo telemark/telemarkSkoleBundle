@@ -104,6 +104,14 @@ services:
         tags:
             - { name: landing_page_field_type.block_type, alias: campaign }
 
+    ezpublish.landing_page.block.calendar:
+        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\CalendarBlock
+        arguments:
+            - '@ezpublish.config.resolver'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: calendar }
+
+
     config_resolver_extension.twig_extension:
         class: tfk\telemarkSkoleBundle\Twig\Extension\ConfigResolverExtension
         public: false
