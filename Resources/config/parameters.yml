@@ -1,15 +1,45 @@
 parameters:
 
     ews.global.host: 'outlook.office365.com'
-    ews.global.username: 'Trio@skoletfk.onmicrosoft.com'
-    ews.global.password: 'Telemark20!'
+    ews.global.username: 'tfkskolekalender@skoletfk.onmicrosoft.com'
+    ews.global.password: 'Telemark20'
 
     ews.global.timezone: 'Central Europe Standard Time'
 
     ews.tfk_school_group.common_calendar_name: 'Felles skolekalender'
     ews.tfk_school_group.calendar_id: 0
 
-    ews.vest_vgs.calendar_name: 'Vest-Telemark'
+    ews.bamble.calendar_name: 'Bamble VGS'
+    ews.bamble.calendar_id: 0
+
+    ews.boe.calendar_name: 'Bø VGS'
+    ews.boe.calendar_id: 0
+
+    ews.hjalmarj.calendar_name: 'Hjalmar Johansen VGS'
+    ews.hjalmarj.calendar_id: 0
+
+    ews.kragero.calendar_name: 'Kragerø VGS'
+    ews.kragero.calendar_id: 0
+
+    ews.nome.calendar_name: 'Nome VGS'
+    ews.nome.calendar_id: 0
+
+    ews.notodden.calendar_name: 'Notodden VGS'
+    ews.notodden.calendar_id: 0
+
+    ews.porsgrunn.calendar_name: 'Porsgrunn VGS'
+    ews.porsgrunn.calendar_id: 0
+
+    ews.rjukan.calendar_name: 'Rjukan VGS'
+    ews.rjukan.calendar_id: 0
+
+    ews.skien.calendar_name: 'Skien VGS'
+    ews.skien.calendar_id: 0
+
+    ews.skogmo.calendar_name: 'Skogmo VGS'
+    ews.skogmo.calendar_id: 0
+
+    ews.vest_vgs.calendar_name: 'Vest-telemark VGS'
     ews.vest_vgs.calendar_id: 0
 
     topmenu.tfk_school_group.identifiers:
@@ -136,7 +166,7 @@ parameters:
     footer.boe.link: 'http://apps.t-fk.no/ansatte/#/ansatt/20169'
     footer.boe.fblink: 'https://www.facebook.com/BØ-Vidaregåande-Skule-530119240390044/'
     footer.boe.fb: 'Facebook'
-    footer.bamble.analytics: 'UA-107696217-1'
+    footer.boe.analytics: 'UA-107696217-1'
 
     head.hjalmarj.logo: 'hjalmarj_toplogo.png'
     head.hjalmarj.title: 'Hjalmar Johansen videregående skole'

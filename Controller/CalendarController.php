@@ -94,6 +94,11 @@ class CalendarController extends Controller
 
         $daysWithEvents = array();
 
+        if ( strlen( $month ) == 1 )
+            $month2 = '0' . $month;
+        else
+            $month2 = $month;
+
         for ($i = 0; $i < $skipBefore; $i++)
         {
             $daysWithEvents[] = array('day' => '', 'events' => array());
@@ -101,8 +106,14 @@ class CalendarController extends Controller
 
         for ($i = 1; $i <= $numberOfDaysInMonth; $i++)
         {
-            $daysWithEvents[] = array('day' => $i, 'events' => $this->findEventsForGivenDay( $i, $events ));
+            if ( strlen( $i ) == 1 )
+                $day = '0' . $i;
+            else
+                $day = $i;
+
+            $daysWithEvents[] = array('day' => $i, 'events' => $this->findEventsForGivenDate( $year .'-'. $month2 .'-'. $day, $events ));
         }
+
 
         for ($i = 0; $i < $skipAfter; $i++)
         {
@@ -116,12 +127,13 @@ class CalendarController extends Controller
 
         return $this->render('tfktelemarkSkoleBundle:calendar:calendar.html.twig', 
             array(
-                'year'              => $year, 
-                'month'             => intval($month), 
-                'monthName'         => $monthName, 
-                'daysWithEvents'    => $daysWithEvents, 
-                'categoriesType'    => $this->findUniqueCategories('3'), 
-                'upcomingEvents'    => $upcomingEvents
+                'year'                          => $year, 
+                'month'                         => intval($month), 
+                'monthName'                     => $monthName, 
+                'events'                        => $events,
+                'daysWithEvents'                => $daysWithEvents, 
+                'categoriesType'                => $this->findUniqueCategories('3'), 
+                'upcomingEvents'                => $upcomingEvents
             )
         );
     }
@@ -181,7 +193,7 @@ class CalendarController extends Controller
         }
         return $itemsToReturn;
     }
-
+/*
     private function findEventsForGivenDay( $day, $events )
     {
         $eventsForDay = array();
@@ -191,6 +203,29 @@ class CalendarController extends Controller
             if (intval($day) == intval($start->format('d'))) {
               $eventsForDay[] = $event;
             }
+        }
+        return $eventsForDay;
+    }
+*/
+    private function findEventsForGivenDate( $date, $events, $startOnly = false )
+    {
+        $eventsForDay = array();
+        foreach ($events as $event) {
+            $start = new DateTime( $event->Start );
+            $end   = new DateTime( $event->End );
+
+            if ( $start->format('Y-m-d') != $end->format('Y-m-d') ) {
+                for ( $i = $start; $i <= $end; $i->modify('+1 day') ) {
+                    if ( $date ==  $i->format('Y-m-d') ) {
+                        $eventsForDay[] = $event;
+                    }
+                }
+            }
+            else
+                if ( $date == $start->format('Y-m-d') ) {
+                    $eventsForDay[] = $event;
+                }
+
         }
         return $eventsForDay;
     }
@@ -216,23 +251,29 @@ class CalendarController extends Controller
 
         $response_messages = $response->ResponseMessages->GetUserConfigurationResponseMessage;
 
-        foreach ($response_messages as $response_message) {
-            $config = $response_message->UserConfiguration;
-            $data = simplexml_load_string(
-                $config->XmlData,
-                'SimpleXMLElement',
-                LIBXML_NOWARNING
-            );
+        if ( $response_messages )
+            foreach ($response_messages as $response_message) {
+                $config = $response_message->UserConfiguration;
 
-            foreach ($data->children() as $child) {
-                $color = $child['color'] . "";
-                if ($color == $wantedCategoryColor) {
-                    $categories[] = $child['name'] . "";
+                if ( $config )
+                {
+                    $data = simplexml_load_string(
+                        $config->XmlData,
+                        'SimpleXMLElement',
+                        LIBXML_NOWARNING
+                    );
+
+                    foreach ($data->children() as $child) {
+                        $color = $child['color'] . "";
+                        if ($color == $wantedCategoryColor) {
+                            $categories[] = $child['name'] . "";
+                        }
+                        else
+                            $categories[] = $child['name'] . "";
+                    }
                 }
-                else
-                    $categories[] = $child['name'] . "";
             }
-        }
+
         return $categories;
     }
 
@@ -267,13 +308,20 @@ class CalendarController extends Controller
         // specify that we want subfolders of the main calendar folder
         $request->ParentFolderIds->DistinguishedFolderId->Id = DistinguishedFolderIdNameType::CALENDAR;
 
-        $response = $client->FindFolder($request);
-        $response_message = $response->ResponseMessages->FindFolderResponseMessage[ 0 ];
+        try {
+            $response = $client->FindFolder($request);
+            $response_message = $response->ResponseMessages->FindFolderResponseMessage[ 0 ];
 
-        $result = array();
-        foreach ( $response_message->RootFolder->Folders->CalendarFolder as $folder )
-            if ( in_array( $folder->DisplayName, $validCalendarFolders ))
-                $result[] = $folder;
+            $result = array();
+            foreach ( $response_message->RootFolder->Folders->CalendarFolder as $folder )
+                if ( in_array( $folder->DisplayName, $validCalendarFolders ))
+                    $result[] = $folder;
+        } catch (Exception $e) {
+            echo ('Caught exception: '.$e->getMessage());
+        } finally {
+            unset($calendarHelper);
+            unset($client);
+        }
 
         return $result;
     }
