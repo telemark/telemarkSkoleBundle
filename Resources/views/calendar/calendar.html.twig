@@ -1,6 +1,9 @@
 {% extends "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
 
+{% set siteaccess = ezpublish.siteaccess.name %}
+
 {% block content %}
+
   <script>
       function categoryClicked(element) {
 
@@ -58,9 +61,9 @@
             <table class="calendar-table" cellspacing="0" cellpadding="0" border="0" summary="Event Calendar">
               <thead>
               <tr class="calendar-table_heading">
-                <th class="calendar-table_heading_prev"><a href="/kalender/{% if month == 1 %}{{ year-1 }}/{{ 12 }}{% else %}{{ year }}/{{ month - 1 }}{% endif %}" title=" Forrige måned " rel="prev">&#8249;&#8249;</a></th>
+                <th class="calendar-table_heading_prev"><a href="/{{ siteaccess }}/kalender/{% if month == 1 %}{{ year-1 }}/{{ 12 }}{% else %}{{ year }}/{{ month - 1 }}{% endif %}" title=" Forrige måned " rel="prev">&#8249;&#8249;</a></th>
                 <th class="calendar-table_heading_date" colspan="5">{{ monthName|capitalize }} {{ year }}</th>
-                <th class="calendar-table_heading_next"><a href="/kalender/{% if month == 12 %}{{ year+1 }}/{{ 1 }}{% else %}{{ year }}/{{ month + 1 }}{% endif %}" title=" Neste måned " rel="next">&#8250;&#8250;</a></th>
+                <th class="calendar-table_heading_next"><a href="/{{ siteaccess }}/kalender/{% if month == 12 %}{{ year+1 }}/{{ 1 }}{% else %}{{ year }}/{{ month + 1 }}{% endif %}" title=" Neste måned " rel="next">&#8250;&#8250;</a></th>
               </tr>
               <tr class="calendar-table_heading-days">
                 <th class="calendar-table_heading-days__day">Man</th>
@@ -142,7 +145,7 @@
                     </div>
                   {% endif %}
                   <div class="calendarText">
-                    <a href="/kalender/hendelse/{{ event.ItemId.Id|replace({'/':'!SLASH!'}) }}">{{ event.Subject }}</a>
+                    <a href="/{{ siteaccess }}/kalender/hendelse/{{ event.ItemId.Id|replace({'/':'!SLASH!'}) }}">{{ event.Subject }}</a>
                     {% if event.Categories.String is defined %}
                       <i class="categories_for_event">{{ categoryConcatComma }}</i>
                     {% endif %}
@@ -215,7 +218,7 @@
                         </div>
                       {% endif %}
                       <div class="calendarText">
-                        <a href="/kalender/hendelse/{{ event.ItemId.Id|replace({'/':'!SLASH!'}) }}">{{ event.Subject }}</a>
+                        <a href="/{{ siteaccess }}/kalender/hendelse/{{ event.ItemId.Id|replace({'/':'!SLASH!'}) }}">{{ event.Subject }}</a>
                         {% if event.Categories.String is defined %}
                           <i class="categories_for_event">{{ categoryConcatComma }}</i>
                         {% endif %}

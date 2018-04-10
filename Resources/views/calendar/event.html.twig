@@ -1,4 +1,6 @@
 {% extends "tfktelemarkSkoleBundle::pagelayout.html.twig" %}
+
+{% set siteaccess = ezpublish.siteaccess.name %}
 {% block content %}
   {% if event is defined %}
     <main id="main" role="main" tabindex="-1">
@@ -33,10 +35,12 @@
             <script>
               $('#event_full style').remove();
             </script>
+                <a href="/{{ siteaccess }}/kalender/">Tilbake</a>
           </div>
         </div>
+
       </article>
     </main>
   {% endif %}
-  {{ dump() }}
+
 {% endblock %}
