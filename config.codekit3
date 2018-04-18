@@ -7,93 +7,144 @@
 		"uuidString": "4A39C4B9-2512-4195-9E98-65B130567164"
 		}
 	],
-"creatorBuild": "25479",
+"creatorBuild": "26330",
 "files": {
 	"\/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/.vscode\/sftp.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/.vscode\/sftp-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/Controller\/CalendarController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Controller\/CalendarController.php",
+		"oF": 0
+		},
 	"\/Controller\/DefaultController.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Controller\/DefaultController.php",
 		"oF": 0
 		},
 	"\/Controller\/FolderController.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Controller\/FolderController.php",
 		"oF": 0
 		},
+	"\/Controller\/ItemController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Controller\/ItemController.php",
+		"oF": 0
+		},
 	"\/Controller\/MainController.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Controller\/MainController.php",
 		"oF": 0
 		},
 	"\/Controller\/MenuController.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Controller\/MenuController.php",
 		"oF": 0
 		},
 	"\/Controller\/SearchController.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Controller\/SearchController.php",
 		"oF": 0
 		},
 	"\/Controller\/SidebarController.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Controller\/SidebarController.php",
 		"oF": 0
 		},
 	"\/DependencyInjection\/Configuration.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/DependencyInjection\/Configuration.php",
 		"oF": 0
 		},
 	"\/DependencyInjection\/tfktelemarkSkoleExtension.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/DependencyInjection\/tfktelemarkSkoleExtension.php",
 		"oF": 0
 		},
+	"\/FieldType\/LandingPage\/Model\/Block\/CalendarBlock.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/CalendarBlock.php",
+		"oF": 0
+		},
 	"\/FieldType\/LandingPage\/Model\/Block\/CampaignBlock.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/CampaignBlock.php",
 		"oF": 0
 		},
 	"\/FieldType\/LandingPage\/Model\/Block\/ContentBox2x2AndLatestBlock.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/ContentBox2x2AndLatestBlock.php",
 		"oF": 0
 		},
 	"\/FieldType\/LandingPage\/Model\/Block\/ContentBox3x1Block.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/ContentBox3x1Block.php",
 		"oF": 0
 		},
 	"\/FieldType\/LandingPage\/Model\/Block\/ContentBoxBlock.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/ContentBoxBlock.php",
 		"oF": 0
 		},
+	"\/FieldType\/LandingPage\/Model\/Block\/ContentBoxBlockStatic.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/ContentBoxBlockStatic.php",
+		"oF": 0
+		},
 	"\/FieldType\/LandingPage\/Model\/Block\/ContentGridBlock.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/ContentGridBlock.php",
 		"oF": 0
 		},
 	"\/FieldType\/LandingPage\/Model\/Block\/LatestContentBlock.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/FieldType\/LandingPage\/Model\/Block\/LatestContentBlock.php",
@@ -101,6 +152,7 @@
 		},
 	"\/gulpfile.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/gulpfile-min.js",
@@ -108,34 +160,39 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/Helper\/CalendarHelper.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Helper\/CalendarHelper.php",
+		"oF": 0
+		},
 	"\/Helper\/LocationHelper.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Helper\/LocationHelper.php",
 		"oF": 0
 		},
 	"\/Helper\/PaginationHelper.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Helper\/PaginationHelper.php",
 		"oF": 0
 		},
 	"\/Helper\/SortLocationClauseHelper.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Helper\/SortLocationClauseHelper.php",
 		"oF": 0
 		},
 	"\/LICENSE": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/LICENSE",
-		"oF": 0
-		},
-	"\/node_modules": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "\/build\/node_modules",
 		"oF": 0
 		},
 	"\/package.json": {
@@ -147,10 +204,10 @@
 		"oS": 1
 		},
 	"\/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
@@ -165,48 +222,63 @@
 		"uCM": 0
 		},
 	"\/Resources\/config\/default_settings.yml": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/config\/default_settings.yml",
 		"oF": 0
 		},
 	"\/Resources\/config\/image_variations.yml": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/config\/image_variations.yml",
 		"oF": 0
 		},
 	"\/Resources\/config\/layouts.yml": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/config\/layouts.yml",
 		"oF": 0
 		},
 	"\/Resources\/config\/liip_image_variations.yml": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/config\/liip_image_variations.yml",
 		"oF": 0
 		},
 	"\/Resources\/config\/override.yml": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/config\/override.yml",
 		"oF": 0
 		},
+	"\/Resources\/config\/parameters.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/config\/parameters.yml",
+		"oF": 0
+		},
 	"\/Resources\/config\/routing.yml": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/config\/routing.yml",
 		"oF": 0
 		},
 	"\/Resources\/config\/services.yml": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/config\/services.yml",
 		"oF": 0
 		},
 	"\/Resources\/doc\/index.rst": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/doc\/index.rst",
@@ -233,6 +305,7 @@
 		"oS": 0
 		},
 	"\/Resources\/public\/css\/custom.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/public\/css\/custom.css.map",
@@ -274,7 +347,9 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/contenttype\/bildetmangler.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/contenttype\/dokument.jpg": {
 		"ft": 16384,
@@ -282,7 +357,9 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/contenttype\/dokument.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/contenttype\/kalender.jpg": {
 		"ft": 16384,
@@ -290,7 +367,9 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/contenttype\/kalender.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/contenttype\/mappe.jpg": {
 		"ft": 16384,
@@ -298,7 +377,9 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/contenttype\/mappe.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/contenttype\/vedlegg.jpg": {
 		"ft": 16384,
@@ -306,7 +387,9 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/contenttype\/vedlegg.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/contenttype\/video.jpg": {
 		"ft": 16384,
@@ -314,9 +397,12 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/contenttype\/video.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/icon-font\/icomoon.eot": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/public\/images\/icon-font\/icomoon.eot",
@@ -333,12 +419,14 @@
 		"prP": 0
 		},
 	"\/Resources\/public\/images\/icon-font\/icomoon.ttf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/public\/images\/icon-font\/icomoon.ttf",
 		"oF": 0
 		},
 	"\/Resources\/public\/images\/icon-font\/icomoon.woff": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/public\/images\/icon-font\/icomoon.woff",
@@ -351,6 +439,13 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"\/Resources\/public\/images\/icons\/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/public\/images\/icons\/favicon.ico",
+		"oF": 0
 		},
 	"\/Resources\/public\/images\/icons\/icons.data.svg.css": {
 		"aP": 0,
@@ -368,7 +463,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/admin_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/bamble_toplogo.png": {
 		"ft": 32768,
@@ -376,7 +474,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/bamble_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/boe_toplogo.png": {
 		"ft": 32768,
@@ -384,7 +485,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/boe_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/fagskolen_toplogo.png": {
 		"ft": 32768,
@@ -392,7 +496,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/fagskolen_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/hjalmarj_toplogo.png": {
 		"ft": 32768,
@@ -400,7 +507,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/hjalmarj_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/kragero_toplogo.png": {
 		"ft": 32768,
@@ -408,7 +518,21 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/kragero_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/Resources\/public\/images\/logo\/nettskolen_toplogo.png": {
+		"ft": 32768,
+		"iS": 16888,
+		"oA": 0,
+		"oAP": "\/Resources\/public\/images\/logo\/nettskolen_toplogo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/nome_toplogo.png": {
 		"ft": 32768,
@@ -416,7 +540,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/nome_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/notodden_toplogo.png": {
 		"ft": 32768,
@@ -424,7 +551,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/notodden_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/porsgrunn_toplogo.png": {
 		"ft": 32768,
@@ -432,7 +562,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/porsgrunn_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/rjukan_toplogo.png": {
 		"ft": 32768,
@@ -440,7 +573,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/rjukan_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/skien_toplogo.png": {
 		"ft": 32768,
@@ -448,7 +584,10 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/skien_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/images\/logo\/skogmo_toplogo.png": {
 		"ft": 32768,
@@ -456,7 +595,20 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/skogmo_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/Resources\/public\/images\/logo\/telemark.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/Resources\/public\/images\/logo\/telemark.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/Resources\/public\/images\/logo\/vesttelemark_toplogo.png": {
 		"ft": 32768,
@@ -464,10 +616,14 @@
 		"oA": 0,
 		"oAP": "\/Resources\/public\/images\/logo\/vesttelemark_toplogo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/Resources\/public\/js\/main.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/js\/main-min.js",
@@ -477,6 +633,7 @@
 		},
 	"\/Resources\/public\/js\/min\/main-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/js\/min\/main-min-min.js",
@@ -486,6 +643,7 @@
 		},
 	"\/Resources\/public\/js\/picturefill.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/js\/picturefill-min.js",
@@ -495,6 +653,7 @@
 		},
 	"\/Resources\/public\/js\/popup.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/js\/popup-min.js",
@@ -504,6 +663,7 @@
 		},
 	"\/Resources\/public\/js\/slider.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/js\/slider-min.js",
@@ -513,6 +673,7 @@
 		},
 	"\/Resources\/public\/js\/tabs.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/js\/tabs-min.js",
@@ -522,6 +683,7 @@
 		},
 	"\/Resources\/public\/js\/vendor\/jquery-1.10.2.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/js\/vendor\/jquery-1.10.2.min-min.js",
@@ -531,6 +693,7 @@
 		},
 	"\/Resources\/public\/js\/vendor\/min\/jquery-1.10.2.min-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/js\/vendor\/min\/jquery-1.10.2.min-min-min.js",
@@ -540,6 +703,7 @@
 		},
 	"\/Resources\/public\/js\/vendor\/modernizr-custom-0.4.1.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/js\/vendor\/modernizr-custom-0.4.1-min.js",
@@ -690,6 +854,32 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/Resources\/public\/scss\/_susy.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/_susy.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/_susyone.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/_susyone.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/Resources\/public\/scss\/_table-styling.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -722,430 +912,937 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
 		"oAP": "\/Resources\/public\/css\/custom.css",
 		"oF": 2,
-		"oS": 3,
+		"oS": 1,
 		"uL": 1
 		},
+	"\/Resources\/public\/scss\/susy\/_background.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_background.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_bleed.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_bleed.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_box-sizing.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_box-sizing.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_breakpoint-plugin.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_breakpoint-plugin.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_container.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_container.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_context.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_context.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_gallery.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_gallery.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_grids.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_grids.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_gutters.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_gutters.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_isolate.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_isolate.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_margins.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_margins.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_padding.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_padding.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_rows.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_rows.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_settings.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_settings.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_span.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_span.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susy\/_validation.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susy\/_validation.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susyone\/_background.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susyone\/_background.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susyone\/_functions.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susyone\/_functions.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susyone\/_grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susyone\/_grid.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susyone\/_isolation.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susyone\/_isolation.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susyone\/_margin.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susyone\/_margin.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susyone\/_media.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susyone\/_media.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susyone\/_padding.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susyone\/_padding.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/public\/scss\/susyone\/_settings.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/Resources\/public\/scss\/susyone\/_settings.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/Resources\/sftp-config.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/Resources\/sftp-config-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/Resources\/translations\/messages.fr.xlf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/translations\/messages.fr.xlf",
 		"oF": 0
 		},
 	"\/Resources\/views\/block_box\/article.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/block_box\/article.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/block_box\/folder.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/block_box\/folder.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/block_box\/link.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/block_box\/link.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/block_box\/presentasjon.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/block_box\/presentasjon.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/block_box\/shortcut.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/block_box\/shortcut.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/blocks\/calendar.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/blocks\/calendar.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/blocks\/campaign.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/blocks\/campaign.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/blocks\/contentbox.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/blocks\/contentbox.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/blocks\/contentbox2x2andlatest.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/blocks\/contentbox2x2andlatest.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/blocks\/contentbox3x1.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/blocks\/contentbox3x1.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/blocks\/contentbox_news.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/blocks\/contentbox_news.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/blocks\/contentgrid.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/blocks\/contentgrid.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/blocks\/latestcontent.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/blocks\/latestcontent.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/blocks\/schedule_float3.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/blocks\/schedule_float3.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/breadcrumb.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/breadcrumb.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/calendar\/calendar.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/calendar\/calendar.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/calendar\/event.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/calendar\/event.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/Default\/index.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/Default\/index.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/embed\/embed.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/embed\/embed.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/embed\/file.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/embed\/file.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/embed\/image.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/embed\/image.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/fields\/ezauthor_simple.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/fields\/ezauthor_simple.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/frontpage\/article.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/frontpage\/article.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/full\/article.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/article.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/course_folder.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/course_folder.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/embed.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/embed.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/fag.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/fag.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/folder.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/folder.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/infobox.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/infobox.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/landing_page.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/landing_page.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/link.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/link.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/news_folder.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/news_folder.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/full\/person.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/full\/person.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/full\/presentasjon.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/presentasjon.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/full\/spacer.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/full\/spacer.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/layouts\/school.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/layouts\/school.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/line\/article.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/line\/article.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/line\/embed.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/line\/embed.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/line\/fag.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/line\/fag.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/line\/folder.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/line\/folder.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/line\/infobox.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/line\/infobox.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/line\/link.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/line\/link.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/line\/person.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/line\/person.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/line\/presentasjon.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/line\/presentasjon.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/line\/spacer.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/line\/spacer.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/menu\/main_menu.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/menu\/main_menu.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/menu_line\/link.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/menu_line\/link.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/menu_line\/spacer.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/menu_line\/spacer.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/page_footer.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/page_footer.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/page_footer_script.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/page_footer_script.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/page_head.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/page_head.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/page_head_displaystyles.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/page_head_displaystyles.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/page_head_script.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/page_head_script.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/page_head_style.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/page_head_style.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/page_header.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/page_header.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayout.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayout.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_bamble.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_bamble.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_bo.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_bo.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_hjalmar.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_hjalmar.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_kragero.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_kragero.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_nome.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_nome.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_notodden.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_notodden.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_porsgrunn.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_porsgrunn.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_rjukan.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_rjukan.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_skien.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_skien.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_skogmo.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_skogmo.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/pagelayouts\/pagelayout_vesttelemark.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/pagelayouts\/pagelayout_vesttelemark.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/parts\/breadcrumbs.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/parts\/breadcrumbs.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/parts\/child_items_loop.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/parts\/child_items_loop.html.twig",
+		"oF": 0
+		},
+	"\/Resources\/views\/parts\/child_loop.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/parts\/child_loop.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/parts\/pagination.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/parts\/pagination.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/parts\/sidebar_right.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/parts\/sidebar_right.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/parts\/subitems.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/parts\/subitems.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/responsive\/image.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/responsive\/image.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/search\/search.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/search\/search.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/search_line\/article.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/search_line\/article.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/search_line\/embed.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/search_line\/embed.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/search_line\/folder.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/search_line\/folder.html.twig",
 		"oF": 0
 		},
+	"\/Resources\/views\/search_line\/presentasjon.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/search_line\/presentasjon.html.twig",
+		"oF": 0
+		},
 	"\/Resources\/views\/security\/login.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/security\/login.html.twig",
 		"oF": 0
 		},
 	"\/Resources\/views\/shortcut_line\/link.html.twig": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Resources\/views\/shortcut_line\/link.html.twig",
 		"oF": 0
 		},
-	"\/sftp-config.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/sftp-config-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
+	"\/Resources\/views\/slide\/article.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Resources\/views\/slide\/article.html.twig",
+		"oF": 0
 		},
 	"\/Tests\/Controller\/DefaultControllerTest.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Tests\/Controller\/DefaultControllerTest.php",
 		"oF": 0
 		},
 	"\/tfktelemarkSkoleBundle.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/tfktelemarkSkoleBundle.php",
 		"oF": 0
 		},
 	"\/Twig\/Extension\/ConfigResolverExtension.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Twig\/Extension\/ConfigResolverExtension.php",
 		"oF": 0
 		},
 	"\/Twig\/Extension\/ContentTypeExtension.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Twig\/Extension\/ContentTypeExtension.php",
@@ -1168,6 +1865,7 @@
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"autoprefixerEnableIEGrid": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
 	"babelConfigFileHandlingType": 0,
@@ -1564,6 +2262,10 @@
 			"active": 0,
 			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
 			},
+		"array-bracket-newline": {
+			"active": 0,
+			"optionString": "{'multiline': true, 'minItems': null}"
+			},
 		"array-bracket-spacing": {
 			"active": 0,
 			"optionString": "'never', {'singleValue': false, 'objectsInArrays': false, 'arraysInArrays': false}"
@@ -1571,6 +2273,10 @@
 		"array-callback-return": {
 			"active": 0,
 			"optionString": ""
+			},
+		"array-element-newline": {
+			"active": 0,
+			"optionString": "'always'"
 			},
 		"arrow-body-style": {
 			"active": 0,
@@ -1668,6 +2374,10 @@
 			"active": 0,
 			"optionString": "'always', {'null': 'always'}"
 			},
+		"for-direction": {
+			"active": 0,
+			"optionString": ""
+			},
 		"func-call-spacing": {
 			"active": 0,
 			"optionString": "'never'"
@@ -1684,9 +2394,17 @@
 			"active": 0,
 			"optionString": "'expression'"
 			},
+		"function-paren-newline": {
+			"active": 0,
+			"optionString": "'multiline'"
+			},
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
+			},
+		"getter-return": {
+			"active": 0,
+			"optionString": "{'allowImplicit': false}"
 			},
 		"global-require": {
 			"active": 0,
@@ -1711,6 +2429,10 @@
 		"id-match": {
 			"active": 0,
 			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			},
+		"implicit-arrow-linebreak": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"indent": {
 			"active": 0,
@@ -1744,9 +2466,9 @@
 			"active": 0,
 			"optionString": "{'beforeBlockComment': true}"
 			},
-		"lines-around-directive": {
+		"lines-between-class-members": {
 			"active": 0,
-			"optionString": "{'before': 'always', 'after': 'always'}"
+			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
 		"max-depth": {
 			"active": 0,
@@ -1776,6 +2498,10 @@
 			"active": 0,
 			"optionString": "{'max': 1}"
 			},
+		"multiline-comment-style": {
+			"active": 0,
+			"optionString": "'starred-block'"
+			},
 		"multiline-ternary": {
 			"active": 0,
 			"optionString": "'always'"
@@ -1785,14 +2511,6 @@
 			"optionString": "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
 			},
 		"new-parens": {
-			"active": 0,
-			"optionString": ""
-			},
-		"newline-after-var": {
-			"active": 0,
-			"optionString": "'always'"
-			},
-		"newline-before-return": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -1808,9 +2526,17 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-await-in-loop": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
+			},
+		"no-buffer-constructor": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-caller": {
 			"active": 0,
@@ -1826,6 +2552,10 @@
 			},
 		"no-class-assign": {
 			"active": 1,
+			"optionString": ""
+			},
+		"no-compare-neg-zero": {
+			"active": 0,
 			"optionString": ""
 			},
 		"no-cond-assign": {
@@ -2028,6 +2758,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -2105,6 +2839,10 @@
 			"optionString": ""
 			},
 		"no-proto": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-prototype-builtins": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -2304,6 +3042,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
+			},
 		"object-curly-newline": {
 			"active": 0,
 			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
@@ -2340,6 +3082,10 @@
 			"active": 0,
 			"optionString": "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
 			},
+		"padding-line-between-statements": {
+			"active": 0,
+			"optionString": "{blankLine: 'always', prev:'*', next:'return'}"
+			},
 		"prefer-arrow-callback": {
 			"active": 0,
 			"optionString": ""
@@ -2348,9 +3094,17 @@
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
 			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
+			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -2400,6 +3154,10 @@
 			"active": 0,
 			"optionString": "{'before': false, 'after': true}"
 			},
+		"semi-style": {
+			"active": 0,
+			"optionString": "'last'"
+			},
 		"sort-imports": {
 			"active": 0,
 			"optionString": "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single']}"
@@ -2440,11 +3198,19 @@
 			"active": 0,
 			"optionString": "'safe'"
 			},
+		"switch-colon-spacing": {
+			"active": 0,
+			"optionString": "{'after': true, 'before': false}"
+			},
 		"symbol-description": {
 			"active": 0,
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},
@@ -2848,7 +3614,8 @@
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 1,
+		"transpilerStyle": 1
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 2,
@@ -2881,6 +3648,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"outputStyle": 0,
+		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -2891,7 +3659,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -2915,21 +3684,14 @@
 		"orderOutput": 0,
 		"outputStyle": 1
 		},
-	"languageDefaultsJSX": {
-		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "jsx",
-		"autoOutputPathReplace2": "js",
-		"autoOutputPathStyle": 0
-		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -2961,13 +3723,13 @@
 		"enableFootnotes": 1,
 		"enableLabels": 1,
 		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
 		"maskEmailAddresses": 1,
 		"outputFormat": 0,
 		"outputStyle": 0,
 		"parseMetadata": 1,
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
+		"shouldRunCacheBuster": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -2976,7 +3738,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -2984,7 +3747,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"optimizerType": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
@@ -2994,7 +3759,8 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
-		"outputStyle": 0
+		"outputStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -3022,7 +3788,8 @@
 		"logicless": 0,
 		"outputFormat": 0,
 		"outputStyle": 1,
-		"railsCompatible": 0
+		"railsCompatible": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -3069,9 +3836,11 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
+	"susyVersion": 2,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
