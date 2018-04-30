@@ -30,7 +30,7 @@ class MenuController extends Controller
 
         $identifiers        = $configResolver->getParameter( 'identifiers', 'topmenu' );
         $hideIdentifiers    = $configResolver->getParameter( 'identifiers_hide_from_menu', 'topmenu' );
-     
+
         $items = array();
 
         $query = new LocationQuery();
@@ -127,7 +127,11 @@ class MenuController extends Controller
         $response->setSharedMaxAge( 3600 );
         $response->setVary( 'X-User-Hash' );
 
-        $identifiers = array_merge( $identifiers, $hideIdentifiers );
+        if ( is_array( $identifiers ) )
+            $identifiers = array_merge( $identifiers, $hideIdentifiers );
+        else
+            $identifiers = $hideIdentifiers;
+
         return $this->render(
             'tfktelemarkSkoleBundle:menu:main_menu.html.twig',
             array(

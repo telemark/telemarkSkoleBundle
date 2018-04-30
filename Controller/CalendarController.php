@@ -25,6 +25,11 @@ use jamesiarmes\PhpEws\Enumeration\FolderQueryTraversalType;
 use jamesiarmes\PhpEws\Type\FolderResponseShapeType;
 use jamesiarmes\PhpEws\Type\UserConfigurationNameType;
 use jamesiarmes\PhpEws\Type\FolderIdType;
+use jamesiarmes\PhpEws\Type\FieldOrderType;
+use jamesiarmes\PhpEws\Type\PathToUnindexedFieldType;
+use jamesiarmes\PhpEws\Enumeration\UnindexedFieldURIType;
+use jamesiarmes\PhpEws\Enumeration\SortDirectionType;
+use jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfFieldOrdersType;
 
 class CalendarController extends Controller
 {
@@ -169,6 +174,17 @@ class CalendarController extends Controller
 
         $request->Traversal = ItemQueryTraversalType::SHALLOW;
 
+        // Set sort order.
+        /*
+        $order = new FieldOrderType();
+        $order->FieldURI = new PathToUnindexedFieldType();
+        $order->FieldURI->FieldURI = UnindexedFieldURIType::CALENDAR_START;
+        //$order->Order = SortDirectionType::DESCENDING;
+        $order->Order = SortDirectionType::ASCENDING;
+        $request->SortOrder = new NonEmptyArrayOfFieldOrdersType();
+        $request->SortOrder->FieldOrder[] = $order;
+        */
+        
         $itemsToReturn = array();
 
         $calendarHelper = new CalendarHelper($this->getConfigResolver());
@@ -191,6 +207,13 @@ class CalendarController extends Controller
             unset($calendarHelper);
             unset($client);
         }
+
+        // sort items
+        usort( $itemsToReturn, function($a, $b)
+        {
+            return strcmp($a->Start, $b->Start);
+        });
+
         return $itemsToReturn;
     }
 /*
@@ -215,6 +238,8 @@ class CalendarController extends Controller
             $end   = new DateTime( $event->End );
 
             if ( $start->format('Y-m-d') != $end->format('Y-m-d') ) {
+                if ( $event->IsAllDayEvent )
+                    $end->modify( '-1 day' );
                 for ( $i = $start; $i <= $end; $i->modify('+1 day') ) {
                     if ( $date ==  $i->format('Y-m-d') ) {
                         $eventsForDay[] = $event;

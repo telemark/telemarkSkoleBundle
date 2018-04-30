@@ -135,13 +135,18 @@
                     {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
                     <div class="calendarDate">{{ event.Start|date('d') }}</div>
                   </div>
-                  {% if event.End|date('Y-m-d') > event.Start|date('Y-m-d') %}
+                  {% if ( event.IsAllDayEvent and event.Duration != 'P1D' ) or ( not event.IsAllDayEvent and event.End|date('Y-m-d') > event.Start|date('Y-m-d') ) %}
                     <div class="calendarIconArrow">
                       →
                     </div>
                     <div class="calendarIcon">
-                      {{ event.End|date('M') }}
-                      <div class="calendarDate">{% if event.IsAllDayEvent %}{{ event.End|date('d') - 1 }}{% else %}{{ event.End|date('d') }}{% endif %}</div>
+                      {% if event.IsAllDayEvent %}
+                        {% set calculatedEndDate  = event.End|date_modify( '-1 day' ) %}
+                      {% else %}
+                        {% set calculatedEndDate  = event.End %}
+                      {% endif %}
+                      {{ calculatedEndDate| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
+                      <div class="calendarDate">{{ calculatedEndDate|date('d') }}</div>
                     </div>
                   {% endif %}
                   <div class="calendarText">
@@ -208,13 +213,18 @@
                         {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
                         <div class="calendarDate">{{ event.Start|date('d') }}</div>
                       </div>
-                      {% if event.End|date('Y-m-d') > event.Start|date('Y-m-d') %}
+                      {% if ( event.IsAllDayEvent and event.Duration != 'P1D' ) or ( not event.IsAllDayEvent and event.End|date('Y-m-d') > event.Start|date('Y-m-d') ) %}
                         <div class="calendarIconArrow">
                           →
                         </div>
                         <div class="calendarIcon">
-                          {{ event.End|date('M') }}
-                          <div class="calendarDate">{% if event.IsAllDayEvent %}{{ event.End|date('d') - 1 }}{% else %}{{ event.End|date('d') }}{% endif %}</div>
+                          {% if event.IsAllDayEvent %}
+                            {% set calculatedEndDate  = event.End|date_modify( '-1 day' ) %}
+                          {% else %}
+                            {% set calculatedEndDate  = event.End %}
+                          {% endif %}
+                          {{ calculatedEndDate| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
+                          <div class="calendarDate">{{ calculatedEndDate|date('d') }}</div>
                         </div>
                       {% endif %}
                       <div class="calendarText">
