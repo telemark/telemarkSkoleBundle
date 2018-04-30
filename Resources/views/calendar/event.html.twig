@@ -14,19 +14,26 @@
         <div class="byline">
           <div class="constrained">
             <span class="ezagenda_date">
+              
               {{ event.Start|date('j') }}. {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMMM' ) }}
-              {% if ( event.IsAllDayEvent and event.Duration != 'P1D' ) or ( not event.IsAllDayEvent and event.End|date('Y-m-d') > event.Start|date('Y-m-d') ) %}
-                {% if event.IsAllDayEvent %}
-                  {% set calculatedEnd  = event.End|date_modify( '-1 day' ) %}
-                {% else %}
-                  {% set calculatedEnd  = event.End %}
+
+              {% if event.IsAllDayEvent %}
+                {% set calculatedEnd  = event.End|date_modify( '-1 day' ) %}
+                {% if event.Duration != 'P1D' %}
+                  → {{ calculatedEnd|date('j') }}. {{ calculatedEnd| localizeddate('none', 'none', app.request.locale, null, 'MMMM' ) | capitalize }}
                 {% endif %}
-                → {{ calculatedEnd|date('j') }}. {{ calculatedEnd| localizeddate('none', 'none', app.request.locale, null, 'MMMM' ) | capitalize }}
-                {{ event.Location }}
               {% else %}
-                {% if event.Start|date( 'Y-m-d' ) == event.End|date( 'Y-m-d' ) %}
-                  - {{ event.Start|date( 'H:i' ) }} → {{ event.End|date( 'H:i' ) }}
+                {{ event.Start|date( 'H:i' ) }}
+                {% if event.End|date('Y-m-d') > event.Start|date('Y-m-d') %}
+                  → {{ event.End|date('j') }}. {{ event.End| localizeddate('none', 'none', app.request.locale, null, 'MMMM' ) | capitalize }}
+                {% else %}
+                  →
                 {% endif %}
+                {{ event.End|date( 'H:i' ) }}
+              {% endif %}
+
+              {% if event.Location != "" %}
+                - {{ event.Location }}
               {% endif %}
             </span>
           </div>
