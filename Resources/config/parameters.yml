@@ -42,6 +42,13 @@ parameters:
     ews.vest_vgs.calendar_name: 'Vest-telemark VGS'
     ews.vest_vgs.calendar_id: 0
 
+    ews.tfk_school_group.categories:
+        - Skoleruta
+        - Arrangement
+        - Melding
+        - Skole/hjem
+        - Annet
+
     topmenu.tfk_school_group.identifiers:
 
 

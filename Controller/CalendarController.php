@@ -63,7 +63,8 @@ class CalendarController extends Controller
     public function viewAllAction( $year = '0', $month = '0' )
     {
         setLocale(LC_TIME, 'no_NO');
-
+        $configResolver = $this->getConfigResolver();
+        
         if ($year == 0) {
             $year = date('Y');
         }
@@ -130,6 +131,11 @@ class CalendarController extends Controller
         $endDay = new DateTime( date('Y-m-d', strtotime( "+30 days" ) ) );
         $upcomingEvents = $this->findEvents( $today, $endDay, $calendarFolders );
 
+        if ( $configResolver->hasParameter( 'categories', 'ews' ) )
+            $categoriesPredefined = $configResolver->getParameter( 'categories', 'ews' );
+        else
+            $categoriesPredefined = array();
+
         return $this->render('tfktelemarkSkoleBundle:calendar:calendar.html.twig', 
             array(
                 'year'                          => $year, 
@@ -138,7 +144,8 @@ class CalendarController extends Controller
                 'events'                        => $events,
                 'daysWithEvents'                => $daysWithEvents, 
                 'categoriesType'                => $this->findUniqueCategories('3'), 
-                'upcomingEvents'                => $upcomingEvents
+                'upcomingEvents'                => $upcomingEvents,
+                'categoriesPredefined'          => $categoriesPredefined
             )
         );
     }

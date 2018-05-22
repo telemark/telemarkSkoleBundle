@@ -110,7 +110,11 @@
                     {% if category|split('ORG_KODE=')|length > 1 %}
                       {%  set categoryConcat = categoryConcat ~ category|split('ORG_KODE=')[1]  %}
                     {% else %}
-                      {%  set categoryConcat = categoryConcat ~ category|replace({' ':'_'})  %}
+                      {% set categoryReplaced = category|replace({' ':'_'}) %}
+                      {% set categoryReplaced = categoryReplaced|replace({'/':'_'}) %}
+                      {% if categoryReplaced in categoriesPredefined %}
+                        {% set categoryConcat = categoryConcat ~ categoryReplaced  %}
+                      {% endif %}                      
                     {% endif %}
 
                     {% if not loop.last %}
@@ -130,7 +134,12 @@
                   {% endfor %}
                 {% endif %}
 
-                <div class="event day{{ event.Start|date('d') }}{% if event.Categories %} {{ categoryConcat }}{% endif %}">
+                {% if categoryConcat == '' %}
+                      {% set categoryConcat = 'Annet'  %}
+                {% endif %}
+
+
+                <div class="event day{{ event.Start|date('d') }}{% if categoryConcat %} {{ categoryConcat }}{% endif %}">
                   <div class="calendarIcon">
                     {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
                     <div class="calendarDate">{{ event.Start|date('d') }}</div>
@@ -169,8 +178,13 @@
             <h2>Filter</h2>
             <div id="typeCategories">
               <b>Type:</b><br/>
-            {% for category in categoriesType|sort %}
-              <div class="category" id="{{ category|replace({' ':'_'}) }}" onclick="categoryClicked(this);"><input type="checkbox"> {{ category }}</div>
+            {% for category in categoriesPredefined %}
+              {% set categoryReplaced = category|replace({' ':'_'}) %}
+              {% set categoryReplaced = categoryReplaced|replace({'/':'_'}) %}
+              {% if category in categoriesType %}
+                <div class="category" id="{{ categoryReplaced }}" onclick="categoryClicked(this);"><input type="checkbox"> {{ category }}</div>
+              {% endif %}
+
             {% endfor %}
             </div>
           </div>
@@ -187,14 +201,17 @@
                         {% if category|split('ORG_KODE=')|length > 1 %}
                           {%  set categoryConcat = categoryConcat ~ category|split('ORG_KODE=')[1]  %}
                         {% else %}
-                          {%  set categoryConcat = categoryConcat ~ category|replace({' ':'_'})  %}
+                          {% set categoryReplaced = category|replace({' ':'_'}) %}
+                          {% set categoryReplaced = categoryReplaced|replace({'/':'_'}) %}
+                          {% if category in categoriesPredefined %}
+                            {% set categoryConcat = categoryConcat ~ categoryReplaced  %}
+                          {% endif %}                          
                         {% endif %}
 
                         {% if not loop.last %}
                           {%  set categoryConcat = categoryConcat ~ ' '  %}
                         {% endif %}
                       {% endfor %}
-
 
                       {% for category in event.Categories.String %}
                         {% if category|split('ORG_KODE=')|length > 1 %}
@@ -208,7 +225,11 @@
                       {% endfor %}
                     {% endif %}
 
-                    <div class="event day{{ event.Start|date('d') }}{% if event.Categories %} {{ categoryConcat }}{% endif %}">
+                    {% if categoryConcat == '' %}
+                          {% set categoryConcat = 'Annet'  %}
+                    {% endif %}
+
+                    <div class="event day{{ event.Start|date('d') }}{% if categoryConcat %} {{ categoryConcat }}{% endif %}">
                       <div class="calendarIcon">
                         {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
                         <div class="calendarDate">{{ event.Start|date('d') }}</div>
