@@ -48,11 +48,8 @@
   <div class="content">
     <div class="constrained-content">
 
-      <main id="main" role="main" tabindex="-1" class="main">
-        <header class="page-header">
-          <div class="constrained">
-            <h1 class="page-header__title" itemprop="name">Kalender</h1>
-          </div>
+        <header class="article__header">
+          <h1>Kalender</h1>
         </header>
         <div class="constrained calendar-container">
 
@@ -82,14 +79,14 @@
                     </tr><tr>
                   {% endif %}
                 {% set class = "calendar-table__days" %}
-                
+
                 {% if year~"%02d"|format(month)~"%02d"|format(dayWithEvent.day) <  'now'|date('Ymd') %}
                   {% set class = class ~ " calendar-table__days--expired" %}
                 {% endif %}
                 {% if year~"%02d"|format(month)~"%02d"|format(dayWithEvent.day) ==  'now'|date('Ymd') %}
                   {% set class = class ~ " calendar-table__days--current" %}
                 {% endif %}
-                {% if dayWithEvent.events|length > 0 %} 
+                {% if dayWithEvent.events|length > 0 %}
                   {% set class = class ~ " calendar-table__days--hasevent" %}
                 {% endif %}
                 <td class="{{ class }}">
@@ -114,7 +111,7 @@
                       {% set categoryReplaced = categoryReplaced|replace({'/':'_'}) %}
                       {% if categoryReplaced in categoriesPredefined %}
                         {% set categoryConcat = categoryConcat ~ categoryReplaced  %}
-                      {% endif %}                      
+                      {% endif %}
                     {% endif %}
 
                     {% if not loop.last %}
@@ -137,7 +134,6 @@
                 {% if categoryConcat == '' %}
                       {% set categoryConcat = 'Annet'  %}
                 {% endif %}
-
 
                 <div class="event day{{ event.Start|date('d') }}{% if categoryConcat %} {{ categoryConcat }}{% endif %}">
                   <div class="calendarIcon">
@@ -205,7 +201,7 @@
                           {% set categoryReplaced = categoryReplaced|replace({'/':'_'}) %}
                           {% if category in categoriesPredefined %}
                             {% set categoryConcat = categoryConcat ~ categoryReplaced  %}
-                          {% endif %}                          
+                          {% endif %}
                         {% endif %}
 
                         {% if not loop.last %}
@@ -267,7 +263,6 @@
           </div>
         </div>
         <div class="clear: both;"></div>
-      </main>
     </div>
   </div>
 
