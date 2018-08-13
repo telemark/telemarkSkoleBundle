@@ -1,7 +1,9 @@
 {% set url = content.getField( 'url' ) %}
 {% set open_in_new_window = content.getField( 'open_in_new_window' ) %}
 {% set target = '' %}
-{% if open_in_new_window.value == true %}
-    {% set target = 'target="_blank"' %}
+{% if open_in_new_window.value == false %}
+    {% set target = '_blank' %}
+{% else %}
+    {% set target = '_self' %}
 {% endif %}
-<a href="{{ url.value.link }}" {{ target }} class="menu__item-link">{{ content.contentInfo.name }}</a>
+<a href="{{ url.value.link }}" target="{{ target }}" class="menu__item-link">{{ content.contentInfo.name }}</a>

@@ -6,6 +6,7 @@
                     <li class="menu__item">
                         <div class="menu__item-content-wrapper">
                             <div class="menu__item-content menu__item--submenu">
+
                                 <a href="{{ path( "ez_urlalias", {"locationId": item.location.id } ) }}" class="menu__item-link menu__item-link--submenu">{{ ez_content_name( item.location.contentInfo ) }}</a>
                                 <span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span>
                                 <span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
@@ -40,7 +41,14 @@
                     <li class="menu__item">
                         <div class="menu__item-content-wrapper">
                             <div class="menu__item-content">
+                            {% if item.location.contentInfo.contentTypeId == 48 %}
+                            {{ render(controller('ez_content:viewLocation', {
+                                            'locationId': item.location.id,
+                                            'viewType': 'menu_line'
+                                        })) }}
+                            {% else %}
                                 <a href="{{ path( "ez_urlalias", {"locationId": item.location.id } ) }}" class="menu__item-link">{{ ez_content_name( item.location.contentInfo ) }}</a>
+                            {% endif %}
                             </div>
                         </div>
                     </li>
