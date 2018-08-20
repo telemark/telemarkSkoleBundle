@@ -38,6 +38,9 @@ blocks:
             contentbox2x2andlatest:
                 template: tfktelemarkSkoleBundle:blocks:contentbox2x2andlatest.html.twig
                 name: Content box 2x2 and latest
+            contentbox2x2calendar:
+                template: tfktelemarkSkoleBundle:blocks:contentbox2x2andcalendar.html.twig
+                name: Content box 2x2 and Calendar
 
     contentgrid:
         views:
