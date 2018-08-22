@@ -1342,7 +1342,7 @@ main form.well.form-search {
 }
 
 .event:last-of-type {
-  margin-bottom: 2em;
+  margin-bottom: 0.7em;
 }
 
 .calendar-table__days span {

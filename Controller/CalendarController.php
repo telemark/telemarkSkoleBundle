@@ -170,7 +170,7 @@ class CalendarController extends Controller
         $events = array();
         foreach ( $upcomingEvents as $event )
         {
-            if ( count( $events ) < 2 )
+            if ( count( $events ) < 3 )
                 $events[] = $event;
             else
                 continue;
