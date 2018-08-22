@@ -11,51 +11,7 @@
                 {% endfor %}
             </div>
             <div class="item--aside calist">
-                <h2>Skoleruta</h2>
-             <div id="events">    
-                    <div class="event day08 Skoleruta">
-                      <div class="calendarIcon">
-                        Okt.
-                        <div class="calendarDate">08</div>
-                      </div>
-                      <div class="calendarIconArrow">
-                          →
-                        </div>
-                        <div class="calendarIcon">
-                                                                                                          Okt.
-                          <div class="calendarDate">14</div>
-                        </div>
-                                            <div class="calendarText">
-                        <a href="/vest_vgs/kalender/hendelse/AAMkAGE1N2E0NmQxLTk3ODMtNDc0ZC05M2IwLThiYWMwNzFhZTU1ZQBGAAAAAABjxo4WxwjySq3Xo!SLASH!NqnOyoBwAymMGMWbveTbgcR9U0TYjkAAAMGxLkAAC0Jk0IMBw!SLASH!RrNIMVEj43MFAACgPCC+AAA=">Høstferie</a>
-                                                  <i class="categories_for_event">Skoleruta</i>
-                                                <br>
-                                                &nbsp;
-                      </div>
-                    </div>
-
-                    </div>
-                    <div class="event day08 Skoleruta">
-                      <div class="calendarIcon">
-                        Okt.
-                        <div class="calendarDate">08</div>
-                      </div>
-                      <div class="calendarIconArrow">
-                          →
-                        </div>
-                        <div class="calendarIcon">
-                                                                                                          Okt.
-                          <div class="calendarDate">14</div>
-                        </div>
-                                            <div class="calendarText">
-                        <a href="/vest_vgs/kalender/hendelse/AAMkAGE1N2E0NmQxLTk3ODMtNDc0ZC05M2IwLThiYWMwNzFhZTU1ZQBGAAAAAABjxo4WxwjySq3Xo!SLASH!NqnOyoBwAymMGMWbveTbgcR9U0TYjkAAAMGxLkAAC0Jk0IMBw!SLASH!RrNIMVEj43MFAACgPCC+AAA=">Høstferie</a>
-                                                  <i class="categories_for_event">Skoleruta</i>
-                                                <br>
-                                                &nbsp;
-                      </div>
-                    </div>
-
-                    </div>   
-            <a href="/kalendar">Se flere hendelser</a>
+              {{ render( controller( 'tfktelemarkSkoleBundle:Calendar:getLatestEvents' ) ) }}
             </div>
     </div>
 </div>
