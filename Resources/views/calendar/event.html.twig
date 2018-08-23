@@ -3,18 +3,17 @@
 {% set siteaccess = ezpublish.siteaccess.name %}
 {% block content %}
   {% if event is defined %}
-    <main id="main" role="main" tabindex="-1">
       <article class="article" itemscope="" itemtype="https://schema.org/NewsArticle">
-        <header class="page-header">
+        <header class="article__header">
           <div class="constrained">
-            <h1 class="page-header__title" itemprop="name">{{ event.Subject }}</h1>
+            <h1 itemprop="name">{{ event.Subject }}</h1>
           </div>
         </header>
 
         <div class="byline">
           <div class="constrained">
             <span class="ezagenda_date">
-              
+
               {{ event.Start|date('j') }}. {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMMM' ) }}
 
               {% if event.IsAllDayEvent %}
@@ -52,7 +51,6 @@
         </div>
 
       </article>
-    </main>
   {% endif %}
 
 {% endblock %}
