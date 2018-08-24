@@ -54,7 +54,18 @@
         <div class="constrained calendar-container">
 
           <div class="calendarRight">
+          <h2>Velg måned</h2>
+              <form name="month"><div>
+              <select name="SelectURL" onChange="document.location.href=document.month.SelectURL.options[document.month.SelectURL.selectedIndex].value">
+                <option value="">Velg måned</option>
+                          {% for month in 1..12 %}
+    {% set date = month ~ "/1/2018" %}
+    <option value="/{{ siteaccess }}/kalender/{{ year }}/{{ date|date("m")|trim('0', side='left') }}">{{ date|date("F", "Europe/Oslo")|localizeddate('none', 'none', app.request.locale, "Europe/Oslo", "MMMM") }}</option>
+{% endfor %}
+              </select></div>
+              </form>
             <h2>Velg dato</h2>
+
             <table class="calendar-table" cellspacing="0" cellpadding="0" border="0" summary="Event Calendar">
               <thead>
               <tr class="calendar-table_heading">
