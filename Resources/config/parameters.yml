@@ -39,7 +39,7 @@ parameters:
     ews.skogmo.calendar_name: 'Skogmo VGS'
     ews.skogmo.calendar_id: 0
 
-    ews.vest_vgs.calendar_name: 'Vest-telemark VGS'
+    ews.vest_vgs.calendar_name: 'Vest Telemark VGS'
     ews.vest_vgs.calendar_id: 0
 
     ews.tfk_school_group.categories:
