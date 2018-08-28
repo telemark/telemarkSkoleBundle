@@ -42,6 +42,9 @@ parameters:
     ews.vest_vgs.calendar_name: 'Vest Telemark VGS'
     ews.vest_vgs.calendar_id: 0
 
+    ews.nettskolen.calendar_name: 'Notodden VGS'
+    ews.nettskolen.calendar_id: 0
+
     ews.tfk_school_group.categories:
         - Skoleruta
         - Arrangement
