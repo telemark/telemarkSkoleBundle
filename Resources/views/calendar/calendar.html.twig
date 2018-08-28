@@ -54,7 +54,7 @@
         <div class="constrained calendar-container">
 
           <div class="calendarRight">
-          <h2>Velg måned</h2>
+{#        <h2>Velg måned</h2>
               <form name="month"><div>
               <select name="SelectURL" onChange="document.location.href=document.month.SelectURL.options[document.month.SelectURL.selectedIndex].value">
                 <option value="">Velg måned</option>
@@ -64,6 +64,7 @@
 {% endfor %}
               </select></div>
               </form>
+#} 
             <h2>Velg dato</h2>
 
             <table class="calendar-table" cellspacing="0" cellpadding="0" border="0" summary="Event Calendar">
@@ -109,75 +110,7 @@
             </table>
             <h2>Aktuelle</h2>
             <div id="upcomingUevents">
-              {% for event in upcomingEvents %}
-                {% set categoryConcat = '' %}
-                {% set categoryConcatComma = '' %}
-
-                {% if event.Categories %}
-                  {% for category in event.Categories.String %}
-                    {% if category|split('ORG_KODE=')|length > 1 %}
-                      {%  set categoryConcat = categoryConcat ~ category|split('ORG_KODE=')[1]  %}
-                    {% else %}
-                      {% set categoryReplaced = category|replace({' ':'_'}) %}
-                      {% set categoryReplaced = categoryReplaced|replace({'/':'_'}) %}
-                      {% if categoryReplaced in categoriesPredefined %}
-                        {% set categoryConcat = categoryConcat ~ categoryReplaced  %}
-                      {% endif %}
-                    {% endif %}
-
-                    {% if not loop.last %}
-                      {%  set categoryConcat = categoryConcat ~ ' '  %}
-                    {% endif %}
-                  {% endfor %}
-
-                  {% for category in event.Categories.String %}
-                    {% if category|split('ORG_KODE=')|length > 1 %}
-                      {%  set categoryConcatComma = categoryConcatComma ~ category|split('ORG_KODE=')[1]  %}
-                    {% else %}
-                        {%  set categoryConcatComma = categoryConcatComma ~ category  %}
-                    {% endif %}
-                    {% if not loop.last %}
-                      {%  set categoryConcatComma = categoryConcatComma ~ ', '  %}
-                    {% endif %}
-                  {% endfor %}
-                {% endif %}
-
-                {% if categoryConcat == '' %}
-                      {% set categoryConcat = 'Annet'  %}
-                {% endif %}
-
-                <div class="event day{{ event.Start|date('d') }}{% if categoryConcat %} {{ categoryConcat }}{% endif %}">
-                  <div class="calendarIcon">
-                    {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
-                    <div class="calendarDate">{{ event.Start|date('d') }}</div>
-                  </div>
-                  {% if ( event.IsAllDayEvent and event.Duration != 'P1D' ) or ( not event.IsAllDayEvent and event.End|date('Y-m-d') > event.Start|date('Y-m-d') ) %}
-                    <div class="calendarIconArrow">
-                      →
-                    </div>
-                    <div class="calendarIcon">
-                      {% if event.IsAllDayEvent %}
-                        {% set calculatedEndDate  = event.End|date_modify( '-1 day' ) %}
-                      {% else %}
-                        {% set calculatedEndDate  = event.End %}
-                      {% endif %}
-                      {{ calculatedEndDate| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
-                      <div class="calendarDate">{{ calculatedEndDate|date('d') }}</div>
-                    </div>
-                  {% endif %}
-                  <div class="calendarText">
-                    <a href="/{{ siteaccess }}/kalender/hendelse/{{ event.ItemId.Id|replace({'/':'!SLASH!'}) }}">{{ event.Subject }}</a>
-                    {% if event.Categories.String is defined %}
-                      <i class="categories_for_event">{{ categoryConcatComma }}</i>
-                    {% endif %}
-                    <br/>
-                    {% if not(event.IsAllDayEvent) %}
-                      {{ event.Start|date('H:i') }}
-                    {% endif %}
-                    {{ event.Location }}&nbsp;
-                  </div>
-                </div>
-              {% endfor %}
+            {{ render( controller( 'tfktelemarkSkoleBundle:Calendar:getEvents' ) ) }}
             </div>
           </div>
 

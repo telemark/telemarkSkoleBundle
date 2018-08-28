@@ -185,6 +185,41 @@ class CalendarController extends Controller
         );          
     }
 
+   public function getEventsAction()
+    {
+        setLocale(LC_TIME, 'no_NO');
+        $configResolver = $this->getConfigResolver();
+
+        if ( $configResolver->hasParameter( 'categories', 'ews' ) )
+            $categoriesPredefined = $configResolver->getParameter( 'categories', 'ews' );
+        else
+            $categoriesPredefined = array();
+      
+        $calendarFolders = $this->findCalendarFolders();
+
+        $today = new DateTime( date("Y-m-d" ) );
+        $endDay = new DateTime( date('Y-m-d', strtotime( "+365 days" ) ) );
+
+        $upcomingEvents = $this->findEvents( $today, $endDay, $calendarFolders );
+
+        $events = array();
+        foreach ( $upcomingEvents as $event )
+        {
+            if ( count( $events ) < 5 )
+                $events[] = $event;
+            else
+                continue;
+        }
+        
+        return $this->render(
+            'tfktelemarkSkoleBundle:calendar:frontpage_latest.html.twig', 
+            array(
+                'events'                => $events,
+                'categoriesPredefined'  => $categoriesPredefined
+            )
+        );          
+    }
+
     private function findEvents( $startDate, $endDate, $folders = false )
     {
         $request = new FindItemType();
