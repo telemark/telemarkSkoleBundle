@@ -1,5 +1,5 @@
 {% set analytics = getConfigResolverParameter( 'analytics', 'footer' ) %}
-
+{% set google = getConfigResolverParameter( 'google', 'footer' ) %}
 {# Override this template and place javascript based statistics here (like Google Analytics) #}
     <script>
       // Picture element HTML5 shiv
@@ -23,4 +23,8 @@
   ga('send', 'pageview');
 
 </script>
+{% endif %}
+
+{% if google %}
+<meta name="google-site-verification" content="{{ google }}" />
 {% endif %}

@@ -115,6 +115,7 @@ parameters:
     footer.vest_vgs.fblink: 'http://www.facebook.com/VTVGS'
     footer.vest_vgs.fb2: 'Seljord på facebook'
     footer.vest_vgs.fblink2: 'https://www.facebook.com/seljordvgs?fref=ts'
+    footer.vest_vgs.google: MxG6p7VzM_W0hL2qufvSYx0iJDfnlfnDBc_cEy__fl4
 
     head.telemark.logo: 'telemark.svg'
     head.telemark.title: 'Telemark Fylkeskommune'
