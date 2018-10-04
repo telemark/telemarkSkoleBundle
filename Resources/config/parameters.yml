@@ -62,7 +62,7 @@ parameters:
         - embed_code
         - link
         - spacer
-        
+
     subitems.tfk_school_group.identifiers:
         - article
         - article_shared
@@ -84,7 +84,7 @@ parameters:
         - spacer
         - person
         - link
-      
+
     sidebar.tfk_school_group.identifiers.right:
         - infobox
 
@@ -97,7 +97,7 @@ parameters:
         - presentasjon_shared
         - embed_code
 
-    head.vest_vgs.logo: 'vesttelemark_toplogo.png'
+    head.vest_vgs.logo: 'vesttelemark_toplogo.svg'
     head.vest_vgs.title: 'Vest-Telemark vidaregåande skule'
     head.vest_vgs.meta_author: 'Vest-Telemark vidaregåande skule'
     head.vest_vgs.meta_description: 'Vest-Telemark vidaregåande skule'
@@ -143,7 +143,7 @@ parameters:
     head.admin.meta_keywords: 'admin telemark videregående skole'
     footer.admin.analytics: 'UA-91276641-1'
 
-    head.bamble.logo: 'bamble_toplogo.png'
+    head.bamble.logo: 'bamble_toplogo.svg'
     head.bamble.title: 'Bamble videregående skole'
     head.bamble.meta_author: 'Bamble videregående skole'
     head.bamble.meta_description: 'Bamble videregående skole- det er hos oss det begynne'
@@ -163,7 +163,7 @@ parameters:
     footer.bamble.youtube: 'https://www.youtube.com/channel/UC49syS4LRCmbIA5K6bLFk7g'
     footer.bamble.analytics: 'UA-5569947-5'
 
-    head.boe.logo: 'boe_toplogo.png'
+    head.boe.logo: 'boe_toplogo.svg'
     head.boe.title: 'Bø vidaregåande skule'
     head.boe.meta_author: 'Bø Vidaregåande skule'
     head.boe.meta_description: 'Bø Vidaregåande er ein fin skule'
@@ -179,7 +179,7 @@ parameters:
     footer.boe.fb: 'Facebook'
     footer.boe.analytics: 'UA-107696217-1'
 
-    head.hjalmarj.logo: 'hjalmarj_toplogo.png'
+    head.hjalmarj.logo: 'hjalmarj_toplogo.svg'
     head.hjalmarj.title: 'Hjalmar Johansen videregående skole'
     head.hjalmarj.meta_author: 'Hjalmar Johansen videregående skole'
     head.hjalmarj.meta_description: 'faglig sosial utvikling'
@@ -197,7 +197,7 @@ parameters:
     footer.hjalmarj.twitter: 'https://twitter.com/hjalmarjovgs'
     footer.hjalmarj.analytics: 'UA-6487573-1'
 
-    head.kragero.logo: 'kragero_toplogo.png'
+    head.kragero.logo: 'kragero_toplogo.svg'
     head.kragero.title: 'Kragerø videregående skole'
     head.kragero.meta_author: 'Kragerø videregående skole'
     head.kragero.meta_description: 'Kragerø videregående skole er en fin skole'
@@ -213,7 +213,7 @@ parameters:
     footer.kragero.fb: 'Facebook'
     footer.kragero.analytics: 'UA-92067423-1'
 
-    head.nome.logo: 'nome_toplogo.png'
+    head.nome.logo: 'nome_toplogo.svg'
     head.nome.title: 'Nome videregående skole'
     head.nome.meta_author: 'Nome videregående skole'
     head.nome.meta_description: 'Nome videregående skole er en fin skole'
@@ -234,7 +234,7 @@ parameters:
     footer.nome.youtube: 'https://www.youtube.com/channel/UCd-NJgMguoKiubhS5e9w1Jg/videos'
     footer.nome.analytics: 'UA-92091324-1'
 
-    head.notodden.logo: 'notodden_toplogo.png'
+    head.notodden.logo: 'notodden_toplogo.svg'
     head.notodden.title: 'Notodden videregående skole'
     head.notodden.meta_author: 'Notodden videregående skole'
     head.notodden.meta_description: 'Notodden videregående skole er en fin skole'
@@ -249,7 +249,7 @@ parameters:
     footer.notodden.fblink: 'https://www.facebook.com/NotoddenVideregaendeSkole/'
     footer.notodden.fb: 'Facebook'
 
-    head.porsgrunn.logo: 'porsgrunn_toplogo.png'
+    head.porsgrunn.logo: 'porsgrunn_toplogo.svg'
     head.porsgrunn.title: 'Porsgrunn videregående skole'
     head.porsgrunn.meta_author: 'Porsgrunn videregående skole'
     head.porsgrunn.meta_description: 'Sammen om mestring, mangfold og miljø!'
@@ -269,7 +269,7 @@ parameters:
     footer.porsgrunn.flickr: 'https://www.flickr.com/photos/porvgs/albums'
     footer.porsgrunn.analytics: 'UA-47841095-1'
 
-    head.rjukan.logo: 'rjukan_toplogo.png'
+    head.rjukan.logo: 'rjukan_toplogo.svg'
     head.rjukan.title: 'Rjukan videregående skole'
     head.rjukan.meta_author: 'Rjukan videregående skole'
     head.rjukan.meta_description: 'Rjukan videregående skole - En skole for alle'
@@ -280,11 +280,11 @@ parameters:
     footer.rjukan.post: 'Såheimsveien 22, 3660 Rjukan'
     footer.rjukan.adress: 'Såheimsveien 22, Rjukan'
     footer.rjukan.contact: 'Webmaster'
-    footer.rjukan.link: 'http://apps.t-fk.no/ansatte/#/ansatt/1186'
+    footer.rjukan.link: 'http://apps.t-fk.no/ansatte/#/ansatt/21646'
     footer.rjukan.fblink: 'http://www.facebook.com/rjukanvgs/'
     footer.rjukan.fb: 'Facebook'
 
-    head.skien.logo: 'skien_toplogo.png'
+    head.skien.logo: 'skien_toplogo.svg'
     head.skien.title: 'Skien videregående skole'
     head.skien.meta_author: 'Skien videregående skole'
     head.skien.meta_description: 'Skien videregående skole er en fin skole'
@@ -302,7 +302,7 @@ parameters:
     footer.skien.youtube: 'https://www.youtube.com/channel/UCSaA2KXfm__BkVYb49P2ACg'
     footer.skien.analytics: 'UA-56306666-1'
 
-    head.skogmo.logo: 'skogmo_toplogo.png'
+    head.skogmo.logo: 'skogmo_toplogo.svg'
     head.skogmo.title: 'Skogmo videregående skole'
     head.skogmo.meta_author: 'Skogmo videregående skole'
     head.skogmo.meta_description: 'Skogmo videregående skole er en fin skole'
@@ -317,7 +317,7 @@ parameters:
     footer.skogmo.fblink: 'https://www.facebook.com/Skogmovgs/'
     footer.skogmo.fb: 'Facebook'
 
-    head.fagskolen.logo: 'fagskolen_toplogo.png'
+    head.fagskolen.logo: 'fagskolen_toplogo.svg'
     head.fagskolen.title: 'Fagskolen telemark'
     head.fagskolen.meta_author: 'Fagskolen telemark'
     head.fagskolen.meta_description: 'Fagskolen telemark er en fin skole'

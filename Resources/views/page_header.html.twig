@@ -4,7 +4,7 @@
         <header role="banner" class="page-header">
           <div class="page-header__content-wrapper js-headroom">
             <div class="constrained">
-              <div class="page-header__content"><a href="#main" class="page-header__skip-to visuallyhidden-focusable">Hovedinnhold</a>
+              <div class="page-header__content {{ezpublish.siteaccess.name}}"><a href="#main" class="page-header__skip-to visuallyhidden-focusable">Hovedinnhold</a>
               <a id="menu-trigger" href="#footer-menu" class="menu-trigger icon--menu-mobile">Meny</a>
               <a id="search-trigger" href="#" class="menu-search-trigger icon--search">Søk</a>
               <a href="{{ path( ezpublish.rootLocation ) }}" class="page-header__logo">
@@ -82,4 +82,6 @@
             </div>
           </div>
           {{ render( controller( "tfktelemarkSkoleBundle:Menu:mainMenu")) }}
+
+
           </header>

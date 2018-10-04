@@ -1065,6 +1065,14 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
 
 .page-header__logo img {
     display: block;
+    width: 22em;
+}
+
+.page-header__content.hjalmarj img {
+    width: 34em;
+}
+.page-header__content.vest_vgs img {
+    width: 27em;
 }
 
 .page-header__search {
