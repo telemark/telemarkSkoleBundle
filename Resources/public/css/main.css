@@ -1074,7 +1074,9 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
 .page-header__content.vest_vgs img {
     width: 27em;
 }
-
+.page-header__content.nettskolen img {
+    width: 34em;
+}
 .page-header__search {
     display: none;
 }
