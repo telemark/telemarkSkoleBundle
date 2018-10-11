@@ -71,7 +71,7 @@
               <thead>
               <tr class="calendar-table_heading">
                 <th class="calendar-table_heading_prev"><a href="/{{ siteaccess }}/kalender/{% if month == 1 %}{{ year-1 }}/{{ 12 }}{% else %}{{ year }}/{{ month - 1 }}{% endif %}" title=" Forrige måned " rel="prev">&#8249;&#8249;</a></th>
-                <th class="calendar-table_heading_date" colspan="5">{{ monthName|capitalize }} {{ year }}</th>
+                <th class="calendar-table_heading_date" colspan="5">{{ monthName|date("F", "Europe/Oslo")|localizeddate('none', 'none', app.request.locale, "Europe/Oslo", "MMMM")|capitalize }} {{ year }}</th>
                 <th class="calendar-table_heading_next"><a href="/{{ siteaccess }}/kalender/{% if month == 12 %}{{ year+1 }}/{{ 1 }}{% else %}{{ year }}/{{ month + 1 }}{% endif %}" title=" Neste måned " rel="next">&#8250;&#8250;</a></th>
               </tr>
               <tr class="calendar-table_heading-days">
@@ -130,7 +130,7 @@
           </div>
 
           <div class="calendarCenter">
-            <h2>Kalender</h2>
+            <h2>{{ monthName|date("F", "Europe/Oslo")|localizeddate('none', 'none', app.request.locale, "Europe/Oslo", "MMMM")|capitalize }}</h2>
             <div id="events">
               {% for event in events %}
                     {% set categoryConcat = '' %}
