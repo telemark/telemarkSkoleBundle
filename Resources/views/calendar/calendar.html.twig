@@ -165,10 +165,10 @@
                       {% endfor %}
                     {% endif %}
 
-                    {% if categoryConcat == '' %}
+                    {% if categoryConcat == 'Annet' %}
                           {% set categoryConcat = 'Annet'  %}
                     {% endif %}
-
+                    {% if categoryConcat is not empty %}
                     <div class="event day{{ event.Start|date('d') }}{% if categoryConcat %} {{ categoryConcat }}{% endif %}">
                       <div class="calendarIcon">
                         {{ event.Start| localizeddate('none', 'none', app.request.locale, null, 'MMM' ) | capitalize }}
@@ -200,7 +200,7 @@
                         {{ event.Location }}&nbsp;
                       </div>
                     </div>
-
+                 {% endif %}
               {% endfor %}
             </div>
 
