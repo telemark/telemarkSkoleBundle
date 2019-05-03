@@ -20,13 +20,51 @@ blocks:
         thumbnail: '/bundles/tfktelemarkskole/images/blocks/random_block.svg#Layer_1'
         views:
             default:
-                template: 'tfktelemarkSkoleBundle:blocks/dummy:default.html.twig'
+                template: 'tfktelemarkSkoleBundle:blocks:dummy.html.twig'
                 name: 'Default view'
+                priority: 0
         attributes:
             content:
-                name: 'Content'
                 type: 'richtext'
+                name: 'Content'
 
+    # overriding standard collection
+    collection:
+        views:
+            campaign:
+                template: 'tfktelemarkSkoleBundle:blocks:collection.html.twig'
+                name: Campaign View
+                options:
+                    match: [article]
+
+    contentlist:
+        views:
+            float2:
+                template: 'tfktelemarkSkoleBundle:blocks:contentlist.html.twig'
+                name: 2 i bredden
+            float3:
+                template: 'tfktelemarkSkoleBundle:blocks:contentlist.html.twig'
+                name: 3 i bredden
+
+    #newsbanner:
+    #    name: 'News banner block'
+    #    thumbnail: '/bundles/tfktelemarkskole/images/blocks/random_block.svg#Layer_1'
+    #    views:
+    #        default:
+    #            template: 'tfktelemarkSkoleBundle:blocks:newsbanner.html.twig'
+    #            name: 'Standard view'
+    #            priority: 0
+    #        campaign:
+    #            template: 'tfktelemarkSkoleBundle:blocks:newsbanner.html.twig'
+    #            name: 'Campaign view'
+    #            priority: 0
+    #    attributes:
+    #        locationlist:
+    #            name: Location list
+    #            type: locationlist
+    #            validators:
+    #                not_blank:
+    #                    message: Choose location items
 
     # contentbox:
     #     views:

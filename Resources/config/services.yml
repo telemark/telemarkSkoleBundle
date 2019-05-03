@@ -38,6 +38,21 @@ services:
         tags:
             - { name: kernel.event_subscriber }
 
+    tfk\telemarkSkoleBundle\Event\CollectionBlockListener:
+        tags:
+            - { name: kernel.event_subscriber }
+
+    tfk\telemarkSkoleBundle\Event\ContentlistBlockListener:
+        tags:
+            - { name: kernel.event_subscriber }
+
+    #tfk\telemarkSkoleBundle\Event\NewsBannerBlockListener:
+    #    arguments:
+    #         - '@ezpublish.api.service.content'
+    #         - '@ezpublish.api.service.location'
+    #    tags:
+    #        - { name: kernel.event_subscriber }
+
     # ezpublish.landing_page.block.contentbox:
     #     class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBoxBlock
     #     arguments:
