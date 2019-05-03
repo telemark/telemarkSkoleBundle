@@ -14,57 +14,71 @@ layouts:
                 name: School zone 3
 
 blocks:
-    contentbox:
-        views:
-            contentbox:
-                template: tfktelemarkSkoleBundle:blocks:contentbox.html.twig
-                name: Content box
-            contentbox_news:
-                template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
-                name: Content box news
-    contentboxstatic:
-        views:
-            contentboxstatic:
-                template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
-                name: Content box static               
-    contentbox3x1:
-        views:
-            contentbox3x1:
-                template: tfktelemarkSkoleBundle:blocks:contentbox3x1.html.twig
-                name: Content box 3x1
 
-    contentbox2x2andlatest:
+    dummy:
+        name: 'Dummy block'
+        thumbnail: '/bundles/tfktelemarkskole/images/blocks/random_block.svg#Layer_1'
         views:
-            contentbox2x2andlatest:
-                template: tfktelemarkSkoleBundle:blocks:contentbox2x2andlatest.html.twig
-                name: Content box 2x2 and latest
-            contentbox2x2calendar:
-                template: tfktelemarkSkoleBundle:blocks:contentbox2x2andcalendar.html.twig
-                name: Content box 2x2 and Calendar
+            default:
+                template: 'tfktelemarkSkoleBundle:blocks/dummy:default.html.twig'
+                name: 'Default view'
+        attributes:
+            content:
+                name: 'Content'
+                type: 'richtext'
 
-    contentgrid:
-        views:
-            contentgrid:
-                template: tfktelemarkSkoleBundle:blocks:contentgrid.html.twig
-                name: Content grid
-    campaign:
-        views:
-            campaign:
-                template: tfktelemarkSkoleBundle:blocks:campaign.html.twig
-                name: Campaign
 
-    schedule:
-        views:
-            schedule_float3:
-                template: tfktelemarkSkoleBundle:blocks:schedule_float3.html.twig
-                name: Schedule float 3
-    latestcontent:
-        views:
-            latestcontent:
-                template: tfktelemarkSkoleBundle:blocks:latestcontent.html.twig
-                name: Latest content
-    calendar:
-        views:
-            calendar:
-                template: tfktelemarkSkoleBundle:blocks:calendar.html.twig
-                name: Calendar
+    # contentbox:
+    #     views:
+    #         contentbox:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox.html.twig
+    #             name: Content box
+    #         contentbox_news:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
+    #             name: Content box news
+    # contentboxstatic:
+    #     views:
+    #         contentboxstatic:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
+    #             name: Content box static               
+    # contentbox3x1:
+    #     views:
+    #         contentbox3x1:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox3x1.html.twig
+    #             name: Content box 3x1
+
+    # contentbox2x2andlatest:
+    #     views:
+    #         contentbox2x2andlatest:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox2x2andlatest.html.twig
+    #             name: Content box 2x2 and latest
+    #         contentbox2x2calendar:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox2x2andcalendar.html.twig
+    #             name: Content box 2x2 and Calendar
+
+    # contentgrid:
+    #     views:
+    #         contentgrid:
+    #             template: tfktelemarkSkoleBundle:blocks:contentgrid.html.twig
+    #             name: Content grid
+    # campaign:
+    #     views:
+    #         campaign:
+    #             template: tfktelemarkSkoleBundle:blocks:campaign.html.twig
+    #             name: Campaign
+
+    # schedule:
+    #     views:
+    #         schedule_float3:
+    #             template: tfktelemarkSkoleBundle:blocks:schedule_float3.html.twig
+    #             name: Schedule float 3
+    # latestcontent:
+    #     views:
+    #         latestcontent:
+    #             template: tfktelemarkSkoleBundle:blocks:latestcontent.html.twig
+    #             name: Latest content
+    # calendar:
+    #     views:
+    #         calendar:
+    #             template: tfktelemarkSkoleBundle:blocks:calendar.html.twig
+    #             name: Calendar
