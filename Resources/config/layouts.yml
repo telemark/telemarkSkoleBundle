@@ -3,18 +3,43 @@ layouts:
         identifier: school
         name: School zone 3 Zone, 1 Column
         description: Three zone in one column
-        thumbnail: /bundles/ezstudiodemo/images/layouts/1.png
+        thumbnail: '/bundles/ezplatformpagefieldtype/images/layouts/default.png'
         template: tfktelemarkSkoleBundle:layouts:school.html.twig
         zones:
+            top:
+                name: Top
+            left:
+                name: Left 
+            middle:
+                name: Middle
+            right:
+                name: Right
+    sidebar:
+        identifier: sidebar
+        name: Right sidebar
+        description: Main section with sidebar on the right
+        thumbnail: '/bundles/ezplatformpagefieldtype/images/layouts/default.png'
+        template: tfktelemarkSkoleBundle:layouts:sidebar.html.twig
+        zones:
             first:
-                name: School zone 1
+                name: First zone
             second:
-                name: School zone 2 
-            third:
-                name: School zone 3
-
+                name: Second zone
 blocks:
-
+    embed:
+        visible: false
+    video:
+        visible: false
+    form:
+        visible: false
+    gallery:
+        visible: false
+    rss:
+        visible: false
+    banner:
+        visible: false
+    schedule:
+        visible: false
     dummy:
         name: 'Dummy block'
         thumbnail: '/bundles/tfktelemarkskole/images/blocks/random_block.svg#Layer_1'
@@ -30,6 +55,8 @@ blocks:
 
     # overriding standard collection
     collection:
+        ttl: 0
+        name: 'Nyhetsbanner'
         views:
             campaign:
                 template: 'tfktelemarkSkoleBundle:blocks:collection.html.twig'
@@ -38,6 +65,7 @@ blocks:
                     match: [article]
 
     contentlist:
+        ttl: 0
         views:
             float2:
                 template: 'tfktelemarkSkoleBundle:blocks:contentlist.html.twig'
@@ -45,6 +73,13 @@ blocks:
             float3:
                 template: 'tfktelemarkSkoleBundle:blocks:contentlist.html.twig'
                 name: 3 i bredden
+    calendar:
+        name: Kalender
+        thumbnail: '/bundles/ezplatformadminui/img/ez-icons.svg#schedule'
+        views:
+             calendar:
+                 template: tfktelemarkSkoleBundle:blocks:calendar.html.twig
+                 name: Calendar
 
     #newsbanner:
     #    name: 'News banner block'
