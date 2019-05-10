@@ -1,0 +1,38 @@
+
+system:
+      default:
+          fieldtypes:
+              ezrichtext:
+                  custom_tags: [ezyoutube]
+
+ezrichtext:
+    custom_tags:
+        ezyoutube:
+            # The template used for front-end rendering of the custom tag
+            template: 'tfktelemarkSkoleBundle:custom_tags:ezyoutube.html.twig'
+            # An icon for the custom tag as displayed in the Online Editor's toolbar.
+            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#video'
+            attributes:
+                title:
+                    type: 'string'
+                    required: true
+                    default_value: ''
+                video_url:
+                    type: 'string'
+                    required: true
+                width:
+                    type: 'number'
+                    required: true
+                    default_value: 640
+                height:
+                    type: 'number'
+                    required: true
+                    default_value: 360
+                autoplay:
+                    type: 'boolean'
+                    default_value: false
+                align:
+                    type: 'choice'
+                    required: false
+                    default_value: 'left'
+                    choices: ['left', 'center', 'right']

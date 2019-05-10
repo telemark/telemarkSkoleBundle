@@ -59,6 +59,12 @@ class tfktelemarkSkoleExtension extends Extension implements PrependExtensionInt
         $container->prependExtensionConfig('ezplatform_page_fieldtype', $config);
         $container->addResource(new FileResource($configFile));
 
+
+        $configFile = __DIR__ . '/../Resources/config/custom_tags.yml';
+        $config = Yaml::parse( file_get_contents( $configFile ) );
+        $container->prependExtensionConfig( 'ezpublish', $config );
+        $container->addResource( new FileResource( $configFile ) );
+
         /*
         $configFile = __DIR__ . '/../Resources/config/liip_image_variations.yml';
         $config = Yaml::parse( file_get_contents( $configFile ) );
