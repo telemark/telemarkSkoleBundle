@@ -1,0 +1,8 @@
+            {% for locationId, value in locationlist %}
+                            {% if locationId %}
+                                {{ render(controller('ez_content:viewLocation', {
+                                    'locationId': locationId,
+                                    'viewType': 'block_box'
+                                })) }}
+                            {% endif %}
+            {% endfor %}

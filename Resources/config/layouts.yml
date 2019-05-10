@@ -41,6 +41,7 @@ blocks:
     schedule:
         visible: false
     dummy:
+        visible: false
         name: 'Dummy block'
         thumbnail: '/bundles/tfktelemarkskole/images/blocks/random_block.svg#Layer_1'
         views:
@@ -61,8 +62,9 @@ blocks:
             campaign:
                 template: 'tfktelemarkSkoleBundle:blocks:collection.html.twig'
                 name: Campaign View
-                options:
-                    match: [article]
+            block_box:
+                template: 'tfktelemarkSkoleBundle:blocks:collection.html.twig'
+                name: Knappe visning
 
     contentlist:
         ttl: 0
@@ -80,6 +82,49 @@ blocks:
              calendar:
                  template: tfktelemarkSkoleBundle:blocks:calendar.html.twig
                  name: Calendar
+    external_url_button:
+        name: Ekstern url knapp
+        visible: false
+        category: default
+        thumbnail: '/bundles/ezplatformadminui/img/ez-icons.svg#schedule'
+        views:
+            default: { name: 'Default block layout', template: 'tfktelemarkSkoleBundle:blocks:extern_url_button.html.twig', priority: -255 }
+        attributes:
+            url:
+                name: URL
+                type: string
+                validators:
+                    not_blank:
+                        message: Du må legge inn en url
+                    regexp:
+                        options:
+                            pattern: '/^(https?|ftp):\/\/[^\s\/$.?#].[^\s]*$/'
+                        message: Legg inn link til url
+                value: 'http://'
+            title:
+                name: Tittel på knapp
+                type: string
+                validators:
+                    not_blank:
+                        message: Du må legge inn en tittel
+                value: ''
+    buttons:
+        name: Buttons
+        visible: false
+        category: default
+        thumbnail: 'bundles/ezplatformpagefieldtype/images/thumbnails/collection.svg'
+        views:
+            block_box:
+                template: 'tfktelemarkSkoleBundle:blocks:button.html.twig'
+                name: Knappe visning
+            default: { name: 'Default block layout', template: 'tfktelemarkSkoleBundle:blocks:button.html.twig' }
+        attributes:
+            locationlist:
+                name: Location list
+                type: locationlist
+                validators:
+                    not_blank:
+                        message: Choose location items
 
     #newsbanner:
     #    name: 'News banner block'
