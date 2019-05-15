@@ -43,6 +43,10 @@ services:
             - { name: kernel.event_subscriber }
 
     tfk\telemarkSkoleBundle\Event\ContentlistBlockListener:
+        arguments:
+             - '@ezpublish.api.service.content'
+             - '@ezpublish.api.service.location'
+             - '@ezpublish.api.service.search'
         tags:
             - { name: kernel.event_subscriber }
 
