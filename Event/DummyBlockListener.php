@@ -30,7 +30,7 @@ class DummyBlockListener implements EventSubscriberInterface
         $renderRequest = $event->getRenderRequest();
 
         $parameters = $renderRequest->getParameters();
-        //$string = var_dump( $blockValue );
+
         $parameters['dummy_string'] = 'foobar';
 
         $renderRequest->setParameters($parameters);
