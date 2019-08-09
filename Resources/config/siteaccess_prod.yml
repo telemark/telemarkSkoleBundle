@@ -1,0 +1,320 @@
+ezpublish:
+    # Siteaccess configuration, with one siteaccess per default
+    siteaccess:
+        list:
+          - admin
+          - vest_vgs
+          - fagskolen
+          - skogmo
+          - skien
+          - rjukan
+          - porsgrunn
+          - notodden
+          - nome
+          - admin_nome
+          - kragero
+          - hjalmarj
+          - boe
+          - bamble
+          - nettskolen
+          - site
+        groups:
+            admin_group:
+                - admin
+                - admin_nome
+            site_group:
+                - site
+                - vest_vgs
+                - fagskolen
+                - skogmo
+                - skien
+                - rjukan
+                - porsgrunn
+                - notodden
+                - nome
+                - kragero
+                - hjalmarj
+                - boe
+                - bamble
+                - nettskolen
+            tfk_school_group:
+                - site
+                - vest_vgs
+                - fagskolen
+                - skogmo
+                - skien
+                - rjukan
+                - porsgrunn
+                - notodden
+                - nome
+                - kragero
+                - hjalmarj
+                - boe
+                - bamble
+                - nettskolen
+                - site
+
+        match:
+            Map\URI:
+                 admin : admin
+                 admin_nome : admin_nome
+                 vest_vgs : vest_vgs
+                 fagskolen : fagskolen
+                 skogmo : skogmo
+                 skien : skien
+                 rjukan : rjukan
+                 porsgrunn : porsgrunn
+                 notodden : notodden
+                 nome : nome
+                 kragero : kragero
+                 hjalmarj : hjalmarj
+                 boe : boe
+                 bamble : bamble
+                 nettskolen : nettskolen
+            Map\Host:
+                 vest-telemark.vgs.no : vest_vgs
+                 nome.vgs.no : nome
+                 prod.tfkskole.vpdev.no :  admin
+                 www.vest-telemark.vgs.no : vest_vgs
+                 vest-telemark.vgs.no : vest_vgs
+                 fagskolentelemark.vgs.t-fk.no : fagskolen
+                 www.skogmo.vgs.no : skogmo
+                 skogmo.vgs.no : skogmo
+                 www.skien.vgs.no : skien
+                 skien.vgs.no : skien
+                 www.rjukan.vgs.no : rjukan
+                 rjukan.vgs.no : rjukan
+                 www.porsgrunn.vgs.no : porsgrunn
+                 porsgrunn.vgs.no : porsgrunn
+                 www.notodden.vgs.no : notodden
+                 notodden.vgs.no : notodden
+                 nome.vgs.no : nome
+                 www.nome.vgs.no : nome
+                 www.kragero.vgs.no : kragero
+                 kragero.vgs.no : kragero
+                 www.hjalmarjohansen.vgs.no : hjalmarj
+                 hjalmarjohansen.vgs.no : hjalmarj
+                 www.bo.vgs.no : boe
+                 bo.vgs.no : boe
+                 bamble.vgs.no : bamble
+                 www.bamble.vgs.no : bamble
+                 www.nettskolentelemark.no : nettskolen
+                 nettskolentelemark.no : nettskolen
+                 www.nrs.tm.no : nettskolen
+                 nrs.tm.no : nettskolen
+
+            URIElement: 1
+        default_siteaccess: admin
+
+    # System settings, grouped by siteaccess and/or siteaccess group
+    system:
+        default:
+            # Pool to use for cache, needs to be different per repository (database).
+            # cache_pool_name: '%cache_pool%'
+            # These reflect the current installers, complete installation before you change them. For changing var_dir
+            # it is recommended to install clean, then change setting before you start adding binary content, otherwise you'll
+            # need to manually modify your database data to reflect this to avoid exceptions.
+            var_dir: var/site
+            # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
+            # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
+            # all eng-GB data to other locales first.
+            languages: [nor-NO, eng-GB]
+            content:
+              # As we by default enable EzSystemsPlatformHttpCacheBundle which is designed to expire all affected cache
+              # on changes, and as error / redirects now have separate ttl, we easier allow ttl to be greatly increased
+              default_ttl: '%httpcache_default_ttl%'
+            # HttpCache purge server(s) setting, eg Varnish, for when ezpublish.http_cache.purge_type is set to 'http'.
+            http_cache:
+                # If using fastly, 'purge_server' must be set to 'https://api.fastly.com'
+                purge_servers: ['%purge_server%']
+                fastly:
+                    service_id: '%fastly_service_id%'
+                    key: '%fastly_key%'
+        site:
+            languages:
+                - nor-NO
+                - eng-GB
+        vest_vgs:
+#             session:
+#                 name: eZSESSID
+#                 cookie_domain: vest_vgs.dev.vpdev.no 
+            languages:
+                - nor-NO
+                #- eng-GB
+            content:
+                tree_root:
+                    location_id: 276
+                    excluded_uri_prefixes: [ /media, /users ]
+        admin:
+            languages:
+                - nor-NO
+                - eng-GB
+#             session:
+#                 name: eZSESSID
+#                 cookie_domain: telemarkskole.dev.vpdev.no
+
+#            content:
+#                tree_root:
+#                    location_id: 246
+#                    excluded_uri_prefixes: [ /media, /users ]
+        fagskolen:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 297
+                    excluded_uri_prefixes: [ /media, /users ]
+        skogmo:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 296
+                    excluded_uri_prefixes: [ /media, /users ]
+        skien:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 295
+                    excluded_uri_prefixes: [ /media, /users ]
+        rjukan:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 294
+                    excluded_uri_prefixes: [ /media, /users ]
+        porsgrunn:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 293
+                    excluded_uri_prefixes: [ /media, /users ]
+        notodden:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 292
+                    excluded_uri_prefixes: [ /media, /users ]
+        nome:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 291
+                    excluded_uri_prefixes: [ /media, /users ]
+        kragero:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 290
+                    excluded_uri_prefixes: [ /media, /users ]
+        hjalmarj:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 289
+                    excluded_uri_prefixes: [ /media, /users ]
+        boe:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 287
+                    excluded_uri_prefixes: [ /media, /users ]
+        bamble:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 288
+                    excluded_uri_prefixes: [ /media, /users ]
+        nettskolen:
+            languages:
+                - nor-NO
+            content:
+                tree_root:
+                    location_id: 3186
+                    excluded_uri_prefixes: [ /media, /users ]
+        admin_nome:
+            languages: [nor-NO]
+            design: admin
+            location_ids:
+                content_structure: 291
+                media: 784
+                users: 5
+            content_tree_module:
+                load_more_limit: 35
+                children_load_max_limit: 200
+                tree_max_depth: 10
+                allowed_content_types: '*'
+                ignored_content_types:
+                   - article_shared
+                   - presentasjon_shared
+                   - file_shared
+                   - user
+                   - user_group
+                contextual_tree_root_location_ids:
+                    - 291 # Home (Content structure)
+                    - 5 # Users
+                    - 784 # Media
+                    #- 48 # Setup
+                    #- 249 # Forms
+            universal_discovery_widget_module:
+                default_location_id: 1
+                configuration:
+                  default:
+                    multiple: true
+                    active_tab: 'browse'
+                    starting_location_id: 1
+                    visible_tabs: []
+                    selected_items_limit: 0
+                    containers_only: false
+                    allowed_content_types: [article, folder, infobox, link, presentasjon, spacer, image, file ]
+                    content_on_the_fly:
+                        allowed_languages: [nor-NO]
+                        allowed_content_types: [article, folder, infobox, link, presentasjon, spacer, image, file]
+                        allowed_locations: [291, 784]
+                        preselected_language: nor-NO
+                        preselected_content_type: null
+                        preselected_location: null
+                    search:
+                        results_per_page: 10
+                        limit: 50
+            page_builder:
+                siteaccess_list: 
+                         - nome
+        # WARNING: Do not remove or rename this group.
+        admin_group:
+            #cache_service_name: '%cache_pool%'
+            #var_dir: var/site
+            languages: [nor-NO, eng-GB]
+            design: admin
+            #content:
+            #    default_ttl: '%httpcache_default_ttl%'
+            #http_cache:
+            #    purge_servers: ['%purge_server%']
+            #    fastly:
+            #        service_id: '%fastly_service_id%'
+            #        key: '%fastly_key%'
+            page_builder:
+                siteaccess_list: 
+                         - vest_vgs
+                         - fagskolen
+                         - skogmo
+                         - skien
+                         - rjukan
+                         - porsgrunn
+                         - notodden
+                         - nome
+                         - kragero
+                         - hjalmarj
+                         - boe
+                         - bamble
+                         - nettskolen
+
