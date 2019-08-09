@@ -140,12 +140,12 @@ parameters:
     footer.telemark.analytics: 'UA-5569947-5'
 
 
-    head.admin.logo: 'admin_toplogo.png'
-    head.admin.title: 'Admin videregående skole'
-    head.admin.meta_author: 'Admin videregående skole'
-    head.admin.meta_description: 'Modig, imøtekommende og troverdig'
-    head.admin.meta_keywords: 'admin telemark videregående skole'
-    footer.admin.analytics: 'UA-91276641-1'
+    head.site.logo: 'admin_toplogo.png'
+    head.site.title: 'Admin videregående skole'
+    head.site.meta_author: 'Admin videregående skole'
+    head.site.meta_description: 'Modig, imøtekommende og troverdig'
+    head.site.meta_keywords: 'admin telemark videregående skole'
+    footer.site.analytics: 'UA-91276641-1'
 
     head.bamble.logo: 'bamble_toplogo.svg'
     head.bamble.title: 'Bamble videregående skole'
