@@ -1,4 +1,8 @@
 parameters:
+    mailer_transport: smtp
+    mailer_host: mail.smtp2go.com
+    mailer_user: post@t-fk.no
+    mailer_password: VTYF3Kca!no
 
     ews.global.host: 'outlook.office365.com'
     ews.global.username: 'tfkskolekalender@skoletfk.onmicrosoft.com'
