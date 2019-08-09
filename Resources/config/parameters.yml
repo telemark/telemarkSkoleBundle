@@ -103,7 +103,7 @@ parameters:
     head.vest_vgs.meta_description: 'Vest-Telemark vidaregåande skule'
     head.vest_vgs.meta_keywords: 'vest telemark videregående skule'
 
-    footer.vest_vgs.email: 'vest-telemark.vgs@t-fk.no'
+    footer.vest_vgs.email: 'vest-telemark.vgs@vtfk.no'
     footer.vest_vgs.phone: 'Sentralbord Dalen: 35 91 97 00'
     footer.vest_vgs.phone2: 'Sentralbord Seljord: 35 91 90 70'
     footer.vest_vgs.post: 'Postboks 2844, 3702 Skien'
@@ -124,7 +124,7 @@ parameters:
     head.telemark.meta_keywords: 'admin telemark videregående skole'
     #footer.telemark.analytics: 'UA-91276641-1'
 
-    footer.telemark.email: ' post@t-fk.no'
+    footer.telemark.email: ' post@vtfk.no'
     footer.telemark.phone: '35 91 70 00'
     footer.telemark.phone2: '35 91 70 01'
     footer.telemark.post: 'Postboks 2844, 3702 Skien'
@@ -149,7 +149,7 @@ parameters:
     head.bamble.meta_description: 'Bamble videregående skole- det er hos oss det begynne'
     head.bamble.meta_keywords: 'http://apps.t-fk.no/ansatte/#/ansatt/353'
 
-    footer.bamble.email: 'bamble.vgs@t-fk.no'
+    footer.bamble.email: 'bamble.vgs@vtfk.no'
     footer.bamble.phone: 'Avd. Grasmyr tlf 35 91 94 00'
     footer.bamble.phone2: 'Avd. Croftholmen tlf 35 91 79 00'
     footer.bamble.post: 'Postboks 2844, 3702 Skien'
@@ -169,7 +169,7 @@ parameters:
     head.boe.meta_description: 'Bø Vidaregåande er ein fin skule'
     head.boe.meta_keywords: 'Bø Vidaregåande skule'
 
-    footer.boe.email: 'bo.vgs@t-fk.no'
+    footer.boe.email: 'bo.vgs@vtfk.no'
     footer.boe.phone: '35 91 90 00'
     footer.boe.post: 'Postboks 54, 3833 Bø i Telemark'
     footer.boe.adress: 'Gymnasbakken 23, Bø i Telemark'
@@ -185,7 +185,7 @@ parameters:
     head.hjalmarj.meta_description: 'faglig sosial utvikling'
     head.hjalmarj.meta_keywords: 'hjalmar johansen videregående skole'
 
-    footer.hjalmarj.email: 'hjalmarjohansen.vgs@t-fk.no'
+    footer.hjalmarj.email: 'hjalmarjohansen.vgs@vtfk.no'
     footer.hjalmarj.phone: '35 91 83 00'
     footer.hjalmarj.post: 'Postboks 2844, 3702 Skien'
     footer.hjalmarj.adress: 'Moflatvegen 38, 3733 Skien'
@@ -203,7 +203,7 @@ parameters:
     head.kragero.meta_description: 'Kragerø videregående skole er en fin skole'
     head.kragero.meta_keywords: 'kragerø videregående skole'
 
-    footer.kragero.email: 'kragero.vgs@t-fk.no'
+    footer.kragero.email: 'kragero.vgs@vtfk.no'
     footer.kragero.phone: '35 91 95 00'
     footer.kragero.post: 'Frydenborgveien 9–11, 3772 Kragerø'
     footer.kragero.adress: 'Frydenborgveien 9–11, Kragerø'
@@ -219,7 +219,7 @@ parameters:
     head.nome.meta_description: 'Nome videregående skole er en fin skole'
     head.nome.meta_keywords: 'nome videregående skole'
 
-    footer.nome.email: 'nome.vgs@t-fk.no'
+    footer.nome.email: 'nome.vgs@vtfk.no'
     footer.nome.phone: 'Sentralbord Søve: 35 91 87 00'
     footer.nome.phone2: 'Sentralbord Lunde: 35 91 88 00'
     footer.nome.post: ' Søvevegen 12, 3830 Ulefoss'
@@ -240,7 +240,7 @@ parameters:
     head.notodden.meta_description: 'Notodden videregående skole er en fin skole'
     head.notodden.meta_keywords: 'notodden videregående skole'
 
-    footer.notodden.email: 'notodden.vgs@t-fk.no'
+    footer.notodden.email: 'notodden.vgs@vtfk.no'
     footer.notodden.phone: '35 91 85 00'
     footer.notodden.post: 'Postboks 184, 3672 Notodden'
     footer.notodden.adress: 'Heddalsvegen 4, Notodden'
@@ -255,7 +255,7 @@ parameters:
     head.porsgrunn.meta_description: 'Sammen om mestring, mangfold og miljø!'
     head.porsgrunn.meta_keywords: 'porsgrunn videregående skole'
 
-    footer.porsgrunn.email: 'porsgrunn.vgs@t-fk.no'
+    footer.porsgrunn.email: 'porsgrunn.vgs@vtfk.no'
     footer.porsgrunn.phone: '35 91 75 00'
     footer.porsgrunn.post: 'Postboks 2844, 3702 Skien'
     footer.porsgrunn.adress: 'Avd. Nord: Kjølnes Ring 58, 3918 Porsgrunn'
@@ -275,7 +275,7 @@ parameters:
     head.rjukan.meta_description: 'Rjukan videregående skole - En skole for alle'
     head.rjukan.meta_keywords: 'rjukan videregående skole'
 
-    footer.rjukan.email: 'rjukan.vgs@t-fk.no'
+    footer.rjukan.email: 'rjukan.vgs@vtfk.no'
     footer.rjukan.phone: '35 91 99 00'
     footer.rjukan.post: 'Såheimsveien 22, 3660 Rjukan'
     footer.rjukan.adress: 'Såheimsveien 22, Rjukan'
@@ -290,7 +290,7 @@ parameters:
     head.skien.meta_description: 'Skien videregående skole er en fin skole'
     head.skien.meta_keywords: 'skien videregående skole'
 
-    footer.skien.email: 'skien.vgs@t-fk.no'
+    footer.skien.email: 'skien.vgs@vtfk.no'
     footer.skien.phone: 'Telefon: 35 91 80 00'
     footer.skien.post: 'Postboks 2844, 3702 Skien'
     footer.skien.adress: 'Hollenderigata 5, 3732 Skien'
@@ -308,7 +308,7 @@ parameters:
     head.skogmo.meta_description: 'Skogmo videregående skole er en fin skole'
     head.skogmo.meta_keywords: 'skogmo'
 
-    footer.skogmo.email: 'skogmo.vgs@t-fk.no'
+    footer.skogmo.email: 'skogmo.vgs@vtfk.no'
     footer.skogmo.phone: '35 91 92 00'
     footer.skogmo.post: 'Postboks 2844, 3702 Skien'
     footer.skogmo.adress: 'Kjørbekkdalen 11, Skien'
