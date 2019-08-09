@@ -34,89 +34,117 @@ services:
     #    class: tfk\telemarkSkoleBundle\Twig\Extension\ConfigResolverHelper
     #    arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
     
+    tfk\telemarkSkoleBundle\Event\DummyBlockListener:
+        tags:
+            - { name: kernel.event_subscriber }
 
-    ezpublish.landing_page.block.contentbox:
-        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBoxBlock
-        arguments:
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.config.resolver'
+    tfk\telemarkSkoleBundle\Event\CollectionBlockListener:
         tags:
-            - { name: landing_page_field_type.block_type, alias: contentbox }
-    ezpublish.landing_page.block.contentboxstatic:
-        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBoxBlockStatic
-        arguments:
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.config.resolver'
-        tags:
-            - { name: landing_page_field_type.block_type, alias: contentboxstatic }
+            - { name: kernel.event_subscriber }
 
-    ezpublish.landing_page.block.contentbox3x1:
-        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBox3x1Block
+    tfk\telemarkSkoleBundle\Event\ContentlistBlockListener:
         arguments:
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.config.resolver'
+             - '@ezpublish.api.service.content'
+             - '@ezpublish.api.service.location'
+             - '@ezpublish.api.service.search'
         tags:
-            - { name: landing_page_field_type.block_type, alias: contentbox3x1 }
+            - { name: kernel.event_subscriber }
 
-    ezpublish.landing_page.block.contentbox2x2andlatest:
-        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBox2x2AndLatestBlock
+    tfk\telemarkSkoleBundle\UI\Config\ImageVariationProviderDecorator:
+        decorates: 'ezsystems.ezplatform_admin_ui.ui.config.provider.image_variations'
         arguments:
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.config.resolver'
-        tags:
-            - { name: landing_page_field_type.block_type, alias: contentbox2x2andlatest }
+            $innerProvider: '@tfk\telemarkSkoleBundle\UI\Config\ImageVariationProviderDecorator.inner'
 
-    ezpublish.landing_page.block.contentgrid:
-        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentGridBlock
-        arguments:
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.config.resolver'
-        tags:
-            - { name: landing_page_field_type.block_type, alias: contentgrid }
+    #tfk\telemarkSkoleBundle\Event\NewsBannerBlockListener:
+    #    arguments:
+    #         - '@ezpublish.api.service.content'
+    #         - '@ezpublish.api.service.location'
+    #    tags:
+    #        - { name: kernel.event_subscriber }
 
-    ezpublish.landing_page.block.latestcontent:
-        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\LatestContentBlock
-        arguments:
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.config.resolver'
-        tags:
-            - { name: landing_page_field_type.block_type, alias: latestcontent }
+    # ezpublish.landing_page.block.contentbox:
+    #     class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBoxBlock
+    #     arguments:
+    #         - '@ezpublish.api.service.location'
+    #         - '@ezpublish.api.service.content'
+    #         - '@ezpublish.api.service.search'
+    #         - '@ezpublish.config.resolver'
+    #     tags:
+    #         - { name: landing_page_field_type.block_type, alias: contentbox }
 
-    ezpublish.landing_page.block.campaign:
-        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\CampaignBlock
-        arguments:
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.config.resolver'
-        tags:
-            - { name: landing_page_field_type.block_type, alias: campaign }
+    # ezpublish.landing_page.block.contentboxstatic:
+    #     class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBoxBlockStatic
+    #     arguments:
+    #         - '@ezpublish.api.service.location'
+    #         - '@ezpublish.api.service.content'
+    #         - '@ezpublish.api.service.search'
+    #         - '@ezpublish.config.resolver'
+    #     tags:
+    #         - { name: landing_page_field_type.block_type, alias: contentboxstatic }
 
-    ezpublish.landing_page.block.calendar:
-        class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\CalendarBlock
-        arguments:
-            - '@ezpublish.config.resolver'
-        tags:
-            - { name: landing_page_field_type.block_type, alias: calendar }
+    # ezpublish.landing_page.block.contentbox3x1:
+    #     class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBox3x1Block
+    #     arguments:
+    #         - '@ezpublish.api.service.location'
+    #         - '@ezpublish.api.service.content'
+    #         - '@ezpublish.api.service.search'
+    #         - '@ezpublish.config.resolver'
+    #     tags:
+    #         - { name: landing_page_field_type.block_type, alias: contentbox3x1 }
+
+    # ezpublish.landing_page.block.contentbox2x2andlatest:
+    #     class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentBox2x2AndLatestBlock
+    #     arguments:
+    #         - '@ezpublish.api.service.location'
+    #         - '@ezpublish.api.service.content'
+    #         - '@ezpublish.api.service.search'
+    #         - '@ezpublish.config.resolver'
+    #     tags:
+    #         - { name: landing_page_field_type.block_type, alias: contentbox2x2andlatest }
+
+    # ezpublish.landing_page.block.contentgrid:
+    #     class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\ContentGridBlock
+    #     arguments:
+    #         - '@ezpublish.api.service.location'
+    #         - '@ezpublish.api.service.content'
+    #         - '@ezpublish.api.service.search'
+    #         - '@ezpublish.config.resolver'
+    #     tags:
+    #         - { name: landing_page_field_type.block_type, alias: contentgrid }
+
+    # ezpublish.landing_page.block.latestcontent:
+    #     class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\LatestContentBlock
+    #     arguments:
+    #         - '@ezpublish.api.service.location'
+    #         - '@ezpublish.api.service.content'
+    #         - '@ezpublish.api.service.search'
+    #         - '@ezpublish.config.resolver'
+    #     tags:
+    #         - { name: landing_page_field_type.block_type, alias: latestcontent }
+
+    # ezpublish.landing_page.block.campaign:
+    #     class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\CampaignBlock
+    #     arguments:
+    #         - '@ezpublish.api.service.location'
+    #         - '@ezpublish.api.service.content'
+    #         - '@ezpublish.api.service.search'
+    #         - '@ezpublish.config.resolver'
+    #     tags:
+    #         - { name: landing_page_field_type.block_type, alias: campaign }
+
+    # ezpublish.landing_page.block.calendar:
+    #     class: tfk\telemarkSkoleBundle\FieldType\LandingPage\Model\Block\CalendarBlock
+    #     arguments:
+    #         - '@ezpublish.config.resolver'
+    #     tags:
+    #         - { name: landing_page_field_type.block_type, alias: calendar }
 
 
     config_resolver_extension.twig_extension:
         class: tfk\telemarkSkoleBundle\Twig\Extension\ConfigResolverExtension
         public: false
         calls:
-            - [setContainer, [@service_container] ]
+            - [setContainer, ['@service_container'] ]
         tags:
             - { name: twig.extension }
 
@@ -124,18 +152,19 @@ services:
         class: tfk\telemarkSkoleBundle\Twig\Extension\ContentTypeExtension
         public: false
         calls:
-            - [setContainer, [@service_container] ]
+            - [setContainer, ['@service_container'] ]
         tags:
             - { name: twig.extension }
 
     vp_utility.location_helper:
         class: tfk\telemarkSkoleBundle\Helper\LocationHelper
-        arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
+        arguments:  ['@ezpublish.api.repository', '@service_container', '@ezpublish.config.resolver']
 
     vp_utility.sort_location_clause_helper:
         class: tfk\telemarkSkoleBundle\Helper\SortLocationClauseHelper
-        arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
+        arguments:  ['@ezpublish.api.repository', '@service_container', '@ezpublish.config.resolver']
 
     vp_utility.pagination_helper:
         class: tfk\telemarkSkoleBundle\Helper\PaginationHelper
-        arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
+        arguments:  ['@ezpublish.api.repository', '@service_container', '@ezpublish.config.resolver']
+

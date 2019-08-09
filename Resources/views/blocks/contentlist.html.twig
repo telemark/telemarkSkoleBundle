@@ -1,0 +1,65 @@
+<div class="row block-contentlist">
+
+    {% if contentArray|length > 0 %}
+
+        {% if block_value.view == 'float2' %}
+            <div class="grid grid--12">
+                {% for item in contentArray %}
+                    <div class="item item--vertical grid__item--6-12 landing-article">
+                        <div>
+                            <a href="{{ path(item.location) }}" alt="{{ item.location.contentInfo.name }}">
+                                {% if not ez_is_field_empty( item.content, 'image' )%}
+                                    {{ ez_render_field(
+                                        item.content, 'image', {
+                                            'parameters': {
+                                                'alias': 'article_grid_2',
+                                                'class': 'img-responsive'
+                                            }
+                                        }
+                                    ) }}
+                                {% endif %}
+                            </a>
+
+                            <div class="intro-text">
+                                <h1><a href="{{ path( item.location ) }}" alt="{{ item.location.contentInfo.name }}">{{ ez_render_field( item.content, 'title') }}</a></h1>
+                                   {{ ez_render_field( item.content, "intro") }}
+                            </div>
+                        </div>
+                     </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if block_value.view == 'float3' %}
+            <div class="grid grid--12">
+                {% for item in contentArray %}
+                    <div class="item item--vertical item--3-3">
+                        <div>
+                            <a href="{{ path( item.location ) }}" alt="{{ item.location.contentInfo.name }}">
+                                {% if not ez_is_field_empty( item.content, 'image' )%}
+                                    {{ ez_render_field(
+                                        item.content, 'image', {
+                                            'parameters': {
+                                                'alias': 'article_grid_3',
+                                                'class': 'img-responsive'
+                                            }
+                                        }
+                                    ) }}
+                                {% endif %}
+                            </a>
+                            <div class="intro-text">
+                                <h4><a href="{{ path( item.location ) }}" alt="{{ content.location.contentInfo.name }}">{{ ez_render_field( item.content, 'title') }}</a></h4>
+                            </div>
+                            {#
+                                {% if not ez_is_field_empty( item.content, ('intro') %}
+                                    <div>{{ ez_render_field(item.content, 'intro') }}</div>
+                                {% endif %}
+                            #}
+                        </div>
+                     </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    {% endif %}
+</div>

@@ -2,7 +2,7 @@ tfktelemark_skole_homepage:
     path:     /hello/{name}
     defaults: { _controller: tfktelemarkSkoleBundle:Default:index }
 tfktelemark_skole_search:
-    path:   /search
+    path:   /sok
     defaults: { _controller: tfktelemarkSkoleBundle:Search:search }
 tfktelemark_skole_calendar_view_event:
     path: /kalender/hendelse/{uid}

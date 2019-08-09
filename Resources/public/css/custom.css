@@ -1752,6 +1752,13 @@ h1 {
   color: white;
 }
 
+.block-3-1 .item--4-12 {
+  background-color: white;
+  text-align: left;
+}
+
+
+
 @media screen and (min-width: 320px) and (max-width: 880px) {
   .constrained,
   .constrained-content {

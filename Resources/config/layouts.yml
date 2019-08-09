@@ -3,68 +3,200 @@ layouts:
         identifier: school
         name: School zone 3 Zone, 1 Column
         description: Three zone in one column
-        thumbnail: /bundles/ezstudiodemo/images/layouts/1.png
+        thumbnail: '/bundles/ezplatformpagefieldtype/images/layouts/default.png'
         template: tfktelemarkSkoleBundle:layouts:school.html.twig
         zones:
+            top:
+                name: Top
+            left:
+                name: Left 
+            middle:
+                name: Middle
+            right:
+                name: Right
+    sidebar:
+        identifier: sidebar
+        name: Right sidebar
+        description: Main section with sidebar on the right
+        thumbnail: '/bundles/ezplatformpagefieldtype/images/layouts/default.png'
+        template: tfktelemarkSkoleBundle:layouts:sidebar.html.twig
+        zones:
             first:
-                name: School zone 1
+                name: First zone
             second:
-                name: School zone 2 
-            third:
-                name: School zone 3
-
+                name: Second zone
 blocks:
-    contentbox:
+    embed:
+        visible: false
+    video:
+        visible: false
+    form:
+        visible: false
+    gallery:
+        visible: false
+    rss:
+        visible: false
+    banner:
+        visible: false
+    schedule:
+        visible: false
+    dummy:
+        visible: false
+        name: 'Dummy block'
+        thumbnail: '/bundles/tfktelemarkskole/images/blocks/random_block.svg#Layer_1'
         views:
-            contentbox:
-                template: tfktelemarkSkoleBundle:blocks:contentbox.html.twig
-                name: Content box
-            contentbox_news:
-                template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
-                name: Content box news
-    contentboxstatic:
-        views:
-            contentboxstatic:
-                template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
-                name: Content box static               
-    contentbox3x1:
-        views:
-            contentbox3x1:
-                template: tfktelemarkSkoleBundle:blocks:contentbox3x1.html.twig
-                name: Content box 3x1
+            default:
+                template: 'tfktelemarkSkoleBundle:blocks:dummy.html.twig'
+                name: 'Default view'
+                priority: 0
+        attributes:
+            content:
+                type: 'richtext'
+                name: 'Content'
 
-    contentbox2x2andlatest:
-        views:
-            contentbox2x2andlatest:
-                template: tfktelemarkSkoleBundle:blocks:contentbox2x2andlatest.html.twig
-                name: Content box 2x2 and latest
-            contentbox2x2calendar:
-                template: tfktelemarkSkoleBundle:blocks:contentbox2x2andcalendar.html.twig
-                name: Content box 2x2 and Calendar
-
-    contentgrid:
-        views:
-            contentgrid:
-                template: tfktelemarkSkoleBundle:blocks:contentgrid.html.twig
-                name: Content grid
-    campaign:
+    # overriding standard collection
+    collection:
+        ttl: 0
+        name: 'Nyhetsbanner'
         views:
             campaign:
-                template: tfktelemarkSkoleBundle:blocks:campaign.html.twig
-                name: Campaign
+                template: 'tfktelemarkSkoleBundle:blocks:collection.html.twig'
+                name: Campaign View
+            block_box:
+                template: 'tfktelemarkSkoleBundle:blocks:collection.html.twig'
+                name: Knappe visning
 
-    schedule:
+    contentlist:
+        ttl: 0
         views:
-            schedule_float3:
-                template: tfktelemarkSkoleBundle:blocks:schedule_float3.html.twig
-                name: Schedule float 3
-    latestcontent:
-        views:
-            latestcontent:
-                template: tfktelemarkSkoleBundle:blocks:latestcontent.html.twig
-                name: Latest content
+            float2:
+                template: 'tfktelemarkSkoleBundle:blocks:contentlist.html.twig'
+                name: 2 i bredden
+            float3:
+                template: 'tfktelemarkSkoleBundle:blocks:contentlist.html.twig'
+                name: 3 i bredden
     calendar:
+        name: Kalender
+        thumbnail: '/bundles/ezplatformadminui/img/ez-icons.svg#schedule'
         views:
-            calendar:
-                template: tfktelemarkSkoleBundle:blocks:calendar.html.twig
-                name: Calendar
+             calendar:
+                 template: tfktelemarkSkoleBundle:blocks:calendar.html.twig
+                 name: Calendar
+    external_url_button:
+        name: Ekstern url knapp
+        visible: false
+        category: default
+        thumbnail: '/bundles/ezplatformadminui/img/ez-icons.svg#schedule'
+        views:
+            default: { name: 'Default block layout', template: 'tfktelemarkSkoleBundle:blocks:extern_url_button.html.twig', priority: -255 }
+        attributes:
+            url:
+                name: URL
+                type: string
+                validators:
+                    not_blank:
+                        message: Du må legge inn en url
+                    regexp:
+                        options:
+                            pattern: '/^(https?|ftp):\/\/[^\s\/$.?#].[^\s]*$/'
+                        message: Legg inn link til url
+                value: 'http://'
+            title:
+                name: Tittel på knapp
+                type: string
+                validators:
+                    not_blank:
+                        message: Du må legge inn en tittel
+                value: ''
+    buttons:
+        name: Buttons
+        visible: false
+        category: default
+        thumbnail: 'bundles/ezplatformpagefieldtype/images/thumbnails/collection.svg'
+        views:
+            block_box:
+                template: 'tfktelemarkSkoleBundle:blocks:button.html.twig'
+                name: Knappe visning
+            default: { name: 'Default block layout', template: 'tfktelemarkSkoleBundle:blocks:button.html.twig' }
+        attributes:
+            locationlist:
+                name: Location list
+                type: locationlist
+                validators:
+                    not_blank:
+                        message: Choose location items
+
+    #newsbanner:
+    #    name: 'News banner block'
+    #    thumbnail: '/bundles/tfktelemarkskole/images/blocks/random_block.svg#Layer_1'
+    #    views:
+    #        default:
+    #            template: 'tfktelemarkSkoleBundle:blocks:newsbanner.html.twig'
+    #            name: 'Standard view'
+    #            priority: 0
+    #        campaign:
+    #            template: 'tfktelemarkSkoleBundle:blocks:newsbanner.html.twig'
+    #            name: 'Campaign view'
+    #            priority: 0
+    #    attributes:
+    #        locationlist:
+    #            name: Location list
+    #            type: locationlist
+    #            validators:
+    #                not_blank:
+    #                    message: Choose location items
+
+    # contentbox:
+    #     views:
+    #         contentbox:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox.html.twig
+    #             name: Content box
+    #         contentbox_news:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
+    #             name: Content box news
+    # contentboxstatic:
+    #     views:
+    #         contentboxstatic:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox_news.html.twig
+    #             name: Content box static               
+    # contentbox3x1:
+    #     views:
+    #         contentbox3x1:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox3x1.html.twig
+    #             name: Content box 3x1
+
+    # contentbox2x2andlatest:
+    #     views:
+    #         contentbox2x2andlatest:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox2x2andlatest.html.twig
+    #             name: Content box 2x2 and latest
+    #         contentbox2x2calendar:
+    #             template: tfktelemarkSkoleBundle:blocks:contentbox2x2andcalendar.html.twig
+    #             name: Content box 2x2 and Calendar
+
+    # contentgrid:
+    #     views:
+    #         contentgrid:
+    #             template: tfktelemarkSkoleBundle:blocks:contentgrid.html.twig
+    #             name: Content grid
+    # campaign:
+    #     views:
+    #         campaign:
+    #             template: tfktelemarkSkoleBundle:blocks:campaign.html.twig
+    #             name: Campaign
+
+    # schedule:
+    #     views:
+    #         schedule_float3:
+    #             template: tfktelemarkSkoleBundle:blocks:schedule_float3.html.twig
+    #             name: Schedule float 3
+    # latestcontent:
+    #     views:
+    #         latestcontent:
+    #             template: tfktelemarkSkoleBundle:blocks:latestcontent.html.twig
+    #             name: Latest content
+    # calendar:
+    #     views:
+    #         calendar:
+    #             template: tfktelemarkSkoleBundle:blocks:calendar.html.twig
+    #             name: Calendar
