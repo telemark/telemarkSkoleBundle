@@ -50,6 +50,11 @@ services:
         tags:
             - { name: kernel.event_subscriber }
 
+    tfk\telemarkSkoleBundle\UI\Config\ImageVariationProviderDecorator:
+        decorates: 'ezsystems.ezplatform_admin_ui.ui.config.provider.image_variations'
+        arguments:
+            $innerProvider: '@tfk\telemarkSkoleBundle\UI\Config\ImageVariationProviderDecorator.inner'
+
     #tfk\telemarkSkoleBundle\Event\NewsBannerBlockListener:
     #    arguments:
     #         - '@ezpublish.api.service.content'
@@ -162,3 +167,4 @@ services:
     vp_utility.pagination_helper:
         class: tfk\telemarkSkoleBundle\Helper\PaginationHelper
         arguments:  ['@ezpublish.api.repository', '@service_container', '@ezpublish.config.resolver']
+

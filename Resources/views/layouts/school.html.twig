@@ -3,6 +3,7 @@
 <div data-ez-zone-id="{{ zones[0].id }}">
         {# If the first zone (with index [0]) contains any blocks #}
         {% if zones[0].blocks %}
+                    {% set locationId = parameters.location is not null ? parameters.location.id : contentInfo.mainLocationId %}
             {# for each block #}
             {% for block in zones[0].blocks %}
                 {# create a new layer with appropriate id #}
@@ -10,12 +11,12 @@
                 <div class="landing-page__block block_{{ block.type }}" data-ez-block-id="{{ block.id }}">
                     {# render the block by using the "EzPlatformPageFieldTypeBundle:Block:render" controller #}
                     {{ render_esi(controller('EzPlatformPageFieldTypeBundle:Block:render', {
-                            'contentId': contentInfo.id,
-                            'blockId': block.id,
-                            'versionNo': versionInfo.versionNo,
-                            'languageCode': field.languageCode
-                        }))
-                    }}
+                                    'locationId': locationId,
+                                    'contentId': contentInfo.id,
+                                    'blockId': block.id,
+                                    'versionNo': versionInfo.versionNo,
+                                    'languageCode': field.languageCode
+                    })) }}
                 </div>
             {% endfor %}
         {% endif %}
@@ -25,15 +26,16 @@
     <div class="grid grid--12 articles-3-1">
         {# Repeat the same for the second zone, with index [1] #}
         {% if zones[1].blocks %}
+              {% set locationId = parameters.location is not null ? parameters.location.id : contentInfo.mainLocationId %}
             {% for block in zones[1].blocks %}
                 <div class="landing-page__block block_{{ block.type }}" data-ez-block-id="{{ block.id }}">
                     {{ render_esi(controller('EzPlatformPageFieldTypeBundle:Block:render', {
-                            'contentId': contentInfo.id,
-                            'blockId': block.id,
-                            'versionNo': versionInfo.versionNo,
-                            'languageCode': field.languageCode
-                        }))
-                    }}
+                                    'locationId': locationId,
+                                    'contentId': contentInfo.id,
+                                    'blockId': block.id,
+                                    'versionNo': versionInfo.versionNo,
+                                    'languageCode': field.languageCode
+                    })) }}
                 </div>
             {% endfor %}
         {% endif %}
@@ -45,15 +47,16 @@
     <div data-ez-zone-id="{{ zones[2].id }}">
         {# Repeat the same for the second zone, with index [1] #}
         {% if zones[2].blocks %}
+              {% set locationId = parameters.location is not null ? parameters.location.id : contentInfo.mainLocationId %}
             {% for block in zones[2].blocks %}
                 <div class="landing-page__block block_{{ block.type }}" data-ez-block-id="{{ block.id }}">
                     {{ render_esi(controller('EzPlatformPageFieldTypeBundle:Block:render', {
-                            'contentId': contentInfo.id,
-                            'blockId': block.id,
-                            'versionNo': versionInfo.versionNo,
-                            'languageCode': field.languageCode
-                        }))
-                    }}
+                                    'locationId': locationId,
+                                    'contentId': contentInfo.id,
+                                    'blockId': block.id,
+                                    'versionNo': versionInfo.versionNo,
+                                    'languageCode': field.languageCode
+                    })) }}
                 </div>
             {% endfor %}
         {% endif %}
@@ -64,15 +67,16 @@
     <div data-ez-zone-id="{{ zones[3].id }}">
         {# Repeat the same for the second zone, with index [1] #}
         {% if zones[3].blocks %}
+              {% set locationId = parameters.location is not null ? parameters.location.id : contentInfo.mainLocationId %}
             {% for block in zones[3].blocks %}
                 <div class="landing-page__block block_{{ block.type }}" data-ez-block-id="{{ block.id }}">
                     {{ render_esi(controller('EzPlatformPageFieldTypeBundle:Block:render', {
-                            'contentId': contentInfo.id,
-                            'blockId': block.id,
-                            'versionNo': versionInfo.versionNo,
-                            'languageCode': field.languageCode
-                        }))
-                    }}
+                                    'locationId': locationId,
+                                    'contentId': contentInfo.id,
+                                    'blockId': block.id,
+                                    'versionNo': versionInfo.versionNo,
+                                    'languageCode': field.languageCode
+                    })) }}
                 </div>
             {% endfor %}
         {% endif %}      

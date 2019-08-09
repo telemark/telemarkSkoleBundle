@@ -1,0 +1,35 @@
+blocks:
+    embed:
+        visible: false
+    video:
+        visible: false
+    form:
+        visible: false
+    gallery:
+        visible: false
+    rss:
+        visible: false
+    banner:
+        visible: false
+    schedule:
+        visible: false
+    # overriding standard collection
+    collection:
+        views:
+            campaign: { name: 'Campaign View', template: 'tfktelemarkSkoleBundle:blocks:collection.html.twig', priority: -255 }
+            block_box: { name: 'Knappe visning', template: 'tfktelemarkSkoleBundle:blocks:collection.html.twig', priority: -255 }
+    contentlist:
+        views:
+            float2:
+                template: 'tfktelemarkSkoleBundle:blocks:contentlist.html.twig'
+                name: 2 i bredden
+            float3:
+                template: 'tfktelemarkSkoleBundle:blocks:contentlist.html.twig'
+                name: 3 i bredden
+    calendar:
+        name: Kalender
+        thumbnail: '/bundles/ezplatformadminui/img/ez-icons.svg#schedule'
+        views:
+             calendar:
+                 template: tfktelemarkSkoleBundle:blocks:calendar.html.twig
+                 name: Calendar

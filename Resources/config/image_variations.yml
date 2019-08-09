@@ -1,19 +1,35 @@
 system:
     default:
         image_variations:
+            small:
+                reference: reference
+                filters:
+                    geometry/scaledownonly: [100, 100]
+            tiny:
+                reference: reference
+                filters:
+                    geometry/scaledownonly: [30, 30]
+            medium:
+                reference: reference
+                filters:
+                    geometry/scaledownonly: [200, 200]
+            large:
+                reference: reference
+                filters:
+                    geometry/scaledownonly: [300, 300]
             folder_full:
                 reference: null
                 filters:
                     - { name: geometry/scalewidth, params: [846] }
-            latest_article:
-                reference: null
-                filters:
-                    - {name: geometry/crop, params: [600, 600, 0, 0]}
-                    - {name: geometry/scalewidth, params: [70]}
-            article_list:
-                reference: null
-                filters:
-                    - { name: geometry/scaledownonly, params: [420, 370] }
+            #latest_article:
+            #    reference: null
+            #    filters:
+            #        - {name: geometry/crop, params: [600, 600, 0, 0]}
+            #        - {name: geometry/scalewidth, params: [70]}
+            #article_list:
+            #    reference: null
+            #    filters:
+            #        - { name: geometry/scaledownonly, params: [420, 370] }
             article:
                 reference: null
                 filters:
