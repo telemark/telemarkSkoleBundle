@@ -1,13 +1,4 @@
 parameters:
-    mailer_transport: smtp
-    mailer_host: mail.smtp2go.com
-    mailer_user: post@t-fk.no
-    mailer_password: VTYF3Kca!no
-
-    ews.global.host: 'outlook.office365.com'
-    ews.global.username: 'tfkskolekalender@skoletfk.onmicrosoft.com'
-    ews.global.password: 'Telemark20'
-
     ews.global.timezone: 'Central Europe Standard Time'
 
     ews.tfk_school_group.common_calendar_name: 'Felles skolekalender'
@@ -107,7 +98,7 @@ parameters:
     head.vest_vgs.meta_description: 'Vest-Telemark vidaregåande skule'
     head.vest_vgs.meta_keywords: 'vest telemark videregående skule'
 
-    footer.vest_vgs.email: 'vest-telemark.vgs@vtfk.no'
+    footer.vest_vgs.email: 'vesttelemark.vgs@vtfk.no'
     footer.vest_vgs.phone: 'Sentralbord Dalen: 35 91 97 00'
     footer.vest_vgs.phone2: 'Sentralbord Seljord: 35 91 90 70'
     footer.vest_vgs.post: 'Postboks 2844, 3702 Skien'
