@@ -110,20 +110,13 @@ ezpublish:
     # System settings, grouped by siteaccess and/or siteaccess group
     system:
         default:
-            # Pool to use for cache, needs to be different per repository (database).
-            # cache_pool_name: '%cache_pool%'
-            # These reflect the current installers, complete installation before you change them. For changing var_dir
-            # it is recommended to install clean, then change setting before you start adding binary content, otherwise you'll
-            # need to manually modify your database data to reflect this to avoid exceptions.
-            var_dir: var/site
-            # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
-            # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
-            # all eng-GB data to other locales first.
-            languages: [nor-NO, eng-GB]
+            cache_service_name: '%cache_pool%'
             content:
-              # As we by default enable EzSystemsPlatformHttpCacheBundle which is designed to expire all affected cache
-              # on changes, and as error / redirects now have separate ttl, we easier allow ttl to be greatly increased
-              default_ttl: '%httpcache_default_ttl%'
+                view_cache: true      # Activates HttpCache for content
+                ttl_cache: true       # Activates expiration based HttpCache for content (very fast)
+                default_ttl: 60       # Number of seconds an Http response cache is valid (if ttl_cache is true, and if no custom s-maxage is set)
+            var_dir: var/site
+            languages: [nor-NO, eng-GB]
             # HttpCache purge server(s) setting, eg Varnish, for when ezpublish.http_cache.purge_type is set to 'http'.
             http_cache:
                 # If using fastly, 'purge_server' must be set to 'https://api.fastly.com'
@@ -296,17 +289,19 @@ ezpublish:
                          - nome
         # WARNING: Do not remove or rename this group.
         admin_group:
-            #cache_service_name: '%cache_pool%'
-            #var_dir: var/site
+            cache_service_name: '%cache_pool%'
+            var_dir: var/site
             languages: [nor-NO, eng-GB]
             design: admin
-            #content:
-            #    default_ttl: '%httpcache_default_ttl%'
-            #http_cache:
-            #    purge_servers: ['%purge_server%']
-            #    fastly:
-            #        service_id: '%fastly_service_id%'
-            #        key: '%fastly_key%'
+            content:
+                view_cache: true      # Activates HttpCache for content
+                ttl_cache: true       # Activates expiration based HttpCache for content (very fast)
+                default_ttl: 60       # Number of seconds an Http response cache is valid (if ttl_cache is true, and if no custom s-maxage is set
+            http_cache:
+                purge_servers: ['%purge_server%']
+                fastly:
+                    service_id: '%fastly_service_id%'
+                    key: '%fastly_key%'
             page_builder:
                 siteaccess_list: 
                          - vest_vgs
