@@ -1,9 +1,10 @@
 {% set url = content.getField( 'url' ) %}
 {% set open_in_new_window = content.getField( 'open_in_new_window' ) %}
+{% set intern = content.getField( 'intern' ) %}
 {% set target = '' %}
 {% if open_in_new_window.value == false %}
     {% set target = '_blank' %}
 {% else %}
     {% set target = '_self' %}
 {% endif %}
-<a href="{{ url.value.link }}" target="{{ target }}" class="menu__item-link">{{ content.contentInfo.name }}</a>
+<a href="{% if intern == false %}{{ url.value.link }}{% else %}{{ url.value.link|trim('http://') }}{% endif %}" target="{{ target }}" class="menu__item-link">{{ content.contentInfo.name }}</a>
