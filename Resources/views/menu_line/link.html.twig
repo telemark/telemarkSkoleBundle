@@ -7,4 +7,4 @@
 {% else %}
     {% set target = '_self' %}
 {% endif %}
-<a href="{% if intern == false %}{{ url.value.link }}{% else %}{{ url.value.link|trim('http://') }}{% endif %}" target="{{ target }}" class="menu__item-link">{{ content.contentInfo.name }}</a>
+<a href=" {% if ez_is_field_empty(content, 'intern') %}{{ url.value.link }}{% else %}{{ url.value.link|trim('http://') }}{% endif %}" target="{{ target }}" class="menu__item-link">{{ content.contentInfo.name }}</a>
