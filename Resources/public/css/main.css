@@ -705,7 +705,7 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
 }
 
 .highlight--dark {
-    background: #000;
+    background: #005260;
     color: #fff;
 }
 
@@ -988,7 +988,7 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
     margin-top: 1.4375em;
     margin-right: -.5em;
     margin-left: -.5em;
-    border: 1px solid #333;
+    border: 0px solid #fff;
     padding: .5em .5em .4375em;
 }
 
@@ -1275,7 +1275,7 @@ input.search__field:focus {
 }
 
 .highlight--dark .side-menu {
-    border-top-color: #333;
+    border-top-color: #red;
 }
 
 .side-menu__item {
@@ -1285,7 +1285,7 @@ input.search__field:focus {
 }
 
 .highlight--dark .side-menu__item {
-    border-bottom-color: #333;
+    border-bottom-color: #red;
 }
 
 .side-menu__item a {
