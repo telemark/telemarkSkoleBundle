@@ -200,8 +200,8 @@
 }
 
 .slider--fullwidth .slider__slide, .slider--fullwidth .slider__slide .top-image__text-wrapper {
-  background-color: #007c97;
-  color: #fff;
+  background-color: #e6e7e2;
+  color: black;
 }
 
 @media (min-width: 64em) {
@@ -239,7 +239,7 @@
   margin-right: 5em;
   margin-left: 5em;
   text-align: center;
-  font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+  /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
   margin-top: .5em;
 }
 
@@ -293,7 +293,9 @@
 .slider__direction-nav {
   margin: 0;
   text-align: right;
-  font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+  /*
+    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+  */
 }
 
 @media (min-width: 64em) {
@@ -1393,7 +1395,7 @@ main form.well.form-search {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 body a {
@@ -1547,7 +1549,7 @@ h1 {
   float: right;
   margin-right: 0;
   position: relative;
-  font-family: 'Telefon';
+  /* font-family: 'Telefon'; */
   float: right;
 }
 
@@ -1867,7 +1869,7 @@ body {
 }
 
 input #basicsearch_term {
-  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+  /* font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
 }
 
 .slider__slide a {
@@ -1879,7 +1881,7 @@ input #basicsearch_term {
 }
 
 .block_contentbox .item, .block_contentbox3x1 .item {
-  background-color: #007c97;
+  background-color: #b2dcda;
   color: #fff;
   text-align: center;
   height: 100px;
@@ -1891,7 +1893,7 @@ input #basicsearch_term {
 }
 
 .block_contentbox3x1 .item {
-  background-color: #007c97;
+  background-color: #b2dcda;
   color: #fff;
   text-align: center;
   height: 100px;

@@ -5,7 +5,7 @@
     background-color: #e8f3f0;
     color: #000;
     cursor: pointer;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
     text-decoration: underline;
 }
 
@@ -86,7 +86,7 @@ html {
 }
 
 button,input,select,textarea {
-    font-family: "Telefon", sans-serif;
+    /* font-family: "Telefon", sans-serif; */
 }
 
 body {
@@ -117,7 +117,7 @@ blockquote {
 }
 
 h1 {
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
     font-weight: 400;
     border-bottom: 1px solid #000;
 }
@@ -131,7 +131,7 @@ h1 {
 
 h2,.form__group__title {
     margin-bottom: 0;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
     font-weight: 400;
     font-size: 1.5em;
     line-height: 1.33333em;
@@ -146,7 +146,7 @@ h2,.form__group__title {
 
 h3 {
     margin-bottom: 0;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
     font-weight: 400;
     font-size: 1.17em;
     line-height: 1.28205em;
@@ -445,7 +445,7 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
 .breadcrumb {
     background-color: #ededed;
     padding: 1em 0;
-    font-family: "Telefon";
+    /* font-family: "Telefon"; */
 }
 
 .breadcrumb__list {
@@ -515,7 +515,7 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
     display: block;
     border-bottom: 1px solid #ededed;
     margin-bottom: -1px;
-    font-family: Verdana,Helvetica,Arial,sans-serif;
+    /* font-family: Verdana,Helvetica,Arial,sans-serif; */
     text-transform: uppercase;
     font-size: .625em;
     line-height: 1.6em;
@@ -524,7 +524,7 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
 .calendar-list__sheet__day {
     display: block;
     padding: .4375em 0;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
     font-weight: 700;
 }
 
@@ -554,7 +554,7 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
     text-align: center;
     table-layout: fixed;
     border-collapse: separate;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
 }
 
 .calendar__head {
@@ -822,13 +822,13 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
 }
 
 .main__right {
-    font-family: "Telefon", sans-serif;
+    /* font-family: "Telefon", sans-serif; */
     font-size: .75em;
     line-height: 1.33333em;
 }
 
 .main__right p {
-    font-family: "Open Sans";
+    font-family: "Nunito Sans", sans-serif;
 }
 
 .main__right h2,.main__right .form__group__title {
@@ -924,7 +924,7 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
 .page-footer-nav {
     margin: 2em 0 -2em;
     text-align: center;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
 }
 
 .page-footer-nav__list {
@@ -938,7 +938,7 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
 .page-footer {
     margin-right: -.83333%;
     margin-left: -.83333%;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
     font-size: 1em;
     line-height: 1.5em;
 }
@@ -1027,7 +1027,7 @@ textarea:invalid:not(:empty),textarea:invalid:not(:empty):hover,textarea:invalid
 }
 
 .page-header {
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
 }
 
 @media (min-width: 64em) {
@@ -1271,7 +1271,7 @@ input.search__field:focus {
     border-top: 1px solid #bdbdbd;
     padding: 0;
     list-style: none;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
 }
 
 .highlight--dark .side-menu {
@@ -1333,7 +1333,7 @@ input.search__field:focus {
 }
 
 .sidenote {
-    font-family: Verdana,Helvetica,Arial,sans-serif;
+    /* font-family: Verdana,Helvetica,Arial,sans-serif; */
     font-size: .75em;
     line-height: 1.33333em;
 }
@@ -1421,7 +1421,7 @@ input.search__field:focus {
 
 .tabs__bar {
     display: none;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
 }
 
 @media (min-width: 64em) {
@@ -1517,7 +1517,7 @@ input.search__field:focus {
     margin-right: -20px;
     margin-left: -20px;
     border: 0;
-    font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    /* font-family: "Telefon","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; */
 }
 
 @media (min-width: 64em) {
@@ -1528,7 +1528,7 @@ input.search__field:focus {
 }
 
 .top-image--small {
-    font-family: Verdana,Helvetica,Arial,sans-serif;
+    /* font-family: Verdana,Helvetica,Arial,sans-serif; */
     font-size: .75em;
     line-height: 1.33333em;
 }
