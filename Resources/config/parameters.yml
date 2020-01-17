@@ -263,7 +263,7 @@ parameters:
     footer.porsgrunn.instagram: 'https://www.instagram.com/porsgrunnvgs/'
     footer.porsgrunn.flickr: 'https://www.flickr.com/photos/porvgs/albums'
     footer.porsgrunn.analytics: 'UA-47841095-1'
-    footer.porsgrunn.surveymonkey: 'tRaiETqnLgj758hTBazgd8FDSSK_2BdJwgb90HhEfWcrT_2FO1oWc7dLEAI8ieHZ_2B8tr'
+    #footer.porsgrunn.surveymonkey: 'tRaiETqnLgj758hTBazgd8FDSSK_2BdJwgb90HhEfWcrT_2FO1oWc7dLEAI8ieHZ_2B8tr'
 
     head.rjukan.logo: 'logo-rjukan-vgs-rgb.svg'
     head.rjukan.title: 'Rjukan videregående skole'
