@@ -130,7 +130,7 @@ ezpublish:
                 - eng-GB
             content:
                 tree_root:
-                    location_id: 246
+                    location_id: 2
                     excluded_uri_prefixes: [ /media, /users ]
         vest_vgs:
 #             session:
