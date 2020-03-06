@@ -5,7 +5,6 @@
 {% set adress2 = getConfigResolverParameter( 'adress2', 'footer' ) %}
 {% set adress = getConfigResolverParameter( 'adress', 'footer' ) %}
 {% set contact = getConfigResolverParameter( 'contact', 'footer' ) %}
-{% set contactlink = getConfigResolverParameter( 'contactlink', 'footer' ) %}
 {% set fblink = getConfigResolverParameter( 'fblink', 'footer' ) %}
 {% set fblink2 = getConfigResolverParameter( 'fblink2', 'footer' ) %}
 {% set fb = getConfigResolverParameter( 'fb', 'footer' ) %}
@@ -17,7 +16,6 @@
 {% set linkedin = getConfigResolverParameter( 'linkedin', 'footer' ) %}
 {% set link = getConfigResolverParameter( 'link', 'footer' ) %}
 {% set title = getConfigResolverParameter( 'title', 'head' ) %}
-
 
 <div class="content highlight--dark">
   <div class="constrained-content clearfix" style="margin-top: 0.5em; margin-bottom: 0.5em;">
@@ -45,7 +43,7 @@
                   <div class="page-footer__content page-footer__content--last">
                     <h3>Kontakter:</h3>
                     <ul class="side-menu">
-                      <li class="side-menu__item"><a href="{{ contactlink }}" target="_blank">Finn ansatte og avdelinger</a></li>
+                      <li class="side-menu__item"><a href="http://apps.t-fk.no/ansatte" target="_blank">Finn ansatte og avdelinger</a></li>
                     <li class="side-menu__item"><a href="{{ link }}" class="nav__item__link">Kontakt webmaster</a></li>
 
                     {% if fblink %}
