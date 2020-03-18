@@ -5,6 +5,6 @@
 {% if open_in_new_window.value == false %}
     {% set target = '_blank' %}
 {% else %}
-    {% set target = '_self' %}
+    {% set target = '_new' %}
 {% endif %}
 <a href=" {% if ez_is_field_empty(content, 'intern') %}{{ url.value.link }}{% else %}{{ url.value.link|trim('http://') }}{% endif %}" target="{{ target }}" class="menu__item-link">{{ content.contentInfo.name }}</a>
